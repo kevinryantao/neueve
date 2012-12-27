@@ -1,9 +1,9 @@
 Lavax::Application.routes.draw do
-  get "static_pages/Home"
+  root :to => "static_pages#Home"
 
-  get "static_pages/About"
+  match "/about" => "static_pages#About"
 
-  get "static_pages/FAQ"
+  match "/faq" => "static_pages#FAQ"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
