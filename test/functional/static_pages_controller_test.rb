@@ -2,17 +2,17 @@ require 'test_helper'
 
 class StaticPagesControllerTest < ActionController::TestCase
   test "should get Home" do
-    get :Home
+    get :home
     assert_response :success
   end
 
   test "should get About" do
-    get :About
+    get :about
     assert_response :success
   end
 
   test "should get FAQ" do
-    get :FAQ
+    get :faq
     assert_response :success
   end
 
