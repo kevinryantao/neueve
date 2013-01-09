@@ -5,7 +5,8 @@ Lavax::Application.routes.draw do
 
   match "/background" => "static_pages#background"
 
-  match "/contact" => "static_pages#contact"
+  match 'contact' => 'contact#new', :as => 'contact', :via => :get
+  match 'contact' => 'contact#create', :as => 'contact', :via => :post
 
   match "/comparison" => "static_pages#comparison"
 
