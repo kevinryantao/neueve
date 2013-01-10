@@ -3,6 +3,8 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.9'
 gem 'bootstrap-sass'
 gem 'execjs'
+gem 'better_errors'
+gem 'simple_form'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -10,6 +12,7 @@ gem 'execjs'
 
 group :development do
   gem 'sqlite3'
+  gem 'annotate'
 end
 
 group :production do

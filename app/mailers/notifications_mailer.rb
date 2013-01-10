@@ -4,7 +4,7 @@ class NotificationsMailer < ActionMailer::Base
 
   def new_message(message)
     @message = message
-    mail(:subject => "[Neueve] #{message.subject}")
+    mail(:subject => "[Neueve Contact Form] New message from : #{message.name}")
   end
 
 
