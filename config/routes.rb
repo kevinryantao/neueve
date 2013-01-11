@@ -20,6 +20,8 @@ Lavax::Application.routes.draw do
 
   match "/buy" => "static_pages#buy"
 
+  match "/success" => "static_pages#success"
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
