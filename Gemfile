@@ -5,6 +5,7 @@ gem 'bootstrap-sass'
 gem 'execjs'
 gem 'better_errors'
 gem 'simple_form'
+gem 'jquery-rails'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
