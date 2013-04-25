@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-Lavax::Application.config.secret_token = '1149491451937346a24711ba1ffe275a0839e556480af79fa638cf78e8c437ed358f81939461dc3fdedebe280b4b20c80fcf76036ea859488f1334a5c1f943fa'
+Lavax::Application.config.secret_token = '4eb0c4385d31fabd9a0f62dd75d6d8e5a993b096bcc97cfd97c3bfb59d51a9c5425e4d3510af9cf34d98993d3aa38c7ecf44e674a7e03af8ec0b94a3d8fe5e82'

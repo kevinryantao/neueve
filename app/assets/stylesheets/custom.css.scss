@@ -1,4 +1,15 @@
 @import "bootstrap";
+ 
+
+/* header */
+.navbar-inner {
+  background-image: none;
+  border: 0px
+}
+
+.navbar {
+  margin-bottom: 0px;
+}
 
 
 /* footer */
@@ -45,6 +56,12 @@ p, div {
 }
 
 // Background image
-body {
-  background: url(creampaper.png) repeat 0 0;
+
+
+.container {
+    background: url(translucentcreampaper.png) repeat 0 0;
+
+    text-align: center; 
+
 }
+
