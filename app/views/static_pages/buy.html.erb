@@ -43,18 +43,30 @@
 </p>
 <table border="1">
     <tr>
-        <td><%= image_tag "https://dl.dropboxusercontent.com/u/29513364/Silver-6-front.JPG"%></td>
-        <td><%= image_tag "https://dl.dropboxusercontent.com/u/29513364/Silver-12-front.JPG"%></td>
+        <th colspan="1">$29 for 1 Month Supply (6 Suppositories)</th> 
+        
     </tr>
+
     <tr>
-        <th>1 Month Supply (6 Suppositories)</th>
-        <th>2 Month Supply (12 Suppositories)</th>
+        <td ><%= image_tag "https://dl.dropboxusercontent.com/u/29513364/Silver-6-front.JPG", :size => "500x500"%></td>
     </tr>
+
+    <tr>
+        <th colspan="1">$49 for 2 Month Supply (12 Suppositories)</th> 
+           
+    </tr>
+
+    <tr>
+      <td><%= image_tag "https://dl.dropboxusercontent.com/u/29513364/Silver-12-front.JPG", :size => "500x500"%></td>
+          
+    </tr>
+
+    
     <tr>
 
 
-    <th> $29</th>
-    <th> $49</th>
+    
+    
 
 
     </tr>
@@ -85,19 +97,22 @@
     NeuEve Gold Formula
 </p>
 <table border="1">
-    <tr>
-        <td><%= image_tag "https://dl.dropboxusercontent.com/u/29513364/Gold-6-trim%20Front.JPG"%></td>
-        <td><%= image_tag "https://dl.dropboxusercontent.com/u/29513364/Gold-12-trim%20Front-2.JPG"%></td>
-    </tr>
-    <tr>
-        <th>1 Month Supply (6 Suppositories)</th>
-        <th>2 Month Supply (12 Suppositories)</th>
+  <tr>
+    <th colspan="1">$49 for 1 Month Supply (6 Suppositories)</th>
 
-    </tr>
+  </tr>
     <tr>
-         <th> $49</th>
-         <th> $89</th>
+        <td><%= image_tag "https://dl.dropboxusercontent.com/u/29513364/Gold-6-trim%20Front.JPG",:size => "500x500"%></td>
     </tr>
+
+
+    <tr>
+      <th colspan="1">$89 for 2 Month Supply (12 Suppositories)</th>
+    </tr>
+      <tr>
+        <td><%= image_tag "https://dl.dropboxusercontent.com/u/29513364/Gold-12-trim%20Front-2.JPG",:size => "500x500"%></td>
+      </tr>
+    
 </table>
 <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
   <input type="hidden" name="cmd" value="_s-xclick">
