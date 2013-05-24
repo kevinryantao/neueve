@@ -1,0 +1,33 @@
+div strong
+{ 	font-family:Candara;
+	color:red;
+	font-size:40px;
+	margin-top:10px;
+
+	}
+
+
+div p
+
+{
+	color:blue;
+	font-size:20px;
+	font-family:Courier New;
+}
+
+div ul li{
+	color:blue;
+	font-family:Candara;
+	font-size:30px;
+}
+
+div h1{
+	color:#003366;
+	font-size:50px;
+}
+
+p
+{
+	color:#003366;
+	font-size:30px;
+}
