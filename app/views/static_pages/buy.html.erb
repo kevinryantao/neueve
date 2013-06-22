@@ -1,75 +1,49 @@
 <% provide(:title, 'Order Now') %>
 
 <div class="jumbotron">
-    <h1>Buy NeuEve</h1>
+  <h1>Buy NeuEve</h1>
 </div>
 
-<font size = "3%">
-<p>
+<font size="3%">
+  <p>
     <strong>
-        Before purchasing, please read the following legal disclaimer:
+      Before purchasing, please read the <%= link_to "legal disclaimer", disclaimer_path %>.
     </strong>
-</p>
-</font>
-
-<font size = "3">
-<p>
-    We make no structural or functional or therapeutic claims of any kind whatsoever for our products. Readers are
-    invited to try our products and see for themselves what if any benefits they may experience. Results given in
-    testimonials are from actual customers who have used our products but are not claimed as typical. Your own
-    experience(s) may vary from those mentioned in the testimonials.
-</font>
-
-<font size = "3">
-<p>
-    If you have a medical condition, allergies or any health situation that might impact your safe use of any cosmetic
-    or hygiene products, consult with your licensed physician before using our (or any) products.
-    Every effort possible is made to offer high-quality, safe and effective products for the consumer. We urge you to
-    test a small number of our product first for compatibility before using it routinely.
-</font>
-
-<font size = "3">
-<p>
-    We <strong>CANNOT ACCEPT RETURNS</strong> due to FDA regulations. We do not want to put out a product that someone
-    else besides our employees in a sterile environment has handled.
+  </p>
 </font>
 
 <h3>
-    Purchase NeuEve below:
+  Purchase NeuEve below:
 </h3>
 
 <p>
-    NeuEve Silver Formula
+  NeuEve Silver Formula
 </p>
 <table border="1">
-    <tr>
-        <th colspan="1">$29 for 1 Month Supply (6 Suppositories)</th> 
-        
-    </tr>
+  <tr>
+    <th colspan="1">$29 for 1 Month Supply (6 Suppositories)</th>
 
-    <tr>
-        <td ><%= image_tag "https://dl.dropboxusercontent.com/u/29513364/Silver-6-front.JPG", :size => "500x500"%></td>
-    </tr>
+  </tr>
 
-    <tr>
-        <th colspan="1">$49 for 2 Month Supply (12 Suppositories)</th> 
-           
-    </tr>
+  <tr>
+    <td><%= image_tag "https://dl.dropboxusercontent.com/u/29513364/Silver-6-front.JPG", :size => "500x500" %></td>
+  </tr>
 
-    <tr>
-      <td><%= image_tag "https://dl.dropboxusercontent.com/u/29513364/Silver-12-front.JPG", :size => "500x500"%></td>
-          
-    </tr>
+  <tr>
+    <th colspan="1">$49 for 2 Month Supply (12 Suppositories)</th>
 
-    
-    <tr>
+  </tr>
+
+  <tr>
+    <td><%= image_tag "https://dl.dropboxusercontent.com/u/29513364/Silver-12-front.JPG", :size => "500x500" %></td>
+
+  </tr>
 
 
-    
-    
+  <tr>
 
 
-    </tr>
+  </tr>
 </table>
 
 <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
@@ -94,25 +68,25 @@
 
 
 <p>
-    NeuEve Gold Formula
+  NeuEve Gold Formula
 </p>
 <table border="1">
   <tr>
     <th colspan="1">$49 for 1 Month Supply (6 Suppositories)</th>
 
   </tr>
-    <tr>
-        <td><%= image_tag "https://dl.dropboxusercontent.com/u/29513364/Gold-6-trim%20Front.JPG",:size => "500x500"%></td>
-    </tr>
+  <tr>
+    <td><%= image_tag "https://dl.dropboxusercontent.com/u/29513364/Gold-6-trim%20Front.JPG", :size => "500x500" %></td>
+  </tr>
 
 
-    <tr>
-      <th colspan="1">$89 for 2 Month Supply (12 Suppositories)</th>
-    </tr>
-      <tr>
-        <td><%= image_tag "https://dl.dropboxusercontent.com/u/29513364/Gold-12-trim%20Front-2.JPG",:size => "500x500"%></td>
-      </tr>
-    
+  <tr>
+    <th colspan="1">$89 for 2 Month Supply (12 Suppositories)</th>
+  </tr>
+  <tr>
+    <td><%= image_tag "https://dl.dropboxusercontent.com/u/29513364/Gold-12-trim%20Front-2.JPG", :size => "500x500" %></td>
+  </tr>
+
 </table>
 <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
   <input type="hidden" name="cmd" value="_s-xclick">
