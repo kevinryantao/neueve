@@ -1,26 +1,26 @@
 Lavax::Application.routes.draw do
   root :to => "static_pages#home"
 
-  match "/about" => "static_pages#about"
+  match "/about" => "static_pages#about", :via => :get
 
-  match "/background" => "static_pages#background"
+  match "/background" => "static_pages#background", :via => :get
 
-  match 'contact' => 'contact#new', :as => 'contact', :via => :get
-  match 'contact' => 'contact#create', :as => 'contact', :via => :post
+  match 'contact' => 'contact#new', :via => :get
+  match 'contact' => 'contact#create', :via => :post
 
-  match "/comparison" => "static_pages#comparison"
+  match "/comparison" => "static_pages#comparison", :via => :get
 
-  match "/disclaimer" => "static_pages#disclaimer"
+  match "/disclaimer" => "static_pages#disclaimer", :via => :get
 
-  match "/faq" => "static_pages#faq"
+  match "/faq" => "static_pages#faq", :via => :get
 
-  match "/product" => "static_pages#product"
+  match "/product" => "static_pages#product", :via => :get
 
-  match "/testimonials" => "static_pages#testimonials"
+  match "/testimonials" => "static_pages#testimonials", :via => :get
 
-  match "/buy" => "static_pages#buy"
+  match "/buy" => "static_pages#buy", :via => :get
 
-  match "/success" => "static_pages#success"
+  match "/success" => "static_pages#success", :via => :get
 
 
   # The priority is based upon order of creation:
