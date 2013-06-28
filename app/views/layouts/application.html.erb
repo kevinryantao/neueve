@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title><%= full_title(yield(:title)) %></title>
-    <%= stylesheet_link_tag "application", :media => "all" %>
-    <%= stylesheet_link_tag "font-awesome/css/font-awesome.min.css" %>
-    <%= javascript_include_tag "application" %>
-    <%= javascript_include_tag "https://js.stripe.com/v1/"%>
-    <%= csrf_meta_tags %>
-    <%= render "layouts/shim" %>
+  <title><%= full_title(yield(:title)) %></title>
+  <%= stylesheet_link_tag "application", :media => "all" %>
+  <%= stylesheet_link_tag "font-awesome/css/font-awesome.min.css" %>
+  <%= javascript_include_tag "application" %>
+  <%= javascript_include_tag "https://js.stripe.com/v1/" %>
+  <%= csrf_meta_tags %>
+  <%= render "layouts/shim" %>
 </head>
 <body>
-    <%= render "layouts/header" %>
-    <div class="container">
-        <% flash.each do |key, value| %>
-            <div class="alert alert-<%= key %>"><%= value %></div>
-        <% end %>
-        <%= yield %>
-        <%= render "layouts/footer" %>
-    </div>
-    <%= render "layouts/googleanalytics" %>
-    <%= render "layouts/backstretch" %>
+<div class="container">
+  <%= render "layouts/header" %>
+  <% flash.each do |key, value| %>
+      <div class="alert alert-<%= key %>"><%= value %></div>
+  <% end %>
+  <%= yield %>
+  <%= render "layouts/footer" %>
+</div>
+<%= render "layouts/googleanalytics" %>
+<%= render "layouts/backstretch" %>
 </body>
 
 </html>
