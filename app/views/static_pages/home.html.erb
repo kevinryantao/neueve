@@ -3,14 +3,16 @@
 
 <div class="jumbotron">
   <h1>
-    NeuEve
+    NeuEve Suppositories
   </h1>
-
-  <h3>
-    Bring New Evenings to Women
-  </h3>
 </div>
 <p>
+
+  Have the night of your life. Night after night.
+  <br>
+
+
+  <!--
 
   For women with vaginal odor, dryness and atrophy and/or painful sex, especially
   for breast cancer survivors, NeuEve suppositories can help:
@@ -75,14 +77,16 @@
   </font>
   <br>
 
+  -->
+
   <br>
 
 <div class="jumbotron">
-  <h1>Testimonials</h1>
-</div>
+  <h3>What customers have said about NeuEve:</h3>
+</div>                                 <!--
 <br>
 The following is feedback we have received from satisfied customers:
-<br>
+<br>                                  -->
 <br>
 "Since entering menopause, I have had vaginal dryness, and could not get close to my husband. This product is super.
 With only one application, all my issues are gone. I feel like a young woman again. My husband is happy too."
@@ -115,6 +119,103 @@ like it very much. He said that this thing is better than Viagra. Please send me
 <br>
 <br>
 
+<h3><%= link_to 'Comparison of Vaginal Care Products', comparison_path %></h3>
+
+<table class='table table-bordered table-striped table-hover table-condensed'>
+  <thead>
+  <tr>
+    <th></th>
+    <th> <strong>NeuEve</strong></th>
+    <th> Lubricant</th>
+    <th> Moisturizer</th>
+    <th> Antibiotics</th>
+    <th> Estrogen</th>
+    <th> Vitamin E</th>
+    <th> Douche</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>Eliminates Odors</td>
+    <td><i class='icon-ok'></i></td>
+    <td><i class='icon-remove'></i></td>
+    <td><i class='icon-remove'></i></td>
+    <td><i class='icon-ok'></i>*</td>
+    <td><i class='icon-remove'></i></td>
+    <td><i class='icon-remove'></i></td>
+    <td><i class='icon-remove'></i></td>
+  </tr>
+  <tr>
+    <td>Fights Dryness</td>
+    <td><i class='icon-ok'></i></td>
+    <td><i class='icon-ok'></i></td>
+    <td><i class='icon-ok'></i></td>
+    <td><i class='icon-remove'></i></td>
+    <td><i class='icon-ok'></i></td>
+    <td><i class='icon-ok'></i></td>
+    <td><i class='icon-remove'></i></td>
+  </tr>
+  <tr>
+    <td>Sexual Pain Relief</td>
+    <td><i class='icon-ok'></i></td>
+    <td><i class='icon-ok'></i></td>
+    <td><i class='icon-ok'></i></td>
+    <td><i class='icon-remove'></i></td>
+    <td><i class='icon-ok'></i></td>
+    <td><i class='icon-ok'></i></td>
+    <td><i class='icon-remove'></i></td>
+  </tr>
+  <tr>
+    <td>All-Natural</td>
+    <td><i class='icon-ok'></i></td>
+    <td><i class='icon-remove'></i></td>
+    <td><i class='icon-remove'></i></td>
+    <td><i class='icon-remove'></i></td>
+    <td><i class='icon-remove'></i></td>
+    <td><i class='icon-ok'></i></td>
+    <td><i class='icon-remove'></i></td>
+  </tr>
+  <tr>
+    <td>Immediate Relief</td>
+    <td><i class='icon-ok'></i></td>
+    <td><i class='icon-ok'></i></td>
+    <td><i class='icon-ok'></i></td>
+    <td><i class='icon-ok'></i>*</td>
+    <td><i class='icon-remove'></i></td>
+    <td><i class='icon-ok'></i></td>
+    <td><i class='icon-ok'></i></td>
+  </tr>
+
+  <tr>
+    <td>Long-Lasting</td>
+    <td><i class='icon-ok'></i></td>
+    <td><i class='icon-remove'></i></td>
+    <td><i class='icon-remove'></i></td>
+    <td><i class='icon-ok'></i></td>
+    <td><i class='icon-remove'></i></td>
+    <td><i class='icon-remove'></i></td>
+    <td><i class='icon-remove'></i></td>
+  </tr>
+
+  <tr>
+    <td>Harmful Side-Effects</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td><%= link_to 'Yeast Infections','http://women.webmd.com/yeast-infections-common-causes' %></td>
+    <td><%= link_to 'Cancer', 'http://www.cancer.org/cancer/cancercauses/othercarcinogens/medicaltreatments/menopausal-hormone-replacement-therapy-and-cancer-risk' %> </td>
+    <td>-</td>
+    <td><%= link_to 'BV', 'https://en.wikipedia.org/wiki/Bacterial_vaginosis#Causes' %></td>
+  </tr>
+  </tbody>
+</table>
+*Only works for some
+<br>
+
+<h3>
+  Try it for yourself, order NeuEve today!
+</h3>
+
 <div align='center'>
-  <%= link_to 'Order NeuEve', buy_path, :class => 'btn btn-large' %>
+  <%= link_to 'Order Now', buy_path, :class => 'btn btn-large' %>
 </div>
