@@ -16,6 +16,7 @@
       <div class="alert alert-<%= key %>"><%= value %></div>
   <% end %>
   <%= yield %>
+  <%= render "layouts/order_now" if !yield(:title).include? 'rder' %>
   <%= render "layouts/footer" %>
 </div>
 <%= render "layouts/googleanalytics" %>
