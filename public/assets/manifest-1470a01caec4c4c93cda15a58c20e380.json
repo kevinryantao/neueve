@@ -1,39 +1,9 @@
 {"files": {
-    "Exotic_Leaves_(Sanserveria)-e2d34cfa27a59d63c79656f266291140.jpg": {
-        "logical_path": "Exotic_Leaves_(Sanserveria).jpg",
-        "mtime": "2013-04-24T22:33:17-05:00",
-        "size": 433888,
-        "digest": "e2d34cfa27a59d63c79656f266291140"
-    },
-    "Gold-2-1ee3550de303d5b33b488b86c58edc6f.jpg": {
-        "logical_path": "Gold-2.jpg",
-        "mtime": "2013-04-20T15:50:44-05:00",
-        "size": 426280,
-        "digest": "1ee3550de303d5b33b488b86c58edc6f"
-    },
-    "Gold-5-b209041bca0ae086cae6e6cb9e1ff83a.jpg": {
-        "logical_path": "Gold-5.jpg",
-        "mtime": "2013-04-20T15:50:44-05:00",
-        "size": 407571,
-        "digest": "b209041bca0ae086cae6e6cb9e1ff83a"
-    },
     "LonghornDewDrop-2c3d7e712f69f912633d67aee3f9fe7f.jpg": {
         "logical_path": "LonghornDewDrop.jpg",
         "mtime": "2013-04-24T22:33:17-05:00",
         "size": 865015,
         "digest": "2c3d7e712f69f912633d67aee3f9fe7f"
-    },
-    "Silver-2-ee39747a6f362372aa23eb144bdcfa5d.jpg": {
-        "logical_path": "Silver-2.jpg",
-        "mtime": "2013-04-20T15:50:44-05:00",
-        "size": 392105,
-        "digest": "ee39747a6f362372aa23eb144bdcfa5d"
-    },
-    "Silver-8-4ca0b9d6f0c2d4387b58b9db1b69fb34.jpg": {
-        "logical_path": "Silver-8.jpg",
-        "mtime": "2013-04-20T15:50:44-05:00",
-        "size": 455821,
-        "digest": "4ca0b9d6f0c2d4387b58b9db1b69fb34"
     },
     "creampaper-cec9c1e459b7d2561d05b4bf4bb2d04a.png": {
         "logical_path": "creampaper.png",
@@ -41,29 +11,11 @@
         "size": 12618,
         "digest": "cec9c1e459b7d2561d05b4bf4bb2d04a"
     },
-    "green-nature-leaves-bdad289041e40c3447a75ece095b7391.jpg": {
-        "logical_path": "green-nature-leaves.jpg",
-        "mtime": "2013-04-24T22:33:17-05:00",
-        "size": 277001,
-        "digest": "bdad289041e40c3447a75ece095b7391"
-    },
-    "home-hero3-fe6a2087d451a1da635da37324114435.png": {
-        "logical_path": "home-hero3.png",
-        "mtime": "2013-04-20T15:50:44-05:00",
-        "size": 55674,
-        "digest": "fe6a2087d451a1da635da37324114435"
-    },
     "translucentcreampaper-1f4d0d8cf3e8ed5b9be342934b813120.png": {
         "logical_path": "translucentcreampaper.png",
         "mtime": "2013-04-20T15:50:44-05:00",
         "size": 21604,
         "digest": "1f4d0d8cf3e8ed5b9be342934b813120"
-    },
-    "woman-laying-7b74a4160150202fd38690455da19231.png": {
-        "logical_path": "woman-laying.png",
-        "mtime": "2013-04-20T15:50:44-05:00",
-        "size": 117554,
-        "digest": "7b74a4160150202fd38690455da19231"
     },
     "application-f3d63532dd49a28974f6d6489f3d7d1e.js": {
         "logical_path": "application.js",
@@ -131,41 +83,11 @@
         "size": 43572,
         "digest": "e2c599b9eada7c81170186e5903134f9"
     },
-    "Exotic_Leaves_(Sanserveria)-d1b984c220ddf95c985d3933e2cf125d.jpg": {
-        "logical_path": "Exotic_Leaves_(Sanserveria).jpg",
-        "mtime": "2013-04-24T22:33:17-05:00",
-        "size": 433888,
-        "digest": "d1b984c220ddf95c985d3933e2cf125d"
-    },
-    "Gold-2-3747ce6eeb24b0ba67117f8af3aaf297.jpg": {
-        "logical_path": "Gold-2.jpg",
-        "mtime": "2013-04-20T15:50:44-05:00",
-        "size": 426280,
-        "digest": "3747ce6eeb24b0ba67117f8af3aaf297"
-    },
-    "Gold-5-c94443a3998375ae07486f915f9d91b4.jpg": {
-        "logical_path": "Gold-5.jpg",
-        "mtime": "2013-04-20T15:50:44-05:00",
-        "size": 407571,
-        "digest": "c94443a3998375ae07486f915f9d91b4"
-    },
     "LonghornDewDrop-a1ee216bcb54a6be30cb63924ac4b6ce.jpg": {
         "logical_path": "LonghornDewDrop.jpg",
         "mtime": "2013-04-24T22:33:17-05:00",
         "size": 865015,
         "digest": "a1ee216bcb54a6be30cb63924ac4b6ce"
-    },
-    "Silver-2-40e2e05deaa4290c11d3e993dcd222b3.jpg": {
-        "logical_path": "Silver-2.jpg",
-        "mtime": "2013-04-20T15:50:44-05:00",
-        "size": 392105,
-        "digest": "40e2e05deaa4290c11d3e993dcd222b3"
-    },
-    "Silver-8-84de50f1d2fe5d30284e5972694481d6.jpg": {
-        "logical_path": "Silver-8.jpg",
-        "mtime": "2013-04-20T15:50:44-05:00",
-        "size": 455821,
-        "digest": "84de50f1d2fe5d30284e5972694481d6"
     },
     "creampaper-f573fd1b409fe740c40efa2572789187.png": {
         "logical_path": "creampaper.png",
@@ -179,23 +101,11 @@
         "size": 277001,
         "digest": "2e34401fa88f8e78e7137b3a9e7ca694"
     },
-    "home-hero3-48ef9b4fa7c8ad7611b35c54853f62ef.png": {
-        "logical_path": "home-hero3.png",
-        "mtime": "2013-04-20T15:50:44-05:00",
-        "size": 55674,
-        "digest": "48ef9b4fa7c8ad7611b35c54853f62ef"
-    },
     "translucentcreampaper-fe3a991bc6a108c2f0e7ffe6e9c53f84.png": {
         "logical_path": "translucentcreampaper.png",
         "mtime": "2013-04-20T15:50:44-05:00",
         "size": 21604,
         "digest": "fe3a991bc6a108c2f0e7ffe6e9c53f84"
-    },
-    "woman-laying-d2d116a30b73583f2a1ee73614c6dd81.png": {
-        "logical_path": "woman-laying.png",
-        "mtime": "2013-04-20T15:50:44-05:00",
-        "size": 117554,
-        "digest": "d2d116a30b73583f2a1ee73614c6dd81"
     },
     "application-3a11ade38504678ea31ed0c36c4ae1ea.js": {
         "logical_path": "application.js",
@@ -258,17 +168,9 @@
         "digest": "d27b443462279070c06479858548ceb9"
     }
 }, "assets": {
-    "Exotic_Leaves_(Sanserveria).jpg": "Exotic_Leaves_(Sanserveria)-d1b984c220ddf95c985d3933e2cf125d.jpg",
-    "Gold-2.jpg": "Gold-2-3747ce6eeb24b0ba67117f8af3aaf297.jpg",
-    "Gold-5.jpg": "Gold-5-c94443a3998375ae07486f915f9d91b4.jpg",
     "LonghornDewDrop.jpg": "LonghornDewDrop-a1ee216bcb54a6be30cb63924ac4b6ce.jpg",
-    "Silver-2.jpg": "Silver-2-40e2e05deaa4290c11d3e993dcd222b3.jpg",
-    "Silver-8.jpg": "Silver-8-84de50f1d2fe5d30284e5972694481d6.jpg",
     "creampaper.png": "creampaper-f573fd1b409fe740c40efa2572789187.png",
-    "green-nature-leaves.jpg": "green-nature-leaves-2e34401fa88f8e78e7137b3a9e7ca694.jpg",
-    "home-hero3.png": "home-hero3-48ef9b4fa7c8ad7611b35c54853f62ef.png",
     "translucentcreampaper.png": "translucentcreampaper-fe3a991bc6a108c2f0e7ffe6e9c53f84.png",
-    "woman-laying.png": "woman-laying-d2d116a30b73583f2a1ee73614c6dd81.png",
     "application.js": "application-3a11ade38504678ea31ed0c36c4ae1ea.js",
     "application.css": "application-1036d3f89d9bea34a8f1b657e43facb7.css",
     "bootstrap.zip": "bootstrap-0737fb45bc507c4baf8f72400f67ef71.zip",
