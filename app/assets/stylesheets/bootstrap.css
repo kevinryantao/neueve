@@ -999,7 +999,7 @@ input[type="file"] {
   line-height: 31px;
 }
 select {
-  width: 220px;
+  width: 275px;
   border: 1px solid #cccccc;
   background-color: #ffffff;
 }
@@ -1680,6 +1680,8 @@ table {
 }
 .table th {
   font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
 }
 .table thead th {
   vertical-align: bottom;
