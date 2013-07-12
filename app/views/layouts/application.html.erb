@@ -8,6 +8,7 @@
   <%= javascript_include_tag "https://js.stripe.com/v1/" %>
   <%= csrf_meta_tags %>
   <%= render "layouts/shim" %>
+  <%= render "layouts/googleanalytics" %>
 </head>
 <body>
 <div class="container">
@@ -19,7 +20,6 @@
   <%= render "layouts/order_now" if !yield(:title).include? 'rder' %>
   <%= render "layouts/footer" %>
 </div>
-<%= render "layouts/googleanalytics" %>
 <%= render "layouts/backstretch" %>
 </body>
 
