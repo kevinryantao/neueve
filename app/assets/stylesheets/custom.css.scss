@@ -1,5 +1,4 @@
 @import "bootstrap";
- 
 
 /* header */
 .navbar-inner {
@@ -10,7 +9,6 @@
 .navbar {
   margin-bottom: 0px;
 }
-
 
 /* footer */
 
@@ -57,21 +55,18 @@ p, div {
 
 // Background image
 
-
 .container {
-    background: url(translucentcreampaper.png) repeat 0 0;
-
-    text-align: left;
-    padding-left:50px;
-    padding-right:50px;
-
+  background: url(translucentcreampaper.png) repeat 0 0;
+  text-align: left;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
-.icon-ok{
+.icon-ok {
   color: green;
 }
 
-.icon-remove{
+.icon-remove {
   color: darkred;
 }
 
