@@ -75,6 +75,7 @@ GEM
     mime-types (1.23)
     minitest (4.7.5)
     multi_json (1.7.7)
+    newrelic_rpm (3.6.5.130)
     pg (0.15.1)
     pg (0.15.1-x86-mingw32)
     polyglot (0.3.3)
@@ -142,6 +143,7 @@ DEPENDENCIES
   execjs
   heroku-deflater
   jquery-rails
+  newrelic_rpm
   pg
   protected_attributes
   rails (~> 4.0.0)
