@@ -1,0 +1,115 @@
+{"files": {
+    "LonghornDewDrop-2c3d7e712f69f912633d67aee3f9fe7f.jpg": {
+        "logical_path": "LonghornDewDrop.jpg",
+        "mtime": "2013-04-24T22:33:17-05:00",
+        "size": 865015,
+        "digest": "2c3d7e712f69f912633d67aee3f9fe7f"
+    },
+    "creampaper-cec9c1e459b7d2561d05b4bf4bb2d04a.png": {
+        "logical_path": "creampaper.png",
+        "mtime": "2013-04-20T15:50:44-05:00",
+        "size": 12618,
+        "digest": "cec9c1e459b7d2561d05b4bf4bb2d04a"
+    },
+    "neueve box 010-2eea9c2aa0c9ee46f7e90bf7fc4389dd.jpg": {
+        "logical_path": "neueve box 010.jpg",
+        "mtime": "2013-08-08T00:03:15-05:00",
+        "size": 36558,
+        "digest": "2eea9c2aa0c9ee46f7e90bf7fc4389dd"
+    },
+    "translucentcreampaper-1f4d0d8cf3e8ed5b9be342934b813120.png": {
+        "logical_path": "translucentcreampaper.png",
+        "mtime": "2013-04-20T15:50:44-05:00",
+        "size": 21604,
+        "digest": "1f4d0d8cf3e8ed5b9be342934b813120"
+    },
+    "application-9839a28e440d8b08aa1fda74e207af4c.js": {
+        "logical_path": "application.js",
+        "mtime": "2013-07-19T17:22:28-05:00",
+        "size": 355488,
+        "digest": "9839a28e440d8b08aa1fda74e207af4c"
+    },
+    "application-eaf23f85d4faebe00ef00cdff747de1c.css": {
+        "logical_path": "application.css",
+        "mtime": "2013-10-26T16:33:09-05:00",
+        "size": 677692,
+        "digest": "eaf23f85d4faebe00ef00cdff747de1c"
+    },
+    "bootstrap-a5941a3f631dfe800e17352df5777f7c.zip": {
+        "logical_path": "bootstrap.zip",
+        "mtime": "2013-04-24T22:33:17-05:00",
+        "size": 84297,
+        "digest": "a5941a3f631dfe800e17352df5777f7c"
+    },
+    "bootstrap/img/glyphicons-halflings-white-4fc45c51f1fd321ec719ce398cade699.png": {
+        "logical_path": "bootstrap/img/glyphicons-halflings-white.png",
+        "mtime": "2013-04-24T22:33:17-05:00",
+        "size": 8777,
+        "digest": "4fc45c51f1fd321ec719ce398cade699"
+    },
+    "bootstrap/img/glyphicons-halflings-21af47b0e428906e478d70c6f69b2655.png": {
+        "logical_path": "bootstrap/img/glyphicons-halflings.png",
+        "mtime": "2013-04-24T22:33:17-05:00",
+        "size": 12799,
+        "digest": "21af47b0e428906e478d70c6f69b2655"
+    },
+    "font-awesome/font/FontAwesome-6b41477a6c9ccb9367456efc3e9ae763.otf": {
+        "logical_path": "font-awesome/font/FontAwesome.otf",
+        "mtime": "2013-06-26T11:40:32-05:00",
+        "size": 61896,
+        "digest": "6b41477a6c9ccb9367456efc3e9ae763"
+    },
+    "font-awesome/font/fontawesome-webfont-b88595a5a4bfa39c91f7c70bb03f7623.eot": {
+        "logical_path": "font-awesome/font/fontawesome-webfont.eot",
+        "mtime": "2013-06-26T11:40:32-05:00",
+        "size": 37405,
+        "digest": "b88595a5a4bfa39c91f7c70bb03f7623"
+    },
+    "font-awesome/font/fontawesome-webfont-ba52945f1f2602ddcaf50e31a56b0f93.svg": {
+        "logical_path": "font-awesome/font/fontawesome-webfont.svg",
+        "mtime": "2013-06-26T11:40:32-05:00",
+        "size": 197829,
+        "digest": "ba52945f1f2602ddcaf50e31a56b0f93"
+    },
+    "font-awesome/font/fontawesome-webfont-b403c9963b138dd9511605f87a9e1623.ttf": {
+        "logical_path": "font-awesome/font/fontawesome-webfont.ttf",
+        "mtime": "2013-06-26T11:40:32-05:00",
+        "size": 79076,
+        "digest": "b403c9963b138dd9511605f87a9e1623"
+    },
+    "font-awesome/font/fontawesome-webfont-e2c599b9eada7c81170186e5903134f9.woff": {
+        "logical_path": "font-awesome/font/fontawesome-webfont.woff",
+        "mtime": "2013-06-26T11:40:32-05:00",
+        "size": 43572,
+        "digest": "e2c599b9eada7c81170186e5903134f9"
+    },
+    "glyphicons-halflings-white-4fc45c51f1fd321ec719ce398cade699.png": {
+        "logical_path": "glyphicons-halflings-white.png",
+        "mtime": "2013-07-21T03:21:25-05:00",
+        "size": 8777,
+        "digest": "4fc45c51f1fd321ec719ce398cade699"
+    },
+    "glyphicons-halflings-21af47b0e428906e478d70c6f69b2655.png": {
+        "logical_path": "glyphicons-halflings.png",
+        "mtime": "2013-07-21T03:21:25-05:00",
+        "size": 12799,
+        "digest": "21af47b0e428906e478d70c6f69b2655"
+    }
+}, "assets": {
+    "LonghornDewDrop.jpg": "LonghornDewDrop-2c3d7e712f69f912633d67aee3f9fe7f.jpg",
+    "creampaper.png": "creampaper-cec9c1e459b7d2561d05b4bf4bb2d04a.png",
+    "neueve box 010.jpg": "neueve box 010-2eea9c2aa0c9ee46f7e90bf7fc4389dd.jpg",
+    "translucentcreampaper.png": "translucentcreampaper-1f4d0d8cf3e8ed5b9be342934b813120.png",
+    "application.js": "application-9839a28e440d8b08aa1fda74e207af4c.js",
+    "application.css": "application-eaf23f85d4faebe00ef00cdff747de1c.css",
+    "bootstrap.zip": "bootstrap-a5941a3f631dfe800e17352df5777f7c.zip",
+    "bootstrap/img/glyphicons-halflings-white.png": "bootstrap/img/glyphicons-halflings-white-4fc45c51f1fd321ec719ce398cade699.png",
+    "bootstrap/img/glyphicons-halflings.png": "bootstrap/img/glyphicons-halflings-21af47b0e428906e478d70c6f69b2655.png",
+    "font-awesome/font/FontAwesome.otf": "font-awesome/font/FontAwesome-6b41477a6c9ccb9367456efc3e9ae763.otf",
+    "font-awesome/font/fontawesome-webfont.eot": "font-awesome/font/fontawesome-webfont-b88595a5a4bfa39c91f7c70bb03f7623.eot",
+    "font-awesome/font/fontawesome-webfont.svg": "font-awesome/font/fontawesome-webfont-ba52945f1f2602ddcaf50e31a56b0f93.svg",
+    "font-awesome/font/fontawesome-webfont.ttf": "font-awesome/font/fontawesome-webfont-b403c9963b138dd9511605f87a9e1623.ttf",
+    "font-awesome/font/fontawesome-webfont.woff": "font-awesome/font/fontawesome-webfont-e2c599b9eada7c81170186e5903134f9.woff",
+    "glyphicons-halflings-white.png": "glyphicons-halflings-white-4fc45c51f1fd321ec719ce398cade699.png",
+    "glyphicons-halflings.png": "glyphicons-halflings-21af47b0e428906e478d70c6f69b2655.png"
+}}
