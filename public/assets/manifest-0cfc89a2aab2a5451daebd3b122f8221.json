@@ -85,15 +85,21 @@
     },
     "glyphicons-halflings-white-4fc45c51f1fd321ec719ce398cade699.png": {
         "logical_path": "glyphicons-halflings-white.png",
-        "mtime": "2013-07-21T03:21:25-05:00",
+        "mtime": "2013-11-08T16:14:50-06:00",
         "size": 8777,
         "digest": "4fc45c51f1fd321ec719ce398cade699"
     },
     "glyphicons-halflings-21af47b0e428906e478d70c6f69b2655.png": {
         "logical_path": "glyphicons-halflings.png",
-        "mtime": "2013-07-21T03:21:25-05:00",
+        "mtime": "2013-11-08T16:14:50-06:00",
         "size": 12799,
         "digest": "21af47b0e428906e478d70c6f69b2655"
+    },
+    "neueve box image-a4ab8b01d4edf15653fa897c7031c149.png": {
+        "logical_path": "neueve box image.png",
+        "mtime": "2013-11-08T16:30:19-06:00",
+        "size": 1336604,
+        "digest": "a4ab8b01d4edf15653fa897c7031c149"
     }
 }, "assets": {
     "LonghornDewDrop.jpg": "LonghornDewDrop-2c3d7e712f69f912633d67aee3f9fe7f.jpg",
@@ -111,5 +117,6 @@
     "font-awesome/font/fontawesome-webfont.ttf": "font-awesome/font/fontawesome-webfont-b403c9963b138dd9511605f87a9e1623.ttf",
     "font-awesome/font/fontawesome-webfont.woff": "font-awesome/font/fontawesome-webfont-e2c599b9eada7c81170186e5903134f9.woff",
     "glyphicons-halflings-white.png": "glyphicons-halflings-white-4fc45c51f1fd321ec719ce398cade699.png",
-    "glyphicons-halflings.png": "glyphicons-halflings-21af47b0e428906e478d70c6f69b2655.png"
+    "glyphicons-halflings.png": "glyphicons-halflings-21af47b0e428906e478d70c6f69b2655.png",
+    "neueve box image.png": "neueve box image-a4ab8b01d4edf15653fa897c7031c149.png"
 }}
