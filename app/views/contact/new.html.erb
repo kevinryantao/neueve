@@ -1,29 +1,11 @@
 <% provide(:title, 'Contact Us') %>
 
 <div class="jumbotron">
-    <h1>Contact Us</h1>
+  <h1>Contact Us</h1>
 </div>
 
 <p>
-    We are located in Palatine, Illinois, USA
+  We are located in Palatine, Illinois, USA
 <p>
-    For questions, comments, and suggestions, email us at: <%= mail_to "NeuEve.Suppositories@gmail.com" %> or
+  For questions, comments, and suggestions, email us at: <%= mail_to "NeuEve.Suppositories@gmail.com" %>
 <p>
-    or use the form below:
-    <%= form_for @message, :url => contact_path, :html => { :class => "form-horizontal well"}  do |form| %>
-        <%= render 'shared/error_messages' %>
-
-    <div class="control-group">
-        <%= form.label "Your Name" %>
-        <%= form.text_field :name %>
-    </div>
-    <div class="control-group">
-        <%= form.label :email %>
-        <%= form.text_field :email %>
-    </div>
-    <div class="control-group">
-        <%= form.label "Message" %>
-        <%= form.text_area :body, :rows => 3, :class => "input-xlarge" %>
-    </div>
-    <%= form.submit "Send", class: "btn btn-large btn-primary" %>
-<% end %>

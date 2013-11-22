@@ -56,7 +56,7 @@ module Lavax
       :address              => "smtp.gmail.com",
       :port                 => 587,
       :user_name            => "neueve.suppositories@gmail.com",
-      :password             => "kduke11589",
+      :password             => "abcdefg",
       :authentication       => "plain",
       :enable_starttls_auto => true
     }
