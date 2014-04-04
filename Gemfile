@@ -13,6 +13,8 @@ gem 'actionpack-action_caching'
 gem 'newrelic_rpm'
 gem 'yui-compressor'
 gem "font-awesome-rails"
+gem 'dalli'
+gem 'memcachier'
 
 gem 'rails_log_stdout', github: 'heroku/rails_log_stdout'
 gem 'rails3_serve_static_assets', github: 'heroku/rails3_serve_static_assets'

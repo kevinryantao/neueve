@@ -18,8 +18,6 @@ Lavax::Application.routes.draw do
 
   match "/testimonials" => "static_pages#testimonials", :via => :get
 
-  match "/buy" => "static_pages#buy", :via => :get
-
   match "/success" => "static_pages#success", :via => :get
 
 
