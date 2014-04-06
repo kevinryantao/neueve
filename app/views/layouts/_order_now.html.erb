@@ -1,10 +1,69 @@
 <br>
 <br>
-<h3>
-  Try it for yourself, order NeuEve today! <%= link_to 'Questions?', faq_path %>
-</h3>
+
+<div align="center">
+  <h3>
+    Which formula is right for me?
+  </h3>
+  <br>
+  <%= image_tag("http://i.imgur.com/W0JQU03.png", size: "500x400") %>
+  <br>
+  <%= link_to 'More details', faq_path(:anchor => 'selectingFormula') %>
+</div>
 
 <br>
+
+
+<table class='table table-bordered table-striped table-hover table-condensed'>
+  <thead>
+  <tr>
+    <th colspan="4" rowspan="1" style="font-size:23px;">Difference between Silk, Silver, and Gold Formulas</th>
+  </tr>
+  <tr>
+    <th>Suppository</th>
+    <th>Silk</th>
+    <th>Silver</th>
+    <th>Gold</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td><strong>Effect</strong></td>
+    <td>Mild</td>
+    <td>Moderate</td>
+    <td>Strong</td>
+  </tr>
+  <tr>
+    <td><strong>Suitable for</strong></td>
+    <td>Recovery</td>
+    <td>Recovery & Maintenance</td>
+    <td>Maintenance</td>
+  </tr>
+  <tr>
+    <td><strong>Each lasts</strong></td>
+    <td>3-4 days</td>
+    <td>5-6 days</td>
+    <td>7-8 days</td>
+  </tr>
+  <tr>
+    <td><strong>Supplies per Month</strong></td>
+    <td>8</td>
+    <td>6</td>
+    <td>4</td>
+  </tr>
+  </tbody>
+</table>
+<div align="center">
+  <%= link_to 'More details on Silk vs. Silver vs. Gold', faq_path(:anchor => 'silkSilverGoldDifferences') %>
+</div>
+<br>
+
+
+
+<br>
+<h3>
+  Try it for yourself, order NeuEve today!
+</h3>
 
 <table class='table table-bordered table-striped'>
   <thead>
