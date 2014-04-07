@@ -382,13 +382,19 @@
         "mtime": "2014-04-04T14:43:49-05:00",
         "size": 23320,
         "digest": "4a5115f683cbc44b31241ce9f4bf9bc0"
+    },
+    "application-edf8e7f03032f038b50924827c01c135.css": {
+        "logical_path": "application.css",
+        "mtime": "2014-04-06T12:08:24-05:00",
+        "size": 792512,
+        "digest": "edf8e7f03032f038b50924827c01c135"
     }
 }, "assets": {
     "creampaper.png": "creampaper-8f0d10616c9fc92e77c22609aec82f90.png",
     "neueve box 010.jpg": "neueve box 010-567bfcdee2f86e12269d4b96e0cd9696.jpg",
     "translucentcreampaper.png": "translucentcreampaper-d082862a46ddeaa3de2e204c5caf9fa1.png",
     "application.js": "application-d48ae72cd86ae08aecdfedf4fc140879.js",
-    "application.css": "application-0702ab9935c755c30f0cc5274dbc41ee.css",
+    "application.css": "application-edf8e7f03032f038b50924827c01c135.css",
     "bootstrap.zip": "bootstrap-6e5c2b5775b3ef78860b9df7294ecfff.zip",
     "bootstrap/img/glyphicons-halflings-white.png": "bootstrap/img/glyphicons-halflings-white-512a56f8680ecd2e92eab1388c7218c3.png",
     "bootstrap/img/glyphicons-halflings.png": "bootstrap/img/glyphicons-halflings-d82f9e6000437d6936b471a08e794bb7.png",
