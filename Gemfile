@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
-ruby "2.0.0"
+ruby "2.1.1"
 
-gem 'rails', '~> 4.0.1.rc3'
+gem 'rails', '~> 4.1'
 gem 'bootstrap-sass'
 gem 'therubyracer'
 gem 'better_errors'
@@ -16,8 +16,8 @@ gem "font-awesome-rails"
 gem 'dalli'
 gem 'memcachier'
 
-gem 'rails_log_stdout', github: 'heroku/rails_log_stdout'
-gem 'rails3_serve_static_assets', github: 'heroku/rails3_serve_static_assets'
+gem 'rails_log_stdout', github : 'heroku/rails_log_stdout'
+gem 'rails3_serve_static_assets', github : 'heroku/rails3_serve_static_assets'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
