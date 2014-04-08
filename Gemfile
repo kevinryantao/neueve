@@ -16,8 +16,7 @@ gem "font-awesome-rails"
 gem 'dalli'
 gem 'memcachier'
 
-gem 'rails_log_stdout', github : 'heroku/rails_log_stdout'
-gem 'rails3_serve_static_assets', github : 'heroku/rails3_serve_static_assets'
+gem 'rails_12factor'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
