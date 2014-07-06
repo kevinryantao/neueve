@@ -88,3 +88,11 @@ p, div {
 .btn-info {
   border-radius: 10px;
 }
+
+.table-bordered {
+  border: 1px #ddd;
+}
+
+.table-bordered td, .table-bordered th {
+  border: 1px solid #ddd;
+}
