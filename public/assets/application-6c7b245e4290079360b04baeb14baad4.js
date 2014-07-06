@@ -1,5 +1,5 @@
 /*!
- * jQuery JavaScript Library v1.11.0
+ * jQuery JavaScript Library v1.11.1
  * http://jquery.com/
  *
  * Includes Sizzle.js
@@ -9,7 +9,7 @@
  * Released under the MIT license
  * http://jquery.org/license
  *
- * Date: 2014-01-23T21:02Z
+ * Date: 2014-05-01T17:42Z
  */
 
 
@@ -60,13 +60,11 @@
 
     var hasOwn = class2type.hasOwnProperty;
 
-    var trim = "".trim;
-
     var support = {};
 
 
     var
-        version = "1.11.0",
+        version = "1.11.1",
 
     // Define a local copy of jQuery
         jQuery = function (selector, context) {
@@ -75,7 +73,8 @@
             return new jQuery.fn.init(selector, context);
         },
 
-    // Make sure we trim BOM and NBSP (here's looking at you, Safari 5.0 and IE)
+    // Support: Android<4.1, IE<9
+    // Make sure we trim BOM and NBSP
         rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g,
 
     // Matches dashed string for camelizing
@@ -108,10 +107,10 @@
         get: function (num) {
             return num != null ?
 
-                // Return a 'clean' array
+                // Return just the one element from the set
                 ( num < 0 ? this[ num + this.length ] : this[ num ] ) :
 
-                // Return just the object
+                // Return all the elements in a clean array
                 slice.call(this);
         },
 
@@ -271,7 +270,7 @@
             // parseFloat NaNs numeric-cast false positives (null|true|false|"")
             // ...but misinterprets leading-number strings, particularly hex literals ("0x...")
             // subtraction forces infinities to NaN
-            return obj - parseFloat(obj) >= 0;
+            return !jQuery.isArray(obj) && obj - parseFloat(obj) >= 0;
         },
 
         isEmptyObject: function (obj) {
@@ -401,20 +400,12 @@
             return obj;
         },
 
-        // Use native String.trim function wherever possible
-        trim: trim && !trim.call("\uFEFF\xA0") ?
-            function (text) {
-                return text == null ?
-                    "" :
-                    trim.call(text);
-            } :
-
-            // Otherwise use our own trimming functionality
-            function (text) {
-                return text == null ?
-                    "" :
-                    ( text + "" ).replace(rtrim, "");
-            },
+        // Support: Android<4.1, IE<9
+        trim: function (text) {
+            return text == null ?
+                "" :
+                ( text + "" ).replace(rtrim, "");
+        },
 
         // results is for internal usage only
         makeArray: function (arr, results) {
@@ -594,14 +585,14 @@
 
     var Sizzle =
         /*!
-         * Sizzle CSS Selector Engine v1.10.16
+         * Sizzle CSS Selector Engine v1.10.19
          * http://sizzlejs.com/
          *
          * Copyright 2013 jQuery Foundation, Inc. and other contributors
          * Released under the MIT license
          * http://jquery.org/license
          *
-         * Date: 2014-01-13
+         * Date: 2014-04-18
          */
         (function (window) {
 
@@ -610,7 +601,9 @@
                 Expr,
                 getText,
                 isXML,
+                tokenize,
                 compile,
+                select,
                 outermostContext,
                 sortInput,
                 hasDuplicate,
@@ -677,17 +670,23 @@
             // Proper syntax: http://www.w3.org/TR/CSS21/syndata.html#value-def-identifier
                 identifier = characterEncoding.replace("w", "w#"),
 
-            // Acceptable operators http://www.w3.org/TR/selectors/#attribute-selectors
-                attributes = "\\[" + whitespace + "*(" + characterEncoding + ")" + whitespace +
-                    "*(?:([*^$|!~]?=)" + whitespace + "*(?:(['\"])((?:\\\\.|[^\\\\])*?)\\3|(" + identifier + ")|)|)" + whitespace + "*\\]",
+            // Attribute selectors: http://www.w3.org/TR/selectors/#attribute-selectors
+                attributes = "\\[" + whitespace + "*(" + characterEncoding + ")(?:" + whitespace +
+                    // Operator (capture 2)
+                    "*([*^$|!~]?=)" + whitespace +
+                    // "Attribute values must be CSS identifiers [capture 5] or strings [capture 3 or capture 4]"
+                    "*(?:'((?:\\\\.|[^\\\\'])*)'|\"((?:\\\\.|[^\\\\\"])*)\"|(" + identifier + "))|)" + whitespace +
+                    "*\\]",
 
-            // Prefer arguments quoted,
-            //   then not containing pseudos/brackets,
-            //   then attribute selectors/non-parenthetical expressions,
-            //   then anything else
-            // These preferences are here to reduce the number of selectors
-            //   needing tokenize in the PSEUDO preFilter
-                pseudos = ":(" + characterEncoding + ")(?:\\(((['\"])((?:\\\\.|[^\\\\])*?)\\3|((?:\\\\.|[^\\\\()[\\]]|" + attributes.replace(3, 8) + ")*)|.*)\\)|)",
+                pseudos = ":(" + characterEncoding + ")(?:\\((" +
+                    // To reduce the number of selectors needing tokenize in the preFilter, prefer arguments:
+                    // 1. quoted (capture 3; capture 4 or capture 5)
+                    "('((?:\\\\.|[^\\\\'])*)'|\"((?:\\\\.|[^\\\\\"])*)\")|" +
+                    // 2. simple (capture 6)
+                    "((?:\\\\.|[^\\\\()[\\]]|" + attributes + ")*)|" +
+                    // 3. anything else (capture 2)
+                    ".*" +
+                    ")\\)|)",
 
             // Leading and non-escaped trailing whitespace, capturing some non-whitespace characters preceding the latter
                 rtrim = new RegExp("^" + whitespace + "+|((?:^|[^\\\\])(?:\\\\.)*)" + whitespace + "+$", "g"),
@@ -732,7 +731,7 @@
                 funescape = function (_, escaped, escapedWhitespace) {
                     var high = "0x" + escaped - 0x10000;
                     // NaN means non-codepoint
-                    // Support: Firefox
+                    // Support: Firefox<24
                     // Workaround erroneous numeric interpretation of +"0x"
                     return high !== high || escapedWhitespace ?
                         escaped :
@@ -1130,7 +1129,7 @@
                             var m = context.getElementById(id);
                             // Check parentNode to catch when Blackberry 4.6 returns
                             // nodes that are no longer in the document #6963
-                            return m && m.parentNode ? [m] : [];
+                            return m && m.parentNode ? [ m ] : [];
                         }
                     };
                     Expr.filter["ID"] = function (id) {
@@ -1210,11 +1209,13 @@
                         // setting a boolean content attribute,
                         // since its presence should be enough
                         // http://bugs.jquery.com/ticket/12359
-                        div.innerHTML = "<select t=''><option selected=''></option></select>";
+                        div.innerHTML = "<select msallowclip=''><option selected=''></option></select>";
 
-                        // Support: IE8, Opera 10-12
+                        // Support: IE8, Opera 11-12.16
                         // Nothing should be selected when empty strings follow ^= or $= or *=
-                        if (div.querySelectorAll("[t^='']").length) {
+                        // The test attribute must be unknown in Opera but "safe" for WinRT
+                        // http://msdn.microsoft.com/en-us/library/ie/hh465388.aspx#attribute_section
+                        if (div.querySelectorAll("[msallowclip^='']").length) {
                             rbuggyQSA.push("[*^$]=" + whitespace + "*(?:''|\"\")");
                         }
 
@@ -1257,7 +1258,8 @@
                     });
                 }
 
-                if ((support.matchesSelector = rnative.test((matches = docElem.webkitMatchesSelector ||
+                if ((support.matchesSelector = rnative.test((matches = docElem.matches ||
+                    docElem.webkitMatchesSelector ||
                     docElem.mozMatchesSelector ||
                     docElem.oMatchesSelector ||
                     docElem.msMatchesSelector)))) {
@@ -1439,7 +1441,7 @@
                     }
                 }
 
-                return Sizzle(expr, document, null, [elem]).length > 0;
+                return Sizzle(expr, document, null, [ elem ]).length > 0;
             };
 
             Sizzle.contains = function (context, elem) {
@@ -1568,7 +1570,7 @@
                         match[1] = match[1].replace(runescape, funescape);
 
                         // Move the given value to match[3] whether quoted or unquoted
-                        match[3] = ( match[4] || match[5] || "" ).replace(runescape, funescape);
+                        match[3] = ( match[3] || match[4] || match[5] || "" ).replace(runescape, funescape);
 
                         if (match[2] === "~=") {
                             match[3] = " " + match[3] + " ";
@@ -1611,15 +1613,15 @@
 
                     "PSEUDO": function (match) {
                         var excess,
-                            unquoted = !match[5] && match[2];
+                            unquoted = !match[6] && match[2];
 
                         if (matchExpr["CHILD"].test(match[0])) {
                             return null;
                         }
 
                         // Accept quoted arguments as-is
-                        if (match[3] && match[4] !== undefined) {
-                            match[2] = match[4];
+                        if (match[3]) {
+                            match[2] = match[4] || match[5] || "";
 
                             // Strip excess characters from unquoted arguments
                         } else if (unquoted && rpseudo.test(unquoted) &&
@@ -2028,7 +2030,7 @@
             setFilters.prototype = Expr.filters = Expr.pseudos;
             Expr.setFilters = new setFilters();
 
-            function tokenize(selector, parseOnly) {
+            tokenize = Sizzle.tokenize = function (selector, parseOnly) {
                 var matched, match, tokens, type,
                     soFar, groups, preFilters,
                     cached = tokenCache[ selector + " " ];
@@ -2093,7 +2095,7 @@
                         Sizzle.error(selector) :
                         // Cache the tokens
                         tokenCache(selector, groups).slice(0);
-            }
+            };
 
             function toSelector(tokens) {
                 var i = 0,
@@ -2170,6 +2172,15 @@
                         return true;
                     } :
                     matchers[0];
+            }
+
+            function multipleContexts(selector, contexts, results) {
+                var i = 0,
+                    len = contexts.length;
+                for (; i < len; i++) {
+                    Sizzle(selector, contexts[i], results);
+                }
+                return results;
             }
 
             function condense(unmatched, map, filter, context, xml) {
@@ -2440,7 +2451,7 @@
                     superMatcher;
             }
 
-            compile = Sizzle.compile = function (selector, group /* Internal Use Only */) {
+            compile = Sizzle.compile = function (selector, match /* Internal Use Only */) {
                 var i,
                     setMatchers = [],
                     elementMatchers = [],
@@ -2448,12 +2459,12 @@
 
                 if (!cached) {
                     // Generate a function of recursive functions that can be used to check each element
-                    if (!group) {
-                        group = tokenize(selector);
+                    if (!match) {
+                        match = tokenize(selector);
                     }
-                    i = group.length;
+                    i = match.length;
                     while (i--) {
-                        cached = matcherFromTokens(group[i]);
+                        cached = matcherFromTokens(match[i]);
                         if (cached[ expando ]) {
                             setMatchers.push(cached);
                         } else {
@@ -2463,74 +2474,83 @@
 
                     // Cache the compiled function
                     cached = compilerCache(selector, matcherFromGroupMatchers(elementMatchers, setMatchers));
+
+                    // Save selector and tokenization
+                    cached.selector = selector;
                 }
                 return cached;
             };
 
-            function multipleContexts(selector, contexts, results) {
-                var i = 0,
-                    len = contexts.length;
-                for (; i < len; i++) {
-                    Sizzle(selector, contexts[i], results);
-                }
-                return results;
-            }
-
-            function select(selector, context, results, seed) {
+            /**
+             * A low-level selection function that works with Sizzle's compiled
+             *  selector functions
+             * @param {String|Function} selector A selector or a pre-compiled
+             *  selector function built with Sizzle.compile
+             * @param {Element} context
+             * @param {Array} [results]
+             * @param {Array} [seed] A set of elements to match against
+             */
+            select = Sizzle.select = function (selector, context, results, seed) {
                 var i, tokens, token, type, find,
-                    match = tokenize(selector);
+                    compiled = typeof selector === "function" && selector,
+                    match = !seed && tokenize((selector = compiled.selector || selector));
 
-                if (!seed) {
-                    // Try to minimize operations if there is only one group
-                    if (match.length === 1) {
+                results = results || [];
 
-                        // Take a shortcut and set the context if the root selector is an ID
-                        tokens = match[0] = match[0].slice(0);
-                        if (tokens.length > 2 && (token = tokens[0]).type === "ID" &&
-                            support.getById && context.nodeType === 9 && documentIsHTML &&
-                            Expr.relative[ tokens[1].type ]) {
+                // Try to minimize operations if there is no seed and only one group
+                if (match.length === 1) {
 
-                            context = ( Expr.find["ID"](token.matches[0].replace(runescape, funescape), context) || [] )[0];
-                            if (!context) {
-                                return results;
-                            }
-                            selector = selector.slice(tokens.shift().value.length);
+                    // Take a shortcut and set the context if the root selector is an ID
+                    tokens = match[0] = match[0].slice(0);
+                    if (tokens.length > 2 && (token = tokens[0]).type === "ID" &&
+                        support.getById && context.nodeType === 9 && documentIsHTML &&
+                        Expr.relative[ tokens[1].type ]) {
+
+                        context = ( Expr.find["ID"](token.matches[0].replace(runescape, funescape), context) || [] )[0];
+                        if (!context) {
+                            return results;
+
+                            // Precompiled matchers will still verify ancestry, so step up a level
+                        } else if (compiled) {
+                            context = context.parentNode;
                         }
 
-                        // Fetch a seed set for right-to-left matching
-                        i = matchExpr["needsContext"].test(selector) ? 0 : tokens.length;
-                        while (i--) {
-                            token = tokens[i];
+                        selector = selector.slice(tokens.shift().value.length);
+                    }
 
-                            // Abort if we hit a combinator
-                            if (Expr.relative[ (type = token.type) ]) {
-                                break;
-                            }
-                            if ((find = Expr.find[ type ])) {
-                                // Search, expanding context for leading sibling combinators
-                                if ((seed = find(
-                                    token.matches[0].replace(runescape, funescape),
-                                    rsibling.test(tokens[0].type) && testContext(context.parentNode) || context
-                                ))) {
+                    // Fetch a seed set for right-to-left matching
+                    i = matchExpr["needsContext"].test(selector) ? 0 : tokens.length;
+                    while (i--) {
+                        token = tokens[i];
 
-                                    // If seed is empty or no tokens remain, we can return early
-                                    tokens.splice(i, 1);
-                                    selector = seed.length && toSelector(tokens);
-                                    if (!selector) {
-                                        push.apply(results, seed);
-                                        return results;
-                                    }
+                        // Abort if we hit a combinator
+                        if (Expr.relative[ (type = token.type) ]) {
+                            break;
+                        }
+                        if ((find = Expr.find[ type ])) {
+                            // Search, expanding context for leading sibling combinators
+                            if ((seed = find(
+                                token.matches[0].replace(runescape, funescape),
+                                rsibling.test(tokens[0].type) && testContext(context.parentNode) || context
+                            ))) {
 
-                                    break;
+                                // If seed is empty or no tokens remain, we can return early
+                                tokens.splice(i, 1);
+                                selector = seed.length && toSelector(tokens);
+                                if (!selector) {
+                                    push.apply(results, seed);
+                                    return results;
                                 }
+
+                                break;
                             }
                         }
                     }
                 }
 
-                // Compile and execute a filtering function
+                // Compile and execute a filtering function if one is not provided
                 // Provide `match` to avoid retokenization if we modified the selector above
-                compile(selector, match)(
+                ( compiled || compile(selector, match) )(
                     seed,
                     context,
                     !documentIsHTML,
@@ -2538,7 +2558,7 @@
                     rsibling.test(selector) && testContext(context.parentNode) || context
                 );
                 return results;
-            }
+            };
 
 // One-time assignments
 
@@ -3427,8 +3447,9 @@
             readyList.resolveWith(document, [ jQuery ]);
 
             // Trigger any bound ready events
-            if (jQuery.fn.trigger) {
-                jQuery(document).trigger("ready").off("ready");
+            if (jQuery.fn.triggerHandler) {
+                jQuery(document).triggerHandler("ready");
+                jQuery(document).off("ready");
             }
         }
     });
@@ -3536,23 +3557,21 @@
 // false until the test is run
     support.inlineBlockNeedsLayout = false;
 
+// Execute ASAP in case we need to set body.style.zoom
     jQuery(function () {
-        // We need to execute this one support test ASAP because we need to know
-        // if body.style.zoom needs to be set.
+        // Minified: var a,b,c,d
+        var val, div, body, container;
 
-        var container, div,
-            body = document.getElementsByTagName("body")[0];
-
-        if (!body) {
+        body = document.getElementsByTagName("body")[ 0 ];
+        if (!body || !body.style) {
             // Return for frameset docs that don't have a body
             return;
         }
 
         // Setup
-        container = document.createElement("div");
-        container.style.cssText = "border:0;width:0;height:0;position:absolute;top:0;left:-9999px;margin-top:1px";
-
         div = document.createElement("div");
+        container = document.createElement("div");
+        container.style.cssText = "position:absolute;border:0;width:0;height:0;top:0;left:-9999px";
         body.appendChild(container).appendChild(div);
 
         if (typeof div.style.zoom !== strundefined) {
@@ -3560,9 +3579,10 @@
             // Check if natively block-level elements act like inline-block
             // elements when setting their display to 'inline' and giving
             // them layout
-            div.style.cssText = "border:0;margin:0;width:1px;padding:1px;display:inline;zoom:1";
+            div.style.cssText = "display:inline;margin:0;border:0;padding:1px;width:1px;zoom:1";
 
-            if ((support.inlineBlockNeedsLayout = ( div.offsetWidth === 3 ))) {
+            support.inlineBlockNeedsLayout = val = div.offsetWidth === 3;
+            if (val) {
                 // Prevent IE 6 from affecting layout for positioned elements #11048
                 // Prevent IE from shrinking the body in IE 7 mode #12869
                 // Support: IE<8
@@ -3571,9 +3591,6 @@
         }
 
         body.removeChild(container);
-
-        // Null elements to avoid leaks in IE
-        container = div = null;
     });
 
 
@@ -3895,12 +3912,15 @@
                     if (elem.nodeType === 1 && !jQuery._data(elem, "parsedAttrs")) {
                         i = attrs.length;
                         while (i--) {
-                            name = attrs[i].name;
 
-                            if (name.indexOf("data-") === 0) {
-                                name = jQuery.camelCase(name.slice(5));
-
-                                dataAttr(elem, name, data[ name ]);
+                            // Support: IE11+
+                            // The attrs elements can be null (#14894)
+                            if (attrs[ i ]) {
+                                name = attrs[ i ].name;
+                                if (name.indexOf("data-") === 0) {
+                                    name = jQuery.camelCase(name.slice(5));
+                                    dataAttr(elem, name, data[ name ]);
+                                }
                             }
                         }
                         jQuery._data(elem, "parsedAttrs", true);
@@ -4138,13 +4158,13 @@
 
 
     (function () {
-        var fragment = document.createDocumentFragment(),
+        // Minified: var a,b,c
+        var input = document.createElement("input"),
             div = document.createElement("div"),
-            input = document.createElement("input");
+            fragment = document.createDocumentFragment();
 
         // Setup
-        div.setAttribute("className", "t");
-        div.innerHTML = "  <link/><table></table><a href='/a'>a</a>";
+        div.innerHTML = "  <link/><table></table><a href='/a'>a</a><input type='checkbox'/>";
 
         // IE strips leading whitespace when .innerHTML is used
         support.leadingWhitespace = div.firstChild.nodeType === 3;
@@ -4204,9 +4224,6 @@
                 support.deleteExpando = false;
             }
         }
-
-        // Null elements to avoid leaks in IE.
-        fragment = div = input = null;
     })();
 
 
@@ -4232,7 +4249,7 @@
 
     var rformElems = /^(?:input|select|textarea)$/i,
         rkeyEvent = /^key/,
-        rmouseEvent = /^(?:mouse|contextmenu)|click/,
+        rmouseEvent = /^(?:mouse|pointer|contextmenu)|click/,
         rfocusMorph = /^(?:focusinfocus|focusoutblur)$/,
         rtypenamespace = /^([^.]*)(?:\.(.+)|)$/;
 
@@ -4836,8 +4853,9 @@
             beforeunload: {
                 postDispatch: function (event) {
 
-                    // Even when returnValue equals to undefined Firefox will still show alert
-                    if (event.result !== undefined) {
+                    // Support: Firefox 20+
+                    // Firefox doesn't alert if the returnValue field is not set.
+                    if (event.result !== undefined && event.originalEvent) {
                         event.originalEvent.returnValue = event.result;
                     }
                 }
@@ -4903,11 +4921,9 @@
             // Events bubbling up the document may have been marked as prevented
             // by a handler lower down the tree; reflect the correct value.
             this.isDefaultPrevented = src.defaultPrevented ||
-                src.defaultPrevented === undefined && (
-                    // Support: IE < 9
-                    src.returnValue === false ||
-                        // Support: Android < 4.0
-                        src.getPreventDefault && src.getPreventDefault() ) ?
+                src.defaultPrevented === undefined &&
+                    // Support: IE < 9, Android < 4.0
+                    src.returnValue === false ?
                 returnTrue :
                 returnFalse;
 
@@ -4970,7 +4986,14 @@
             e.cancelBubble = true;
         },
         stopImmediatePropagation: function () {
+            var e = this.originalEvent;
+
             this.isImmediatePropagationStopped = returnTrue;
+
+            if (e && e.stopImmediatePropagation) {
+                e.stopImmediatePropagation();
+            }
+
             this.stopPropagation();
         }
     };
@@ -4978,7 +5001,9 @@
 // Create mouseenter/leave events using mouseover/out and event-time checks
     jQuery.each({
         mouseenter: "mouseover",
-        mouseleave: "mouseout"
+        mouseleave: "mouseout",
+        pointerenter: "pointerover",
+        pointerleave: "pointerout"
     }, function (orig, fix) {
         jQuery.event.special[ orig ] = {
             delegateType: fix,
@@ -5981,14 +6006,15 @@
      */
 // Called only from within defaultDisplay
     function actualDisplay(name, doc) {
-        var elem = jQuery(doc.createElement(name)).appendTo(doc.body),
+        var style,
+            elem = jQuery(doc.createElement(name)).appendTo(doc.body),
 
         // getDefaultComputedStyle might be reliably used only on attached element
-            display = window.getDefaultComputedStyle ?
+            display = window.getDefaultComputedStyle && ( style = window.getDefaultComputedStyle(elem[ 0 ]) ) ?
 
                 // Use of this method is a temporary fix (more like optmization) until something better comes along,
                 // since it was removed from specification and supported only in FF
-                window.getDefaultComputedStyle(elem[ 0 ]).display : jQuery.css(elem[ 0 ], "display");
+                style.display : jQuery.css(elem[ 0 ], "display");
 
         // We don't have any data stored on the element,
         // so use "detach" method as fast way to get rid of the element
@@ -6034,67 +6060,46 @@
 
 
     (function () {
-        var a, shrinkWrapBlocksVal,
-            div = document.createElement("div"),
-            divReset =
-                "-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box;" +
-                    "display:block;padding:0;margin:0;border:0";
-
-        // Setup
-        div.innerHTML = "  <link/><table></table><a href='/a'>a</a><input type='checkbox'/>";
-        a = div.getElementsByTagName("a")[ 0 ];
-
-        a.style.cssText = "float:left;opacity:.5";
-
-        // Make sure that element opacity exists
-        // (IE uses filter instead)
-        // Use a regex to work around a WebKit issue. See #5145
-        support.opacity = /^0.5/.test(a.style.opacity);
-
-        // Verify style float existence
-        // (IE uses styleFloat instead of cssFloat)
-        support.cssFloat = !!a.style.cssFloat;
-
-        div.style.backgroundClip = "content-box";
-        div.cloneNode(true).style.backgroundClip = "";
-        support.clearCloneStyle = div.style.backgroundClip === "content-box";
-
-        // Null elements to avoid leaks in IE.
-        a = div = null;
+        var shrinkWrapBlocksVal;
 
         support.shrinkWrapBlocks = function () {
-            var body, container, div, containerStyles;
-
-            if (shrinkWrapBlocksVal == null) {
-                body = document.getElementsByTagName("body")[ 0 ];
-                if (!body) {
-                    // Test fired too early or in an unsupported environment, exit.
-                    return;
-                }
-
-                containerStyles = "border:0;width:0;height:0;position:absolute;top:0;left:-9999px";
-                container = document.createElement("div");
-                div = document.createElement("div");
-
-                body.appendChild(container).appendChild(div);
-
-                // Will be changed later if needed.
-                shrinkWrapBlocksVal = false;
-
-                if (typeof div.style.zoom !== strundefined) {
-                    // Support: IE6
-                    // Check if elements with layout shrink-wrap their children
-                    div.style.cssText = divReset + ";width:1px;padding:1px;zoom:1";
-                    div.innerHTML = "<div></div>";
-                    div.firstChild.style.width = "5px";
-                    shrinkWrapBlocksVal = div.offsetWidth !== 3;
-                }
-
-                body.removeChild(container);
-
-                // Null elements to avoid leaks in IE.
-                body = container = div = null;
+            if (shrinkWrapBlocksVal != null) {
+                return shrinkWrapBlocksVal;
             }
+
+            // Will be changed later if needed.
+            shrinkWrapBlocksVal = false;
+
+            // Minified: var b,c,d
+            var div, body, container;
+
+            body = document.getElementsByTagName("body")[ 0 ];
+            if (!body || !body.style) {
+                // Test fired too early or in an unsupported environment, exit.
+                return;
+            }
+
+            // Setup
+            div = document.createElement("div");
+            container = document.createElement("div");
+            container.style.cssText = "position:absolute;border:0;width:0;height:0;top:0;left:-9999px";
+            body.appendChild(container).appendChild(div);
+
+            // Support: IE6
+            // Check if elements with layout shrink-wrap their children
+            if (typeof div.style.zoom !== strundefined) {
+                // Reset CSS: box-sizing; display; margin; border
+                div.style.cssText =
+                    // Support: Firefox<29, Android 2.3
+                    // Vendor-prefix box-sizing
+                    "-webkit-box-sizing:content-box;-moz-box-sizing:content-box;" +
+                        "box-sizing:content-box;display:block;margin:0;border:0;" +
+                        "padding:1px;width:1px;zoom:1";
+                div.appendChild(document.createElement("div")).style.width = "5px";
+                shrinkWrapBlocksVal = div.offsetWidth !== 3;
+            }
+
+            body.removeChild(container);
 
             return shrinkWrapBlocksVal;
         };
@@ -6240,92 +6245,46 @@
 
 
     (function () {
-        var a, reliableHiddenOffsetsVal, boxSizingVal, boxSizingReliableVal,
-            pixelPositionVal, reliableMarginRightVal,
-            div = document.createElement("div"),
-            containerStyles = "border:0;width:0;height:0;position:absolute;top:0;left:-9999px",
-            divReset =
-                "-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box;" +
-                    "display:block;padding:0;margin:0;border:0";
+        // Minified: var b,c,d,e,f,g, h,i
+        var div, style, a, pixelPositionVal, boxSizingReliableVal,
+            reliableHiddenOffsetsVal, reliableMarginRightVal;
 
         // Setup
+        div = document.createElement("div");
         div.innerHTML = "  <link/><table></table><a href='/a'>a</a><input type='checkbox'/>";
         a = div.getElementsByTagName("a")[ 0 ];
+        style = a && a.style;
 
-        a.style.cssText = "float:left;opacity:.5";
+        // Finish early in limited (non-browser) environments
+        if (!style) {
+            return;
+        }
 
-        // Make sure that element opacity exists
-        // (IE uses filter instead)
-        // Use a regex to work around a WebKit issue. See #5145
-        support.opacity = /^0.5/.test(a.style.opacity);
+        style.cssText = "float:left;opacity:.5";
+
+        // Support: IE<9
+        // Make sure that element opacity exists (as opposed to filter)
+        support.opacity = style.opacity === "0.5";
 
         // Verify style float existence
         // (IE uses styleFloat instead of cssFloat)
-        support.cssFloat = !!a.style.cssFloat;
+        support.cssFloat = !!style.cssFloat;
 
         div.style.backgroundClip = "content-box";
         div.cloneNode(true).style.backgroundClip = "";
         support.clearCloneStyle = div.style.backgroundClip === "content-box";
 
-        // Null elements to avoid leaks in IE.
-        a = div = null;
+        // Support: Firefox<29, Android 2.3
+        // Vendor-prefix box-sizing
+        support.boxSizing = style.boxSizing === "" || style.MozBoxSizing === "" ||
+            style.WebkitBoxSizing === "";
 
         jQuery.extend(support, {
             reliableHiddenOffsets: function () {
-                if (reliableHiddenOffsetsVal != null) {
-                    return reliableHiddenOffsetsVal;
-                }
-
-                var container, tds, isSupported,
-                    div = document.createElement("div"),
-                    body = document.getElementsByTagName("body")[ 0 ];
-
-                if (!body) {
-                    // Return for frameset docs that don't have a body
-                    return;
-                }
-
-                // Setup
-                div.setAttribute("className", "t");
-                div.innerHTML = "  <link/><table></table><a href='/a'>a</a><input type='checkbox'/>";
-
-                container = document.createElement("div");
-                container.style.cssText = containerStyles;
-
-                body.appendChild(container).appendChild(div);
-
-                // Support: IE8
-                // Check if table cells still have offsetWidth/Height when they are set
-                // to display:none and there are still other visible table cells in a
-                // table row; if so, offsetWidth/Height are not reliable for use when
-                // determining if an element has been hidden directly using
-                // display:none (it is still safe to use offsets if a parent element is
-                // hidden; don safety goggles and see bug #4512 for more information).
-                div.innerHTML = "<table><tr><td></td><td>t</td></tr></table>";
-                tds = div.getElementsByTagName("td");
-                tds[ 0 ].style.cssText = "padding:0;margin:0;border:0;display:none";
-                isSupported = ( tds[ 0 ].offsetHeight === 0 );
-
-                tds[ 0 ].style.display = "";
-                tds[ 1 ].style.display = "none";
-
-                // Support: IE8
-                // Check if empty table cells still have offsetWidth/Height
-                reliableHiddenOffsetsVal = isSupported && ( tds[ 0 ].offsetHeight === 0 );
-
-                body.removeChild(container);
-
-                // Null elements to avoid leaks in IE.
-                div = body = null;
-
-                return reliableHiddenOffsetsVal;
-            },
-
-            boxSizing: function () {
-                if (boxSizingVal == null) {
+                if (reliableHiddenOffsetsVal == null) {
                     computeStyleTests();
                 }
-                return boxSizingVal;
+                return reliableHiddenOffsetsVal;
             },
 
             boxSizingReliable: function () {
@@ -6342,83 +6301,85 @@
                 return pixelPositionVal;
             },
 
+            // Support: Android 2.3
             reliableMarginRight: function () {
-                var body, container, div, marginDiv;
-
-                // Use window.getComputedStyle because jsdom on node.js will break without it.
-                if (reliableMarginRightVal == null && window.getComputedStyle) {
-                    body = document.getElementsByTagName("body")[ 0 ];
-                    if (!body) {
-                        // Test fired too early or in an unsupported environment, exit.
-                        return;
-                    }
-
-                    container = document.createElement("div");
-                    div = document.createElement("div");
-                    container.style.cssText = containerStyles;
-
-                    body.appendChild(container).appendChild(div);
-
-                    // Check if div with explicit width and no margin-right incorrectly
-                    // gets computed margin-right based on width of container. (#3333)
-                    // Fails in WebKit before Feb 2011 nightlies
-                    // WebKit Bug 13343 - getComputedStyle returns wrong value for margin-right
-                    marginDiv = div.appendChild(document.createElement("div"));
-                    marginDiv.style.cssText = div.style.cssText = divReset;
-                    marginDiv.style.marginRight = marginDiv.style.width = "0";
-                    div.style.width = "1px";
-
-                    reliableMarginRightVal = !parseFloat(( window.getComputedStyle(marginDiv, null) || {} ).marginRight);
-
-                    body.removeChild(container);
+                if (reliableMarginRightVal == null) {
+                    computeStyleTests();
                 }
-
                 return reliableMarginRightVal;
             }
         });
 
         function computeStyleTests() {
-            var container, div,
-                body = document.getElementsByTagName("body")[ 0 ];
+            // Minified: var b,c,d,j
+            var div, body, container, contents;
 
-            if (!body) {
+            body = document.getElementsByTagName("body")[ 0 ];
+            if (!body || !body.style) {
                 // Test fired too early or in an unsupported environment, exit.
                 return;
             }
 
-            container = document.createElement("div");
+            // Setup
             div = document.createElement("div");
-            container.style.cssText = containerStyles;
-
+            container = document.createElement("div");
+            container.style.cssText = "position:absolute;border:0;width:0;height:0;top:0;left:-9999px";
             body.appendChild(container).appendChild(div);
 
             div.style.cssText =
-                "-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;" +
-                    "position:absolute;display:block;padding:1px;border:1px;width:4px;" +
-                    "margin-top:1%;top:1%";
+                // Support: Firefox<29, Android 2.3
+                // Vendor-prefix box-sizing
+                "-webkit-box-sizing:border-box;-moz-box-sizing:border-box;" +
+                    "box-sizing:border-box;display:block;margin-top:1%;top:1%;" +
+                    "border:1px;padding:1px;width:4px;position:absolute";
 
-            // Workaround failing boxSizing test due to offsetWidth returning wrong value
-            // with some non-1 values of body zoom, ticket #13543
-            jQuery.swap(body, body.style.zoom != null ? { zoom: 1 } : {}, function () {
-                boxSizingVal = div.offsetWidth === 4;
-            });
-
-            // Will be changed later if needed.
-            boxSizingReliableVal = true;
-            pixelPositionVal = false;
+            // Support: IE<9
+            // Assume reasonable values in the absence of getComputedStyle
+            pixelPositionVal = boxSizingReliableVal = false;
             reliableMarginRightVal = true;
 
-            // Use window.getComputedStyle because jsdom on node.js will break without it.
+            // Check for getComputedStyle so that this code is not run in IE<9.
             if (window.getComputedStyle) {
                 pixelPositionVal = ( window.getComputedStyle(div, null) || {} ).top !== "1%";
                 boxSizingReliableVal =
                     ( window.getComputedStyle(div, null) || { width: "4px" } ).width === "4px";
+
+                // Support: Android 2.3
+                // Div with explicit width and no margin-right incorrectly
+                // gets computed margin-right based on width of container (#3333)
+                // WebKit Bug 13343 - getComputedStyle returns wrong value for margin-right
+                contents = div.appendChild(document.createElement("div"));
+
+                // Reset CSS: box-sizing; display; margin; border; padding
+                contents.style.cssText = div.style.cssText =
+                    // Support: Firefox<29, Android 2.3
+                    // Vendor-prefix box-sizing
+                    "-webkit-box-sizing:content-box;-moz-box-sizing:content-box;" +
+                        "box-sizing:content-box;display:block;margin:0;border:0;padding:0";
+                contents.style.marginRight = contents.style.width = "0";
+                div.style.width = "1px";
+
+                reliableMarginRightVal = !parseFloat(( window.getComputedStyle(contents, null) || {} ).marginRight);
+            }
+
+            // Support: IE8
+            // Check if table cells still have offsetWidth/Height when they are set
+            // to display:none and there are still other visible table cells in a
+            // table row; if so, offsetWidth/Height are not reliable for use when
+            // determining if an element has been hidden directly using
+            // display:none (it is still safe to use offsets if a parent element is
+            // hidden; don safety goggles and see bug #4512 for more information).
+            div.innerHTML = "<table><tr><td></td><td>t</td></tr></table>";
+            contents = div.getElementsByTagName("td");
+            contents[ 0 ].style.cssText = "margin:0;border:0;padding:0;display:none";
+            reliableHiddenOffsetsVal = contents[ 0 ].offsetHeight === 0;
+            if (reliableHiddenOffsetsVal) {
+                contents[ 0 ].style.display = "";
+                contents[ 1 ].style.display = "none";
+                reliableHiddenOffsetsVal = contents[ 0 ].offsetHeight === 0;
             }
 
             body.removeChild(container);
-
-            // Null elements to avoid leaks in IE.
-            div = body = null;
         }
 
     })();
@@ -6458,8 +6419,8 @@
 
         cssShow = { position: "absolute", visibility: "hidden", display: "block" },
         cssNormalTransform = {
-            letterSpacing: 0,
-            fontWeight: 400
+            letterSpacing: "0",
+            fontWeight: "400"
         },
 
         cssPrefixes = [ "Webkit", "O", "Moz", "ms" ];
@@ -6516,13 +6477,10 @@
                     values[ index ] = jQuery._data(elem, "olddisplay", defaultDisplay(elem.nodeName));
                 }
             } else {
+                hidden = isHidden(elem);
 
-                if (!values[ index ]) {
-                    hidden = isHidden(elem);
-
-                    if (display && display !== "none" || !hidden) {
-                        jQuery._data(elem, "olddisplay", hidden ? display : jQuery.css(elem, "display"));
-                    }
+                if (display && display !== "none" || !hidden) {
+                    jQuery._data(elem, "olddisplay", hidden ? display : jQuery.css(elem, "display"));
                 }
             }
         }
@@ -6595,7 +6553,7 @@
         var valueIsBorderBox = true,
             val = name === "width" ? elem.offsetWidth : elem.offsetHeight,
             styles = getStyles(elem),
-            isBorderBox = support.boxSizing() && jQuery.css(elem, "boxSizing", false, styles) === "border-box";
+            isBorderBox = support.boxSizing && jQuery.css(elem, "boxSizing", false, styles) === "border-box";
 
         // some non-html elements return undefined for offsetWidth, so check for null/undefined
         // svg - https://bugzilla.mozilla.org/show_bug.cgi?id=649285
@@ -6651,6 +6609,8 @@
         cssNumber: {
             "columnCount": true,
             "fillOpacity": true,
+            "flexGrow": true,
+            "flexShrink": true,
             "fontWeight": true,
             "lineHeight": true,
             "opacity": true,
@@ -6719,9 +6679,6 @@
                     // Support: IE
                     // Swallow errors from 'invalid' CSS values (#5509)
                     try {
-                        // Support: Chrome, Safari
-                        // Setting style to blank string required to delete "style: x !important;"
-                        style[ name ] = "";
                         style[ name ] = value;
                     } catch (e) {
                     }
@@ -6779,7 +6736,7 @@
                 if (computed) {
                     // certain elements can have dimension info if we invisibly show them
                     // however, it must have a current display style that would benefit from this
-                    return elem.offsetWidth === 0 && rdisplayswap.test(jQuery.css(elem, "display")) ?
+                    return rdisplayswap.test(jQuery.css(elem, "display")) && elem.offsetWidth === 0 ?
                         jQuery.swap(elem, cssShow, function () {
                             return getWidthOrHeight(elem, name, extra);
                         }) :
@@ -6794,7 +6751,7 @@
                         elem,
                         name,
                         extra,
-                        support.boxSizing() && jQuery.css(elem, "boxSizing", false, styles) === "border-box",
+                        support.boxSizing && jQuery.css(elem, "boxSizing", false, styles) === "border-box",
                         styles
                     ) : 0
                 );
@@ -7142,7 +7099,7 @@
 
     function defaultPrefilter(elem, props, opts) {
         /* jshint validthis: true */
-        var prop, value, toggle, tween, hooks, oldfire, display, dDisplay,
+        var prop, value, toggle, tween, hooks, oldfire, display, checkDisplay,
             anim = this,
             orig = {},
             style = elem.style,
@@ -7186,16 +7143,16 @@
             // Set display property to inline-block for height/width
             // animations on inline elements that are having width/height animated
             display = jQuery.css(elem, "display");
-            dDisplay = defaultDisplay(elem.nodeName);
-            if (display === "none") {
-                display = dDisplay;
-            }
-            if (display === "inline" &&
-                jQuery.css(elem, "float") === "none") {
+
+            // Test default display if display is currently "none"
+            checkDisplay = display === "none" ?
+                jQuery._data(elem, "olddisplay") || defaultDisplay(elem.nodeName) : display;
+
+            if (checkDisplay === "inline" && jQuery.css(elem, "float") === "none") {
 
                 // inline-level elements accept inline-block;
                 // block-level elements need to be inline with layout
-                if (!support.inlineBlockNeedsLayout || dDisplay === "inline") {
+                if (!support.inlineBlockNeedsLayout || defaultDisplay(elem.nodeName) === "inline") {
                     style.display = "inline-block";
                 } else {
                     style.zoom = 1;
@@ -7230,6 +7187,10 @@
                     }
                 }
                 orig[ prop ] = dataShow && dataShow[ prop ] || jQuery.style(elem, prop);
+
+                // Any non-fx value stops us from restoring the original display value
+            } else {
+                display = undefined;
             }
         }
 
@@ -7271,6 +7232,10 @@
                     }
                 }
             }
+
+            // If this is a noop like .hide().hide(), restore an overwritten display value
+        } else if ((display === "none" ? defaultDisplay(elem.nodeName) : display) === "inline") {
+            style.display = display;
         }
     }
 
@@ -7687,10 +7652,11 @@
 
 
     (function () {
-        var a, input, select, opt,
-            div = document.createElement("div");
+        // Minified: var a,b,c,d,e
+        var input, div, select, a, opt;
 
         // Setup
+        div = document.createElement("div");
         div.setAttribute("className", "t");
         div.innerHTML = "  <link/><table></table><a href='/a'>a</a><input type='checkbox'/>";
         a = div.getElementsByTagName("a")[ 0 ];
@@ -7738,9 +7704,6 @@
         input.value = "t";
         input.setAttribute("type", "radio");
         support.radioValue = input.value === "t";
-
-        // Null elements to avoid leaks in IE.
-        a = input = select = opt = div = null;
     })();
 
 
@@ -7814,7 +7777,9 @@
                     var val = jQuery.find.attr(elem, "value");
                     return val != null ?
                         val :
-                        jQuery.text(elem);
+                        // Support: IE10-11+
+                        // option.text throws exceptions (#14686, #14858)
+                        jQuery.trim(jQuery.text(elem));
                 }
             },
             select: {
@@ -9964,7 +9929,7 @@
             off = url.indexOf(" ");
 
         if (off >= 0) {
-            selector = url.slice(off, url.length);
+            selector = jQuery.trim(url.slice(off, url.length));
             url = url.slice(0, off);
         }
 
@@ -10270,6 +10235,12 @@
 // derived from file names, and jQuery is normally delivered in a lowercase
 // file name. Do this after creating the global so that if an AMD module wants
 // to call noConflict to hide this version of jQuery, it will work.
+
+// Note that for maximum portability, libraries that are not jQuery should
+// declare themselves as anonymous modules, and avoid setting a global if an
+// AMD loader is present. jQuery is a special case. For more information, see
+// https://github.com/jrburke/requirejs/wiki/Updating-existing-libraries#wiki-anon
+
     if (typeof define === "function" && define.amd) {
         define("jquery", [], function () {
             return jQuery;
@@ -10331,10 +10302,10 @@
 
     $.rails = rails = {
         // Link elements bound by jquery-ujs
-        linkClickSelector: 'a[data-confirm], a[data-method], a[data-remote], a[data-disable-with]',
+        linkClickSelector: 'a[data-confirm], a[data-method], a[data-remote], a[data-disable-with], a[data-disable]',
 
         // Button elements bound by jquery-ujs
-        buttonClickSelector: 'button[data-remote]',
+        buttonClickSelector: 'button[data-remote], button[data-confirm]',
 
         // Select elements bound by jquery-ujs
         inputChangeSelector: 'select[data-remote], input[data-remote], textarea[data-remote]',
@@ -10346,10 +10317,10 @@
         formInputClickSelector: 'form input[type=submit], form input[type=image], form button[type=submit], form button:not([type])',
 
         // Form input elements disabled during form submission
-        disableSelector: 'input[data-disable-with], button[data-disable-with], textarea[data-disable-with]',
+        disableSelector: 'input[data-disable-with]:enabled, button[data-disable-with]:enabled, textarea[data-disable-with]:enabled, input[data-disable]:enabled, button[data-disable]:enabled, textarea[data-disable]:enabled',
 
         // Form input elements re-enabled after form submission
-        enableSelector: 'input[data-disable-with]:disabled, button[data-disable-with]:disabled, textarea[data-disable-with]:disabled',
+        enableSelector: 'input[data-disable-with]:disabled, button[data-disable-with]:disabled, textarea[data-disable-with]:disabled, input[data-disable]:disabled, button[data-disable]:disabled, textarea[data-disable]:disabled',
 
         // Form required input elements
         requiredInputSelector: 'input[name][required]:not([disabled]),textarea[name][required]:not([disabled])',
@@ -10358,7 +10329,10 @@
         fileInputSelector: 'input[type=file]',
 
         // Link onClick disable selector with possible reenable after remote submission
-        linkDisableSelector: 'a[data-disable-with]',
+        linkDisableSelector: 'a[data-disable-with], a[data-disable]',
+
+        // Button onClick disable selector with possible reenable after remote submission
+        buttonDisableSelector: 'button[data-remote][data-disable-with], button[data-remote][data-disable]',
 
         // Make sure that every Ajax request sends the CSRF token
         CSRFProtection: function (xhr) {
@@ -10438,7 +10412,11 @@
                         if (settings.dataType === undefined) {
                             xhr.setRequestHeader('accept', '*/*;q=0.5, ' + settings.accepts.script);
                         }
-                        return rails.fire(element, 'ajax:beforeSend', [xhr, settings]);
+                        if (rails.fire(element, 'ajax:beforeSend', [xhr, settings])) {
+                            element.trigger('ajax:send', xhr);
+                        } else {
+                            return false;
+                        }
                     },
                     success: function (data, status, xhr) {
                         element.trigger('ajax:success', [data, status, xhr]);
@@ -10465,9 +10443,7 @@
                     options.url = url;
                 }
 
-                var jqxhr = rails.ajax(options);
-                element.trigger('ajax:send', jqxhr);
-                return jqxhr;
+                return rails.ajax(options);
             } else {
                 return false;
             }
@@ -10496,18 +10472,36 @@
             form.submit();
         },
 
+        // Helper function that returns form elements that match the specified CSS selector
+        // If form is actually a "form" element this will return associated elements outside the from that have
+        // the html form attribute set
+        formElements: function (form, selector) {
+            return form.is('form') ? $(form[0].elements).filter(selector) : form.find(selector);
+        },
+
         /* Disables form elements:
          - Caches element value in 'ujs:enable-with' data store
          - Replaces element text with value of 'data-disable-with' attribute
          - Sets disabled property to true
          */
         disableFormElements: function (form) {
-            form.find(rails.disableSelector).each(function () {
-                var element = $(this), method = element.is('button') ? 'html' : 'val';
-                element.data('ujs:enable-with', element[method]());
-                element[method](element.data('disable-with'));
-                element.prop('disabled', true);
+            rails.formElements(form, rails.disableSelector).each(function () {
+                rails.disableFormElement($(this));
             });
+        },
+
+        disableFormElement: function (element) {
+            var method, replacement;
+
+            method = element.is('button') ? 'html' : 'val';
+            replacement = element.data('disable-with');
+
+            element.data('ujs:enable-with', element[method]());
+            if (replacement !== undefined) {
+                element[method](replacement);
+            }
+
+            element.prop('disabled', true);
         },
 
         /* Re-enables disabled form elements:
@@ -10515,11 +10509,15 @@
          - Sets disabled property to false
          */
         enableFormElements: function (form) {
-            form.find(rails.enableSelector).each(function () {
-                var element = $(this), method = element.is('button') ? 'html' : 'val';
-                if (element.data('ujs:enable-with')) element[method](element.data('ujs:enable-with'));
-                element.prop('disabled', false);
+            rails.formElements(form, rails.enableSelector).each(function () {
+                rails.enableFormElement($(this));
             });
+        },
+
+        enableFormElement: function (element) {
+            var method = element.is('button') ? 'html' : 'val';
+            if (element.data('ujs:enable-with')) element[method](element.data('ujs:enable-with'));
+            element.prop('disabled', false);
         },
 
         /* For 'data-confirm' attribute:
@@ -10584,8 +10582,13 @@
         //  replace element's html with the 'data-disable-with' after storing original html
         //  and prevent clicking on it
         disableElement: function (element) {
+            var replacement = element.data('disable-with');
+
             element.data('ujs:enable-with', element.html()); // store enabled state
-            element.html(element.data('disable-with')); // set to disabled state
+            if (replacement !== undefined) {
+                element.html(replacement);
+            }
+
             element.bind('click.railsDisable', function (e) { // prevent further clicking
                 return rails.stopEverything(e);
             });
@@ -10599,7 +10602,6 @@
             }
             element.unbind('click.railsDisable'); // enable element
         }
-
     };
 
     if (rails.fire($document, 'rails:attachBindings')) {
@@ -10612,6 +10614,10 @@
 
         $document.delegate(rails.linkDisableSelector, 'ajax:complete', function () {
             rails.enableElement($(this));
+        });
+
+        $document.delegate(rails.buttonDisableSelector, 'ajax:complete', function () {
+            rails.enableFormElement($(this));
         });
 
         $document.delegate(rails.linkClickSelector, 'click.rails', function (e) {
@@ -10646,7 +10652,17 @@
             var button = $(this);
             if (!rails.allowAction(button)) return rails.stopEverything(e);
 
-            rails.handleRemote(button);
+            if (button.is(rails.buttonDisableSelector)) rails.disableFormElement(button);
+
+            var handleRemote = rails.handleRemote(button);
+            // response from rails.handleRemote() will either be false or a deferred object promise.
+            if (handleRemote === false) {
+                rails.enableFormElement(button);
+            } else {
+                handleRemote.error(function () {
+                    rails.enableFormElement(button);
+                });
+            }
             return false;
         });
 
@@ -10661,17 +10677,21 @@
         $document.delegate(rails.formSubmitSelector, 'submit.rails', function (e) {
             var form = $(this),
                 remote = form.data('remote') !== undefined,
-                blankRequiredInputs = rails.blankInputs(form, rails.requiredInputSelector),
-                nonBlankFileInputs = rails.nonBlankInputs(form, rails.fileInputSelector);
+                blankRequiredInputs,
+                nonBlankFileInputs;
 
             if (!rails.allowAction(form)) return rails.stopEverything(e);
 
             // skip other logic when required values are missing or file upload is present
-            if (blankRequiredInputs && form.attr("novalidate") == undefined && rails.fire(form, 'ajax:aborted:required', [blankRequiredInputs])) {
-                return rails.stopEverything(e);
+            if (form.attr('novalidate') == undefined) {
+                blankRequiredInputs = rails.blankInputs(form, rails.requiredInputSelector);
+                if (blankRequiredInputs && rails.fire(form, 'ajax:aborted:required', [blankRequiredInputs])) {
+                    return rails.stopEverything(e);
+                }
             }
 
             if (remote) {
+                nonBlankFileInputs = rails.nonBlankInputs(form, rails.fileInputSelector);
                 if (nonBlankFileInputs) {
                     // slight timeout so that the submit button gets properly serialized
                     // (make it easy for event handler to serialize form without disabled values)
@@ -10713,7 +10733,7 @@
             button.closest('form').data('ujs:submit-button', data);
         });
 
-        $document.delegate(rails.formSubmitSelector, 'ajax:beforeSend.rails', function (event) {
+        $document.delegate(rails.formSubmitSelector, 'ajax:send.rails', function (event) {
             if (this == event.target) rails.disableFormElements($(this));
         });
 
@@ -10728,7 +10748,7 @@
 
 })(jQuery);
 /* ========================================================================
- * Bootstrap: affix.js v3.1.0
+ * Bootstrap: affix.js v3.2.0
  * http://getbootstrap.com/javascript/#affix
  * ========================================================================
  * Copyright 2011-2014 Twitter, Inc.
@@ -10744,7 +10764,8 @@
 
     var Affix = function (element, options) {
         this.options = $.extend({}, Affix.DEFAULTS, options)
-        this.$window = $(window)
+
+        this.$target = $(this.options.target)
             .on('scroll.bs.affix.data-api', $.proxy(this.checkPosition, this))
             .on('click.bs.affix.data-api', $.proxy(this.checkPositionWithEventLoop, this))
 
@@ -10756,16 +10777,19 @@
         this.checkPosition()
     }
 
+    Affix.VERSION = '3.2.0'
+
     Affix.RESET = 'affix affix-top affix-bottom'
 
     Affix.DEFAULTS = {
-        offset: 0
+        offset: 0,
+        target: window
     }
 
     Affix.prototype.getPinnedOffset = function () {
         if (this.pinnedOffset) return this.pinnedOffset
         this.$element.removeClass(Affix.RESET).addClass('affix')
-        var scrollTop = this.$window.scrollTop()
+        var scrollTop = this.$target.scrollTop()
         var position = this.$element.offset()
         return (this.pinnedOffset = position.top - scrollTop)
     }
@@ -10778,13 +10802,11 @@
         if (!this.$element.is(':visible')) return
 
         var scrollHeight = $(document).height()
-        var scrollTop = this.$window.scrollTop()
+        var scrollTop = this.$target.scrollTop()
         var position = this.$element.offset()
         var offset = this.options.offset
         var offsetTop = offset.top
         var offsetBottom = offset.bottom
-
-        if (this.affixed == 'top') position.top += scrollTop
 
         if (typeof offset != 'object')         offsetBottom = offsetTop = offset
         if (typeof offsetTop == 'function')    offsetTop = offset.top(this.$element)
@@ -10795,7 +10817,7 @@
                 offsetTop != null && (scrollTop <= offsetTop) ? 'top' : false
 
         if (this.affixed === affix) return
-        if (this.unpin) this.$element.css('top', '')
+        if (this.unpin != null) this.$element.css('top', '')
 
         var affixType = 'affix' + (affix ? '-' + affix : '')
         var e = $.Event(affixType + '.bs.affix')
@@ -10813,7 +10835,9 @@
             .trigger($.Event(affixType.replace('affix', 'affixed')))
 
         if (affix == 'bottom') {
-            this.$element.offset({ top: scrollHeight - offsetBottom - this.$element.height() })
+            this.$element.offset({
+                top: scrollHeight - this.$element.height() - offsetBottom
+            })
         }
     }
 
@@ -10821,9 +10845,7 @@
     // AFFIX PLUGIN DEFINITION
     // =======================
 
-    var old = $.fn.affix
-
-    $.fn.affix = function (option) {
+    function Plugin(option) {
         return this.each(function () {
             var $this = $(this)
             var data = $this.data('bs.affix')
@@ -10834,6 +10856,9 @@
         })
     }
 
+    var old = $.fn.affix
+
+    $.fn.affix = Plugin
     $.fn.affix.Constructor = Affix
 
 
@@ -10859,13 +10884,14 @@
             if (data.offsetBottom) data.offset.bottom = data.offsetBottom
             if (data.offsetTop)    data.offset.top = data.offsetTop
 
-            $spy.affix(data)
+            Plugin.call($spy, data)
         })
     })
 
 }(jQuery);
+
 /* ========================================================================
- * Bootstrap: alert.js v3.1.0
+ * Bootstrap: alert.js v3.2.0
  * http://getbootstrap.com/javascript/#alerts
  * ========================================================================
  * Copyright 2011-2014 Twitter, Inc.
@@ -10883,6 +10909,8 @@
     var Alert = function (el) {
         $(el).on('click', dismiss, this.close)
     }
+
+    Alert.VERSION = '3.2.0'
 
     Alert.prototype.close = function (e) {
         var $this = $(this)
@@ -10908,12 +10936,13 @@
         $parent.removeClass('in')
 
         function removeElement() {
-            $parent.trigger('closed.bs.alert').remove()
+            // detach from parent, fire event then clean up data
+            $parent.detach().trigger('closed.bs.alert').remove()
         }
 
         $.support.transition && $parent.hasClass('fade') ?
             $parent
-                .one($.support.transition.end, removeElement)
+                .one('bsTransitionEnd', removeElement)
                 .emulateTransitionEnd(150) :
             removeElement()
     }
@@ -10922,9 +10951,7 @@
     // ALERT PLUGIN DEFINITION
     // =======================
 
-    var old = $.fn.alert
-
-    $.fn.alert = function (option) {
+    function Plugin(option) {
         return this.each(function () {
             var $this = $(this)
             var data = $this.data('bs.alert')
@@ -10934,6 +10961,9 @@
         })
     }
 
+    var old = $.fn.alert
+
+    $.fn.alert = Plugin
     $.fn.alert.Constructor = Alert
 
 
@@ -10952,8 +10982,9 @@
     $(document).on('click.bs.alert.data-api', dismiss, Alert.prototype.close)
 
 }(jQuery);
+
 /* ========================================================================
- * Bootstrap: button.js v3.1.0
+ * Bootstrap: button.js v3.2.0
  * http://getbootstrap.com/javascript/#buttons
  * ========================================================================
  * Copyright 2011-2014 Twitter, Inc.
@@ -10973,6 +11004,8 @@
         this.isLoading = false
     }
 
+    Button.VERSION = '3.2.0'
+
     Button.DEFAULTS = {
         loadingText: 'loading...'
     }
@@ -10985,9 +11018,9 @@
 
         state = state + 'Text'
 
-        if (!data.resetText) $el.data('resetText', $el[val]())
+        if (data.resetText == null) $el.data('resetText', $el[val]())
 
-        $el[val](data[state] || this.options[state])
+        $el[val](data[state] == null ? this.options[state] : data[state])
 
         // push to event loop to allow forms to submit
         setTimeout($.proxy(function () {
@@ -11021,9 +11054,7 @@
     // BUTTON PLUGIN DEFINITION
     // ========================
 
-    var old = $.fn.button
-
-    $.fn.button = function (option) {
+    function Plugin(option) {
         return this.each(function () {
             var $this = $(this)
             var data = $this.data('bs.button')
@@ -11036,6 +11067,9 @@
         })
     }
 
+    var old = $.fn.button
+
+    $.fn.button = Plugin
     $.fn.button.Constructor = Button
 
 
@@ -11051,16 +11085,17 @@
     // BUTTON DATA-API
     // ===============
 
-    $(document).on('click.bs.button.data-api', '[data-toggle^=button]', function (e) {
+    $(document).on('click.bs.button.data-api', '[data-toggle^="button"]', function (e) {
         var $btn = $(e.target)
         if (!$btn.hasClass('btn')) $btn = $btn.closest('.btn')
-        $btn.button('toggle')
+        Plugin.call($btn, 'toggle')
         e.preventDefault()
     })
 
 }(jQuery);
+
 /* ========================================================================
- * Bootstrap: carousel.js v3.1.0
+ * Bootstrap: carousel.js v3.2.0
  * http://getbootstrap.com/javascript/#carousel
  * ========================================================================
  * Copyright 2011-2014 Twitter, Inc.
@@ -11075,7 +11110,7 @@
     // =========================
 
     var Carousel = function (element, options) {
-        this.$element = $(element)
+        this.$element = $(element).on('keydown.bs.carousel', $.proxy(this.keydown, this))
         this.$indicators = this.$element.find('.carousel-indicators')
         this.options = options
         this.paused =
@@ -11085,14 +11120,31 @@
                         this.$items = null
 
         this.options.pause == 'hover' && this.$element
-            .on('mouseenter', $.proxy(this.pause, this))
-            .on('mouseleave', $.proxy(this.cycle, this))
+            .on('mouseenter.bs.carousel', $.proxy(this.pause, this))
+            .on('mouseleave.bs.carousel', $.proxy(this.cycle, this))
     }
+
+    Carousel.VERSION = '3.2.0'
 
     Carousel.DEFAULTS = {
         interval: 5000,
         pause: 'hover',
         wrap: true
+    }
+
+    Carousel.prototype.keydown = function (e) {
+        switch (e.which) {
+            case 37:
+                this.prev();
+                break
+            case 39:
+                this.next();
+                break
+            default:
+                return
+        }
+
+        e.preventDefault()
     }
 
     Carousel.prototype.cycle = function (e) {
@@ -11107,22 +11159,20 @@
         return this
     }
 
-    Carousel.prototype.getActiveIndex = function () {
-        this.$active = this.$element.find('.item.active')
-        this.$items = this.$active.parent().children()
-
-        return this.$items.index(this.$active)
+    Carousel.prototype.getItemIndex = function (item) {
+        this.$items = item.parent().children('.item')
+        return this.$items.index(item || this.$active)
     }
 
     Carousel.prototype.to = function (pos) {
         var that = this
-        var activeIndex = this.getActiveIndex()
+        var activeIndex = this.getItemIndex(this.$active = this.$element.find('.item.active'))
 
         if (pos > (this.$items.length - 1) || pos < 0) return
 
         if (this.sliding)       return this.$element.one('slid.bs.carousel', function () {
             that.to(pos)
-        })
+        }) // yes, "slid"
         if (activeIndex == pos) return this.pause().cycle()
 
         return this.slide(pos > activeIndex ? 'next' : 'prev', $(this.$items[pos]))
@@ -11164,11 +11214,15 @@
             $next = this.$element.find('.item')[fallback]()
         }
 
-        if ($next.hasClass('active')) return this.sliding = false
+        if ($next.hasClass('active')) return (this.sliding = false)
 
-        var e = $.Event('slide.bs.carousel', { relatedTarget: $next[0], direction: direction })
-        this.$element.trigger(e)
-        if (e.isDefaultPrevented()) return
+        var relatedTarget = $next[0]
+        var slideEvent = $.Event('slide.bs.carousel', {
+            relatedTarget: relatedTarget,
+            direction: direction
+        })
+        this.$element.trigger(slideEvent)
+        if (slideEvent.isDefaultPrevented()) return
 
         this.sliding = true
 
@@ -11176,24 +11230,23 @@
 
         if (this.$indicators.length) {
             this.$indicators.find('.active').removeClass('active')
-            this.$element.one('slid.bs.carousel', function () {
-                var $nextIndicator = $(that.$indicators.children()[that.getActiveIndex()])
-                $nextIndicator && $nextIndicator.addClass('active')
-            })
+            var $nextIndicator = $(this.$indicators.children()[this.getItemIndex($next)])
+            $nextIndicator && $nextIndicator.addClass('active')
         }
 
+        var slidEvent = $.Event('slid.bs.carousel', { relatedTarget: relatedTarget, direction: direction }) // yes, "slid"
         if ($.support.transition && this.$element.hasClass('slide')) {
             $next.addClass(type)
             $next[0].offsetWidth // force reflow
             $active.addClass(direction)
             $next.addClass(direction)
             $active
-                .one($.support.transition.end, function () {
+                .one('bsTransitionEnd', function () {
                     $next.removeClass([type, direction].join(' ')).addClass('active')
                     $active.removeClass(['active', direction].join(' '))
                     that.sliding = false
                     setTimeout(function () {
-                        that.$element.trigger('slid.bs.carousel')
+                        that.$element.trigger(slidEvent)
                     }, 0)
                 })
                 .emulateTransitionEnd($active.css('transition-duration').slice(0, -1) * 1000)
@@ -11201,7 +11254,7 @@
             $active.removeClass('active')
             $next.addClass('active')
             this.sliding = false
-            this.$element.trigger('slid.bs.carousel')
+            this.$element.trigger(slidEvent)
         }
 
         isCycling && this.cycle()
@@ -11213,9 +11266,7 @@
     // CAROUSEL PLUGIN DEFINITION
     // ==========================
 
-    var old = $.fn.carousel
-
-    $.fn.carousel = function (option) {
+    function Plugin(option) {
         return this.each(function () {
             var $this = $(this)
             var data = $this.data('bs.carousel')
@@ -11229,6 +11280,9 @@
         })
     }
 
+    var old = $.fn.carousel
+
+    $.fn.carousel = Plugin
     $.fn.carousel.Constructor = Carousel
 
 
@@ -11245,15 +11299,17 @@
     // =================
 
     $(document).on('click.bs.carousel.data-api', '[data-slide], [data-slide-to]', function (e) {
-        var $this = $(this), href
-        var $target = $($this.attr('data-target') || (href = $this.attr('href')) && href.replace(/.*(?=#[^\s]+$)/, '')) //strip for ie7
+        var href
+        var $this = $(this)
+        var $target = $($this.attr('data-target') || (href = $this.attr('href')) && href.replace(/.*(?=#[^\s]+$)/, '')) // strip for ie7
+        if (!$target.hasClass('carousel')) return
         var options = $.extend({}, $target.data(), $this.data())
         var slideIndex = $this.attr('data-slide-to')
         if (slideIndex) options.interval = false
 
-        $target.carousel(options)
+        Plugin.call($target, options)
 
-        if (slideIndex = $this.attr('data-slide-to')) {
+        if (slideIndex) {
             $target.data('bs.carousel').to(slideIndex)
         }
 
@@ -11263,13 +11319,14 @@
     $(window).on('load', function () {
         $('[data-ride="carousel"]').each(function () {
             var $carousel = $(this)
-            $carousel.carousel($carousel.data())
+            Plugin.call($carousel, $carousel.data())
         })
     })
 
 }(jQuery);
+
 /* ========================================================================
- * Bootstrap: collapse.js v3.1.0
+ * Bootstrap: collapse.js v3.2.0
  * http://getbootstrap.com/javascript/#collapse
  * ========================================================================
  * Copyright 2011-2014 Twitter, Inc.
@@ -11292,6 +11349,8 @@
         if (this.options.toggle) this.toggle()
     }
 
+    Collapse.VERSION = '3.2.0'
+
     Collapse.DEFAULTS = {
         toggle: true
     }
@@ -11313,7 +11372,7 @@
         if (actives && actives.length) {
             var hasData = actives.data('bs.collapse')
             if (hasData && hasData.transitioning) return
-            actives.collapse('hide')
+            Plugin.call(actives, 'hide')
             hasData || actives.data('bs.collapse', null)
         }
 
@@ -11321,18 +11380,17 @@
 
         this.$element
             .removeClass('collapse')
-            .addClass('collapsing')
-            [dimension](0)
+            .addClass('collapsing')[dimension](0)
 
         this.transitioning = 1
 
         var complete = function () {
             this.$element
                 .removeClass('collapsing')
-                .addClass('collapse in')
-                [dimension]('auto')
+                .addClass('collapse in')[dimension]('')
             this.transitioning = 0
-            this.$element.trigger('shown.bs.collapse')
+            this.$element
+                .trigger('shown.bs.collapse')
         }
 
         if (!$.support.transition) return complete.call(this)
@@ -11340,9 +11398,8 @@
         var scrollSize = $.camelCase(['scroll', dimension].join('-'))
 
         this.$element
-            .one($.support.transition.end, $.proxy(complete, this))
-            .emulateTransitionEnd(350)
-            [dimension](this.$element[0][scrollSize])
+            .one('bsTransitionEnd', $.proxy(complete, this))
+            .emulateTransitionEnd(350)[dimension](this.$element[0][scrollSize])
     }
 
     Collapse.prototype.hide = function () {
@@ -11354,9 +11411,7 @@
 
         var dimension = this.dimension()
 
-        this.$element
-            [dimension](this.$element[dimension]())
-            [0].offsetHeight
+        this.$element[dimension](this.$element[dimension]())[0].offsetHeight
 
         this.$element
             .addClass('collapsing')
@@ -11377,7 +11432,7 @@
 
         this.$element
             [dimension](0)
-            .one($.support.transition.end, $.proxy(complete, this))
+            .one('bsTransitionEnd', $.proxy(complete, this))
             .emulateTransitionEnd(350)
     }
 
@@ -11389,9 +11444,7 @@
     // COLLAPSE PLUGIN DEFINITION
     // ==========================
 
-    var old = $.fn.collapse
-
-    $.fn.collapse = function (option) {
+    function Plugin(option) {
         return this.each(function () {
             var $this = $(this)
             var data = $this.data('bs.collapse')
@@ -11403,6 +11456,9 @@
         })
     }
 
+    var old = $.fn.collapse
+
+    $.fn.collapse = Plugin
     $.fn.collapse.Constructor = Collapse
 
 
@@ -11418,11 +11474,12 @@
     // COLLAPSE DATA-API
     // =================
 
-    $(document).on('click.bs.collapse.data-api', '[data-toggle=collapse]', function (e) {
-        var $this = $(this), href
+    $(document).on('click.bs.collapse.data-api', '[data-toggle="collapse"]', function (e) {
+        var href
+        var $this = $(this)
         var target = $this.attr('data-target')
             || e.preventDefault()
-            || (href = $this.attr('href')) && href.replace(/.*(?=#[^\s]+$)/, '') //strip for ie7
+            || (href = $this.attr('href')) && href.replace(/.*(?=#[^\s]+$)/, '') // strip for ie7
         var $target = $(target)
         var data = $target.data('bs.collapse')
         var option = data ? 'toggle' : $this.data()
@@ -11430,16 +11487,17 @@
         var $parent = parent && $(parent)
 
         if (!data || !data.transitioning) {
-            if ($parent) $parent.find('[data-toggle=collapse][data-parent="' + parent + '"]').not($this).addClass('collapsed')
+            if ($parent) $parent.find('[data-toggle="collapse"][data-parent="' + parent + '"]').not($this).addClass('collapsed')
             $this[$target.hasClass('in') ? 'addClass' : 'removeClass']('collapsed')
         }
 
-        $target.collapse(option)
+        Plugin.call($target, option)
     })
 
 }(jQuery);
+
 /* ========================================================================
- * Bootstrap: dropdown.js v3.1.0
+ * Bootstrap: dropdown.js v3.2.0
  * http://getbootstrap.com/javascript/#dropdowns
  * ========================================================================
  * Copyright 2011-2014 Twitter, Inc.
@@ -11454,10 +11512,12 @@
     // =========================
 
     var backdrop = '.dropdown-backdrop'
-    var toggle = '[data-toggle=dropdown]'
+    var toggle = '[data-toggle="dropdown"]'
     var Dropdown = function (element) {
         $(element).on('click.bs.dropdown', this.toggle)
     }
+
+    Dropdown.VERSION = '3.2.0'
 
     Dropdown.prototype.toggle = function (e) {
         var $this = $(this)
@@ -11480,11 +11540,11 @@
 
             if (e.isDefaultPrevented()) return
 
+            $this.trigger('focus')
+
             $parent
                 .toggleClass('open')
                 .trigger('shown.bs.dropdown', relatedTarget)
-
-            $this.focus()
         }
 
         return false
@@ -11504,12 +11564,12 @@
         var isActive = $parent.hasClass('open')
 
         if (!isActive || (isActive && e.keyCode == 27)) {
-            if (e.which == 27) $parent.find(toggle).focus()
-            return $this.click()
+            if (e.which == 27) $parent.find(toggle).trigger('focus')
+            return $this.trigger('click')
         }
 
         var desc = ' li:not(.divider):visible a'
-        var $items = $parent.find('[role=menu]' + desc + ', [role=listbox]' + desc)
+        var $items = $parent.find('[role="menu"]' + desc + ', [role="listbox"]' + desc)
 
         if (!$items.length) return
 
@@ -11519,10 +11579,11 @@
         if (e.keyCode == 40 && index < $items.length - 1) index++                        // down
         if (!~index)                                      index = 0
 
-        $items.eq(index).focus()
+        $items.eq(index).trigger('focus')
     }
 
     function clearMenus(e) {
+        if (e && e.which === 3) return
         $(backdrop).remove()
         $(toggle).each(function () {
             var $parent = getParent($(this))
@@ -11539,7 +11600,7 @@
 
         if (!selector) {
             selector = $this.attr('href')
-            selector = selector && /#[A-Za-z]/.test(selector) && selector.replace(/.*(?=#[^\s]*$)/, '') //strip for ie7
+            selector = selector && /#[A-Za-z]/.test(selector) && selector.replace(/.*(?=#[^\s]*$)/, '') // strip for ie7
         }
 
         var $parent = selector && $(selector)
@@ -11551,9 +11612,7 @@
     // DROPDOWN PLUGIN DEFINITION
     // ==========================
 
-    var old = $.fn.dropdown
-
-    $.fn.dropdown = function (option) {
+    function Plugin(option) {
         return this.each(function () {
             var $this = $(this)
             var data = $this.data('bs.dropdown')
@@ -11563,6 +11622,9 @@
         })
     }
 
+    var old = $.fn.dropdown
+
+    $.fn.dropdown = Plugin
     $.fn.dropdown.Constructor = Dropdown
 
 
@@ -11584,11 +11646,12 @@
             e.stopPropagation()
         })
         .on('click.bs.dropdown.data-api', toggle, Dropdown.prototype.toggle)
-        .on('keydown.bs.dropdown.data-api', toggle + ', [role=menu], [role=listbox]', Dropdown.prototype.keydown)
+        .on('keydown.bs.dropdown.data-api', toggle + ', [role="menu"], [role="listbox"]', Dropdown.prototype.keydown)
 
 }(jQuery);
+
 /* ========================================================================
- * Bootstrap: tab.js v3.1.0
+ * Bootstrap: tab.js v3.2.0
  * http://getbootstrap.com/javascript/#tabs
  * ========================================================================
  * Copyright 2011-2014 Twitter, Inc.
@@ -11606,6 +11669,8 @@
         this.element = $(element)
     }
 
+    Tab.VERSION = '3.2.0'
+
     Tab.prototype.show = function () {
         var $this = this.element
         var $ul = $this.closest('ul:not(.dropdown-menu)')
@@ -11613,7 +11678,7 @@
 
         if (!selector) {
             selector = $this.attr('href')
-            selector = selector && selector.replace(/.*(?=#[^\s]*$)/, '') //strip for ie7
+            selector = selector && selector.replace(/.*(?=#[^\s]*$)/, '') // strip for ie7
         }
 
         if ($this.parent('li').hasClass('active')) return
@@ -11629,7 +11694,7 @@
 
         var $target = $(selector)
 
-        this.activate($this.parent('li'), $ul)
+        this.activate($this.closest('li'), $ul)
         this.activate($target, $target.parent(), function () {
             $this.trigger({
                 type: 'shown.bs.tab',
@@ -11668,7 +11733,7 @@
 
         transition ?
             $active
-                .one($.support.transition.end, next)
+                .one('bsTransitionEnd', next)
                 .emulateTransitionEnd(150) :
             next()
 
@@ -11679,9 +11744,7 @@
     // TAB PLUGIN DEFINITION
     // =====================
 
-    var old = $.fn.tab
-
-    $.fn.tab = function (option) {
+    function Plugin(option) {
         return this.each(function () {
             var $this = $(this)
             var data = $this.data('bs.tab')
@@ -11691,6 +11754,9 @@
         })
     }
 
+    var old = $.fn.tab
+
+    $.fn.tab = Plugin
     $.fn.tab.Constructor = Tab
 
 
@@ -11708,12 +11774,13 @@
 
     $(document).on('click.bs.tab.data-api', '[data-toggle="tab"], [data-toggle="pill"]', function (e) {
         e.preventDefault()
-        $(this).tab('show')
+        Plugin.call($(this), 'show')
     })
 
 }(jQuery);
+
 /* ========================================================================
- * Bootstrap: transition.js v3.1.0
+ * Bootstrap: transition.js v3.2.0
  * http://getbootstrap.com/javascript/#transitions
  * ========================================================================
  * Copyright 2011-2014 Twitter, Inc.
@@ -11731,10 +11798,10 @@
         var el = document.createElement('bootstrap')
 
         var transEndEventNames = {
-            'WebkitTransition': 'webkitTransitionEnd',
-            'MozTransition': 'transitionend',
-            'OTransition': 'oTransitionEnd otransitionend',
-            'transition': 'transitionend'
+            WebkitTransition: 'webkitTransitionEnd',
+            MozTransition: 'transitionend',
+            OTransition: 'oTransitionEnd otransitionend',
+            transition: 'transitionend'
         }
 
         for (var name in transEndEventNames) {
@@ -11748,8 +11815,9 @@
 
     // http://blog.alexmaccaw.com/css-transitions
     $.fn.emulateTransitionEnd = function (duration) {
-        var called = false, $el = this
-        $(this).one($.support.transition.end, function () {
+        var called = false
+        var $el = this
+        $(this).one('bsTransitionEnd', function () {
             called = true
         })
         var callback = function () {
@@ -11761,11 +11829,22 @@
 
     $(function () {
         $.support.transition = transitionEnd()
+
+        if (!$.support.transition) return
+
+        $.event.special.bsTransitionEnd = {
+            bindType: $.support.transition.end,
+            delegateType: $.support.transition.end,
+            handle: function (e) {
+                if ($(e.target).is(this)) return e.handleObj.handler.apply(this, arguments)
+            }
+        }
     })
 
 }(jQuery);
+
 /* ========================================================================
- * Bootstrap: scrollspy.js v3.1.0
+ * Bootstrap: scrollspy.js v3.2.0
  * http://getbootstrap.com/javascript/#scrollspy
  * ========================================================================
  * Copyright 2011-2014 Twitter, Inc.
@@ -11780,36 +11859,48 @@
     // ==========================
 
     function ScrollSpy(element, options) {
-        var href
         var process = $.proxy(this.process, this)
 
-        this.$element = $(element).is('body') ? $(window) : $(element)
         this.$body = $('body')
-        this.$scrollElement = this.$element.on('scroll.bs.scroll-spy.data-api', process)
+        this.$scrollElement = $(element).is('body') ? $(window) : $(element)
         this.options = $.extend({}, ScrollSpy.DEFAULTS, options)
-        this.selector = (this.options.target
-            || ((href = $(element).attr('href')) && href.replace(/.*(?=#[^\s]+$)/, '')) //strip for ie7
-            || '') + ' .nav li > a'
-        this.offsets = $([])
-        this.targets = $([])
+        this.selector = (this.options.target || '') + ' .nav li > a'
+        this.offsets = []
+        this.targets = []
         this.activeTarget = null
+        this.scrollHeight = 0
 
+        this.$scrollElement.on('scroll.bs.scrollspy', process)
         this.refresh()
         this.process()
     }
+
+    ScrollSpy.VERSION = '3.2.0'
 
     ScrollSpy.DEFAULTS = {
         offset: 10
     }
 
-    ScrollSpy.prototype.refresh = function () {
-        var offsetMethod = this.$element[0] == window ? 'offset' : 'position'
+    ScrollSpy.prototype.getScrollHeight = function () {
+        return this.$scrollElement[0].scrollHeight || Math.max(this.$body[0].scrollHeight, document.documentElement.scrollHeight)
+    }
 
-        this.offsets = $([])
-        this.targets = $([])
+    ScrollSpy.prototype.refresh = function () {
+        var offsetMethod = 'offset'
+        var offsetBase = 0
+
+        if (!$.isWindow(this.$scrollElement[0])) {
+            offsetMethod = 'position'
+            offsetBase = this.$scrollElement.scrollTop()
+        }
+
+        this.offsets = []
+        this.targets = []
+        this.scrollHeight = this.getScrollHeight()
 
         var self = this
-        var $targets = this.$body
+
+        this.$body
             .find(this.selector)
             .map(function () {
                 var $el = $(this)
@@ -11820,7 +11911,7 @@
                     && $href.length
                     && $href.is(':visible')
                     && [
-                    [ $href[offsetMethod]().top + (!$.isWindow(self.$scrollElement.get(0)) && self.$scrollElement.scrollTop()), href ]
+                    [$href[offsetMethod]().top + offsetBase, href]
                 ]) || null
             })
             .sort(function (a, b) {
@@ -11834,15 +11925,19 @@
 
     ScrollSpy.prototype.process = function () {
         var scrollTop = this.$scrollElement.scrollTop() + this.options.offset
-        var scrollHeight = this.$scrollElement[0].scrollHeight || this.$body[0].scrollHeight
-        var maxScroll = scrollHeight - this.$scrollElement.height()
+        var scrollHeight = this.getScrollHeight()
+        var maxScroll = this.options.offset + scrollHeight - this.$scrollElement.height()
         var offsets = this.offsets
         var targets = this.targets
         var activeTarget = this.activeTarget
         var i
 
+        if (this.scrollHeight != scrollHeight) {
+            this.refresh()
+        }
+
         if (scrollTop >= maxScroll) {
-            return activeTarget != (i = targets.last()[0]) && this.activate(i)
+            return activeTarget != (i = targets[targets.length - 1]) && this.activate(i)
         }
 
         if (activeTarget && scrollTop <= offsets[0]) {
@@ -11885,9 +11980,7 @@
     // SCROLLSPY PLUGIN DEFINITION
     // ===========================
 
-    var old = $.fn.scrollspy
-
-    $.fn.scrollspy = function (option) {
+    function Plugin(option) {
         return this.each(function () {
             var $this = $(this)
             var data = $this.data('bs.scrollspy')
@@ -11898,6 +11991,9 @@
         })
     }
 
+    var old = $.fn.scrollspy
+
+    $.fn.scrollspy = Plugin
     $.fn.scrollspy.Constructor = ScrollSpy
 
 
@@ -11913,16 +12009,17 @@
     // SCROLLSPY DATA-API
     // ==================
 
-    $(window).on('load', function () {
+    $(window).on('load.bs.scrollspy.data-api', function () {
         $('[data-spy="scroll"]').each(function () {
             var $spy = $(this)
-            $spy.scrollspy($spy.data())
+            Plugin.call($spy, $spy.data())
         })
     })
 
 }(jQuery);
+
 /* ========================================================================
- * Bootstrap: modal.js v3.1.0
+ * Bootstrap: modal.js v3.2.0
  * http://getbootstrap.com/javascript/#modals
  * ========================================================================
  * Copyright 2011-2014 Twitter, Inc.
@@ -11938,9 +12035,11 @@
 
     var Modal = function (element, options) {
         this.options = options
+        this.$body = $(document.body)
         this.$element = $(element)
         this.$backdrop =
             this.isShown = null
+        this.scrollbarWidth = 0
 
         if (this.options.remote) {
             this.$element
@@ -11951,6 +12050,8 @@
         }
     }
 
+    Modal.VERSION = '3.2.0'
+
     Modal.DEFAULTS = {
         backdrop: true,
         keyboard: true,
@@ -11958,7 +12059,7 @@
     }
 
     Modal.prototype.toggle = function (_relatedTarget) {
-        return this[!this.isShown ? 'show' : 'hide'](_relatedTarget)
+        return this.isShown ? this.hide() : this.show(_relatedTarget)
     }
 
     Modal.prototype.show = function (_relatedTarget) {
@@ -11971,6 +12072,10 @@
 
         this.isShown = true
 
+        this.checkScrollbar()
+        this.$body.addClass('modal-open')
+
+        this.setScrollbar()
         this.escape()
 
         this.$element.on('click.dismiss.bs.modal', '[data-dismiss="modal"]', $.proxy(this.hide, this))
@@ -11979,7 +12084,7 @@
             var transition = $.support.transition && that.$element.hasClass('fade')
 
             if (!that.$element.parent().length) {
-                that.$element.appendTo(document.body) // don't move modals dom position
+                that.$element.appendTo(that.$body) // don't move modals dom position
             }
 
             that.$element
@@ -12000,11 +12105,11 @@
 
             transition ?
                 that.$element.find('.modal-dialog') // wait for modal to slide in
-                    .one($.support.transition.end, function () {
-                        that.$element.focus().trigger(e)
+                    .one('bsTransitionEnd', function () {
+                        that.$element.trigger('focus').trigger(e)
                     })
                     .emulateTransitionEnd(300) :
-                that.$element.focus().trigger(e)
+                that.$element.trigger('focus').trigger(e)
         })
     }
 
@@ -12019,6 +12124,9 @@
 
         this.isShown = false
 
+        this.$body.removeClass('modal-open')
+
+        this.resetScrollbar()
         this.escape()
 
         $(document).off('focusin.bs.modal')
@@ -12030,7 +12138,7 @@
 
         $.support.transition && this.$element.hasClass('fade') ?
             this.$element
-                .one($.support.transition.end, $.proxy(this.hideModal, this))
+                .one('bsTransitionEnd', $.proxy(this.hideModal, this))
                 .emulateTransitionEnd(300) :
             this.hideModal()
     }
@@ -12040,7 +12148,7 @@
             .off('focusin.bs.modal') // guard against infinite focus loop
             .on('focusin.bs.modal', $.proxy(function (e) {
                 if (this.$element[0] !== e.target && !this.$element.has(e.target).length) {
-                    this.$element.focus()
+                    this.$element.trigger('focus')
                 }
             }, this))
     }
@@ -12059,7 +12167,6 @@
         var that = this
         this.$element.hide()
         this.backdrop(function () {
-            that.removeBackdrop()
             that.$element.trigger('hidden.bs.modal')
         })
     }
@@ -12070,13 +12177,14 @@
     }
 
     Modal.prototype.backdrop = function (callback) {
+        var that = this
         var animate = this.$element.hasClass('fade') ? 'fade' : ''
 
         if (this.isShown && this.options.backdrop) {
             var doAnimate = $.support.transition && animate
 
             this.$backdrop = $('<div class="modal-backdrop ' + animate + '" />')
-                .appendTo(document.body)
+                .appendTo(this.$body)
 
             this.$element.on('click.dismiss.bs.modal', $.proxy(function (e) {
                 if (e.target !== e.currentTarget) return
@@ -12093,31 +12201,56 @@
 
             doAnimate ?
                 this.$backdrop
-                    .one($.support.transition.end, callback)
+                    .one('bsTransitionEnd', callback)
                     .emulateTransitionEnd(150) :
                 callback()
 
         } else if (!this.isShown && this.$backdrop) {
             this.$backdrop.removeClass('in')
 
+            var callbackRemove = function () {
+                that.removeBackdrop()
+                callback && callback()
+            }
             $.support.transition && this.$element.hasClass('fade') ?
                 this.$backdrop
-                    .one($.support.transition.end, callback)
+                    .one('bsTransitionEnd', callbackRemove)
                     .emulateTransitionEnd(150) :
-                callback()
+                callbackRemove()
 
         } else if (callback) {
             callback()
         }
     }
 
+    Modal.prototype.checkScrollbar = function () {
+        if (document.body.clientWidth >= window.innerWidth) return
+        this.scrollbarWidth = this.scrollbarWidth || this.measureScrollbar()
+    }
+
+    Modal.prototype.setScrollbar = function () {
+        var bodyPad = parseInt((this.$body.css('padding-right') || 0), 10)
+        if (this.scrollbarWidth) this.$body.css('padding-right', bodyPad + this.scrollbarWidth)
+    }
+
+    Modal.prototype.resetScrollbar = function () {
+        this.$body.css('padding-right', '')
+    }
+
+    Modal.prototype.measureScrollbar = function () { // thx walsh
+        var scrollDiv = document.createElement('div')
+        scrollDiv.className = 'modal-scrollbar-measure'
+        this.$body.append(scrollDiv)
+        var scrollbarWidth = scrollDiv.offsetWidth - scrollDiv.clientWidth
+        this.$body[0].removeChild(scrollDiv)
+        return scrollbarWidth
+    }
+
 
     // MODAL PLUGIN DEFINITION
     // =======================
 
-    var old = $.fn.modal
-
-    $.fn.modal = function (option, _relatedTarget) {
+    function Plugin(option, _relatedTarget) {
         return this.each(function () {
             var $this = $(this)
             var data = $this.data('bs.modal')
@@ -12129,6 +12262,9 @@
         })
     }
 
+    var old = $.fn.modal
+
+    $.fn.modal = Plugin
     $.fn.modal.Constructor = Modal
 
 
@@ -12147,29 +12283,24 @@
     $(document).on('click.bs.modal.data-api', '[data-toggle="modal"]', function (e) {
         var $this = $(this)
         var href = $this.attr('href')
-        var $target = $($this.attr('data-target') || (href && href.replace(/.*(?=#[^\s]+$)/, ''))) //strip for ie7
+        var $target = $($this.attr('data-target') || (href && href.replace(/.*(?=#[^\s]+$)/, ''))) // strip for ie7
         var option = $target.data('bs.modal') ? 'toggle' : $.extend({ remote: !/#/.test(href) && href }, $target.data(), $this.data())
 
         if ($this.is('a')) e.preventDefault()
 
-        $target
-            .modal(option, this)
-            .one('hide', function () {
-                $this.is(':visible') && $this.focus()
+        $target.one('show.bs.modal', function (showEvent) {
+            if (showEvent.isDefaultPrevented()) return // only register focus restorer if modal will actually get shown
+            $target.one('hidden.bs.modal', function () {
+                $this.is(':visible') && $this.trigger('focus')
             })
+        })
+        Plugin.call($target, option, this)
     })
 
-    $(document)
-        .on('show.bs.modal', '.modal', function () {
-            $(document.body).addClass('modal-open')
-        })
-        .on('hidden.bs.modal', '.modal', function () {
-            $(document.body).removeClass('modal-open')
-        })
-
 }(jQuery);
+
 /* ========================================================================
- * Bootstrap: tooltip.js v3.1.0
+ * Bootstrap: tooltip.js v3.2.0
  * http://getbootstrap.com/javascript/#tooltip
  * Inspired by the original jQuery.tipsy by Jason Frame
  * ========================================================================
@@ -12195,16 +12326,22 @@
         this.init('tooltip', element, options)
     }
 
+    Tooltip.VERSION = '3.2.0'
+
     Tooltip.DEFAULTS = {
         animation: true,
         placement: 'top',
         selector: false,
-        template: '<div class="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>',
+        template: '<div class="tooltip" role="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>',
         trigger: 'hover focus',
         title: '',
         delay: 0,
         html: false,
-        container: false
+        container: false,
+        viewport: {
+            selector: 'body',
+            padding: 0
+        }
     }
 
     Tooltip.prototype.init = function (type, element, options) {
@@ -12212,6 +12349,7 @@
         this.type = type
         this.$element = $(element)
         this.options = this.getOptions(options)
+        this.$viewport = this.options.viewport && $(this.options.viewport.selector || this.options.viewport)
 
         var triggers = this.options.trigger.split(' ')
 
@@ -12264,7 +12402,12 @@
 
     Tooltip.prototype.enter = function (obj) {
         var self = obj instanceof this.constructor ?
-            obj : $(obj.currentTarget)[this.type](this.getDelegateOptions()).data('bs.' + this.type)
+            obj : $(obj.currentTarget).data('bs.' + this.type)
+
+        if (!self) {
+            self = new this.constructor(obj.currentTarget, this.getDelegateOptions())
+            $(obj.currentTarget).data('bs.' + this.type, self)
+        }
 
         clearTimeout(self.timeout)
 
@@ -12279,7 +12422,12 @@
 
     Tooltip.prototype.leave = function (obj) {
         var self = obj instanceof this.constructor ?
-            obj : $(obj.currentTarget)[this.type](this.getDelegateOptions()).data('bs.' + this.type)
+            obj : $(obj.currentTarget).data('bs.' + this.type)
+
+        if (!self) {
+            self = new this.constructor(obj.currentTarget, this.getDelegateOptions())
+            $(obj.currentTarget).data('bs.' + this.type, self)
+        }
 
         clearTimeout(self.timeout)
 
@@ -12298,12 +12446,17 @@
         if (this.hasContent() && this.enabled) {
             this.$element.trigger(e)
 
-            if (e.isDefaultPrevented()) return
-            var that = this;
+            var inDom = $.contains(document.documentElement, this.$element[0])
+            if (e.isDefaultPrevented() || !inDom) return
+            var that = this
 
             var $tip = this.tip()
 
+            var tipId = this.getUID(this.type)
+
             this.setContent()
+            $tip.attr('id', tipId)
+            this.$element.attr('aria-describedby', tipId)
 
             if (this.options.animation) $tip.addClass('fade')
 
@@ -12319,6 +12472,7 @@
                 .detach()
                 .css({ top: 0, left: 0, display: 'block' })
                 .addClass(placement)
+                .data('bs.' + this.type, this)
 
             this.options.container ? $tip.appendTo(this.options.container) : $tip.insertAfter(this.$element)
 
@@ -12327,18 +12481,14 @@
             var actualHeight = $tip[0].offsetHeight
 
             if (autoPlace) {
-                var $parent = this.$element.parent()
-
                 var orgPlacement = placement
-                var docScroll = document.documentElement.scrollTop || document.body.scrollTop
-                var parentWidth = this.options.container == 'body' ? window.innerWidth : $parent.outerWidth()
-                var parentHeight = this.options.container == 'body' ? window.innerHeight : $parent.outerHeight()
-                var parentLeft = this.options.container == 'body' ? 0 : $parent.offset().left
+                var $parent = this.$element.parent()
+                var parentDim = this.getPosition($parent)
 
-                placement = placement == 'bottom' && pos.top + pos.height + actualHeight - docScroll > parentHeight ? 'top' :
-                    placement == 'top' && pos.top - docScroll - actualHeight < 0 ? 'bottom' :
-                        placement == 'right' && pos.right + actualWidth > parentWidth ? 'left' :
-                            placement == 'left' && pos.left - actualWidth < parentLeft ? 'right' :
+                placement = placement == 'bottom' && pos.top + pos.height + actualHeight - parentDim.scroll > parentDim.height ? 'top' :
+                    placement == 'top' && pos.top - parentDim.scroll - actualHeight < 0 ? 'bottom' :
+                        placement == 'right' && pos.right + actualWidth > parentDim.width ? 'left' :
+                            placement == 'left' && pos.left - actualWidth < parentDim.left ? 'right' :
                                 placement
 
                 $tip
@@ -12349,22 +12499,21 @@
             var calculatedOffset = this.getCalculatedOffset(placement, pos, actualWidth, actualHeight)
 
             this.applyPlacement(calculatedOffset, placement)
-            this.hoverState = null
 
             var complete = function () {
                 that.$element.trigger('shown.bs.' + that.type)
+                that.hoverState = null
             }
 
             $.support.transition && this.$tip.hasClass('fade') ?
                 $tip
-                    .one($.support.transition.end, complete)
+                    .one('bsTransitionEnd', complete)
                     .emulateTransitionEnd(150) :
                 complete()
         }
     }
 
     Tooltip.prototype.applyPlacement = function (offset, placement) {
-        var replace
         var $tip = this.tip()
         var width = $tip[0].offsetWidth
         var height = $tip[0].offsetHeight
@@ -12398,29 +12547,20 @@
         var actualHeight = $tip[0].offsetHeight
 
         if (placement == 'top' && actualHeight != height) {
-            replace = true
             offset.top = offset.top + height - actualHeight
         }
 
-        if (/bottom|top/.test(placement)) {
-            var delta = 0
+        var delta = this.getViewportAdjustedDelta(placement, offset, actualWidth, actualHeight)
 
-            if (offset.left < 0) {
-                delta = offset.left * -2
-                offset.left = 0
+        if (delta.left) offset.left += delta.left
+        else offset.top += delta.top
 
-                $tip.offset(offset)
+        var arrowDelta = delta.left ? delta.left * 2 - width + actualWidth : delta.top * 2 - height + actualHeight
+        var arrowPosition = delta.left ? 'left' : 'top'
+        var arrowOffsetPosition = delta.left ? 'offsetWidth' : 'offsetHeight'
 
-                actualWidth = $tip[0].offsetWidth
-                actualHeight = $tip[0].offsetHeight
-            }
-
-            this.replaceArrow(delta - width + actualWidth, actualWidth, 'left')
-        } else {
-            this.replaceArrow(actualHeight - height, actualHeight, 'top')
-        }
-
-        if (replace) $tip.offset(offset)
+        $tip.offset(offset)
+        this.replaceArrow(arrowDelta, $tip[0][arrowOffsetPosition], arrowPosition)
     }
 
     Tooltip.prototype.replaceArrow = function (delta, dimension, position) {
@@ -12440,6 +12580,8 @@
         var $tip = this.tip()
         var e = $.Event('hide.bs.' + this.type)
 
+        this.$element.removeAttr('aria-describedby')
+
         function complete() {
             if (that.hoverState != 'in') $tip.detach()
             that.$element.trigger('hidden.bs.' + that.type)
@@ -12453,7 +12595,7 @@
 
         $.support.transition && this.$tip.hasClass('fade') ?
             $tip
-                .one($.support.transition.end, complete)
+                .one('bsTransitionEnd', complete)
                 .emulateTransitionEnd(150) :
             complete()
 
@@ -12464,7 +12606,7 @@
 
     Tooltip.prototype.fixTitle = function () {
         var $e = this.$element
-        if ($e.attr('title') || typeof($e.attr('data-original-title')) != 'string') {
+        if ($e.attr('title') || typeof ($e.attr('data-original-title')) != 'string') {
             $e.attr('data-original-title', $e.attr('title') || '').attr('title', '')
         }
     }
@@ -12473,12 +12615,15 @@
         return this.getTitle()
     }
 
-    Tooltip.prototype.getPosition = function () {
-        var el = this.$element[0]
-        return $.extend({}, (typeof el.getBoundingClientRect == 'function') ? el.getBoundingClientRect() : {
-            width: el.offsetWidth,
-            height: el.offsetHeight
-        }, this.$element.offset())
+    Tooltip.prototype.getPosition = function ($element) {
+        $element = $element || this.$element
+        var el = $element[0]
+        var isBody = el.tagName == 'BODY'
+        return $.extend({}, (typeof el.getBoundingClientRect == 'function') ? el.getBoundingClientRect() : null, {
+            scroll: isBody ? document.documentElement.scrollTop || document.body.scrollTop : $element.scrollTop(),
+            width: isBody ? $(window).width() : $element.outerWidth(),
+            height: isBody ? $(window).height() : $element.outerHeight()
+        }, isBody ? { top: 0, left: 0 } : $element.offset())
     }
 
     Tooltip.prototype.getCalculatedOffset = function (placement, pos, actualWidth, actualHeight) {
@@ -12486,6 +12631,35 @@
             placement == 'top' ? { top: pos.top - actualHeight, left: pos.left + pos.width / 2 - actualWidth / 2  } :
                 placement == 'left' ? { top: pos.top + pos.height / 2 - actualHeight / 2, left: pos.left - actualWidth } :
                     /* placement == 'right' */ { top: pos.top + pos.height / 2 - actualHeight / 2, left: pos.left + pos.width   }
+
+    }
+
+    Tooltip.prototype.getViewportAdjustedDelta = function (placement, pos, actualWidth, actualHeight) {
+        var delta = { top: 0, left: 0 }
+        if (!this.$viewport) return delta
+
+        var viewportPadding = this.options.viewport && this.options.viewport.padding || 0
+        var viewportDimensions = this.getPosition(this.$viewport)
+
+        if (/right|left/.test(placement)) {
+            var topEdgeOffset = pos.top - viewportPadding - viewportDimensions.scroll
+            var bottomEdgeOffset = pos.top + viewportPadding - viewportDimensions.scroll + actualHeight
+            if (topEdgeOffset < viewportDimensions.top) { // top overflow
+                delta.top = viewportDimensions.top - topEdgeOffset
+            } else if (bottomEdgeOffset > viewportDimensions.top + viewportDimensions.height) { // bottom overflow
+                delta.top = viewportDimensions.top + viewportDimensions.height - bottomEdgeOffset
+            }
+        } else {
+            var leftEdgeOffset = pos.left - viewportPadding
+            var rightEdgeOffset = pos.left + viewportPadding + actualWidth
+            if (leftEdgeOffset < viewportDimensions.left) { // left overflow
+                delta.left = viewportDimensions.left - leftEdgeOffset
+            } else if (rightEdgeOffset > viewportDimensions.width) { // right overflow
+                delta.left = viewportDimensions.left + viewportDimensions.width - rightEdgeOffset
+            }
+        }
+
+        return delta
     }
 
     Tooltip.prototype.getTitle = function () {
@@ -12499,12 +12673,18 @@
         return title
     }
 
+    Tooltip.prototype.getUID = function (prefix) {
+        do prefix += ~~(Math.random() * 1000000)
+        while (document.getElementById(prefix))
+        return prefix
+    }
+
     Tooltip.prototype.tip = function () {
-        return this.$tip = this.$tip || $(this.options.template)
+        return (this.$tip = this.$tip || $(this.options.template))
     }
 
     Tooltip.prototype.arrow = function () {
-        return this.$arrow = this.$arrow || this.tip().find('.tooltip-arrow')
+        return (this.$arrow = this.$arrow || this.tip().find('.tooltip-arrow'))
     }
 
     Tooltip.prototype.validate = function () {
@@ -12528,7 +12708,15 @@
     }
 
     Tooltip.prototype.toggle = function (e) {
-        var self = e ? $(e.currentTarget)[this.type](this.getDelegateOptions()).data('bs.' + this.type) : this
+        var self = this
+        if (e) {
+            self = $(e.currentTarget).data('bs.' + this.type)
+            if (!self) {
+                self = new this.constructor(e.currentTarget, this.getDelegateOptions())
+                $(e.currentTarget).data('bs.' + this.type, self)
+            }
+        }
+
         self.tip().hasClass('in') ? self.leave(self) : self.enter(self)
     }
 
@@ -12541,9 +12729,7 @@
     // TOOLTIP PLUGIN DEFINITION
     // =========================
 
-    var old = $.fn.tooltip
-
-    $.fn.tooltip = function (option) {
+    function Plugin(option) {
         return this.each(function () {
             var $this = $(this)
             var data = $this.data('bs.tooltip')
@@ -12555,6 +12741,9 @@
         })
     }
 
+    var old = $.fn.tooltip
+
+    $.fn.tooltip = Plugin
     $.fn.tooltip.Constructor = Tooltip
 
 
@@ -12567,8 +12756,9 @@
     }
 
 }(jQuery);
+
 /* ========================================================================
- * Bootstrap: popover.js v3.1.0
+ * Bootstrap: popover.js v3.2.0
  * http://getbootstrap.com/javascript/#popovers
  * ========================================================================
  * Copyright 2011-2014 Twitter, Inc.
@@ -12588,11 +12778,13 @@
 
     if (!$.fn.tooltip) throw new Error('Popover requires tooltip.js')
 
+    Popover.VERSION = '3.2.0'
+
     Popover.DEFAULTS = $.extend({}, $.fn.tooltip.Constructor.DEFAULTS, {
         placement: 'right',
         trigger: 'click',
         content: '',
-        template: '<div class="popover"><div class="arrow"></div><h3 class="popover-title"></h3><div class="popover-content"></div></div>'
+        template: '<div class="popover" role="tooltip"><div class="arrow"></div><h3 class="popover-title"></h3><div class="popover-content"></div></div>'
     })
 
 
@@ -12613,7 +12805,7 @@
         var content = this.getContent()
 
         $tip.find('.popover-title')[this.options.html ? 'html' : 'text'](title)
-        $tip.find('.popover-content')[ // we use append for html objects to maintain js events
+        $tip.find('.popover-content').empty()[ // we use append for html objects to maintain js events
             this.options.html ? (typeof content == 'string' ? 'html' : 'append') : 'text'
             ](content)
 
@@ -12639,7 +12831,7 @@
     }
 
     Popover.prototype.arrow = function () {
-        return this.$arrow = this.$arrow || this.tip().find('.arrow')
+        return (this.$arrow = this.$arrow || this.tip().find('.arrow'))
     }
 
     Popover.prototype.tip = function () {
@@ -12651,9 +12843,7 @@
     // POPOVER PLUGIN DEFINITION
     // =========================
 
-    var old = $.fn.popover
-
-    $.fn.popover = function (option) {
+    function Plugin(option) {
         return this.each(function () {
             var $this = $(this)
             var data = $this.data('bs.popover')
@@ -12665,6 +12855,9 @@
         })
     }
 
+    var old = $.fn.popover
+
+    $.fn.popover = Plugin
     $.fn.popover.Constructor = Popover
 
 
@@ -12677,7 +12870,6 @@
     }
 
 }(jQuery);
-
 
 /*
  * At its core, Backstretch is a one-line plugin.
