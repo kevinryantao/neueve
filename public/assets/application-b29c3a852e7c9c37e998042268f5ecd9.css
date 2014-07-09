@@ -3210,7 +3210,7 @@ input[type="color"]:focus,
 .uneditable-input:focus {
     border-color: rgba(82, 168, 236, 0.8);
     outline: 0;
-    outline: thin dotted   \9;
+    outline: thin dotted    \9;
     /* IE6-9 */
 
     -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(82, 168, 236, .6);
@@ -3224,7 +3224,7 @@ input[type="checkbox"] {
     *margin-top: 0;
     /* IE7 */
 
-    margin-top: 1px   \9;
+    margin-top: 1px    \9;
     /* IE8-9 */
 
     line-height: normal;
@@ -3854,9 +3854,9 @@ select:focus:invalid:focus {
 
 input.search-query {
     padding-right: 14px;
-    padding-right: 4px   \9;
+    padding-right: 4px    \9;
     padding-left: 14px;
-    padding-left: 4px   \9;
+    padding-left: 4px    \9;
     /* IE7-8 doesn't have border-radius, so don't indent the padding */
 
     margin-bottom: 0;
@@ -5255,7 +5255,7 @@ button.close {
 
 .btn:active,
 .btn.active {
-    background-color: #cccccc   \9;
+    background-color: #cccccc    \9;
 }
 
 .btn:first-child {
@@ -5402,7 +5402,7 @@ input[type="button"].btn-block {
 
 .btn-primary:active,
 .btn-primary.active {
-    background-color: #002923   \9;
+    background-color: #002923    \9;
 }
 
 .btn-warning {
@@ -5436,7 +5436,7 @@ input[type="button"].btn-block {
 
 .btn-warning:active,
 .btn-warning.active {
-    background-color: #d44d0d   \9;
+    background-color: #d44d0d    \9;
 }
 
 .btn-danger {
@@ -5470,7 +5470,7 @@ input[type="button"].btn-block {
 
 .btn-danger:active,
 .btn-danger.active {
-    background-color: #aa3526   \9;
+    background-color: #aa3526    \9;
 }
 
 .btn-success {
@@ -5504,7 +5504,7 @@ input[type="button"].btn-block {
 
 .btn-success:active,
 .btn-success.active {
-    background-color: #004071   \9;
+    background-color: #004071    \9;
 }
 
 .btn-info {
@@ -5538,7 +5538,7 @@ input[type="button"].btn-block {
 
 .btn-info:active,
 .btn-info.active {
-    background-color: #24748c   \9;
+    background-color: #24748c    \9;
 }
 
 .btn-inverse {
@@ -5572,7 +5572,7 @@ input[type="button"].btn-block {
 
 .btn-inverse:active,
 .btn-inverse.active {
-    background-color: #2f2f2f   \9;
+    background-color: #2f2f2f    \9;
 }
 
 button.btn,
@@ -6673,7 +6673,7 @@ input[type="submit"].btn.btn-mini {
 
 .navbar .btn-navbar:active,
 .navbar .btn-navbar.active {
-    background-color: #000000   \9;
+    background-color: #000000    \9;
 }
 
 .navbar .btn-navbar .icon-bar {
@@ -6934,7 +6934,7 @@ input[type="submit"].btn.btn-mini {
 
 .navbar-inverse .btn-navbar:active,
 .navbar-inverse .btn-navbar.active {
-    background-color: #b7b7b7   \9;
+    background-color: #b7b7b7    \9;
 }
 
 .breadcrumb {
@@ -12492,7 +12492,7 @@ input[type="color"]:focus,
 .uneditable-input:focus {
     border-color: rgba(82, 168, 236, 0.8);
     outline: 0;
-    outline: thin dotted  \9;
+    outline: thin dotted   \9;
     /* IE6-9 */
 
     -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
@@ -12503,7 +12503,7 @@ input[type="color"]:focus,
 input[type="radio"],
 input[type="checkbox"] {
     margin: 4px 0 0;
-    margin-top: 1px  \9;
+    margin-top: 1px   \9;
     *margin-top: 0;
     line-height: normal;
 }
@@ -13154,9 +13154,9 @@ select:focus:invalid:focus {
 
 input.search-query {
     padding-right: 14px;
-    padding-right: 4px  \9;
+    padding-right: 4px   \9;
     padding-left: 14px;
-    padding-left: 4px  \9;
+    padding-left: 4px   \9;
     /* IE7-8 doesn't have border-radius, so don't indent the padding */
 
     margin-bottom: 0;
@@ -14549,7 +14549,7 @@ button.close {
 
 .btn:active,
 .btn.active {
-    background-color: #cccccc  \9;
+    background-color: #cccccc   \9;
 }
 
 .btn:first-child {
@@ -14694,7 +14694,7 @@ input[type="button"].btn-block {
 
 .btn-primary:active,
 .btn-primary.active {
-    background-color: #003399  \9;
+    background-color: #003399   \9;
 }
 
 .btn-warning {
@@ -14726,7 +14726,7 @@ input[type="button"].btn-block {
 
 .btn-warning:active,
 .btn-warning.active {
-    background-color: #c67605  \9;
+    background-color: #c67605   \9;
 }
 
 .btn-danger {
@@ -14758,7 +14758,7 @@ input[type="button"].btn-block {
 
 .btn-danger:active,
 .btn-danger.active {
-    background-color: #942a25  \9;
+    background-color: #942a25   \9;
 }
 
 .btn-success {
@@ -14790,7 +14790,7 @@ input[type="button"].btn-block {
 
 .btn-success:active,
 .btn-success.active {
-    background-color: #408140  \9;
+    background-color: #408140   \9;
 }
 
 .btn-info {
@@ -14822,7 +14822,7 @@ input[type="button"].btn-block {
 
 .btn-info:active,
 .btn-info.active {
-    background-color: #24748c  \9;
+    background-color: #24748c   \9;
 }
 
 .btn-inverse {
@@ -14854,7 +14854,7 @@ input[type="button"].btn-block {
 
 .btn-inverse:active,
 .btn-inverse.active {
-    background-color: #080808  \9;
+    background-color: #080808   \9;
 }
 
 button.btn,
@@ -15952,7 +15952,7 @@ input[type="submit"].btn.btn-mini {
 
 .navbar .btn-navbar:active,
 .navbar .btn-navbar.active {
-    background-color: #cccccc  \9;
+    background-color: #cccccc   \9;
 }
 
 .navbar .btn-navbar .icon-bar {
@@ -16211,7 +16211,7 @@ input[type="submit"].btn.btn-mini {
 
 .navbar-inverse .btn-navbar:active,
 .navbar-inverse .btn-navbar.active {
-    background-color: #000000  \9;
+    background-color: #000000   \9;
 }
 
 .breadcrumb {
@@ -18412,7 +18412,7 @@ textarea, input[type="text"], input[type="password"], input[type="datetime"], in
 textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="date"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus, input[type="number"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="color"]:focus, .uneditable-input:focus {
     border-color: rgba(82, 168, 236, 0.8);
     outline: 0;
-    outline: thin dotted  \9;
+    outline: thin dotted   \9;
     -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
     -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6)
@@ -18420,7 +18420,7 @@ textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[ty
 
 input[type="radio"], input[type="checkbox"] {
     margin: 4px 0 0;
-    margin-top: 1px  \9;
+    margin-top: 1px   \9;
     *margin-top: 0;
     line-height: normal
 }
@@ -18903,9 +18903,9 @@ input:focus:invalid:focus, textarea:focus:invalid:focus, select:focus:invalid:fo
 
 input.search-query {
     padding-right: 14px;
-    padding-right: 4px  \9;
+    padding-right: 4px   \9;
     padding-left: 14px;
-    padding-left: 4px  \9;
+    padding-left: 4px   \9;
     margin-bottom: 0;
     -webkit-border-radius: 15px;
     -moz-border-radius: 15px;
@@ -20180,7 +20180,8 @@ button.close {
 }
 
 .btn:active, .btn.active {
-    background-color: #ccc  \9
+    background-color: #ccc   \9
+
 }
 
 .btn:first-child {
@@ -20308,7 +20309,8 @@ input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="butto
 }
 
 .btn-primary:active, .btn-primary.active {
-    background-color: #039  \9
+    background-color: #039   \9
+
 }
 
 .btn-warning {
@@ -20335,7 +20337,8 @@ input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="butto
 }
 
 .btn-warning:active, .btn-warning.active {
-    background-color: #c67605  \9
+    background-color: #c67605   \9
+
 }
 
 .btn-danger {
@@ -20362,7 +20365,8 @@ input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="butto
 }
 
 .btn-danger:active, .btn-danger.active {
-    background-color: #942a25  \9
+    background-color: #942a25   \9
+
 }
 
 .btn-success {
@@ -20389,7 +20393,8 @@ input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="butto
 }
 
 .btn-success:active, .btn-success.active {
-    background-color: #408140  \9
+    background-color: #408140   \9
+
 }
 
 .btn-info {
@@ -20416,7 +20421,8 @@ input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="butto
 }
 
 .btn-info:active, .btn-info.active {
-    background-color: #24748c  \9
+    background-color: #24748c   \9
+
 }
 
 .btn-inverse {
@@ -20443,7 +20449,8 @@ input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="butto
 }
 
 .btn-inverse:active, .btn-inverse.active {
-    background-color: #080808  \9
+    background-color: #080808   \9
+
 }
 
 button.btn, input[type="submit"].btn {
@@ -21455,7 +21462,8 @@ button.btn.btn-mini, input[type="submit"].btn.btn-mini {
 }
 
 .navbar .btn-navbar:active, .navbar .btn-navbar.active {
-    background-color: #ccc  \9
+    background-color: #ccc   \9
+
 }
 
 .navbar .btn-navbar .icon-bar {
@@ -21691,7 +21699,8 @@ button.btn.btn-mini, input[type="submit"].btn.btn-mini {
 }
 
 .navbar-inverse .btn-navbar:active, .navbar-inverse .btn-navbar.active {
-    background-color: #000  \9
+    background-color: #000   \9
+
 }
 
 .breadcrumb {
@@ -24163,7 +24172,7 @@ input[type="color"]:focus,
 .uneditable-input:focus {
     border-color: rgba(82, 168, 236, 0.8);
     outline: 0;
-    outline: thin dotted   \9;
+    outline: thin dotted    \9;
     /* IE6-9 */
     -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
     -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
@@ -24176,7 +24185,7 @@ input[type="checkbox"] {
     margin: 4px 0 0;
     *margin-top: 0;
     /* IE7 */
-    margin-top: 1px   \9;
+    margin-top: 1px    \9;
     /* IE8-9 */
     line-height: normal;
 }
@@ -24894,9 +24903,9 @@ select:focus:invalid:focus {
 /* line 1802, /Users/ktao/personal_code/lavax/app/assets/stylesheets/bootstrap.css */
 input.search-query {
     padding-right: 14px;
-    padding-right: 4px   \9;
+    padding-right: 4px    \9;
     padding-left: 14px;
-    padding-left: 4px   \9;
+    padding-left: 4px    \9;
     /* IE7-8 doesn't have border-radius, so don't indent the padding */
     margin-bottom: 0;
     -webkit-border-radius: 15px;
@@ -26540,7 +26549,7 @@ button.close {
 /* line 3204, /Users/ktao/personal_code/lavax/app/assets/stylesheets/bootstrap.css */
 .btn:active,
 .btn.active {
-    background-color: #cccccc   \9;
+    background-color: #cccccc    \9;
 }
 
 /* line 3208, /Users/ktao/personal_code/lavax/app/assets/stylesheets/bootstrap.css */
@@ -26705,7 +26714,7 @@ input[type="button"].btn-block {
 /* line 3351, /Users/ktao/personal_code/lavax/app/assets/stylesheets/bootstrap.css */
 .btn-primary:active,
 .btn-primary.active {
-    background-color: #002923   \9;
+    background-color: #002923    \9;
 }
 
 /* line 3355, /Users/ktao/personal_code/lavax/app/assets/stylesheets/bootstrap.css */
@@ -26741,7 +26750,7 @@ input[type="button"].btn-block {
 /* line 3385, /Users/ktao/personal_code/lavax/app/assets/stylesheets/bootstrap.css */
 .btn-warning:active,
 .btn-warning.active {
-    background-color: #d44d0d   \9;
+    background-color: #d44d0d    \9;
 }
 
 /* line 3389, /Users/ktao/personal_code/lavax/app/assets/stylesheets/bootstrap.css */
@@ -26777,7 +26786,7 @@ input[type="button"].btn-block {
 /* line 3419, /Users/ktao/personal_code/lavax/app/assets/stylesheets/bootstrap.css */
 .btn-danger:active,
 .btn-danger.active {
-    background-color: #aa3526   \9;
+    background-color: #aa3526    \9;
 }
 
 /* line 3423, /Users/ktao/personal_code/lavax/app/assets/stylesheets/bootstrap.css */
@@ -26813,7 +26822,7 @@ input[type="button"].btn-block {
 /* line 3453, /Users/ktao/personal_code/lavax/app/assets/stylesheets/bootstrap.css */
 .btn-success:active,
 .btn-success.active {
-    background-color: #004071   \9;
+    background-color: #004071    \9;
 }
 
 /* line 3457, /Users/ktao/personal_code/lavax/app/assets/stylesheets/bootstrap.css */
@@ -26849,7 +26858,7 @@ input[type="button"].btn-block {
 /* line 3487, /Users/ktao/personal_code/lavax/app/assets/stylesheets/bootstrap.css */
 .btn-info:active,
 .btn-info.active {
-    background-color: #24748c   \9;
+    background-color: #24748c    \9;
 }
 
 /* line 3491, /Users/ktao/personal_code/lavax/app/assets/stylesheets/bootstrap.css */
@@ -26885,7 +26894,7 @@ input[type="button"].btn-block {
 /* line 3521, /Users/ktao/personal_code/lavax/app/assets/stylesheets/bootstrap.css */
 .btn-inverse:active,
 .btn-inverse.active {
-    background-color: #2f2f2f   \9;
+    background-color: #2f2f2f    \9;
 }
 
 /* line 3526, /Users/ktao/personal_code/lavax/app/assets/stylesheets/bootstrap.css */
@@ -28160,7 +28169,7 @@ input[type="submit"].btn.btn-mini {
 /* line 4622, /Users/ktao/personal_code/lavax/app/assets/stylesheets/bootstrap.css */
 .navbar .btn-navbar:active,
 .navbar .btn-navbar.active {
-    background-color: #000000   \9;
+    background-color: #000000    \9;
 }
 
 /* line 4626, /Users/ktao/personal_code/lavax/app/assets/stylesheets/bootstrap.css */
@@ -28456,7 +28465,7 @@ input[type="submit"].btn.btn-mini {
 /* line 4883, /Users/ktao/personal_code/lavax/app/assets/stylesheets/bootstrap.css */
 .navbar-inverse .btn-navbar:active,
 .navbar-inverse .btn-navbar.active {
-    background-color: #b7b7b7   \9;
+    background-color: #b7b7b7    \9;
 }
 
 /* line 4887, /Users/ktao/personal_code/lavax/app/assets/stylesheets/bootstrap.css */
@@ -30687,6 +30696,16 @@ p, div {
 /* line 88, /Users/ktao/personal_code/lavax/app/assets/stylesheets/custom.css.scss */
 .btn-info {
     border-radius: 10px;
+}
+
+/* line 92, /Users/ktao/personal_code/lavax/app/assets/stylesheets/custom.css.scss */
+.table-bordered {
+    border: 1px #ddd;
+}
+
+/* line 96, /Users/ktao/personal_code/lavax/app/assets/stylesheets/custom.css.scss */
+.table-bordered td, .table-bordered th {
+    border: 1px solid #ddd;
 }
 
 /*!
