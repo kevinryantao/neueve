@@ -13,6 +13,30 @@
 
   We thank you for your business! <br>
 
+  <script type="text/javascript">
+      var urlParams;
+      (window.onpopstate = function () {
+          var match,
+                  pl = /\+/g,  // Regex for replacing addition symbol with a space
+                  search = /([^&=]+)=?([^&]*)/g,
+                  decode = function (s) {
+                      return decodeURIComponent(s.replace(pl, " "));
+                  },
+                  query = window.location.search.substring(1);
+
+          urlParams = {};
+          while (match = search.exec(query)) {
+              urlParams[decode(match[1])] = decode(match[2]);
+          }
+          ga('require', 'ecommerce');
+          ga('ecommerce:addTransaction', {
+              'id': urlParams['tx'],                     // Transaction ID. Required.
+              'revenue': urlParams['amt']               // Grand Total.
+          });
+          ga('ecommerce:send');
+      })();
+  </script>
+
 
   <!-- Google Code for Successful Order Conversion Page -->
   <script type="text/javascript">
@@ -23,6 +47,7 @@
       var google_conversion_color = "ffffff";
       var google_conversion_label = "3PP2CJflwgUQ9_u67wM";
       var google_conversion_value = 6.00;
+      var google_remarketing_only = false;
       /* ]]> */
   </script>
   <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
