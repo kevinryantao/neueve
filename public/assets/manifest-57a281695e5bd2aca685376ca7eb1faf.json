@@ -85,57 +85,63 @@
     },
     "FontAwesome-d5dbb4489846f6874f57c5b698a09e81.otf": {
         "logical_path": "FontAwesome.otf",
-        "mtime": "2014-07-04T02:32:23-05:00",
+        "mtime": "2014-08-09T02:59:57-05:00",
         "size": 75188,
         "digest": "d5dbb4489846f6874f57c5b698a09e81"
     },
     "fontawesome-webfont-1ce1f4e531fb2a4a5c1c2c8c6d838735.eot": {
         "logical_path": "fontawesome-webfont.eot",
-        "mtime": "2014-07-04T02:32:23-05:00",
+        "mtime": "2014-08-09T02:59:57-05:00",
         "size": 72449,
         "digest": "1ce1f4e531fb2a4a5c1c2c8c6d838735"
     },
     "fontawesome-webfont-f869505d30ef1c64983e2418a602fc1e.svg": {
         "logical_path": "fontawesome-webfont.svg",
-        "mtime": "2014-07-04T02:32:23-05:00",
+        "mtime": "2014-08-09T02:59:57-05:00",
         "size": 253487,
         "digest": "f869505d30ef1c64983e2418a602fc1e"
     },
     "fontawesome-webfont-a595eb609ff702c24104bde4baf42347.ttf": {
         "logical_path": "fontawesome-webfont.ttf",
-        "mtime": "2014-07-04T02:32:23-05:00",
+        "mtime": "2014-08-09T02:59:57-05:00",
         "size": 141564,
         "digest": "a595eb609ff702c24104bde4baf42347"
     },
     "fontawesome-webfont-7abb3c8289bbfa16ed38d0828f5f8a1d.woff": {
         "logical_path": "fontawesome-webfont.woff",
-        "mtime": "2014-07-04T02:32:23-05:00",
+        "mtime": "2014-08-09T02:59:57-05:00",
         "size": 83760,
         "digest": "7abb3c8289bbfa16ed38d0828f5f8a1d"
     },
     "bootstrap/glyphicons-halflings-regular-096f18b081b104fd70a613a5a85c3a6b.eot": {
         "logical_path": "bootstrap/glyphicons-halflings-regular.eot",
-        "mtime": "2014-07-04T02:32:19-05:00",
+        "mtime": "2014-08-09T02:59:51-05:00",
         "size": 20335,
         "digest": "096f18b081b104fd70a613a5a85c3a6b"
     },
     "bootstrap/glyphicons-halflings-regular-dd55935477ecf169e4d77cfcd00964d7.svg": {
         "logical_path": "bootstrap/glyphicons-halflings-regular.svg",
-        "mtime": "2014-07-04T02:32:19-05:00",
+        "mtime": "2014-08-09T02:59:51-05:00",
         "size": 62927,
         "digest": "dd55935477ecf169e4d77cfcd00964d7"
     },
     "bootstrap/glyphicons-halflings-regular-04097583f3394813b9642cf91c9e019f.ttf": {
         "logical_path": "bootstrap/glyphicons-halflings-regular.ttf",
-        "mtime": "2014-07-04T02:32:19-05:00",
+        "mtime": "2014-08-09T02:59:51-05:00",
         "size": 41280,
         "digest": "04097583f3394813b9642cf91c9e019f"
     },
     "bootstrap/glyphicons-halflings-regular-f32c7c112d6ae9aafd723c78dfe35bcf.woff": {
         "logical_path": "bootstrap/glyphicons-halflings-regular.woff",
-        "mtime": "2014-07-04T02:32:19-05:00",
+        "mtime": "2014-08-09T02:59:51-05:00",
         "size": 23320,
         "digest": "f32c7c112d6ae9aafd723c78dfe35bcf"
+    },
+    "neueve box image-222104c62bdbc53156a1decc178219e1.jpg": {
+        "logical_path": "neueve box image.jpg",
+        "mtime": "2014-08-19T04:13:26-05:00",
+        "size": 142374,
+        "digest": "222104c62bdbc53156a1decc178219e1"
     }
 }, "assets": {
     "creampaper.png": "creampaper-f2cedd743c2663efa106b2b30b2fb7af.png",
@@ -160,5 +166,6 @@
     "bootstrap/glyphicons-halflings-regular.eot": "bootstrap/glyphicons-halflings-regular-096f18b081b104fd70a613a5a85c3a6b.eot",
     "bootstrap/glyphicons-halflings-regular.svg": "bootstrap/glyphicons-halflings-regular-dd55935477ecf169e4d77cfcd00964d7.svg",
     "bootstrap/glyphicons-halflings-regular.ttf": "bootstrap/glyphicons-halflings-regular-04097583f3394813b9642cf91c9e019f.ttf",
-    "bootstrap/glyphicons-halflings-regular.woff": "bootstrap/glyphicons-halflings-regular-f32c7c112d6ae9aafd723c78dfe35bcf.woff"
+    "bootstrap/glyphicons-halflings-regular.woff": "bootstrap/glyphicons-halflings-regular-f32c7c112d6ae9aafd723c78dfe35bcf.woff",
+    "neueve box image.jpg": "neueve box image-222104c62bdbc53156a1decc178219e1.jpg"
 }}
