@@ -18,3 +18,7 @@ $('.add-to-cart').on('click', function () {
 $('.subscribe-button').on('click', function () {
     ga('send', 'event', 'button', 'click', 'Subscribe');
 });
+
+$('.amazon-review').on('click', function () {
+    ga('send', 'event', 'amazon-review-link', 'click', "Viewed Amazon Review for " + this.id);
+});
