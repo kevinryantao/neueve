@@ -414,7 +414,7 @@
             if (arr != null) {
                 if (isArraylike(Object(arr))) {
                     jQuery.merge(ret,
-                        typeof arr === "string" ?
+                            typeof arr === "string" ?
                             [ arr ] : arr
                     );
                 } else {
@@ -735,11 +735,11 @@
                     // Workaround erroneous numeric interpretation of +"0x"
                     return high !== high || escapedWhitespace ?
                         escaped :
-                        high < 0 ?
-                            // BMP codepoint
-                            String.fromCharCode(high + 0x10000) :
-                            // Supplemental Plane codepoint (surrogate pair)
-                            String.fromCharCode(high >> 10 | 0xD800, high & 0x3FF | 0xDC00);
+                            high < 0 ?
+                        // BMP codepoint
+                        String.fromCharCode(high + 0x10000) :
+                        // Supplemental Plane codepoint (surrogate pair)
+                        String.fromCharCode(high >> 10 | 0xD800, high & 0x3FF | 0xDC00);
                 };
 
 // Optimize for push.apply( _, NodeList )
@@ -956,7 +956,7 @@
                 var cur = b && a,
                     diff = cur && a.nodeType === 1 && b.nodeType === 1 &&
                         ( ~b.sourceIndex || MAX_NEGATIVE ) -
-                            ( ~a.sourceIndex || MAX_NEGATIVE );
+                        ( ~a.sourceIndex || MAX_NEGATIVE );
 
                 // Use IE sourceIndex if available on both nodes
                 if (diff) {
@@ -1370,12 +1370,12 @@
                         // Parentless nodes are either documents or disconnected
                         if (!aup || !bup) {
                             return a === doc ? -1 :
-                                b === doc ? 1 :
-                                    aup ? -1 :
-                                        bup ? 1 :
-                                            sortInput ?
-                                                ( indexOf.call(sortInput, a) - indexOf.call(sortInput, b) ) :
-                                                0;
+                                    b === doc ? 1 :
+                                aup ? -1 :
+                                    bup ? 1 :
+                                        sortInput ?
+                                            ( indexOf.call(sortInput, a) - indexOf.call(sortInput, b) ) :
+                                            0;
 
                             // If the nodes are siblings, we can do a quick check
                         } else if (aup === bup) {
@@ -1402,9 +1402,9 @@
                             siblingCheck(ap[i], bp[i]) :
 
                             // Otherwise nodes in our document sort first
-                            ap[i] === preferredDoc ? -1 :
+                                ap[i] === preferredDoc ? -1 :
                                 bp[i] === preferredDoc ? 1 :
-                                    0;
+                            0;
                     };
 
                 return doc;
@@ -1466,11 +1466,11 @@
 
                 return val !== undefined ?
                     val :
-                    support.attributes || !documentIsHTML ?
-                        elem.getAttribute(name) :
+                        support.attributes || !documentIsHTML ?
+                    elem.getAttribute(name) :
                         (val = elem.getAttributeNode(name)) && val.specified ?
-                            val.value :
-                            null;
+                    val.value :
+                    null;
             };
 
             Sizzle.error = function (msg) {
@@ -1658,9 +1658,9 @@
 
                         return pattern ||
                             (pattern = new RegExp("(^|" + whitespace + ")" + className + "(" + whitespace + "|$)")) &&
-                                classCache(className, function (elem) {
-                                    return pattern.test(typeof elem.className === "string" && elem.className || typeof elem.getAttribute !== strundefined && elem.getAttribute("class") || "");
-                                });
+                            classCache(className, function (elem) {
+                                return pattern.test(typeof elem.className === "string" && elem.className || typeof elem.getAttribute !== strundefined && elem.getAttribute("class") || "");
+                            });
                     },
 
                     "ATTR": function (name, operator, check) {
@@ -1677,13 +1677,13 @@
                             result += "";
 
                             return operator === "=" ? result === check :
-                                operator === "!=" ? result !== check :
+                                    operator === "!=" ? result !== check :
                                     operator === "^=" ? check && result.indexOf(check) === 0 :
-                                        operator === "*=" ? check && result.indexOf(check) > -1 :
-                                            operator === "$=" ? check && result.slice(-check.length) === check :
-                                                operator === "~=" ? ( " " + result + " " ).indexOf(check) > -1 :
-                                                    operator === "|=" ? result === check || result.slice(0, check.length + 1) === check + "-" :
-                                                        false;
+                                    operator === "*=" ? check && result.indexOf(check) > -1 :
+                                    operator === "$=" ? check && result.slice(-check.length) === check :
+                                    operator === "~=" ? ( " " + result + " " ).indexOf(check) > -1 :
+                                    operator === "|=" ? result === check || result.slice(0, check.length + 1) === check + "-" :
+                                false;
                         };
                     },
 
@@ -2227,13 +2227,13 @@
 
                         matcherOut = matcher ?
                             // If we have a postFinder, or filtered seed, or non-seed postFilter or preexisting results,
-                            postFinder || ( seed ? preFilter : preexisting || postFilter ) ?
+                                postFinder || ( seed ? preFilter : preexisting || postFilter ) ?
 
-                                // ...intermediate processing is necessary
-                                [] :
+                            // ...intermediate processing is necessary
+                            [] :
 
-                                // ...otherwise use results directly
-                                results :
+                            // ...otherwise use results directly
+                            results :
                             matcherIn;
 
                     // Find primary matches
@@ -2284,7 +2284,7 @@
                         // Add elements to results, through postFinder if defined
                     } else {
                         matcherOut = condense(
-                            matcherOut === results ?
+                                matcherOut === results ?
                                 matcherOut.splice(preexisting, matcherOut.length) :
                                 matcherOut
                         );
@@ -2334,15 +2334,15 @@
                                 }
                             }
                             return setMatcher(
-                                i > 1 && elementMatcher(matchers),
-                                i > 1 && toSelector(
+                                    i > 1 && elementMatcher(matchers),
+                                    i > 1 && toSelector(
                                     // If the preceding token was a descendant combinator, insert an implicit any-element `*`
                                     tokens.slice(0, i - 1).concat({ value: tokens[ i - 2 ].type === " " ? "*" : "" })
                                 ).replace(rtrim, "$1"),
                                 matcher,
-                                i < j && matcherFromTokens(tokens.slice(i, j)),
-                                j < len && matcherFromTokens((tokens = tokens.slice(j))),
-                                j < len && toSelector(tokens)
+                                    i < j && matcherFromTokens(tokens.slice(i, j)),
+                                    j < len && matcherFromTokens((tokens = tokens.slice(j))),
+                                    j < len && toSelector(tokens)
                             );
                         }
                         matchers.push(matcher);
@@ -2531,7 +2531,7 @@
                             // Search, expanding context for leading sibling combinators
                             if ((seed = find(
                                 token.matches[0].replace(runescape, funescape),
-                                rsibling.test(tokens[0].type) && testContext(context.parentNode) || context
+                                    rsibling.test(tokens[0].type) && testContext(context.parentNode) || context
                             ))) {
 
                                 // If seed is empty or no tokens remain, we can return early
@@ -2555,7 +2555,7 @@
                     context,
                     !documentIsHTML,
                     results,
-                    rsibling.test(selector) && testContext(context.parentNode) || context
+                        rsibling.test(selector) && testContext(context.parentNode) || context
                 );
                 return results;
             };
@@ -2616,9 +2616,9 @@
                     var val;
                     if (!isXML) {
                         return elem[ name ] === true ? name.toLowerCase() :
-                            (val = elem.getAttributeNode(name)) && val.specified ?
-                                val.value :
-                                null;
+                                (val = elem.getAttributeNode(name)) && val.specified ?
+                            val.value :
+                            null;
                     }
                 });
             }
@@ -2726,7 +2726,7 @@
 
                 // If this is a positional/relative selector, check membership in the returned set
                 // so $("p:first").is("p:last") won't return true for a doc with two "p".
-                typeof selector === "string" && rneedsContext.test(selector) ?
+                    typeof selector === "string" && rneedsContext.test(selector) ?
                     jQuery(selector) :
                     selector || [],
                 false
@@ -2778,7 +2778,7 @@
                         // Intentionally let the error be thrown if parseHTML is not present
                         jQuery.merge(this, jQuery.parseHTML(
                             match[1],
-                            context && context.nodeType ? context.ownerDocument || context : document,
+                                context && context.nodeType ? context.ownerDocument || context : document,
                             true
                         ));
 
@@ -2929,7 +2929,7 @@
 
                         // Don't pass non-elements to Sizzle
                         cur.nodeType === 1 &&
-                            jQuery.find.matchesSelector(cur, selectors))) {
+                        jQuery.find.matchesSelector(cur, selectors))) {
 
                         matched.push(cur);
                         break;
@@ -2970,7 +2970,7 @@
 
         addBack: function (selector) {
             return this.add(selector == null ?
-                this.prevObject : this.prevObject.filter(selector)
+                    this.prevObject : this.prevObject.filter(selector)
             );
         }
     });
@@ -3644,12 +3644,12 @@
             if (typeof data === "string") {
                 try {
                     data = data === "true" ? true :
-                        data === "false" ? false :
+                            data === "false" ? false :
                             data === "null" ? null :
-                                // Only convert to a number if it doesn't change the string
-                                +data + "" === data ? +data :
-                                    rbrace.test(data) ? jQuery.parseJSON(data) :
-                                        data;
+                        // Only convert to a number if it doesn't change the string
+                            +data + "" === data ? +data :
+                        rbrace.test(data) ? jQuery.parseJSON(data) :
+                            data;
                 } catch (e) {
                 }
 
@@ -4922,8 +4922,8 @@
             // by a handler lower down the tree; reflect the correct value.
             this.isDefaultPrevented = src.defaultPrevented ||
                 src.defaultPrevented === undefined &&
-                    // Support: IE < 9, Android < 4.0
-                    src.returnValue === false ?
+                // Support: IE < 9, Android < 4.0
+                src.returnValue === false ?
                 returnTrue :
                 returnFalse;
 
@@ -5327,8 +5327,8 @@
         var elems, elem,
             i = 0,
             found = typeof context.getElementsByTagName !== strundefined ? context.getElementsByTagName(tag || "*") :
-                typeof context.querySelectorAll !== strundefined ? context.querySelectorAll(tag || "*") :
-                    undefined;
+                    typeof context.querySelectorAll !== strundefined ? context.querySelectorAll(tag || "*") :
+                undefined;
 
         if (!found) {
             for (found = [], elems = context.childNodes || context; (elem = elems[i]) != null; i++) {
@@ -5359,7 +5359,7 @@
             jQuery.nodeName(content.nodeType !== 11 ? content : content.firstChild, "tr") ?
 
             elem.getElementsByTagName("tbody")[0] ||
-                elem.appendChild(elem.ownerDocument.createElement("tbody")) :
+            elem.appendChild(elem.ownerDocument.createElement("tbody")) :
             elem;
     }
 
@@ -5592,9 +5592,9 @@
                                 tmp.firstChild :
 
                                 // String was a bare <thead> or <tfoot>
-                                wrap[1] === "<table>" && !rtbody.test(elem) ?
-                                    tmp :
-                                    0;
+                                    wrap[1] === "<table>" && !rtbody.test(elem) ?
+                                tmp :
+                                0;
 
                             j = elem && elem.childNodes.length;
                             while (j--) {
@@ -6093,8 +6093,8 @@
                     // Support: Firefox<29, Android 2.3
                     // Vendor-prefix box-sizing
                     "-webkit-box-sizing:content-box;-moz-box-sizing:content-box;" +
-                        "box-sizing:content-box;display:block;margin:0;border:0;" +
-                        "padding:1px;width:1px;zoom:1";
+                    "box-sizing:content-box;display:block;margin:0;border:0;" +
+                    "padding:1px;width:1px;zoom:1";
                 div.appendChild(document.createElement("div")).style.width = "5px";
                 shrinkWrapBlocksVal = div.offsetWidth !== 3;
             }
@@ -6330,8 +6330,8 @@
                 // Support: Firefox<29, Android 2.3
                 // Vendor-prefix box-sizing
                 "-webkit-box-sizing:border-box;-moz-box-sizing:border-box;" +
-                    "box-sizing:border-box;display:block;margin-top:1%;top:1%;" +
-                    "border:1px;padding:1px;width:4px;position:absolute";
+                "box-sizing:border-box;display:block;margin-top:1%;top:1%;" +
+                "border:1px;padding:1px;width:4px;position:absolute";
 
             // Support: IE<9
             // Assume reasonable values in the absence of getComputedStyle
@@ -6355,7 +6355,7 @@
                     // Support: Firefox<29, Android 2.3
                     // Vendor-prefix box-sizing
                     "-webkit-box-sizing:content-box;-moz-box-sizing:content-box;" +
-                        "box-sizing:content-box;display:block;margin:0;border:0;padding:0";
+                    "box-sizing:content-box;display:block;margin:0;border:0;padding:0";
                 contents.style.marginRight = contents.style.width = "0";
                 div.style.width = "1px";
 
@@ -6513,7 +6513,7 @@
                 // If we already have the right measurement, avoid augmentation
                 4 :
                 // Otherwise initialize for horizontal or vertical properties
-                name === "width" ? 1 : 0,
+                    name === "width" ? 1 : 0,
 
             val = 0;
 
@@ -6583,7 +6583,7 @@
             augmentWidthOrHeight(
                 elem,
                 name,
-                extra || ( isBorderBox ? "border" : "content" ),
+                    extra || ( isBorderBox ? "border" : "content" ),
                 valueIsBorderBox,
                 styles
             )
@@ -6747,13 +6747,13 @@
             set: function (elem, value, extra) {
                 var styles = extra && getStyles(elem);
                 return setPositiveNumber(elem, value, extra ?
-                    augmentWidthOrHeight(
-                        elem,
-                        name,
-                        extra,
-                        support.boxSizing && jQuery.css(elem, "boxSizing", false, styles) === "border-box",
-                        styles
-                    ) : 0
+                        augmentWidthOrHeight(
+                            elem,
+                            name,
+                            extra,
+                                support.boxSizing && jQuery.css(elem, "boxSizing", false, styles) === "border-box",
+                            styles
+                        ) : 0
                 );
             }
         };
@@ -7321,7 +7321,7 @@
                 tweens: [],
                 createTween: function (prop, end) {
                     var tween = jQuery.Tween(elem, animation.opts, prop, end,
-                        animation.opts.specialEasing[ prop ] || animation.opts.easing);
+                            animation.opts.specialEasing[ prop ] || animation.opts.easing);
                     animation.tweens.push(tween);
                     return tween;
                 },
@@ -7418,7 +7418,7 @@
         };
 
         opt.duration = jQuery.fx.off ? 0 : typeof opt.duration === "number" ? opt.duration :
-            opt.duration in jQuery.fx.speeds ? jQuery.fx.speeds[ opt.duration ] : jQuery.fx.speeds._default;
+                opt.duration in jQuery.fx.speeds ? jQuery.fx.speeds[ opt.duration ] : jQuery.fx.speeds._default;
 
         // normalize opt.queue - true/undefined/null -> "fx"
         if (opt.queue == null || opt.queue === true) {
@@ -7728,7 +7728,7 @@
                         // handle most common string cases
                         ret.replace(rreturn, "") :
                         // handle cases where value is null/undef or number
-                        ret == null ? "" : ret;
+                            ret == null ? "" : ret;
                 }
 
                 return;
@@ -8206,9 +8206,9 @@
 
                     return tabindex ?
                         parseInt(tabindex, 10) :
-                        rfocusable.test(elem.nodeName) || rclickable.test(elem.nodeName) && elem.href ?
-                            0 :
-                            -1;
+                            rfocusable.test(elem.nodeName) || rclickable.test(elem.nodeName) && elem.href ?
+                        0 :
+                        -1;
                 }
             }
         }
@@ -9041,7 +9041,7 @@
                 s.crossDomain = !!( parts &&
                     ( parts[ 1 ] !== ajaxLocParts[ 1 ] || parts[ 2 ] !== ajaxLocParts[ 2 ] ||
                         ( parts[ 3 ] || ( parts[ 1 ] === "http:" ? "80" : "443" ) ) !==
-                            ( ajaxLocParts[ 3 ] || ( ajaxLocParts[ 1 ] === "http:" ? "80" : "443" ) ) )
+                        ( ajaxLocParts[ 3 ] || ( ajaxLocParts[ 1 ] === "http:" ? "80" : "443" ) ) )
                     );
             }
 
@@ -9116,7 +9116,7 @@
             // Set the Accepts header for the server, depending on the dataType
             jqXHR.setRequestHeader(
                 "Accept",
-                s.dataTypes[ 0 ] && s.accepts[ s.dataTypes[0] ] ?
+                    s.dataTypes[ 0 ] && s.accepts[ s.dataTypes[0] ] ?
                     s.accepts[ s.dataTypes[0] ] + ( s.dataTypes[ 0 ] !== "*" ? ", " + allTypes + "; q=0.01" : "" ) :
                     s.accepts[ "*" ]
             );
@@ -9956,21 +9956,21 @@
                 data: params
             }).done(function (responseText) {
 
-                    // Save response for use in complete callback
-                    response = arguments;
+                // Save response for use in complete callback
+                response = arguments;
 
-                    self.html(selector ?
+                self.html(selector ?
 
-                        // If a selector was specified, locate the right elements in a dummy div
-                        // Exclude scripts to avoid IE 'Permission Denied' errors
-                        jQuery("<div>").append(jQuery.parseHTML(responseText)).find(selector) :
+                    // If a selector was specified, locate the right elements in a dummy div
+                    // Exclude scripts to avoid IE 'Permission Denied' errors
+                    jQuery("<div>").append(jQuery.parseHTML(responseText)).find(selector) :
 
-                        // Otherwise use the full result
-                        responseText);
+                    // Otherwise use the full result
+                    responseText);
 
-                }).complete(callback && function (jqXHR, status) {
-                    self.each(callback, response || [ jqXHR.responseText, status, jqXHR ]);
-                });
+            }).complete(callback && function (jqXHR, status) {
+                self.each(callback, response || [ jqXHR.responseText, status, jqXHR ]);
+            });
         }
 
         return this;
@@ -9978,7 +9978,7 @@
 
 
     jQuery.expr.filters.animated = function (elem) {
-        return jQuery.grep(jQuery.timers,function (fn) {
+        return jQuery.grep(jQuery.timers, function (fn) {
             return elem === fn.elem;
         }).length;
     };
@@ -9992,9 +9992,9 @@
     function getWindow(elem) {
         return jQuery.isWindow(elem) ?
             elem :
-            elem.nodeType === 9 ?
-                elem.defaultView || elem.parentWindow :
-                false;
+                elem.nodeType === 9 ?
+            elem.defaultView || elem.parentWindow :
+            false;
     }
 
     jQuery.offset = {
@@ -10284,7 +10284,7 @@
      * Unobtrusive scripting adapter for jQuery
      * https://github.com/rails/jquery-ujs
      *
-     * Requires jQuery 1.7.0 or later.
+     * Requires jQuery 1.8.0 or later.
      *
      * Released under the MIT license
      *
@@ -10305,7 +10305,7 @@
         linkClickSelector: 'a[data-confirm], a[data-method], a[data-remote], a[data-disable-with], a[data-disable]',
 
         // Button elements bound by jquery-ujs
-        buttonClickSelector: 'button[data-remote], button[data-confirm]',
+        buttonClickSelector: 'button[data-remote]:not(form button), button[data-confirm]:not(form button)',
 
         // Select elements bound by jquery-ujs
         inputChangeSelector: 'select[data-remote], input[data-remote], textarea[data-remote]',
@@ -10314,7 +10314,7 @@
         formSubmitSelector: 'form',
 
         // Form input elements bound by jquery-ujs
-        formInputClickSelector: 'form input[type=submit], form input[type=image], form button[type=submit], form button:not([type])',
+        formInputClickSelector: 'form input[type=submit], form input[type=image], form button[type=submit], form button:not([type]), input[type=submit][form], input[type=image][form], button[type=submit][form], button[form]:not([type])',
 
         // Form input elements disabled during form submission
         disableSelector: 'input[data-disable-with]:enabled, button[data-disable-with]:enabled, textarea[data-disable-with]:enabled, input[data-disable]:enabled, button[data-disable]:enabled, textarea[data-disable]:enabled',
@@ -10650,6 +10650,7 @@
 
         $document.delegate(rails.buttonClickSelector, 'click.rails', function (e) {
             var button = $(this);
+
             if (!rails.allowAction(button)) return rails.stopEverything(e);
 
             if (button.is(rails.buttonDisableSelector)) rails.disableFormElement(button);
@@ -10813,7 +10814,7 @@
         if (typeof offsetBottom == 'function') offsetBottom = offset.bottom(this.$element)
 
         var affix = this.unpin != null && (scrollTop + this.unpin <= position.top) ? false :
-            offsetBottom != null && (position.top + this.$element.height() >= scrollHeight - offsetBottom) ? 'bottom' :
+                offsetBottom != null && (position.top + this.$element.height() >= scrollHeight - offsetBottom) ? 'bottom' :
                 offsetTop != null && (scrollTop <= offsetTop) ? 'top' : false
 
         if (this.affixed === affix) return
@@ -11153,7 +11154,7 @@
         this.interval && clearInterval(this.interval)
 
         this.options.interval
-            && !this.paused
+        && !this.paused
         && (this.interval = setInterval($.proxy(this.next, this), this.options.interval))
 
         return this
@@ -11911,8 +11912,8 @@
                     && $href.length
                     && $href.is(':visible')
                     && [
-                    [$href[offsetMethod]().top + offsetBase, href]
-                ]) || null
+                        [$href[offsetMethod]().top + offsetBase, href]
+                    ]) || null
             })
             .sort(function (a, b) {
                 return a[0] - b[0]
@@ -11946,8 +11947,8 @@
 
         for (i = offsets.length; i--;) {
             activeTarget != targets[i]
-                && scrollTop >= offsets[i]
-                && (!offsets[i + 1] || scrollTop <= offsets[i + 1])
+            && scrollTop >= offsets[i]
+            && (!offsets[i + 1] || scrollTop <= offsets[i + 1])
             && this.activate(targets[i])
         }
     }
@@ -12486,10 +12487,10 @@
                 var parentDim = this.getPosition($parent)
 
                 placement = placement == 'bottom' && pos.top + pos.height + actualHeight - parentDim.scroll > parentDim.height ? 'top' :
-                    placement == 'top' && pos.top - parentDim.scroll - actualHeight < 0 ? 'bottom' :
+                        placement == 'top' && pos.top - parentDim.scroll - actualHeight < 0 ? 'bottom' :
                         placement == 'right' && pos.right + actualWidth > parentDim.width ? 'left' :
-                            placement == 'left' && pos.left - actualWidth < parentDim.left ? 'right' :
-                                placement
+                        placement == 'left' && pos.left - actualWidth < parentDim.left ? 'right' :
+                    placement
 
                 $tip
                     .removeClass(orgPlacement)
@@ -12628,9 +12629,9 @@
 
     Tooltip.prototype.getCalculatedOffset = function (placement, pos, actualWidth, actualHeight) {
         return placement == 'bottom' ? { top: pos.top + pos.height, left: pos.left + pos.width / 2 - actualWidth / 2  } :
-            placement == 'top' ? { top: pos.top - actualHeight, left: pos.left + pos.width / 2 - actualWidth / 2  } :
+                placement == 'top' ? { top: pos.top - actualHeight, left: pos.left + pos.width / 2 - actualWidth / 2  } :
                 placement == 'left' ? { top: pos.top + pos.height / 2 - actualHeight / 2, left: pos.left - actualWidth } :
-                    /* placement == 'right' */ { top: pos.top + pos.height / 2 - actualHeight / 2, left: pos.left + pos.width   }
+            /* placement == 'right' */ { top: pos.top + pos.height / 2 - actualHeight / 2, left: pos.left + pos.width   }
 
     }
 
@@ -12826,8 +12827,8 @@
 
         return $e.attr('data-content')
             || (typeof o.content == 'function' ?
-            o.content.call($e[0]) :
-            o.content)
+                o.content.call($e[0]) :
+                o.content)
     }
 
     Popover.prototype.arrow = function () {
@@ -12887,8 +12888,9 @@
  * Date: 7/6/14
  * Time: 1:13 AM
  *
- * Event Tracking with Google Analytics.
+ * Event Tracking with Google Analytics and Bing.
  * https://developers.google.com/analytics/devguides/collection/analyticsjs/events
+ * http://help.bingads.microsoft.com/apex.aspx?product=bing_ads&market=en&sku=&query=hlp_ba_proc_uet.htm&view=summary_reportinggoals&inst=1
  */
 
 
@@ -12898,10 +12900,22 @@ $('.view-cart').on('click', function () {
 
 $('.add-to-cart').on('click', function () {
     ga('send', 'event', 'button', 'click', 'Add To Cart ' + this.id);
+    var value = 50;
+    if (this.id == 'neueve-cream') {
+        value = 33;
+    }
+    var uetq = uetq || [];
+    uetq.push({'ec': 'button', 'ea': 'click', 'el': 'Add To Cart ' + this.id, 'ev': value });
 });
 
 $('.subscribe-button').on('click', function () {
     ga('send', 'event', 'button', 'click', 'Subscribe');
+    var uetq = uetq || [];
+    uetq.push({'ec': 'button', 'ea': 'click', 'el': 'Subscribe', 'ev': 50 });
+});
+
+$('a.amazon-review').on('click', function () {
+    ga('send', 'event', 'amazon-review-link', 'click', "Viewed Amazon Review for " + this.id);
 });
 /*! Backstretch - v2.0.3 - 2012-11-30
  * http://srobbin.com/jquery-plugins/backstretch/
@@ -12942,7 +12956,7 @@ $('.subscribe-button').on('click', function () {
         if (Math.abs(t) > this.images.length - 1)return;
         this.index = t;
         var n = this, i = n.$wrap.find("img").addClass("deleteable"), s = e.Event("backstretch.show", {relatedTarget: n.$container[0]});
-        return clearInterval(n.interval), n.$img = e("<img />").css(r.img).bind("load",function (t) {
+        return clearInterval(n.interval), n.$img = e("<img />").css(r.img).bind("load", function (t) {
             var r = this.width || e(t.target).width(), o = this.height || e(t.target).height();
             e(this).data("ratio", r / o), e(this).fadeIn(n.options.speed || n.options.fade, function () {
                 i.remove(), n.paused || n.cycle(), n.$container.trigger(s, n)
