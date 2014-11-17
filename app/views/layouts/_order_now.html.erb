@@ -98,6 +98,8 @@
         <br>
         <li>Convenient automatic payment via PayPal</li>
         <br>
+        <li>Easy change of subscription by sending us an email</li>
+        <br>
         <li>You're free to cancel at any time</li>
       </ul>
       <br>
@@ -248,8 +250,8 @@
     </div>
   </td>
 
-  <td colspan="2" rowspan="3" style="vertical-align:middle">
-    <div itemscope itemtype="http://schema.org/Product" align="center">
+  <td colspan="2" rowspan="2" style="vertical-align:middle">
+  <div itemscope itemtype="http://schema.org/Product" align="center">
       <strong>
         <div itemprop="name">NeuEve Cream<br>0.6 oz</div>
         <meta itemprop="category" content="Health & Beauty > Personal Care > Feminine Sanitary Supplies > Feminine Deodorant"/>
@@ -363,10 +365,85 @@
       If you have severe dryness, you should order the mild Silk formula first.
     </div>
   </td>
+
+  <td colspan="2" rowspan="2" style="vertical-align:middle">
+    <div itemscope itemtype="http://schema.org/Product" align="center">
+
+      <strong>
+        <div itemprop="name">Suppository Applicator, Reusable</div>
+        <%= image_tag('http://i.imgur.com/1heUxx7.png', :size => "240x240") %><br>
+
+        <meta itemprop="category" content="Health & Beauty > Personal Care > Feminine Sanitary Supplies > Feminine Deodorant"/>
+        <meta itemprop="description" content="Natural suppository for fighting odor, dryness, dyspareunia, and bacterial vaginosis (BV). Gynecologist-tested."/>
+      </strong>
+        <span itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+          <span itemprop="price">$4.95</span>
+          <meta itemprop="priceCurrency" content="USD"/>
+        </span>
+      <br>
+
+      <div class="formbutton">
+        <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+          <input type="hidden" name="cmd" value="_s-xclick">
+          <input type="hidden" name="hosted_button_id" value="2R7PRXENKU33G">
+          <%= submit_tag 'Add to Cart',
+                  :class => 'btn btn-large btn-warning add-to-cart',
+                  :id    => 'suppository-applicator',
+                  :name  => 'submit' %>
+          <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+        </form>
+      </div>
+
+      <ul>
+        <li>Makes the use of suppositories easier</li>
+        <li>Made of plastic</li>
+        <li>Rinse after each use</li>
+      </ul>
+    </div>
+  </td>
 </tr>
 
 <tr>
-  <th colspan="4">
+  <td colspan="2">
+    <div itemscope itemtype="http://schema.org/Product" align="center">
+      <strong>
+        <div itemprop="name">NeuEve Assorted Formulas (1 month supply)<br>7 suppositories / pack (4 Silks, 2 Silvers, 1
+          Gold)
+        </div>
+        <meta itemprop="category" content="Health & Beauty > Personal Care > Feminine Sanitary Supplies > Feminine Deodorant"/>
+        <meta itemprop="description" content="Natural suppository for fighting odor, dryness, dyspareunia, and bacterial vaginosis (BV). Gynecologist-tested."/>
+      </strong>
+        <span itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+          <span itemprop="price">$52.95</span>
+          <meta itemprop="priceCurrency" content="USD"/>
+        </span>
+      <br>
+
+      <div class="formbutton">
+        <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+          <input type="hidden" name="cmd" value="_s-xclick">
+          <input type="hidden" name="hosted_button_id" value="NU5SQ9KGHKCLG">
+          <%= submit_tag 'Add to Cart',
+                  :class => 'btn btn-large btn-warning add-to-cart',
+                  :id    => 'assorted-formulas',
+                  :name  => 'submit' %>
+          <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+        </form>
+      </div>
+
+      <br>
+
+      <%= link_to 'Amazon Reviews of NeuEve Assorted Formulas'.html_safe,
+              'http://www.amazon.com/NeuEve-Suppository-Assorted-Formulas-7/product-reviews/B00NN2Y04E',
+              :class  => 'amazon-review',
+              :id     => 'assorted-formulas',
+              :target => '_blank' %>
+    </div>
+  </td>
+</tr>
+
+<tr>
+<th colspan="4">
     Shipping is $5.95. Free shipping on all orders over $70!<br><br>
     Shipping to Canada is $8.95 USD, and only $3 USD for orders over $70.<br>
     Shipping internationally is $15 USD, and only $9 USD for orders over $70.
