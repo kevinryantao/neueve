@@ -60,13 +60,17 @@ p, div {
 
 // Background image
 
-.container {
+.container-fluid {
   background: url(creampaper.png) repeat 0 0;
   text-align: left;
   padding-left: 12.5%;
   padding-right: 12.5%;
   width: 75%;
-  min-width: 700px;
+  min-width: 320px;
+}
+
+.img_pair {
+  max-width: 300px;
 }
 
 .icon-ok {
@@ -95,4 +99,44 @@ p, div {
 
 .table-bordered td, .table-bordered th {
   border: 1px solid #ddd;
+}
+
+
+@media (max-width: 900px) {
+  body {
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+  .container-fluid {
+    width: 95%;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+  }
+  p, div {
+    font-size: 14px;
+  }
+  .table {
+    font-size: 14px;
+  }
+  .table div {
+    font-size: 14px;
+  }
+  .img_pair {
+    max-width: 230px;
+  }
+}
+
+@media (max-width: 480px) {
+  p, div {
+    font-size: 13px;
+  }
+  .table {
+    font-size: 12px;
+  }
+  .table div {
+    font-size: 12px;
+  }
+  .img_pair {
+    max-width: 160px;
+  }
 }
