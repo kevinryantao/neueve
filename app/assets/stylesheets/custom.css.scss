@@ -124,6 +124,18 @@ p, div {
   .img_pair {
     max-width: 230px;
   }
+  h1 {
+    font-size: 30px;
+  }
+  h2 {
+    font-size: 24px;
+  }
+  h3 {
+    font-size: 20px;
+  }
+  h4 {
+    font-size: 18px;
+  }
   .navbar .brand {
     font-size: 18px;
     padding-bottom: 12px;
@@ -165,18 +177,13 @@ p, div {
   h4 {
     font-size: 16px;
   }
-  .navbar .brand {
-    font-size: 14px;
-    padding-bottom: 6px;
-    padding-left: 6px;
-    padding-right: 6px;
-    padding-top: 10px;
+  .navbar .non-mobile-only {
+    display: none;
   }
-  .navbar .nav > li > a {
-    font-size: 12px;
-    padding-bottom: 6px;
-    padding-left: 6px;
-    padding-right: 6px;
-    padding-top: 10px;
+}
+
+@media (min-width: 501px) {
+  .navbar .mobile-only {
+    display: none;
   }
 }
