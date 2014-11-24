@@ -31,3 +31,10 @@ $('.subscribe-button').on('click', function () {
 $('a.amazon-review').on('click', function () {
     ga('send', 'event', 'amazon-review-link', 'click', "Viewed Amazon Review for " + this.id);
 });
+
+setTimeout("ga('send', 'event', 'adjusted bounce rate', 'page visit seconds', 15)", 15000);
+setTimeout("ga('send', 'event', 'adjusted bounce rate', 'page visit seconds', 30)", 30000);
+setTimeout("ga('send', 'event', 'adjusted bounce rate', 'page visit seconds', 60)", 60000);
+setTimeout("ga('send', 'event', 'adjusted bounce rate', 'page visit seconds', 120)",120000);
+setTimeout("ga('send', 'event', 'adjusted bounce rate', 'page visit seconds', 240)",240000);
+setTimeout("ga('send', 'event', 'adjusted bounce rate', 'page visit seconds', 480)",480000);
