@@ -177,8 +177,22 @@ p, div {
   h4 {
     font-size: 16px;
   }
+  .navbar .brand {
+    font-size: 17px;
+    padding-bottom: 6px;
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-top: 10px;
+  }
   .navbar .non-mobile-only {
     display: none;
+  }
+  .navbar .nav > li > a {
+    font-size: 12px;
+    padding-bottom: 6px;
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-top: 5px;
   }
 }
 
