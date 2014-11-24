@@ -114,12 +114,15 @@ p, div {
   }
   p, div {
     font-size: 14px;
+    line-height: 31.5px;
   }
   .table {
     font-size: 14px;
+    line-height: 31.5px;
   }
   .table div {
     font-size: 14px;
+    line-height: 31.5px;
   }
   .img_pair {
     max-width: 230px;
@@ -155,27 +158,30 @@ p, div {
 @media (max-width: 500px) {
   p, div {
     font-size: 13px;
+    line-height: 27px;
   }
   .table {
     font-size: 12px;
+    line-height: 24px;
   }
   .table div {
     font-size: 12px;
+    line-height: 24px;
   }
   .img_pair {
     max-width: 160px;
   }
   h1 {
-    font-size: 24px;
+    font-size: 17.5px;
   }
   h2 {
-    font-size: 20px;
+    font-size: 17px;
   }
   h3 {
-    font-size: 18px;
+    font-size: 15px;
   }
   h4 {
-    font-size: 16px;
+    font-size: 13px;
   }
   .navbar .brand {
     font-size: 17px;
