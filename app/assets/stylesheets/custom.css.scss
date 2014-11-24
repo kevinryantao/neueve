@@ -124,9 +124,23 @@ p, div {
   .img_pair {
     max-width: 230px;
   }
+  .navbar .brand {
+    font-size: 18px;
+    padding-bottom: 12px;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 17px;
+  }
+  .navbar .nav > li > a {
+    font-size: 15px;
+    padding-bottom: 12px;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 17px;
+  }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 500px) {
   p, div {
     font-size: 13px;
   }
@@ -138,5 +152,31 @@ p, div {
   }
   .img_pair {
     max-width: 160px;
+  }
+  h1 {
+    font-size: 24px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  h3 {
+    font-size: 18px;
+  }
+  h4 {
+    font-size: 16px;
+  }
+  .navbar .brand {
+    font-size: 14px;
+    padding-bottom: 6px;
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-top: 10px;
+  }
+  .navbar .nav > li > a {
+    font-size: 12px;
+    padding-bottom: 6px;
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-top: 10px;
   }
 }

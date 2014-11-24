@@ -23493,26 +23493,82 @@ p, div {
   .img_pair {
     max-width: 230px;
   }
+
+  /* line 127, /Users/ktao/code/lavax/app/assets/stylesheets/custom.css.scss */
+  .navbar .brand {
+    font-size: 18px;
+    padding-bottom: 12px;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 17px;
+  }
+
+  /* line 134, /Users/ktao/code/lavax/app/assets/stylesheets/custom.css.scss */
+  .navbar .nav > li > a {
+    font-size: 15px;
+    padding-bottom: 12px;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 17px;
+  }
 }
-@media (max-width: 480px) {
-  /* line 130, /Users/ktao/code/lavax/app/assets/stylesheets/custom.css.scss */
+@media (max-width: 500px) {
+  /* line 144, /Users/ktao/code/lavax/app/assets/stylesheets/custom.css.scss */
   p, div {
     font-size: 13px;
   }
 
-  /* line 133, /Users/ktao/code/lavax/app/assets/stylesheets/custom.css.scss */
+  /* line 147, /Users/ktao/code/lavax/app/assets/stylesheets/custom.css.scss */
   .table {
     font-size: 12px;
   }
 
-  /* line 136, /Users/ktao/code/lavax/app/assets/stylesheets/custom.css.scss */
+  /* line 150, /Users/ktao/code/lavax/app/assets/stylesheets/custom.css.scss */
   .table div {
     font-size: 12px;
   }
 
-  /* line 139, /Users/ktao/code/lavax/app/assets/stylesheets/custom.css.scss */
+  /* line 153, /Users/ktao/code/lavax/app/assets/stylesheets/custom.css.scss */
   .img_pair {
     max-width: 160px;
+  }
+
+  /* line 156, /Users/ktao/code/lavax/app/assets/stylesheets/custom.css.scss */
+  h1 {
+    font-size: 24px;
+  }
+
+  /* line 159, /Users/ktao/code/lavax/app/assets/stylesheets/custom.css.scss */
+  h2 {
+    font-size: 20px;
+  }
+
+  /* line 162, /Users/ktao/code/lavax/app/assets/stylesheets/custom.css.scss */
+  h3 {
+    font-size: 18px;
+  }
+
+  /* line 165, /Users/ktao/code/lavax/app/assets/stylesheets/custom.css.scss */
+  h4 {
+    font-size: 16px;
+  }
+
+  /* line 168, /Users/ktao/code/lavax/app/assets/stylesheets/custom.css.scss */
+  .navbar .brand {
+    font-size: 14px;
+    padding-bottom: 6px;
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-top: 10px;
+  }
+
+  /* line 175, /Users/ktao/code/lavax/app/assets/stylesheets/custom.css.scss */
+  .navbar .nav > li > a {
+    font-size: 12px;
+    padding-bottom: 6px;
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-top: 10px;
   }
 }
 /*!
