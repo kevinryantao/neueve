@@ -1,6 +1,8 @@
 Lavax::Application.routes.draw do
   root :to => "static_pages#home"
 
+  match "/index.html" => "static_pages#home", :via => :get
+
   match "/about" => "static_pages#about", :via => :get
 
   match "/background" => "static_pages#background", :via => :get
