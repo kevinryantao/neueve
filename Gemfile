@@ -13,7 +13,9 @@ gem 'actionpack-action_caching'
 gem 'newrelic_rpm'
 gem 'yui-compressor'
 gem "font-awesome-rails"
+gem 'rack-cache'
 gem 'dalli'
+gem 'kgio'
 gem 'memcachier'
 
 gem 'rails_12factor'

@@ -62,6 +62,8 @@ module Lavax
     }
     config.action_mailer.raise_delivery_errors = true
 
+    config.cache_store = :dalli_store
+
 
   end
 end
