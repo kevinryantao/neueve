@@ -70,7 +70,7 @@ p, div {
 }
 
 .img_pair {
-  max-width: 300px;
+  max-height: 267px;
 }
 
 .icon-ok {
@@ -128,7 +128,11 @@ p, div {
     line-height: 31.5px;
   }
   .img_pair {
-    max-width: 230px;
+    max-height: 175px;
+  }
+  .applicator {
+    max-height: 170px;
+    max-width: 170px;
   }
   h1 {
     font-size: 30px;
@@ -175,7 +179,11 @@ p, div {
     line-height: 24px;
   }
   .img_pair {
-    max-width: 160px;
+    max-height: 110px;
+  }
+  .applicator {
+    max-height: 110px;
+    max-width: 110px;
   }
   h1 {
     font-size: 17.5px;
