@@ -148,17 +148,17 @@ p, div {
   }
   .navbar .brand {
     font-size: 18px;
-    padding-bottom: 12px;
+    padding-bottom: 17px;
     padding-left: 12px;
     padding-right: 12px;
     padding-top: 17px;
   }
   .navbar .nav > li > a {
     font-size: 15px;
-    padding-bottom: 12px;
+    padding-bottom: 22px;
     padding-left: 12px;
     padding-right: 12px;
-    padding-top: 17px;
+    padding-top: 22px;
   }
 }
 
@@ -199,30 +199,24 @@ p, div {
   }
   .navbar .brand {
     font-size: 17px;
-    padding-bottom: 6px;
+    padding-bottom: 14px;
     padding-left: 6px;
     padding-right: 6px;
-    padding-top: 10px;
+    padding-top: 14px;
   }
   .non-mobile-only {
     display: none;
   }
-  .navbar .non-mobile-only {
-      display: none;
-  }
   .navbar .nav > li > a {
     font-size: 12px;
-    padding-bottom: 6px;
+    padding-bottom: 17px;
     padding-left: 6px;
     padding-right: 6px;
-    padding-top: 5px;
+    padding-top: 17px;
   }
 }
 
 @media (min-width: 521px) {
-  .navbar .mobile-only {
-    display: none;
-  }
   .mobile-only {
     display: none;
   }

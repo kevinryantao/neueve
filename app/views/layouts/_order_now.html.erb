@@ -26,7 +26,7 @@
     </td>
     <td style="background-color: #fdfdfa" colspan="2">
       <div align="center">
-        <%= image_tag('http://i.imgur.com/Qd2uoFal.jpg', :class=>'img_pair') %>
+        <%= link_to image_tag('http://i.imgur.com/Qd2uoFal.jpg', :class=>'img_pair'), cream_path %>
       </div>
     </td>
   </tr>
@@ -64,9 +64,14 @@
     <td>4</td>
   </tr>
   <tr>
-    <td colspan="4">
+    <td colspan="2">
       <div align="center">
         <%= link_to 'More details on Silk vs. Silver vs. Gold', faq_path(:anchor => 'silkSilverGoldDifferences') %>
+      </div>
+    </td>
+    <td colspan="2">
+      <div align="center">
+        <%= link_to 'More details on Cream', cream_path %>
       </div>
     </td>
   </tr>
@@ -392,6 +397,11 @@
       </div>
 
       <br>
+      4.7 Stars on <%= link_to image_tag('http://i.imgur.com/KqOIgAJl.png', :size => "95x42"),
+              'http://www.amazon.com/NeuEve-Suppository-Silver-formula-6/product-reviews/B00CMIC35I/',
+              :class => 'amazon-review',
+              :id     => 'silver-formula',
+              :target => '_blank' %><br>
 
       <%= link_to 'Amazon Reviews of NeuEve Silver'.html_safe,
               'http://www.amazon.com/NeuEve-Suppository-Silver-formula-6/product-reviews/B00CMIC35I/',
@@ -427,6 +437,12 @@
       </div>
 
       <br>
+
+      5.0 Stars on <%= link_to image_tag('http://i.imgur.com/JEp6f2al.jpg', :size => "95x42"),
+              'http://www.amazon.com/NeuEve-Cream/product-reviews/B00CHY132G/',
+              :class => 'amazon-review',
+              :id     => 'neueve-cream',
+              :target => '_blank' %><br>
 
       <%= link_to 'Amazon Reviews of NeuEve Cream'.html_safe,
               'http://www.amazon.com/NeuEve-Cream/product-reviews/B00CHY132G/',

@@ -22,6 +22,8 @@ Lavax::Application.routes.draw do
 
   match "/success" => "static_pages#success", :via => :get
 
+  match "/cream" => "static_pages#cream", :via => :get
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

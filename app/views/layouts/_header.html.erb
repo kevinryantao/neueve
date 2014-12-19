@@ -1,11 +1,11 @@
 <header class="navbar">
   <div class="navbar-inner">
-    <%= link_to "NeuEve Suppositories", root_path, class: "brand non-mobile-only" %>
-    <%= link_to "NeuEve", root_path, class: "brand mobile-only" %>
+    <%= link_to "NeuEve", root_path, class: "brand" %>
     <nav>
       <ul class="nav pull-right">
         <li><%= link_to "Product", product_path %></li>
         <li><%= link_to "FAQ", faq_path %></li>
+        <li><%= link_to "Cream", cream_path %></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
             Our Suppositories
@@ -15,6 +15,8 @@
             <li><%= link_to "Background", background_path %></li>
             <li><%= link_to "Comparison", comparison_path %></li>
             <li><%= link_to "Testimonials", testimonials_path %></li>
+            <li><%= link_to "About Us", about_path %></li>
+            <li><%= link_to "Contact", contact_path %></li>
           </ul>
         </li>
       </ul>
