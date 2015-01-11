@@ -5,7 +5,11 @@ Lavax::Application.routes.draw do
 
   match "/about" => "static_pages#about", :via => :get
 
-  match "/background" => "static_pages#background", :via => :get
+  match "/background" => "static_pages#vaginal_dryness_atrophy_cause_treatment", :via => :get
+
+  match "/vaginal_dryness_atrophy_cause_treatment" => "static_pages#vaginal_dryness_atrophy_cause_treatment", :via => :get
+
+  match "/vaginal_odor_cause_treatment" => "static_pages#vaginal_odor_cause_treatment", :via => :get
 
   match 'contact' => 'contact#new', :via => :get
   match 'contact' => 'contact#create', :via => :post
