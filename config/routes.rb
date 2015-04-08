@@ -13,6 +13,8 @@ Lavax::Application.routes.draw do
 
   match "/bacterial_vaginosis_vaginal_odor" => "static_pages#bacterial_vaginosis", :via => :get
 
+  match "/bv" => "static_pages#bacterial_vaginosis", :via => :get
+
   match 'contact' => 'contact#new', :via => :get
   match 'contact' => 'contact#create', :via => :post
 
