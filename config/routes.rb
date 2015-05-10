@@ -32,6 +32,9 @@ Lavax::Application.routes.draw do
 
   match "/cream" => "static_pages#cream", :via => :get
 
+  match "/original_price_secret_page" => "static_pages#original_priced_subscription", :via => :get
+
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
