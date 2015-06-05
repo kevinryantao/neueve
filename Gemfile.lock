@@ -93,10 +93,7 @@ GEM
     newrelic_rpm (3.12.0.288)
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
-    nokogiri (1.6.6.2-x86-mingw32)
-      mini_portile (~> 0.6.0)
     pg (0.18.2)
-    pg (0.18.2-x86-mingw32)
     protected_attributes (1.0.9)
       activemodel (>= 4.0.1, < 5.0)
     rack (1.6.1)
@@ -156,7 +153,6 @@ GEM
       activesupport (>= 3.0)
       sprockets (>= 2.8, < 4.0)
     sqlite3 (1.3.10)
-    sqlite3 (1.3.10-x86-mingw32)
     therubyracer (0.12.2)
       libv8 (~> 3.16.14.0)
       ref
