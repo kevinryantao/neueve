@@ -23828,11 +23828,12 @@ p, div {
 /* line 61, /Users/ktao/code/lavax/app/assets/stylesheets/custom.css.scss.erb */
 .testimonial {
   font-family: 'Georgia', serif;
-  font-size: 19px;
+  font-size: 16px;
   font-style: italic;
+  line-height: 32px;
 }
 
-/* line 69, /Users/ktao/code/lavax/app/assets/stylesheets/custom.css.scss.erb */
+/* line 70, /Users/ktao/code/lavax/app/assets/stylesheets/custom.css.scss.erb */
 .container-fluid {
   background: url(/assets/creampaper.png) repeat 0 0;
   text-align: left;
@@ -23842,126 +23843,126 @@ p, div {
   min-width: 320px;
 }
 
-/* line 78, /Users/ktao/code/lavax/app/assets/stylesheets/custom.css.scss.erb */
+/* line 79, /Users/ktao/code/lavax/app/assets/stylesheets/custom.css.scss.erb */
 .img_pair {
   max-height: 267px;
 }
 
-/* line 82, /Users/ktao/code/lavax/app/assets/stylesheets/custom.css.scss.erb */
+/* line 83, /Users/ktao/code/lavax/app/assets/stylesheets/custom.css.scss.erb */
 .icon-ok {
   color: green;
 }
 
-/* line 86, /Users/ktao/code/lavax/app/assets/stylesheets/custom.css.scss.erb */
+/* line 87, /Users/ktao/code/lavax/app/assets/stylesheets/custom.css.scss.erb */
 .icon-remove {
   color: darkred;
 }
 
-/* line 90, /Users/ktao/code/lavax/app/assets/stylesheets/custom.css.scss.erb */
+/* line 91, /Users/ktao/code/lavax/app/assets/stylesheets/custom.css.scss.erb */
 .formbutton {
   display: inline-block;
 }
 
-/* line 94, /Users/ktao/code/lavax/app/assets/stylesheets/custom.css.scss.erb */
+/* line 95, /Users/ktao/code/lavax/app/assets/stylesheets/custom.css.scss.erb */
 .btn-warning {
   border-radius: 10px;
 }
 
-/* line 98, /Users/ktao/code/lavax/app/assets/stylesheets/custom.css.scss.erb */
+/* line 99, /Users/ktao/code/lavax/app/assets/stylesheets/custom.css.scss.erb */
 .btn-info {
   border-radius: 10px;
 }
 
-/* line 102, /Users/ktao/code/lavax/app/assets/stylesheets/custom.css.scss.erb */
+/* line 103, /Users/ktao/code/lavax/app/assets/stylesheets/custom.css.scss.erb */
 .table-bordered {
   border: 1px #ddd;
 }
 
-/* line 106, /Users/ktao/code/lavax/app/assets/stylesheets/custom.css.scss.erb */
+/* line 107, /Users/ktao/code/lavax/app/assets/stylesheets/custom.css.scss.erb */
 .table-bordered td, .table-bordered th {
   border: 1px solid #ddd;
 }
 
-/* line 110, /Users/ktao/code/lavax/app/assets/stylesheets/custom.css.scss.erb */
+/* line 111, /Users/ktao/code/lavax/app/assets/stylesheets/custom.css.scss.erb */
 ol.margin10 li {
   margin: 10px 0;
 }
 
 @media (max-width: 900px) {
-  /* line 116, /Users/ktao/code/lavax/app/assets/stylesheets/custom.css.scss.erb */
+  /* line 117, /Users/ktao/code/lavax/app/assets/stylesheets/custom.css.scss.erb */
   body {
     padding-right: 0px;
     padding-left: 0px;
   }
 
-  /* line 120, /Users/ktao/code/lavax/app/assets/stylesheets/custom.css.scss.erb */
+  /* line 121, /Users/ktao/code/lavax/app/assets/stylesheets/custom.css.scss.erb */
   .container-fluid {
     width: 95%;
     padding-left: 2.5%;
     padding-right: 2.5%;
   }
 
-  /* line 125, /Users/ktao/code/lavax/app/assets/stylesheets/custom.css.scss.erb */
+  /* line 126, /Users/ktao/code/lavax/app/assets/stylesheets/custom.css.scss.erb */
   p, div {
     font-size: 14px;
     line-height: 31.5px;
   }
 
-  /* line 129, /Users/ktao/code/lavax/app/assets/stylesheets/custom.css.scss.erb */
+  /* line 130, /Users/ktao/code/lavax/app/assets/stylesheets/custom.css.scss.erb */
   label {
     font-size: 13.5px;
   }
 
-  /* line 132, /Users/ktao/code/lavax/app/assets/stylesheets/custom.css.scss.erb */
+  /* line 133, /Users/ktao/code/lavax/app/assets/stylesheets/custom.css.scss.erb */
   .table {
     font-size: 14px;
     line-height: 31.5px;
   }
 
-  /* line 136, /Users/ktao/code/lavax/app/assets/stylesheets/custom.css.scss.erb */
+  /* line 137, /Users/ktao/code/lavax/app/assets/stylesheets/custom.css.scss.erb */
   .table div {
     font-size: 14px;
     line-height: 31.5px;
   }
 
-  /* line 140, /Users/ktao/code/lavax/app/assets/stylesheets/custom.css.scss.erb */
+  /* line 141, /Users/ktao/code/lavax/app/assets/stylesheets/custom.css.scss.erb */
   .img_pair {
     max-height: 175px;
   }
 
-  /* line 143, /Users/ktao/code/lavax/app/assets/stylesheets/custom.css.scss.erb */
+  /* line 144, /Users/ktao/code/lavax/app/assets/stylesheets/custom.css.scss.erb */
   .applicator {
     max-height: 170px;
     max-width: 170px;
   }
 
-  /* line 147, /Users/ktao/code/lavax/app/assets/stylesheets/custom.css.scss.erb */
+  /* line 148, /Users/ktao/code/lavax/app/assets/stylesheets/custom.css.scss.erb */
   .seal {
     max-height: 120px;
     max-width: 120px;
   }
 
-  /* line 151, /Users/ktao/code/lavax/app/assets/stylesheets/custom.css.scss.erb */
+  /* line 152, /Users/ktao/code/lavax/app/assets/stylesheets/custom.css.scss.erb */
   h1 {
     font-size: 30px;
   }
 
-  /* line 154, /Users/ktao/code/lavax/app/assets/stylesheets/custom.css.scss.erb */
+  /* line 155, /Users/ktao/code/lavax/app/assets/stylesheets/custom.css.scss.erb */
   h2 {
     font-size: 24px;
   }
 
-  /* line 157, /Users/ktao/code/lavax/app/assets/stylesheets/custom.css.scss.erb */
+  /* line 158, /Users/ktao/code/lavax/app/assets/stylesheets/custom.css.scss.erb */
   h3 {
     font-size: 20px;
   }
 
-  /* line 160, /Users/ktao/code/lavax/app/assets/stylesheets/custom.css.scss.erb */
+  /* line 161, /Users/ktao/code/lavax/app/assets/stylesheets/custom.css.scss.erb */
   h4 {
     font-size: 18px;
   }
 
-  /* line 163, /Users/ktao/code/lavax/app/assets/stylesheets/custom.css.scss.erb */
+  /* line 164, /Users/ktao/code/lavax/app/assets/stylesheets/custom.css.scss.erb */
   .navbar .brand {
     font-size: 18px;
     padding-bottom: 17px;
@@ -23970,7 +23971,7 @@ ol.margin10 li {
     padding-top: 17px;
   }
 
-  /* line 170, /Users/ktao/code/lavax/app/assets/stylesheets/custom.css.scss.erb */
+  /* line 171, /Users/ktao/code/lavax/app/assets/stylesheets/custom.css.scss.erb */
   .navbar .nav > li > a {
     font-size: 15px;
     padding-bottom: 22px;
@@ -23980,67 +23981,67 @@ ol.margin10 li {
   }
 }
 @media (max-width: 520px) {
-  /* line 180, /Users/ktao/code/lavax/app/assets/stylesheets/custom.css.scss.erb */
+  /* line 181, /Users/ktao/code/lavax/app/assets/stylesheets/custom.css.scss.erb */
   p, div {
     font-size: 13px;
     line-height: 27px;
   }
 
-  /* line 184, /Users/ktao/code/lavax/app/assets/stylesheets/custom.css.scss.erb */
+  /* line 185, /Users/ktao/code/lavax/app/assets/stylesheets/custom.css.scss.erb */
   label {
     font-size: 12px;
   }
 
-  /* line 187, /Users/ktao/code/lavax/app/assets/stylesheets/custom.css.scss.erb */
+  /* line 188, /Users/ktao/code/lavax/app/assets/stylesheets/custom.css.scss.erb */
   .table {
     font-size: 12px;
     line-height: 24px;
   }
 
-  /* line 191, /Users/ktao/code/lavax/app/assets/stylesheets/custom.css.scss.erb */
+  /* line 192, /Users/ktao/code/lavax/app/assets/stylesheets/custom.css.scss.erb */
   .table div {
     font-size: 12px;
     line-height: 24px;
   }
 
-  /* line 195, /Users/ktao/code/lavax/app/assets/stylesheets/custom.css.scss.erb */
+  /* line 196, /Users/ktao/code/lavax/app/assets/stylesheets/custom.css.scss.erb */
   .img_pair {
     max-height: 110px;
   }
 
-  /* line 198, /Users/ktao/code/lavax/app/assets/stylesheets/custom.css.scss.erb */
+  /* line 199, /Users/ktao/code/lavax/app/assets/stylesheets/custom.css.scss.erb */
   .applicator {
     max-height: 110px;
     max-width: 110px;
   }
 
-  /* line 202, /Users/ktao/code/lavax/app/assets/stylesheets/custom.css.scss.erb */
+  /* line 203, /Users/ktao/code/lavax/app/assets/stylesheets/custom.css.scss.erb */
   .seal {
     max-height: 95px;
     max-width: 95px;
   }
 
-  /* line 206, /Users/ktao/code/lavax/app/assets/stylesheets/custom.css.scss.erb */
+  /* line 207, /Users/ktao/code/lavax/app/assets/stylesheets/custom.css.scss.erb */
   h1 {
     font-size: 17.5px;
   }
 
-  /* line 209, /Users/ktao/code/lavax/app/assets/stylesheets/custom.css.scss.erb */
+  /* line 210, /Users/ktao/code/lavax/app/assets/stylesheets/custom.css.scss.erb */
   h2 {
     font-size: 17px;
   }
 
-  /* line 212, /Users/ktao/code/lavax/app/assets/stylesheets/custom.css.scss.erb */
+  /* line 213, /Users/ktao/code/lavax/app/assets/stylesheets/custom.css.scss.erb */
   h3 {
     font-size: 15px;
   }
 
-  /* line 215, /Users/ktao/code/lavax/app/assets/stylesheets/custom.css.scss.erb */
+  /* line 216, /Users/ktao/code/lavax/app/assets/stylesheets/custom.css.scss.erb */
   h4 {
     font-size: 13px;
   }
 
-  /* line 218, /Users/ktao/code/lavax/app/assets/stylesheets/custom.css.scss.erb */
+  /* line 219, /Users/ktao/code/lavax/app/assets/stylesheets/custom.css.scss.erb */
   .navbar .brand {
     font-size: 17px;
     padding-bottom: 14px;
@@ -24049,12 +24050,12 @@ ol.margin10 li {
     padding-top: 14px;
   }
 
-  /* line 225, /Users/ktao/code/lavax/app/assets/stylesheets/custom.css.scss.erb */
+  /* line 226, /Users/ktao/code/lavax/app/assets/stylesheets/custom.css.scss.erb */
   .non-mobile-only {
     display: none;
   }
 
-  /* line 228, /Users/ktao/code/lavax/app/assets/stylesheets/custom.css.scss.erb */
+  /* line 229, /Users/ktao/code/lavax/app/assets/stylesheets/custom.css.scss.erb */
   .navbar .nav > li > a {
     font-size: 12px;
     padding-bottom: 17px;
@@ -24064,7 +24065,7 @@ ol.margin10 li {
   }
 }
 @media (min-width: 521px) {
-  /* line 238, /Users/ktao/code/lavax/app/assets/stylesheets/custom.css.scss.erb */
+  /* line 239, /Users/ktao/code/lavax/app/assets/stylesheets/custom.css.scss.erb */
   .mobile-only {
     display: none;
   }

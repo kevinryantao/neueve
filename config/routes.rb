@@ -34,6 +34,7 @@ Lavax::Application.routes.draw do
 
   match "/original_price_secret_page" => "static_pages#original_priced_subscription", :via => :get
 
+  match "/libido" => "static_pages#libido", :via => :get
 
 
   # The priority is based upon order of creation:
