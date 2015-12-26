@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
-ruby "2.2.2"
+ruby "2.2.4"
 
-gem 'rails', '~> 4.1'
+gem 'rails', '~> 4.2'
 gem 'bootstrap-sass'
 gem 'therubyracer'
 gem 'better_errors'
