@@ -112,7 +112,7 @@ p {
   border: 1px solid #ddd;
 }
 
-ol.margin10 li {
+.margin10 li {
   margin: 10px 0;
 }
 
@@ -120,6 +120,17 @@ ol.margin10 li {
   border: #000000 solid 7px
 }
 
+.title{
+  font-size: 23px;
+}
+
+.strong{
+  font-weight: bold;
+}
+
+.em{
+  font-style: italic;
+}
 
 @media (max-width: 900px) {
   body {
@@ -134,6 +145,9 @@ ol.margin10 li {
   p, div, .testimonial {
     font-size: 14px;
     line-height: 31.5px;
+  }
+  p {
+    padding-bottom: 14px;
   }
   label {
     font-size: 13.5px;
@@ -183,12 +197,19 @@ ol.margin10 li {
     padding-right: 12px;
     padding-top: 22px;
   }
+
+  .title{
+    font-size: 20px;
+  }
 }
 
 @media (max-width: 520px) {
   p, div, .testimonial {
     font-size: 13px;
     line-height: 27px;
+  }
+  p {
+    padding-bottom: 13px;
   }
   label {
       font-size: 12px;
@@ -240,6 +261,9 @@ ol.margin10 li {
     padding-left: 6px;
     padding-right: 6px;
     padding-top: 17px;
+  }
+  .title{
+    font-size: 17px;
   }
 }
 
