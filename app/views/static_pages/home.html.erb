@@ -13,7 +13,7 @@
 <p>
   NeuEve <%= link_to 'suppositories', product_path %> and <%= link_to 'cream', cream_path %> help ease menopausal discomforts: vaginal odor,
   dryness, atrophy, itching, burning, <%= link_to 'painful sex', 'https://en.wikipedia.org/wiki/Dyspareunia' %>, and <%= link_to 'bacterial
-  vaginosis', bacterial_vaginosis_vaginal_odor_path %>.
+  vaginosis', bacterial_vaginosis_vaginal_odor_path %>.<sup>*</sup>
 </p>
 
 <p>
@@ -40,12 +40,12 @@
 
 <br>
 
-<h3>NeuEve vs. other products for promoting vaginal wellness</h3>
+<h3>NeuEve vs. other products for promoting vaginal wellness<sup>*</sup></h3>
 
 <table class='table table-bordered table-striped table-hover table-condensed'>
   <thead>
   <tr>
-    <th>Function reported by customers' feedback</th>
+    <th>Function reported by customers' feedback<sup>*</sup></th>
     <th><strong>NeuEve</strong></th>
     <th> Moisturizer
     </th>
@@ -112,11 +112,13 @@
   </tbody>
 </table>
 <h6> <%= link_to 'Point-by-point explanation of this chart', comparison_path %></h6>
+
+<%= render 'layouts/disclaimer'%>
+
 <br>
 
-
 <div class="jumbotron">
-  <h3>What customers have said about NeuEve:</h3>
+  <h3>What customers have said about NeuEve:<sup>*</sup></h3>
 </div>                                 <!--
 <br>
 The following is feedback we have received from satisfied customers:
