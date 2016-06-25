@@ -3,7 +3,8 @@
 /* header */
 .navbar-inner {
   background-image: none;
-  border: 0px
+  border: 0px;
+  background-color: #872890;
 }
 
 .navbar {
@@ -46,9 +47,30 @@ footer ul li {
   background-color: hotpink;
 }
 
+.table th, .table-striped tbody tr:nth-child(odd) th {
+  background-color: #872890;
+}
+
+.dropdown-menu, .navbar .nav > li > a:focus, .navbar .nav > li > a:hover, .navbar .nav li.dropdown.open > .dropdown-toggle, .navbar .nav li.dropdown.active > .dropdown-toggle, .navbar .nav li.dropdown.open.active > .dropdown-toggle {
+  background-color: #771880;
+}
+
+.dropdown-menu li > a:hover, .dropdown-menu li > a:focus, .dropdown-submenu:hover > a{
+  background-color: #A728A0;
+}
+
 // Fonts
+.jumbotron {
+  color: #872890;
+}
+
+a {
+  color: #3728F0;
+}
+
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Droid Serif'
+  font-family: 'Droid Serif';
+  color: #771880;
 }
 
 p, div {
@@ -72,7 +94,7 @@ p {
 // Background image
 
 .container-fluid {
-  background: url(<%= asset_path 'creampaper.png' %>) repeat 0 0;
+  background: url(<%= asset_path 'creampaperpink.png' %>) repeat 0 0;
   text-align: left;
   padding-left: 12.5%;
   padding-right: 12.5%;
