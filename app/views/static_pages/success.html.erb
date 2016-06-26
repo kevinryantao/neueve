@@ -158,6 +158,8 @@
               'revenue': urlParams['amt']               // Grand Total.
           });
           ga('ecommerce:send');
+          // Send to Facebook Pixel
+          fbq('track', 'Purchase', {value: urlParams['amt'], currency: 'USD'});
       })();
 
 </script>
