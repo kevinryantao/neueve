@@ -6,6 +6,7 @@ class StaticPagesController < ApplicationController
   end
 
   def faq
+    @sections = FaqHelper::ALL_FAQ_SECTIONS
   end
 
   def libido
