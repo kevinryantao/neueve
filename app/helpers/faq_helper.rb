@@ -5,7 +5,7 @@ require 'objects/faq_section'
 module FaqHelper
 
   INGREDIENTS_SECTION = FaqSection.new('NeuEve Ingredients: ',[
-      FaqQuestion.new('proprietaryBlend', "What's contained in the <strong>\"proprietary blend?\"</strong>"),
+      FaqQuestion.new('proprietaryBlend', "I asked my doctor whether he could recommend me to use NeuEve, but he wants to know what secret ingredients in your proprietary blend are before he can give recommendation. So, could you tell me what ingredients are in your proprietary blend?"),
       FaqQuestion.new('silkSilverGoldDifferences', "What are the <strong>differences</strong> among the Silk, Silver and Gold formulas?"),
       FaqQuestion.new('silkSilverGoldIngredientDifferences', "The ingredients listed are all the same among the Silk, Silver and Gold. <strong>Are there
         different ingredients in each formula</strong> or is it the quantity of each ingredient that makes
@@ -47,7 +47,10 @@ module FaqHelper
       FaqQuestion.new('clindamycin', "I was just diagnosed with BV by my gynecologist.  He prescribed me
 clindamycin vaginal cream for seven days.  When can I start using your product and
 which product would be best to use after a seven day round of antibiotic cream?"),
-      FaqQuestion.new('bv_clear_kit', "Why does the BV Clear Kit works for other women but not for me?")
+      FaqQuestion.new('bv_clear_kit', "Why does the BV Clear Kit works for other women but not for me?"),
+      FaqQuestion.new('bv_antibiotics', "I was interested in purchasing your BV Clear Kit. Does it clear odor only or does it get rid of BV completely? <strong>Antibiotics</strong> have not been working for me."),
+      FaqQuestion.new('bv_how_to_use', "How to use the BV Clear Kit?"),
+
   ])
 
   COMMON_KNOWLEDGE_SECTION = FaqSection.new('Common Knowledge: ',[
@@ -58,12 +61,16 @@ which product would be best to use after a seven day round of antibiotic cream?"
       FaqQuestion.new('lichenSclerosus', "I have <strong>lichen sclerosus</strong> with itching and painful sex. Can NeuEve help me?"),
       FaqQuestion.new('pregnant', "Is there something in the suppositories that is harmful to unborn babies? I noticed you advise not using the
         suppositories if <strong>pregnant.</strong> My concern is if <strong>I were to conceive and not know yet I was
-        pregnant</strong> and be using the suppositories I would not want to endanger my child.")
+        pregnant</strong> and be using the suppositories I would not want to endanger my child."),
+      FaqQuestion.new('herpes', "After using NeuEve for a day, my old <strong>herpes</strong> flares up. Does NeuEve contain L-arginine that could trigger herpes to flare up?")
+
   ])
 
   COST_SECTION = FaqSection.new('Cost: ',[
-      FaqQuestion.new('whyExpensive', "I just bought the NeuEve suppository at a health food store. It was highly recommended. Why is it so expensive?"),
-      FaqQuestion.new('jelly', "<strong>Lubricant</strong> is cheap. How is NeuEve better than <strong>Jelly</strong>?")
+      FaqQuestion.new('whyExpensive', "NeuEve works great, but why is it so expensive?"),
+      FaqQuestion.new('jelly', "<strong>Lubricant</strong> is cheap. How is NeuEve better than <strong>Jelly</strong>?"),
+      FaqQuestion.new('vitamin_e', "The <strong>vitamin E</strong> suppository is cheap and it can make me feel comfortable. NeuEve is more expensive. Could you explain why it is better than the vitamin E suppository?")
+
   ])
 
   OTHER_SECTION = FaqSection.new('Other: ',[
@@ -71,7 +78,9 @@ which product would be best to use after a seven day round of antibiotic cream?"
       FaqQuestion.new('hotClimate', "I live in a very hot climate. Will the effectiveness of the product be
         compromised if the whole package is stored in the refrigerator? Or, would
         it better to place the next suppository I will use in the fridge and hour or
-        two before insertion? Please advise.")
+        two before insertion? Please advise."),
+      FaqQuestion.new('cream_sealed', "I have just received the NeuEve cream, but it is not sealed. I think it is not safe. Please explain."),
+
   ])
 
   ALL_FAQ_SECTIONS = [
