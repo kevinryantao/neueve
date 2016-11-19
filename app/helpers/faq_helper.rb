@@ -12,7 +12,8 @@ module FaqHelper
         the difference?"),
       FaqQuestion.new('activeIngredient', "What is the <strong>active ingredient</strong> in NeuEve that works?"),
       FaqQuestion.new('suppositoryForm', "Why is NeuEve produced in <strong>suppository form</strong>?"),
-      FaqQuestion.new('oilBased', "Why are NeuEve suppositories <strong>oil-based</strong>?")
+      FaqQuestion.new('oilBased', "Why are NeuEve suppositories <strong>oil-based</strong>?"),
+      FaqQuestion.new('tropicalTraditions', "The palm oil industry is destroying rainforests. For the sake of the environment and wildlife, please stop using palm oil.")
   ])
 
   APPLICATION_SECTION = FaqSection.new('NeuEve Application: ',[
