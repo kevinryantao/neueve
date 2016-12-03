@@ -34,7 +34,8 @@ module FaqHelper
         it?"),
       FaqQuestion.new('oralSex', "Can my partner do <strong>oral sex</strong> while using this product? Will it be unsafe and hurt my partner?"),
       FaqQuestion.new('estrace', "My gynecologist also has me on Estrace cream twice a week. How many days should I space out the Silk
-        suppositories with my prescription Estrace?")
+        suppositories with my prescription Estrace?"),
+      FaqQuestion.new('still_dry', "I have had many years of vaginal atrophy. I have tried the NeuEve silver for 4 months. It worked a little but I still feel dry like a sand paper. Is there anything else that can help NeuEve work better?")
   ])
 
   BV_SECTION = FaqSection.new('BV/Infection: ',[
@@ -51,6 +52,7 @@ which product would be best to use after a seven day round of antibiotic cream?"
       FaqQuestion.new('bv_clear_kit', "Why does the BV Clear Kit works for other women but not for me?"),
       FaqQuestion.new('bv_antibiotics', "I was interested in purchasing your BV Clear Kit. Does it clear odor only or does it get rid of BV completely? <strong>Antibiotics</strong> have not been working for me."),
       FaqQuestion.new('bv_how_to_use', "How to use the BV Clear Kit?"),
+      FaqQuestion.new('still_bv', "An OB/GYN has been treating me for several months. BV was confirmed, but none of the prescription drugs worked. After using one box of NeuEve Gold, I noticed some relief, but symptoms are not cleared. Should I order another box until it is cleared? Any advice?")
 
   ])
 
@@ -70,8 +72,8 @@ which product would be best to use after a seven day round of antibiotic cream?"
   COST_SECTION = FaqSection.new('Cost: ',[
       FaqQuestion.new('whyExpensive', "NeuEve works great, but why is it so expensive?"),
       FaqQuestion.new('jelly', "<strong>Lubricant</strong> is cheap. How is NeuEve better than <strong>Jelly</strong>?"),
-      FaqQuestion.new('vitamin_e', "The <strong>vitamin E</strong> suppository is cheap and it can make me feel comfortable. NeuEve is more expensive. Could you explain why it is better than the vitamin E suppository?")
-
+      FaqQuestion.new('vitamin_e', "The <strong>vitamin E</strong> suppository is cheap and it can make me feel comfortable. NeuEve is more expensive. Could you explain why it is better than the vitamin E suppository?"),
+      FaqQuestion.new('subscription_cream', "I want to order NeuEve Silver Suppositories for subscription and also to buy a vaginal cream, but I cannot put these two items into one shopping cart to get the free shipping discount. Could you show me how?")
   ])
 
   OTHER_SECTION = FaqSection.new('Other: ',[
