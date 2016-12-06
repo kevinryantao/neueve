@@ -64,7 +64,30 @@
 
 <%= link_to '', {}, name: 'reviews' %>
 <p>
-  Below are NeuEve customers’ reviews on sex life improvement on www.amazon.com<sup>*</sup>
+  <strong>Below are NeuEve customers’ reviews on sex life improvement on
+      <%= link_to 'www.amazon.com'.html_safe,
+                  create_url('https://www.amazon.com/',
+                             ['NeuEve-Suppository-Silver-formula',
+                              'product-reviews',
+                              'B00CMIC35I'],
+                             {
+                                     ie:'UTF8',
+                                     reviewerType:'all_reviews',
+                                     showViewpoints:0,
+                                     sortBy:'helpful',
+                                     pageNumber:1,
+                                     filterByStar:'positive',
+                                     _encoding:'UTF8',
+                                     tag:'neu08-20',
+                                     linkCode:'ur2',
+                                     linkId:'f5f767d63d5ccb2f9e6d9c295d516349',
+                                     camp:1789,
+                                     creative: 9325
+                             }, nil),
+                  :class => 'amazon-review',
+                  :id => 'silver-formula',
+                  :target => '_blank' %>
+      <sup>*</sup></strong>
 </p>
 
 <ol>
@@ -75,5 +98,31 @@
       <br>
   <% end %>
 </ol>
+
+<%= link_to 'Read More Reviews'.html_safe,
+            create_url('https://www.amazon.com/',
+                       ['NeuEve-Suppository-Silver-formula',
+                        'product-reviews',
+                        'B00CMIC35I'],
+                       {
+                               ie:'UTF8',
+                               reviewerType:'all_reviews',
+                               showViewpoints:0,
+                               sortBy:'helpful',
+                               pageNumber:1,
+                               filterByStar:'positive',
+                               _encoding:'UTF8',
+                               tag:'neu08-20',
+                               linkCode:'ur2',
+                               linkId:'f5f767d63d5ccb2f9e6d9c295d516349',
+                               camp:1789,
+                               creative: 9325
+                       }, nil),
+            :class => 'amazon-review',
+            :id => 'silver-formula',
+            :target => '_blank' %>
+
+<br>
+<br>
 
 <%= render 'layouts/testimonial_disclaimer' %>
