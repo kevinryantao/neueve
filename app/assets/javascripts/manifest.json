@@ -1,0 +1,25 @@
+{
+  "name": "NeuEve",
+  "short_name": "NeuEve",
+  "icons": [{
+    "src": "favicon/apple-touch-icon-120x120.png",
+    "sizes": "120x120",
+    "type": "image/png"
+  }, {
+    "src": "favicon/apple-touch-icon-144x144.png",
+    "sizes": "144x144",
+    "type": "image/png"
+  }, {
+    "src": "favicon/apple-touch-icon-152x152.png",
+    "sizes": "152x152",
+    "type": "image/png"
+  }, {
+    "src": "favicon/android-chrome-192x192.png",
+    "sizes": "192x192",
+    "type": "image/png"
+  }],
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#EEDAF3",
+  "theme_color": "#872890"
+}
