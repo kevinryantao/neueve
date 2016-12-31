@@ -65,7 +65,8 @@ which product would be best to use after a seven day round of antibiotic cream?"
       FaqQuestion.new('pregnant', "Is there something in the suppositories that is harmful to unborn babies? I noticed you advise not using the
         suppositories if <strong>pregnant.</strong> My concern is if <strong>I were to conceive and not know yet I was
         pregnant</strong> and be using the suppositories I would not want to endanger my child."),
-      FaqQuestion.new('herpes', "After using NeuEve for a day, my old <strong>herpes</strong> flares up. Does NeuEve contain L-arginine that could trigger herpes to flare up?")
+      FaqQuestion.new('herpes', "After using NeuEve for a day, my old <strong>herpes</strong> flares up. Does NeuEve contain L-arginine that could trigger herpes to flare up?"),
+      FaqQuestion.new('hrt', "I am on the hormone replacement therapy (HRT). I would like to quit it and use an alternative natural product like NeuEve to manage vaginal dryness. Can NeuEve compensate the loss of HRT?")
 
   ])
 
