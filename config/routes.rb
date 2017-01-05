@@ -36,6 +36,7 @@ Lavax::Application.routes.draw do
 
   match "/libido" => "static_pages#libido", :via => :get
 
+  match '/friends' => 'static_pages#friends', :via => :get
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
