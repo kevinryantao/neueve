@@ -51,7 +51,7 @@ Lavax::Application.configure do
   # config.action_controller.asset_host = "http://assets.example.com"
 
   # https://devcenter.heroku.com/articles/using-amazon-cloudfront-cdn#amazon-cloudfront
-  config.action_controller.asset_host = "http://d3ilh7i74k3q3i.cloudfront.net/"
+  config.action_controller.asset_host = "https://d3ilh7i74k3q3i.cloudfront.net/"
 
 
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
