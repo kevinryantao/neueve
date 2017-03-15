@@ -67,7 +67,8 @@ which product would be best to use after a seven day round of antibiotic cream?"
         pregnant</strong> and be using the suppositories I would not want to endanger my child."),
       FaqQuestion.new('herpes', "After using NeuEve for a day, my old <strong>herpes</strong> flares up. Does NeuEve contain L-arginine that could trigger herpes to flare up?"),
       FaqQuestion.new('hrt', "I am on the hormone replacement therapy (HRT). I would like to quit it and use an alternative natural product like NeuEve to manage vaginal dryness. Can NeuEve compensate the loss of HRT?"),
-      FaqQuestion.new('nothingBackOut', "I have just begun to use the silk suppositories with the applicator. I tried your product once before without the applicator, but the insertion was not deep and much of the dissolved suppository came out quickly. <strong>Now, with the applicator, I have a new concern: nothing comes back out!</strong> Is it normal that the entire contents of the suppository, even the wax, could be absorbed by my vaginal wall?")
+      FaqQuestion.new('nothingBackOut', "I have just begun to use the silk suppositories with the applicator. I tried your product once before without the applicator, but the insertion was not deep and much of the dissolved suppository came out quickly. <strong>Now, with the applicator, I have a new concern: nothing comes back out!</strong> Is it normal that the entire contents of the suppository, even the wax, could be absorbed by my vaginal wall?"),
+      FaqQuestion.new('dilator', "Do you recommend any vaginal dilators to use in conjunction with NeuEve?")
   ])
 
   COST_SECTION = FaqSection.new('Cost: ', [
