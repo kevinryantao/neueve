@@ -38,4 +38,50 @@ class StaticPagesController < ApplicationController
                 "Simply Amazing! This product is amazing! I'm 40 years old and had a partial hysterectomy about 10 years ago. I haven't been sexually active in a few years, but recently attempted to give it a go. I don't know if it was the hysterectomy or the lack of activity, but let's just say it was as dry as a desert down there...and painful! So I did some research online and ran across Neueve. The good reviews far outweighed the bad and I decided to give it a try. All I can say is WOW, WOW, WOW! I only used it twice and let's just say splash! The desert has turned into a river. I stopped using it to see if it was something I'd have to keep taking. Nope! It completely corrected the problem. Now that's satisfaction! I'd recommend this to all my family, friends, loved ones, and even those I don't know that could benefit from using it. This product is magic! Thanks Neueve!",
                 "Trust Me! This Really Works! I suffered from mild dryness and BV ever since I turned 50 now I'm 52. Estrogen patches and pills did not work for me but I was determined to find something since I am in a loving relationship with a 34 year old man! (need I say anymore...) I found this product 2 months ago and started with the silver since I was not having painful sex. I immediately noticed feeling lubricated from the inside out and I stayed that way for 5 days. Sex is beyond amazing and we make love twice a day sometimes more! So I decided to order the gold formula and had trouble receiving my package in fact I didn't receive it. I called NeuEve customer service and who answers the phone? Dr. Chang herself the founder of this amazing product! She helped me track my product and when I still didn't receive it she shipped me more free of charge. She also sent me a personal Email to check on me a few days ago to make sure I received it! Change your life and try this product as a nurse of 28 years, I have never experienced such a transformation ever!"]
   end
+
+  def success
+    paypal_transaction_id = params[:tx]
+    @pdt_data = ajax_paypal_pdt(paypal_transaction_id)
+    @estimated_delivery_date = 7.days.from_now.strftime("%Y-%m-%d")
+  end
+
+  def ajax_paypal_pdt(transaction_id)
+    payload = "cmd=_notify-synch&tx=#{transaction_id}&at=#{ENV['PAYPAL_PDT_TOKEN']}"
+    request = Typhoeus::Request.new(
+        'https://www.paypal.com/cgi-bin/webscr',
+        method: :post,
+        body: payload,
+        headers: { 'Content-Type' => 'application/x-www-form-urlencoded' },
+        ssl_verifypeer: false,
+        ssl_verifyhost: 0,
+        verbose: true,
+        timeout: 3
+    )
+    request.on_complete do |response|
+      if response.success?
+        body = parse_paypal_pdt(response.response_body)
+        Rails.logger.info(body)
+        return body
+      else
+        error_response = response.body
+        Rails.logger.error("Paypal PDT Failed with Error: #{error_response}, payload: #{payload}")
+        return nil
+      end
+    end
+    request.run
+  end
+
+  def parse_paypal_pdt(body)
+    result_hash = {}
+    lines = body.split("\n")
+    lines.each do |line|
+      key,value = line.split('=')
+      if value.present?
+        value = value.gsub('+', ' ')
+        result_hash[key] = URI.unescape(value)
+      end
+    end
+    result_hash
+  end
+
 end

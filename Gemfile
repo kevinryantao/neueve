@@ -20,6 +20,8 @@ gem 'memcachier'
 
 gem 'rails_12factor'
 
+gem 'typhoeus'
+
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
