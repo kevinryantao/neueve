@@ -13,7 +13,7 @@
     </strong>
 </p>
 
-<% if @pdt_data.size > 0 %>
+<% if @pdt_data.present? && @pdt_data.size > 0 %>
 <table class='table table-bordered table-striped table-hover table-condensed'>
     <thead>
     <tr>
