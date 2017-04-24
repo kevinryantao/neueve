@@ -55,7 +55,7 @@ class StaticPagesController < ApplicationController
         ssl_verifypeer: false,
         ssl_verifyhost: 0,
         verbose: true,
-        timeout: 3
+        timeout: 10
     )
     request.on_complete do |response|
       if response.success?
