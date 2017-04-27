@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby "2.2.5"
+ruby '2.2.7'
 
 gem 'rails', '~> 4.2'
 gem 'bootstrap-sass'
@@ -12,7 +12,7 @@ gem 'actionpack-page_caching'
 gem 'actionpack-action_caching'
 gem 'newrelic_rpm'
 gem 'yui-compressor'
-gem "font-awesome-rails"
+gem 'font-awesome-rails'
 gem 'rack-cache'
 gem 'dalli'
 gem 'kgio'
