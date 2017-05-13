@@ -596,7 +596,9 @@
           <br>
           <li>Easy change of subscription by sending us an email</li>
           <br>
-          <li>You're free to cancel at any time</li>
+          <li>You're free to cancel at any time <strong>after 3 months</strong></li>
+          <br>
+          <li><%= link_to 'How to cancel a subscription', faq_path(:anchor => 'howToCancel')%></li>
         </ul>
         <br>
         <br><br><br>
@@ -732,6 +734,7 @@
     <tr>
       <th colspan="6">
         Subscribers get free shipping + 10% savings for USA addresses!
+          You're free to <%= link_to 'cancel', faq_path(:anchor => 'howToCancel')%> at any time <strong>after 3 months</strong>
       </th>
     </tr>
 
