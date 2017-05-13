@@ -88,7 +88,7 @@ which product would be best to use after a seven day round of antibiotic cream?'
         it better to place the next suppository I will use in the fridge and hour or
         two before insertion? Please advise.'),
       FaqQuestion.new('cream_sealed', 'I have just received the NeuEve cream, but it is not sealed. I think it is not safe. Please explain.'),
-
+      FaqQuestion.new('howToCancel', 'How do I cancel my subscription and unsubscribe from PayPal?'),
   ])
 
   ALL_FAQ_SECTIONS = [
