@@ -38,6 +38,9 @@ Lavax::Application.routes.draw do
 
   match '/friends' => 'static_pages#friends', :via => :get
 
+  match "/bacterial_vaginosis_testimonials" => "static_pages#bv_testimonials", :via => :get
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

@@ -26,7 +26,10 @@
       <div class="alert alert-<%= key %>"><%= value %></div>
   <% end %>
   <%= yield %>
-  <%= render "layouts/order_now" if (!yield(:title).include?('rder') && !yield(:title).include?('Bacterial Vaginosis'))  %>
+  <%= render "layouts/order_now" if (!yield(:title).include?('rder') &&
+          !yield(:title).include?('Bacterial Vaginosis') &&
+          !yield(:title).include?('Vaginal Odor') &&
+          !yield(:title).include?('BV'))  %>
   <%= render "layouts/footer" %>
 </div>
 <%= render "layouts/remarketingtag" %>
