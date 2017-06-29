@@ -29,7 +29,9 @@
   <%= render "layouts/order_now" if (!yield(:title).include?('rder') &&
           !yield(:title).include?('Bacterial Vaginosis') &&
           !yield(:title).include?('Vaginal Odor') &&
-          !yield(:title).include?('BV'))  %>
+          !yield(:title).include?('BV') &&
+          !yield(:title).include?('Scholarship')) %>
+
   <%= render "layouts/footer" %>
 </div>
 <%= render "layouts/remarketingtag" %>
