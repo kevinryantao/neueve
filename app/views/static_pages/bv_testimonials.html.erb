@@ -1,0 +1,48 @@
+<% provide(:title, 'Testimonials for NeuEve BV Clear Kit') %>
+
+<div class="jumbotron">
+    <h1>Testimonials for NeuEve BV Clear Kit</h1>
+</div>
+<p>
+    The following is feedback we have received from real nurses:
+<p>
+
+<ol>
+    <% @nurse_reviews.each do |review| %>
+        <li class="testimonial">
+            "<%= review %>"
+        </li>
+        <br>
+    <% end %>
+</ol>
+
+<p>
+    The following is feedback we have received from real people:
+<p>
+
+<ol>
+    <% @long_reviews.each do |review| %>
+        <li class="testimonial">
+            "<%= review %>"
+        </li>
+        <br>
+    <% end %>
+</ol>
+
+<p>
+    More testimonials from real people:
+<p>
+
+<ol>
+    <% @short_reviews.each do |review| %>
+        <li class="testimonial">
+            "<%= review %>"
+        </li>
+        <br>
+    <% end %>
+</ol>
+
+
+<%= render 'layouts/testimonial_disclaimer' %>
+
+<%= render 'layouts/order_now_bv'%>
