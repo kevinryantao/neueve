@@ -44,6 +44,9 @@ Lavax::Application.routes.draw do
 
   match '/scholarship/douglass' => 'scholarship#douglass', :via => :get
 
+  match '/scholarship/gwashingtonhs' => 'scholarship#gwashingtonhs', :via => :get
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
