@@ -17,7 +17,7 @@ gem 'rack-cache'
 gem 'dalli'
 gem 'kgio'
 gem 'memcachier'
-
+gem 'sitemap_generator'
 gem 'rails_12factor'
 
 gem 'typhoeus'
