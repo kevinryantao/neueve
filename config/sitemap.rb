@@ -3,7 +3,7 @@
 # Set the host name for URL creation
 SitemapGenerator::Sitemap.default_host = "https://www.neueve.com"
 
-SitemapGenerator::Sitemap.public_path = 'app/assets/fonts/'
+SitemapGenerator::Sitemap.public_path = 'public/'
 
 SitemapGenerator::Sitemap.create do
   # Put links creation logic here.
