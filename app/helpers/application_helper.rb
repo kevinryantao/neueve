@@ -8,4 +8,12 @@ module ApplicationHelper
       "#{page_title} | #{base_title}"
     end
   end
+
+  def full_description(description)
+    if description.empty?
+      "NeuEve Suppositories and Cream are a natural remedy for vaginal dryness, atrophy, odor, itching, burning, painful sex and other discomforts of menopause. NeuEve is hormone-free and estrogen-free, and works by restoring and re-balancing your vaginal ecology."
+    else
+      description
+    end
+  end
 end
