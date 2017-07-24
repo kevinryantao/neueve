@@ -11,7 +11,10 @@
     <br>
     Tip: For women with advanced vaginal dryness, using Cream daily plus the Silk formula twice/week works well.
     <br>
-    <%= image_tag('flowchart-tiny.png', size: "500x400") %>
+    <%= image_tag('flowchart-tiny.png',
+                  size: '500x400',
+                  alt: 'If intercourse is very painful or not possible or atrophy is severe, start with Silk formula.
+                  If intercourse is painful, or you have BV, start with the Silver formula.') %>
     <br>
     <%= link_to 'Frequently Asked Questions: How do I select the right NeuEve suppository formula?', faq_path(:anchor => 'selectingFormula') %>
 </div>
@@ -26,12 +29,17 @@
   <tr align="center">
     <td style="background-color: #fafaf6" colspan="2">
       <div align="center">
-        <%= image_tag('triple-neueve-white.jpg', :class => 'img_pair') %>
+        <%= image_tag('triple-neueve-white.jpg',
+                      :class => 'img_pair',
+                      alt: 'NeuEve Vaginal Suppositories help alleviate symptoms of vaginal dryness, atrophy, and BV') %>
       </div>
     </td>
     <td style="background-color: #fdfdfa" colspan="2">
       <div align="center">
-        <%= link_to image_tag('cream-red-flower-med.jpg', :class => 'img_pair'), cream_path %>
+        <%= link_to image_tag('cream-red-flower-med.jpg',
+                              :class => 'img_pair',
+                              alt: 'NeuEve Cream is a natural vaginal moisturizer that helps with vaginal itching'),
+                    cream_path %>
       </div>
     </td>
   </tr>
@@ -491,7 +499,11 @@
 
         <strong>
           <div itemprop="name">Suppository Applicator, Reusable</div>
-          <%= image_tag('applicator.jpg', :size => "240x240", :class => 'applicator') %><br>
+          <%= image_tag('applicator.jpg',
+                        :size => "240x240",
+                        :class => 'applicator',
+                        alt: 'NeuEve Suppository Applicator'
+              ) %><br>
 
           <meta itemprop="category" content="Health & Beauty > Personal Care > Feminine Sanitary Supplies > Feminine Deodorant"/>
           <meta itemprop="description" content="Natural suppository for fighting odor, dryness, dyspareunia, and bacterial vaginosis (BV). Gynecologist-tested."/>
@@ -535,7 +547,11 @@
   <tr>
     <td colspan="4">
       <div align="center">
-        <%= image_tag("100-guarantee-tiny.png", :size => "300x300", :class => "applicator") %>
+        <%= image_tag("100-guarantee-tiny.png",
+                      :size => "300x300",
+                      :class => "applicator",
+                      alt: '100% Customer Satisfaction Guarantee'
+            ) %>
         <br>
 
         We offer a 100% customer satisfaction guarantee on all of our products.
@@ -745,11 +761,14 @@
 <%= render 'layouts/disclaimer'%>
 
 <div align="center">
-  <%= image_tag("hormone-free-trans.gif", :size => "160x160", :class=>'seal') %>
-  &nbsp; &nbsp; &nbsp;
-  <%= image_tag("no-chemical-logo-trans.gif", :size => "160x160", :class=>'seal') %>
-  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-  <%= image_tag("not-tested-on-animals.gif", :size => "160x160", :class => "seal") %>
+  <%= image_tag("hormone-free-trans.gif", :size => "160x160", :class=>'seal',
+                alt: 'Hormone Free Seal') %>
+  &nbsp; &nbsp; &nbsp; &nbsp;
+  <%= image_tag("no-chemical-logo-trans.gif", :size => "160x160", :class=>'seal',
+                alt: 'No Chemical Seal') %>
+  &nbsp; &nbsp; &nbsp; &nbsp;
+  <%= image_tag("not-tested-on-animals.gif", :size => "160x160", :class => "seal",
+                alt: 'Not Tested on Animals Seal') %>
 </div>
 
 <img src="https://ir-na.amazon-adsystem.com/e/ir?t=neu08-20&l=ur2&o=1" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
