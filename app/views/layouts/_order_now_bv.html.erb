@@ -283,7 +283,8 @@
     <tr align="center">
         <td style="background-color: #ffffff">
             <div align="center">
-                <%= image_tag('bv-clear-starter-kit-image.jpg', :class => 'img_pair') %>
+                <%= image_tag('bv-clear-starter-kit-image.jpg', :class => 'img_pair',
+                    alt: 'NeuEve BV Clear Kit is a 100% all-natural vaginal suppository. It does not contain any boric acid.') %>
             </div>
         </td>
         <td style="vertical-align:middle">
@@ -378,7 +379,8 @@
     <tr align="center">
         <td style="background-color: #ffffff">
             <div align="center">
-                <%= image_tag('gold-formula-for-bv.jpg', :class => 'img_pair') %>
+                <%= image_tag('gold-formula-for-bv.jpg', :class => 'img_pair',
+                    alt: 'NeuEve Gold Formula is a 100% all-natural vaginal suppository. It does not contain any boric acid.') %>
             </div>
         </td>
         <td style="vertical-align:middle">
@@ -503,11 +505,14 @@
     <em>NeuEve has never been tested on animals, and does not contain any animal products.</em><br>
 </div>
 <div align="center">
-    <%= image_tag("hormone-free-trans.gif", :size => "160x160", :class => "seal") %>
-    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-    <%= image_tag("no-chemical-logo-trans.gif", :size => "160x160", :class => "seal") %>
-    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-    <%= image_tag("not-tested-on-animals.gif", :size => "160x160", :class => "seal") %>
+    <%= image_tag("hormone-free-trans.gif", :size => "160x160", :class=>'seal',
+                  alt: 'Hormone Free Seal') %>
+    &nbsp; &nbsp; &nbsp; &nbsp;
+    <%= image_tag("no-chemical-logo-trans.gif", :size => "160x160", :class=>'seal',
+                  alt: 'No Chemical Seal') %>
+    &nbsp; &nbsp; &nbsp; &nbsp;
+    <%= image_tag("not-tested-on-animals.gif", :size => "160x160", :class => "seal",
+                  alt: 'Not Tested on Animals Seal') %>
 </div>
 
 
