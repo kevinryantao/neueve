@@ -14,3 +14,8 @@
 //= require jquery_ujs
 //= require bootstrap
 //= require_tree .
+
+// Site Search box won't close after a click outside
+$('li.dropdown.mega-dropdown a').on('click', function (event) {
+  $(this).parent().toggleClass('open');
+});
