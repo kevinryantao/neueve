@@ -1,6 +1,29 @@
 <header class="navbar">
     <div class="navbar-inner">
         <nav>
+            <ul class="nav pull-left">
+                <li class="dropdown mega-dropdown">
+                    <a class="dropdown-toggle">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                    </a>
+                    <ul class="dropdown-menu search-box" role="menu">
+                        <li>
+                            <script>
+                                (function() {
+                                    var cx = '017871404147966635691:gk_h6msffxa';
+                                    var gcse = document.createElement('script');
+                                    gcse.type = 'text/javascript';
+                                    gcse.async = true;
+                                    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+                                    var s = document.getElementsByTagName('script')[0];
+                                    s.parentNode.insertBefore(gcse, s);
+                                })();
+                            </script>
+                            <gcse:search></gcse:search>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
             <ul class="nav pull-right">
                 <li><%= link_to "About", about_path %></li>
                 <li class="dropdown">
