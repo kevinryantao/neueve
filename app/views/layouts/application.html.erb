@@ -35,6 +35,9 @@
           !yield(:title).include?('BV') &&
           !yield(:title).include?('Scholarship')) %>
 
+    <p>
+        Last modified: <%= yield(:last_modified) %>
+    </p>
   <%= render "layouts/footer" %>
 </div>
 <%= render "layouts/remarketingtag" %>
