@@ -41,8 +41,7 @@ SitemapGenerator::Sitemap.create do
   add cream_path, priority: 1
   add libido_path, priority: 1
   add bacterial_vaginosis_testimonials_path, priority: 1
-  add scholarship_path, priority: 0.1
-  add scholarship_douglass_path, priority: 0.1
-  add scholarship_gwashingtonhs_path, priority: 0.1
-
+  add gold_path, priority: 1
+  add silver_path, priority: 1
+  add silk_path, priority: 1
 end
