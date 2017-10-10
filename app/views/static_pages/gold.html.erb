@@ -1,0 +1,282 @@
+<% provide(:title, 'Gold | Vaginal Suppositories by NeuEve') %>
+<% provide(:description, 'NeuEve Gold is a natural vaginal suppository developed by a gynecologist. NeuEve Gold improves
+ vaginal health and ends recurrent BV. $51.95, FREE SHIPPING on orders >$70.') %>
+<% provide(:last_modified, 'October 10, 2017') %>
+
+<br>
+<div class="jumbotron">
+    <h1>Gold</h1>
+</div>
+
+<table class='table table-bordered table-striped'>
+    <tr align="center" class="mobile-only">
+        <td style="background-color: #ffffff">
+            <div align="center">
+                <%= image_tag('Gold-NeuEve.jpg', :size => '600x450',
+                              alt: 'NeuEve Gold is a 100% all-natural vaginal suppository, for recurrent bacterial vaginosis.') %>
+            </div>
+        </td>
+    </tr>
+    <tr align="center">
+        <td style="background-color: #ffffff" class="non-mobile-only">
+            <div align="center">
+                <%= image_tag('Gold-NeuEve.jpg', :class => 'img_pair',
+                              alt: 'NeuEve Gold is a 100% all-natural vaginal suppository, for recurrent bacterial vaginosis.') %>
+            </div>
+        </td>
+        <td style="vertical-align:middle">
+            <div itemscope itemtype="http://schema.org/Product" align="center">
+                <strong>
+                    <div itemprop="name">NeuEve Gold Formula (1 month supply)<br>4 suppositories / pack</div>
+                    <meta itemprop="category" content="Health & Beauty > Personal Care > Feminine Sanitary Supplies > Feminine Deodorant"/>
+                    <meta itemprop="description" content="Natural suppository for fighting odor, dryness, dyspareunia, and bacterial vaginosis (BV). Gynecologist-tested."/>
+                </strong>
+                <span itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                  <span itemprop="price">$51.95</span>
+                  <meta itemprop="priceCurrency" content="USD"/>
+                </span>
+                <br>
+
+                <div class="formbutton">
+                    <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                        <input type="hidden" name="cmd" value="_s-xclick">
+                        <input type="hidden" name="hosted_button_id" value="BW3C5YD36UAS8">
+                        <%= submit_tag 'Add to Cart',
+                                       :class => 'btn btn-large btn-warning add-to-cart',
+                                       :id => 'gold-formula',
+                                       :name => 'submit' %>
+                        <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                    </form>
+                </div>
+
+                <br>
+
+                3.5 Stars on <%= link_to image_tag('amazon-4-stars.png', :size => "95x42"),
+                                         create_url('https://www.amazon.com/',
+                                                    ['NeuEve-Suppository-Gold-formula-6',
+                                                     'product-reviews',
+                                                     'B00CM1T35I'],
+                                                    {
+                                                            ie:'UTF8',
+                                                            reviewerType:'all_reviews',
+                                                            showViewpoints:0,
+                                                            sortBy:'helpful',
+                                                            pageNumber:1,
+                                                            filterByStar:'positive',
+                                                            _encoding:'UTF8',
+                                                            tag:'neu08-20',
+                                                            linkCode:'ur2',
+                                                            linkId:'HSNLHLCPIAWK6RZM',
+                                                            camp:1789,
+                                                            creative: 9325
+                                                    }, 'R34NC759R1IWN8'),
+                                         :class => 'amazon-review',
+                                         :id => 'gold-formula',
+                                         :target => '_blank' %><br>
+
+
+                <%= link_to 'Amazon Reviews of NeuEve Gold'.html_safe,
+                            create_url('https://www.amazon.com/',
+                                       ['NeuEve-Suppository-Gold-formula-6',
+                                        'product-reviews',
+                                        'B00CM1T35I'],
+                                       {
+                                               ie:'UTF8',
+                                               reviewerType:'all_reviews',
+                                               showViewpoints:0,
+                                               sortBy:'helpful',
+                                               pageNumber:1,
+                                               filterByStar:'positive',
+                                               _encoding:'UTF8',
+                                               tag:'neu08-20',
+                                               linkCode:'ur2',
+                                               linkId:'HSNLHLCPIAWK6RZM',
+                                               camp:1789,
+                                               creative: 9325
+                                       }, 'R34NC759R1IWN8'),
+                            :class => 'amazon-review',
+                            :id => 'gold-formula',
+                            :target => '_blank' %>
+
+                <br>
+                <strong><%= link_to 'For first time buyers, please read THIS', faq_path(:anchor => 'right_formula_atrophy') %></strong>
+                <br>
+                If you have severe dryness, you <br>should order the mild Silk formula first.
+            </div>
+        </td>
+    </tr>
+</table>
+
+<h3>
+    Description:
+</h3>
+<p>
+    NeuEve Gold is a natural vaginal suppository developed by a <%= link_to "gynecologist.", about_path %>
+    NeuEve Gold naturally moisturizes to help with painful sex (dyspareunia).
+    NeuEve Gold is made with vitamins and nutrients to nourish the vaginal tissues. The low pH helps to restore vaginal
+    ecology and get rid of recurrent BV.
+</p>
+<h3>
+    What does NeuEve Gold do?
+</h3>
+<p>
+    NeuEve Gold is ideal for women with mild painful sex, mild vaginal atrophy, and mild vaginal dryness. NeuEve Gold is
+    excellent for maintaining healthy vaginal ecological balance.
+</p>
+<p>
+    NeuEve Gold is more concentrated in certain ingredients and with extended release. It is designed for
+    long-term relieving of dryness and atrophy and suitable for easy maintenance (use 1 per week) because it can last 7-8 days.
+</p>
+<p>
+    NeuEve Gold is also excellent for recurrent fishy vaginal odor or bacterial vaginosis. Many women with years of
+    recurrent BV were finally able to break the cycle with NeuEve Gold.
+</p>
+<h3>
+    Who's NeuEve Gold For?
+</h3>
+<p>
+    NeuEve Gold is our strongest vaginal suppository.
+</p>
+<p>
+    We generally recommend starting with NeuEve Gold for women <strong>who are between under 40 years old</strong> and
+    are premenopausal.
+<p>
+    We recommend starting with NeuEve Gold if you are
+    <strong>under 30 years old and have a medical history of any of the following:</strong>
+</p>
+<ul>
+    <li>breast or ovarian cancer treatment</li>
+    <li>oophorectomy</li>
+    <li>hysterectomy</li>
+    <li>lichen sclerosus</li>
+    <li>Sjogren's symdrome</li>
+    <li>currently use antihypertensive drugs</li>
+    <li>currently use antiallergics drugs</li>
+    <li>currently use antidepressants drugs</li>
+</ul>
+<p>
+    If you've been using <%=link_to "NeuEve Silver", silver_path%> for 1-4 months, you can consider moving up to NeuEve Gold.
+</p>
+<p>
+    NeuEve does not contain any estrogen, herbs, or drugs. That makes NeuEve perfect for women wanting to avoid
+    hormones,
+    (such as breast and ovarian cancer survivors and previvors). NeuEve is also perfect for women wanting to supplement
+    their estrogen replacement therapy with something extra.
+</p>
+
+
+<h3>
+    Ingredients:
+</h3>
+<p>
+    <%= link_to 'Palm oil*', faq_path(:anchor => 'tropicalTraditions') %> , sunflower wax, tapioca starch, inulin,
+    fructo-oligosaccharides, sunflower lecithin, orange oil, vitamin
+    E, <%= link_to 'and a proprietary blend of nutrients.',
+                   faq_path(:anchor => 'proprietaryBlend') %>
+<p>
+    NeuEve is gluten-free, hormone-free and estrogen-free. NeuEve does NOT contain any boric acid, petrochemicals,
+    parabens, BHT, T.E.A, M.E.A, urea, glycols, PEG's, etc. NeuEve has never been tested on animals, and does not
+    contain any animal products.
+</p>
+<p>
+    NeuEve is manufactured locally and sustainably in small-batches in Arlington Heights, IL, USA, with care and
+    tenderness.
+</p>
+
+<div align="center">
+    <%= image_tag("hormone-free-trans.gif", :size => "160x160", :class=>'seal',
+                  alt: 'Hormone Free Seal') %>
+    &nbsp; &nbsp; &nbsp; &nbsp;
+    <%= image_tag("no-chemical-logo-trans.gif", :size => "160x160", :class=>'seal',
+                  alt: 'No Chemical Seal') %>
+    &nbsp; &nbsp; &nbsp; &nbsp;
+    <%= image_tag("not-tested-on-animals.gif", :size => "160x160", :class => "seal",
+                  alt: 'Not Tested on Animals Seal') %>
+    &nbsp; &nbsp; &nbsp; &nbsp;
+    <%= image_tag("made-in-usa-logo-vector-400x400.png", :size => "160x160", :class => "seal",
+                  alt: 'Made in USA Seal') %>
+</div>
+
+
+<h3>
+    Warnings:
+</h3>
+<p>
+    For vaginal use only. Stop use and wash thoroughly to remove the suppository if
+    suspected allergy occurs (such as itching and excessive discharges).
+</p>
+
+<p>
+<BLOCKQUOTE>
+    <strong><em>Stop use and consult with your doctor if:</em></strong>
+    <ul>
+        <li>Symptoms persist after the initial dosage of 8-12 suppositories</li>
+        <li>You have pain or tenderness in the lower part of the abdomen and pelvis</li>
+        <li>You have vaginal discharge or bleeding, chills, nausea, or fever</li>
+        <li>You (or your sexual partner) have sores or ulcers</li>
+        <li>You have an STD (sexually transmitted disease) or PID (pelvic inflammatory disease)</li>
+        <li>Your vaginal discharge is an unusual amount, color, or odor</li>
+        <li>You have frequent and painful urination</li>
+        <li>If use results in pain, soreness, swelling, redness, itching, or irritation.</li>
+    </ul>
+</BLOCKQUOTE>
+
+<h3>
+    Important Notice:
+</h3>
+<p>
+    NeuEve suppositories are not contraceptives or drugs of any kind. They do NOT protect against any communicable
+    diseases. There is no data available for compatibility with latex condoms. As a precautionary measure, you should
+    not use NeuEve if you use latex condoms. If you are pregnant or breastfeeding you should ask a health professional
+    before using this product. If the NeuEve is accidentally eaten or swallowed, it is not a problem, because it is
+    fully food grade and should be safe even though it may taste bad.
+</p>
+
+<h3>
+    Storage:
+</h3>
+<p>
+    Store the product in a cool, dry place (4 – 20°C). Keep it away from heat, direct sunlight, and the reach of
+    children.
+</p>
+
+<h3>
+    Indication:<sup>*</sup>
+</h3>
+<p>
+    Vaginal odor, dryness, appearance of atrophy, or painful intercourse (dyspareunia).
+</p>
+
+<a name="directions" id="directions"></a>
+<h3>
+    Directions for use:
+</h3>
+<p>
+    Use 1 NeuEve Gold Suppository every 7 days.
+<ol>
+    <li>Use restroom to empty bowels or the bladder. Wash hands with soap and water.</li>
+    <li>Tear a single suppository apart from the group.</li>
+    <%= image_tag('how-to-open.jpg',
+                  alt: 'Instruction for opening suppository.
+    1. Find the bullet point.
+    2. Feel two open wings.
+    3. Peel it open.
+    4. If hard to open, use a nail clipper or scissors to cut along dotted lines.
+    5. Peel it again.') %>
+    <li>Find the bullet point of the suppository. It has two opened wings.</li>
+    <li>Peel open the suppository shell.</li>
+    <li>Lie on back, raise knees and gently insert the suppository with a finger and push into the vagina as far as it
+        will
+        comfortably go.
+    </li>
+    <li>Stay in this position for about 15 minutes, or until the suppository melts.</li>
+</ol>
+
+Using at bedtime is desirable. Do not use during menses.
+
+<p>
+    For more details of suppository application please see :
+
+<div align="center">
+    <iframe width="640" height="360" src="https://www.youtube-nocookie.com/embed/YEYheg3AEWY?rel=0" frameborder="0" allowfullscreen></iframe>
+</div>
