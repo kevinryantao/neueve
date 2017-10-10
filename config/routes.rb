@@ -32,6 +32,11 @@ Lavax::Application.routes.draw do
 
   match "/cream" => "static_pages#cream", :via => :get
 
+  match "/silk" => "static_pages#silk", :via => :get
+  match "/silver" => "static_pages#silver", :via => :get
+  match "/gold" => "static_pages#gold", :via => :get
+
+
   match "/original_price_secret_page" => "static_pages#original_priced_subscription", :via => :get
 
   match "/libido" => "static_pages#libido", :via => :get

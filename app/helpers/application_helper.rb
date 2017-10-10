@@ -4,6 +4,8 @@ module ApplicationHelper
     base_title = "NeuEve"
     if page_title.empty?
       base_title
+    elsif page_title.include?('NeuEve')
+      page_title
     else
       "#{page_title} | #{base_title}"
     end
@@ -11,7 +13,7 @@ module ApplicationHelper
 
   def full_description(description)
     if description.empty?
-      "NeuEve Suppositories and Cream are a natural remedy for vaginal dryness, atrophy, odor, itching, burning, painful sex and other discomforts of menopause. NeuEve is hormone-free and estrogen-free, and works by restoring and re-balancing your vaginal ecology."
+      "NeuEve Suppositories and Cream are a natural remedy for vaginal dryness, atrophy, odor, itching, burning, painful sex and other discomforts of menopause."
     else
       description
     end
