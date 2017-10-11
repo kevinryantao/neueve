@@ -1,13 +1,13 @@
 {
-    "name": "NeuEve",
+    "name": "",
     "icons": [
         {
-            "src": "/favicon/android-chrome-192x192.png",
+            "src": "/favicon/android-chrome-192x192.png?v=bOLpQ7pKjA",
             "sizes": "192x192",
             "type": "image/png"
         },
         {
-            "src": "/favicon/android-chrome-256x256.png",
+            "src": "/favicon/android-chrome-256x256.png?v=bOLpQ7pKjA",
             "sizes": "256x256",
             "type": "image/png"
         }
