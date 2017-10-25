@@ -36,6 +36,7 @@ Lavax::Application.routes.draw do
   match "/silver" => "static_pages#silver", :via => :get
   match "/gold" => "static_pages#gold", :via => :get
 
+  match "/applicator" => "static_pages#applicator", :via => :get
 
   match "/original_price_secret_page" => "static_pages#original_priced_subscription", :via => :get
 
