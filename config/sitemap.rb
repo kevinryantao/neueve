@@ -44,4 +44,5 @@ SitemapGenerator::Sitemap.create do
   add gold_path, priority: 1
   add silver_path, priority: 1
   add silk_path, priority: 1
+  add applicator_path, priority: 1
 end
