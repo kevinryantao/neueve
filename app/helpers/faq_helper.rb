@@ -39,6 +39,7 @@ module FaqHelper
       FaqQuestion.new('right_formula_atrophy', 'Could you help me choose the right NeuEve formula to start for my dryness and atrophy?'),
       FaqQuestion.new('how_long_silk', 'I am now on subscription for NeuEve Silk, could you tell me how long I should stay on the Silk formula before moving up to the Silver formula?'),
       FaqQuestion.new('how_long_relief', 'I have had vaginal dryness and painful sex for about 7 years. I have used 1 box of NeuEve Silk in a month, but I still have not noticed relief. Could you tell me how long I need to use NeuEve before I will notice relief?'),
+      FaqQuestion.new('side_effects', 'What are the side effects of NeuEve?'),
   ])
 
   BV_SECTION = FaqSection.new('BV/Infection: ', [
