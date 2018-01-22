@@ -18,13 +18,16 @@
         Once your package is shipped, you will receive an email with your USPS tracking number. Add <a href="mailto:marketing@shipbob.com">marketing@shipbob.com</a> to your address book to prevent it from going to your spam filter.
     </td>
 </tr>
-<tr>
-    <td class="content-block alignleft">
-        <strong>IMPORTANT:</strong>
-        Taking calcium, vitamin D, and omega-3 supplements daily will help NeuEve work better.
-        Learn more at: <a href="https://www.neueve.com/faq#supplements">neueve.com/faq#supplements</a>
-    </td>
-</tr>
+<% if !@is_bv_user %>
+    <tr>
+        <td class="content-block alignleft">
+            <strong>IMPORTANT:</strong>
+            Taking calcium, vitamin D, and omega-3 supplements daily will help NeuEve work better.
+            Learn more at:
+            <a href="https://www.neueve.com/faq#supplements">neueve.com/faq#supplements</a>
+        </td>
+    </tr>
+<% end %>
 
 <tr>
     <td class="content-block aligncenter">
