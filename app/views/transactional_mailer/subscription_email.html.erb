@@ -37,7 +37,8 @@
     <td class="content-block alignleft">
         <strong>IMPORTANT:</strong>
         Taking calcium, vitamin D, and omega-3 supplements daily will help NeuEve work better.
-        Learn more at: <a href="https://www.neueve.com/faq#supplements">neueve.com/faq#supplements</a>
+        Learn more at:
+        <a href="https://www.neueve.com/faq#supplements">neueve.com/faq#supplements</a>
     </td>
 </tr>
 
@@ -89,36 +90,30 @@
                 </td>
             </tr>
 
-            <% if @pdt_hash["txn_type"] == 'cart' %>
+            <tr>
+                <td>
+                    <strong>Subscription Details:</strong>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table class="invoice-items" cellpadding="0" cellspacing="0">
 
-            <% elsif @pdt_hash["txn_type"] == 'subscr_payment' %>
+                        <tr>
+                            <td><%= @pdt_hash["option_selection1"] %></td>
 
-                <tr>
-                    <td>
-                        <strong>Subscription Details:</strong>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <table class="invoice-items" cellpadding="0" cellspacing="0">
-
-                            <tr>
-                                <td><%= @pdt_hash["option_selection1"] %></td>
-
-                                <td class="alignright">$ <%= @pdt_hash["mc_gross"] %></td>
-                            </tr>
-                            <tr>
-                                <td>Monthly</td>
-                            </tr>
-                            <tr class="total">
-                                <td class="alignright" width="80%">Total</td>
-                                <td class="alignright"> $<%= @pdt_hash["payment_gross"] %></td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-
-            <% end %>
+                            <td class="alignright">$ <%= @pdt_hash["mc_gross"] %></td>
+                        </tr>
+                        <tr>
+                            <td>Monthly</td>
+                        </tr>
+                        <tr class="total">
+                            <td class="alignright" width="80%">Total</td>
+                            <td class="alignright"> $<%= @pdt_hash["payment_gross"] %></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
 
         </table>
     </td>
