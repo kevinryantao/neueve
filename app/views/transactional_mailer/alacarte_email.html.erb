@@ -1,0 +1,99 @@
+<% content_for :title do %>
+    NeuEve Order Confirmation
+<% end %>
+
+
+<tr>
+    <td class="content-block">
+        <h1 class="aligncenter">$<%= @pdt_hash["payment_gross"] %> <%= @pdt_hash["mc_currency"] %> Paid</h1>
+    </td>
+</tr>
+<tr>
+    <td class="content-block">
+        <h2 class="aligncenter">Thanks for your purchase!</h2>
+    </td>
+</tr>
+<tr>
+    <td class="content-block alignleft">
+        Once your package is shipped, you will receive an email with your USPS tracking number. Add <a href="mailto:marketing@shipbob.com">marketing@shipbob.com</a> to your address book to prevent it from going to your spam filter.
+    </td>
+</tr>
+<tr>
+    <td class="content-block alignleft">
+        <strong>IMPORTANT:</strong>
+        Taking calcium, vitamin D, and omega-3 supplements daily will help NeuEve work better.
+        Learn more at: <a href="https://www.neueve.com/faq#supplements">neueve.com/faq#supplements</a>
+    </td>
+</tr>
+
+<tr>
+    <td class="content-block aligncenter">
+        <table class="invoice">
+            <tr>
+                <td>
+                    <strong>Shipping Address:</strong>
+                </td>
+            </tr>
+            <tr>
+                <td><%= @pdt_hash["address_name"] %><br>
+                    <%= @pdt_hash["address_street"] %><br>
+                    <%= @pdt_hash["address_city"] %>, <%= @pdt_hash["address_state"] %> <%= @pdt_hash["address_zip"] %>
+                    <br>
+                    <%= @pdt_hash["address_country"] %>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <strong>Payment Date:</strong>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <%= @pdt_hash["payment_date"] %>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <strong>PayPal Transaction ID:</strong>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <%= link_to @pdt_hash["txn_id"], "https://www.paypal.com/activity/payment/#{@pdt_hash["txn_id"]}" %>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <strong>Order Details:</strong>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table class="invoice-items" cellpadding="0" cellspacing="0">
+
+                        <% (1..(@pdt_hash["num_cart_items"].to_i)).each do |i| %>
+                            <tr>
+                                <td><%= @pdt_hash["quantity#{i}"] %> x <%= @pdt_hash["item_name#{i}"] %></td>
+
+                                <td class="alignright">$ <%= @pdt_hash["mc_gross_#{i}"] %></td>
+                            </tr>
+                        <% end %>
+                        <tr>
+                            <td>Shipping</td>
+                            <td class="alignright">$ <%= @pdt_hash["mc_shipping"] %></td>
+                        </tr>
+                        <tr class="total">
+                            <td class="alignright" width="80%">Total</td>
+                            <td class="alignright"> $<%= @pdt_hash["payment_gross"] %></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </td>
+</tr>
+<tr>
+    <td class="content-block aligncenter">
+
+    </td>
+</tr>

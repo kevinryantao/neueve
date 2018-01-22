@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 ruby '2.2.7'
 
 gem 'rails', '~> 4.2'
-gem 'bootstrap-sass'
+gem 'bootstrap-sass', '~> 3.3.7'
 gem 'therubyracer'
 gem 'better_errors'
 gem 'simple_form'
@@ -32,15 +32,19 @@ group :development do
 end
 
 group :production do
-  gem 'pg'
+  gem 'pg', '~>0.21.0'
   gem 'heroku-deflater'
 end
 
 
 # Gems used only for assets and not required
 # in production environments by default.
-gem 'sass-rails', '~> 4.0.0'
-gem 'coffee-rails', '~> 4.0.0'
+gem 'coffee-rails', '~> 4.1.0'
+
+# Premailer
+gem 'premailer-rails'
+gem 'nokogiri'
+gem 'sass-rails', '~> 5.0.4'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', :platforms => :ruby
