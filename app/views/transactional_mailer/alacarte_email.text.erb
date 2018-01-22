@@ -1,8 +1,33 @@
-Hi <%= @first_name %>
-===============================================
+NeuEve Order Confirmation
+
+$<%= @pdt_hash["payment_gross"] %> <%= @pdt_hash["mc_currency"] %> Paid
 
 Thanks for your purchase!
 
-Here is your transaction id: <%= @txn_id %>
+Once your package is shipped, you will receive an email with your USPS tracking number. Add marketing@shipbob.com to your address book to prevent it from going to your spam filter.
 
-Thanks for joining and have a great day!
+IMPORTANT:
+Taking calcium, vitamin D, and omega-3 supplements daily will help NeuEve work better.
+Learn more at: neueve.com/faq#supplements
+
+Shipping Address:
+
+<%= @pdt_hash["address_name"] %>
+<%= @pdt_hash["address_street"] %>
+<%= @pdt_hash["address_city"] %>, <%= @pdt_hash["address_state"] %> <%= @pdt_hash["address_zip"] %>
+<%= @pdt_hash["address_country"] %>
+
+Payment Date:
+<%= @pdt_hash["payment_date"] %>
+
+PayPal Transaction ID:
+<%= "https://www.paypal.com/activity/payment/#{@pdt_hash["txn_id"]}" %>
+
+Order Details:
+
+<% (1..(@pdt_hash["num_cart_items"].to_i)).each do |i| %>
+<%= @pdt_hash["quantity#{i}"] %> x <%= @pdt_hash["item_name#{i}"] %> $<%= @pdt_hash["mc_gross_#{i}"] %>
+<% end %>
+Shipping $ <%= @pdt_hash["mc_shipping"] %>
+-----------------------------------------------------------------------
+Total $<%= @pdt_hash["payment_gross"] %>
