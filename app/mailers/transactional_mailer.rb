@@ -6,7 +6,9 @@ class TransactionalMailer < ApplicationMailer
 
     @is_bv_user = is_bv_user(pdt_hash)
 
-    mail(to: "kevin@neueve.com", subject: 'NeuEve Order Confirmation')
+    payer_email = pdt_hash["payer_email"]
+
+    mail(to: payer_email, subject: 'NeuEve Order Confirmation')
   end
 
   def is_bv_user(pdt_hash)
@@ -21,6 +23,8 @@ class TransactionalMailer < ApplicationMailer
   def subscription_email(pdt_hash)
     @pdt_hash = pdt_hash
 
-    mail(to: "kevin@neueve.com", subject: 'NeuEve Subscription Confirmation')
+    payer_email = pdt_hash["payer_email"]
+
+    mail(to: payer_email, subject: 'NeuEve Subscription Confirmation')
   end
 end
