@@ -1,4 +1,7 @@
 class StaticPagesController < ApplicationController
+
+  TRANSACTION_IDS_SENT_CACHE = {}
+
   def home
   end
 
@@ -145,10 +148,15 @@ class StaticPagesController < ApplicationController
     # if it's a subscription, send a subscription Email
     # if it's ala carte, send an ala carte email
 
-    if @pdt_data["txn_type"] == 'cart'
-      TransactionalMailer.alacarte_email(@pdt_data).deliver_now
-    elsif @pdt_data["txn_type"] == 'subscr_payment'
-      TransactionalMailer.subscription_email(@pdt_data).deliver_now
+    if !TRANSACTION_IDS_SENT_CACHE[paypal_transaction_id] #can send a max of one email per txn id
+      if @pdt_data["txn_type"] == 'cart'
+        TransactionalMailer.alacarte_email(@pdt_data).deliver_now
+        TRANSACTION_IDS_SENT_CACHE[paypal_transaction_id] = true
+
+      elsif @pdt_data["txn_type"] == 'subscr_payment'
+        TransactionalMailer.subscription_email(@pdt_data).deliver_now
+        TRANSACTION_IDS_SENT_CACHE[paypal_transaction_id] = true
+      end
     end
 
     @estimated_delivery_date = 7.days.from_now.strftime("%Y-%m-%d")
