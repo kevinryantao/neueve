@@ -101,7 +101,7 @@ GEM
     newrelic_rpm (4.7.1.340)
     nokogiri (1.8.1)
       mini_portile2 (~> 2.3.0)
-    pg (1.0.0)
+    pg (0.21.0)
     premailer (1.11.1)
       addressable
       css_parser (>= 1.6.0)
@@ -209,7 +209,7 @@ DEPENDENCIES
   memcachier
   newrelic_rpm
   nokogiri
-  pg
+  pg (~> 0.21.0)
   premailer-rails
   protected_attributes
   rack-cache
