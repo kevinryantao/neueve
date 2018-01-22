@@ -52,13 +52,13 @@ module Lavax
     config.assets.version                              = '1.0'
 
     config.action_mailer.delivery_method       = :smtp
+    config.x.mail_from = 'NeuEve <orders@neueve.com>'
+    config.action_mailer.default_url_options = { host: 'neueve.com' }
+
     ActionMailer::Base.smtp_settings           = {
-      :address              => "smtp.gmail.com",
-      :port                 => 587,
-      :user_name            => "neueve.suppositories@gmail.com",
-      :password             => "abcdefg",
-      :authentication       => "plain",
-      :enable_starttls_auto => true
+        address: 'email-smtp.us-east-1.amazonaws.com',
+        user_name: ENV['AMZ_SES_USER_NAME'],
+        password: ENV['AMZ_SES_PASSWORD']
     }
     config.action_mailer.raise_delivery_errors = true
 

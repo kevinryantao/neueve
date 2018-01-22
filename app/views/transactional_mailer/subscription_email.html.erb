@@ -1,0 +1,130 @@
+<% content_for :title do %>
+    NeuEve Subscription Confirmation
+<% end %>
+
+
+<tr>
+    <td class="content-block">
+        <h1 class="aligncenter">$<%= @pdt_hash["payment_gross"] %> <%= @pdt_hash["mc_currency"] %> Monthly</h1>
+    </td>
+</tr>
+<tr>
+    <td class="content-block">
+        <h2 class="aligncenter">Thanks for your subscription!</h2>
+    </td>
+</tr>
+<tr>
+    <td class="content-block alignleft">
+        Once your package is shipped, you will receive an email from
+        <a href="mailto:marketing@shipbob.com">marketing@shipbob.com</a>
+        with your tracking number.<br>
+        Add it to your address book to prevent it from going to your spam filter.
+    </td>
+</tr>
+<tr>
+    <td class="content-block alignleft">
+        You are free to cancel at any time <strong>after 3 months.</strong><br>
+    </td>
+</tr>
+<tr>
+    <td class="content-block alignleft">
+        Most women move up a level after 1-4 months. If you wish to change your level, please email us at
+        <a href="mailto:contact@neueve.com">contact@neueve.com</a>
+        and we will update your subscription.
+    </td>
+</tr>
+<tr>
+    <td class="content-block alignleft">
+        <strong>IMPORTANT:</strong>
+        Taking calcium, vitamin D, and omega-3 supplements daily will help NeuEve work better.
+        Learn more at: <a href="https://www.neueve.com/faq#supplements">neueve.com/faq#supplements</a>
+    </td>
+</tr>
+
+<tr>
+    <td class="content-block aligncenter">
+        <table class="invoice">
+            <tr>
+                <td>
+                    <strong>Shipping Address:</strong>
+                </td>
+            </tr>
+            <tr>
+                <td><%= @pdt_hash["address_name"] %><br>
+                    <%= @pdt_hash["address_street"] %><br>
+                    <%= @pdt_hash["address_city"] %>, <%= @pdt_hash["address_state"] %> <%= @pdt_hash["address_zip"] %>
+                    <br>
+                    <%= @pdt_hash["address_country"] %>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <strong>Subscription Start Date:</strong>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <%= @pdt_hash["payment_date"] %>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <strong>PayPal Transaction ID:</strong>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <%= link_to @pdt_hash["txn_id"], "https://www.paypal.com/activity/payment/#{@pdt_hash["txn_id"]}" %>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <strong>PayPal Subscription ID:</strong>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <%= link_to @pdt_hash["subscr_id"], "https://www.paypal.com/activity/payment/#{@pdt_hash["subscr_id"]}" %>
+                </td>
+            </tr>
+
+            <% if @pdt_hash["txn_type"] == 'cart' %>
+
+            <% elsif @pdt_hash["txn_type"] == 'subscr_payment' %>
+
+                <tr>
+                    <td>
+                        <strong>Subscription Details:</strong>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <table class="invoice-items" cellpadding="0" cellspacing="0">
+
+                            <tr>
+                                <td><%= @pdt_hash["option_selection1"] %></td>
+
+                                <td class="alignright">$ <%= @pdt_hash["mc_gross"] %></td>
+                            </tr>
+                            <tr>
+                                <td>Monthly</td>
+                            </tr>
+                            <tr class="total">
+                                <td class="alignright" width="80%">Total</td>
+                                <td class="alignright"> $<%= @pdt_hash["payment_gross"] %></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+
+            <% end %>
+
+        </table>
+    </td>
+</tr>
+<tr>
+    <td class="content-block aligncenter">
+
+    </td>
+</tr>

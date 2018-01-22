@@ -142,6 +142,15 @@ class StaticPagesController < ApplicationController
   def success
     paypal_transaction_id = params[:tx]
     @pdt_data = ajax_paypal_pdt(paypal_transaction_id)
+    # if it's a subscription, send a subscription Email
+    # if it's ala carte, send an ala carte email
+
+    if @pdt_data["txn_type"] == 'cart'
+      TransactionalMailer.alacarte_email(@pdt_data).deliver_now
+    elsif @pdt_data["txn_type"] == 'subscr_payment'
+      TransactionalMailer.subscription_email(@pdt_data).deliver_now
+    end
+
     @estimated_delivery_date = 7.days.from_now.strftime("%Y-%m-%d")
   end
 
