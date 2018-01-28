@@ -153,9 +153,17 @@ class StaticPagesController < ApplicationController
         TransactionalMailer.alacarte_email(@pdt_data).deliver_now
         TRANSACTION_IDS_SENT_CACHE[paypal_transaction_id] = true
 
+        if is_bv_user(@pdt_data)
+          ajax_mailwizz_add_subscriber(@pdt_data["payer_email"], @pdt_data["first_name"], @pdt_data["last_name"], :bv)
+        else
+          ajax_mailwizz_add_subscriber(@pdt_data["payer_email"], @pdt_data["first_name"], @pdt_data["last_name"], :purchase)
+        end
+
       elsif @pdt_data["txn_type"] == 'subscr_payment'
         TransactionalMailer.subscription_email(@pdt_data).deliver_now
         TRANSACTION_IDS_SENT_CACHE[paypal_transaction_id] = true
+
+        ajax_mailwizz_add_subscriber(@pdt_data["payer_email"], @pdt_data["first_name"], @pdt_data["last_name"], :subscriber)
       end
     end
 
@@ -201,4 +209,52 @@ class StaticPagesController < ApplicationController
     result_hash
   end
 
+  def ajax_mailwizz_add_subscriber(email, first_name, last_name, segment)
+    case segment
+      when :bv
+        list = 'co284xlkzpd15'
+      when :subscriber
+        list = 'vn950gce653f0'
+      when :purchase
+        list = 'gk6598t9f5aff'
+      else
+        list = 'rk386syp21bf2' # test
+    end
+
+    payload = "EMAIL=#{email}&FNAME=#{first_name}&LNAME=#{last_name}"
+    request = Typhoeus::Request.new(
+        "http://ec2-54-197-19-229.compute-1.amazonaws.com/api/lists/#{list}/subscribers/",
+        method: :post,
+        body: payload,
+        headers: { 'Content-Type' => 'application/x-www-form-urlencoded',
+                   'x-mw-public-key' => ENV['MAILWIZZ_PUBLIC_KEY'],
+                   'x-mw-timestamp' => Time.now.to_i
+        },
+        ssl_verifypeer: false,
+        ssl_verifyhost: 0,
+        verbose: true,
+        timeout: 10
+    )
+    request.on_complete do |response|
+      if response.success?
+        Rails.logger.info(response.response_body)
+        return response.response_body
+      else
+        error_response = response.body
+        Rails.logger.error("Mailwizz Add Subscriber Failed with Error: #{error_response}, payload: #{payload}")
+        return nil
+      end
+    end
+    request.run
+  end
+
+
+  def is_bv_user(pdt_hash)
+    (1..(pdt_hash["num_cart_items"].to_i)).each do |i|
+      if pdt_hash["item_name#{i}"].include? "BV"
+        return true
+      end
+    end
+    false
+  end
 end
