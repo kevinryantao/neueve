@@ -223,7 +223,7 @@ class StaticPagesController < ApplicationController
 
     payload = "EMAIL=#{email}&FNAME=#{first_name}&LNAME=#{last_name}"
     request = Typhoeus::Request.new(
-        "http://ec2-54-197-19-229.compute-1.amazonaws.com/api/lists/#{list}/subscribers/",
+        "http://ec2-34-203-205-175.compute-1.amazonaws.com/api/lists/#{list}/subscribers/",
         method: :post,
         body: payload,
         headers: { 'Content-Type' => 'application/x-www-form-urlencoded',
