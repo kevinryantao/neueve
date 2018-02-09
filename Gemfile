@@ -46,6 +46,9 @@ gem 'premailer-rails'
 gem 'nokogiri'
 gem 'sass-rails', '~> 5.0.4'
 
+# Canonical Rails
+gem 'canonical-rails', '~> 0.2.2'
+
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', :platforms => :ruby
 
