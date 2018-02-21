@@ -1,7 +1,7 @@
 <% provide(:title, 'Silver | Vaginal Suppositories by NeuEve') %>
 <% provide(:description, 'NeuEve Silver is a natural vaginal suppository developed by a gynecologist. NeuEve Silver
 helps painful sex and BV. $51.95, FREE SHIPPING on orders >$70.') %>
-<% provide(:last_modified, 'October 10, 2017') %>
+<% provide(:last_modified, 'February 21, 2018') %>
 
 <br>
 <div class="jumbotron">
@@ -98,6 +98,52 @@ helps painful sex and BV. $51.95, FREE SHIPPING on orders >$70.') %>
                             :target => '_blank' %>
                 <br>
                 <strong><%= link_to 'For first time buyers, please read THIS', faq_path(:anchor => 'right_formula_atrophy') %></strong>
+            </div>
+        </td>
+    </tr>
+    <tr align="center" class="mobile-only">
+        <td style="background-color: #ffffff">
+            <div align="center">
+                <%= image_tag('Silver-NeuEve-4boxes.jpg', :size => '600x450',
+                              alt: 'NeuEve Silver is a natural, estrogen-free, moisturizing vaginal suppository.') %>
+            </div>
+        </td>
+    </tr>
+    <tr align="center">
+        <td style="background-color: #ffffff" class="non-mobile-only">
+            <div align="center">
+                <%= image_tag('Silver-NeuEve-4boxes.jpg', :class => 'img_pair',
+                              alt: 'NeuEve Silver is a natural, estrogen-free, moisturizing vaginal suppository.') %>
+            </div>
+        </td>
+        <td style="vertical-align:middle">
+            <div itemscope itemtype="http://schema.org/Product" align="center">
+                <strong>
+                    <div itemprop="name">Four Boxes of NeuEve Silver</div>
+                    <meta itemprop="category" content="Health & Beauty > Personal Care > Feminine Sanitary Supplies > Feminine Deodorant"/>
+                    <meta itemprop="description" content="Natural suppository for fighting odor, dryness, dyspareunia, and bacterial vaginosis (BV). Gynecologist-tested."/>
+                </strong>
+                <span itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                  <strike>$207.80</strike> <i class="fa fa-long-arrow-right"></i> <span itemprop="price">$187.00</span>
+                  <meta itemprop="priceCurrency" content="USD"/>
+                </span>
+
+                <div>
+                    Save $20 + Free Shipping!
+                </div>
+                <br>
+
+                <div class="formbutton">
+                    <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                        <input type="hidden" name="cmd" value="_s-xclick">
+                        <input type="hidden" name="hosted_button_id" value="V8XG8GSATEW34">
+                        <%= submit_tag 'Add to Cart',
+                                       :class => 'btn btn-large btn-warning add-to-cart',
+                                       :id => 'silver-formula',
+                                       :name => 'submit' %>
+                        <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                    </form>
+                </div>
             </div>
         </td>
     </tr>
