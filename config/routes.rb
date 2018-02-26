@@ -41,7 +41,7 @@ Lavax::Application.routes.draw do
 
   match "/libido" => "static_pages#libido", :via => :get
 
-  match '/friends' => 'static_pages#friends', :via => :get
+  match "/kevin_tao" => "static_pages#kevin_tao", :via => :get
 
   match "/bacterial_vaginosis_testimonials" => "static_pages#bv_testimonials", :via => :get
 

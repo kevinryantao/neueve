@@ -45,4 +45,5 @@ SitemapGenerator::Sitemap.create do
   add silver_path, priority: 1
   add silk_path, priority: 1
   add applicator_path, priority: 1
+  add kevin_tao_path, priority: 1
 end
