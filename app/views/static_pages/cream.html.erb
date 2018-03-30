@@ -1,28 +1,103 @@
 <% provide(:title, 'Vaginal Cream for Dryness and Atrophy') %>
 <% provide(:description, 'Works Quickly! NeuEve is a non-hormonal cream that is extremely effective at healing vaginal atrophy for $34.95. Satisfaction guaranteed.') %>
-<% provide(:last_modified, 'July 24, 2017') %>
+<% provide(:last_modified, 'March 30, 2018') %>
 
 <div class="jumbotron">
-    <h1>NeuEve Cream : Product Information</h1>
+    <h1>Natural Vaginal Cream by NeuEve</h1>
 </div>
-<br>
 
-<table class='table table-bordered table-striped table-condensed'>
-
-    <tr align="center">
-        <td style="background-color: #fdfdfa" colspan="2">
+<table class='table table-bordered table-striped'>
+    <tr align="center" class="mobile-only">
+        <td style="background-color: #ffffff">
             <div align="center">
-                <%= image_tag('cream-red-flower-med.jpg', :class=>'img_pair',
+                <%= image_tag('natural_vaginal_cream_NeuEve.jpg', :size => '600x450',
                               alt: 'NeuEve Cream is a natural vaginal moisturizer that alleviates itching and burning.
                               It was designed for women with severe atrophy and painful sex.') %>
             </div>
         </td>
-        <td style="background-color: #eaeaea" colspan="2">
+    </tr>
+    <tr align="center">
+        <td style="background-color: #ffffff" class="non-mobile-only">
             <div align="center">
-                <%= image_tag('cream-back.jpg', :class=>'img_pair',
-                              alt: 'NeuEve Cream - Direction : Apply a tiny bit to the vulva daily. Ingredients:
-                              Palm oil, evening primrose oil, flaxseed oil, orange oil, lavender essential oil, vitamins,
-                              and a proprietary blend.') %>
+                <%= image_tag('natural_vaginal_cream_NeuEve.jpg', :class => 'img_pair',
+                              alt: 'NeuEve Cream is a natural vaginal moisturizer that alleviates itching and burning.
+                              It was designed for women with severe atrophy and painful sex.') %>
+            </div>
+        </td>
+        <td style="vertical-align:middle">
+            <div itemscope itemtype="http://schema.org/Product" align="center">
+                <strong>
+                    <div itemprop="name">NeuEve Cream (2-3 months supply)</div>
+                    <meta itemprop="category" content="Health & Beauty > Personal Care > Feminine Sanitary Supplies > Feminine Deodorant"/>
+                    <meta itemprop="description" content="Natural suppository for fighting odor, dryness, dyspareunia, and bacterial vaginosis (BV). Gynecologist-tested."/>
+                </strong>
+                0.7 oz<br>
+        <span itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+          <span itemprop="price">$34.95</span>
+          <meta itemprop="priceCurrency" content="USD"/>
+        </span>
+                <br>
+
+                <div class="formbutton">
+                    <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                        <input type="hidden" name="cmd" value="_s-xclick">
+                        <input type="hidden" name="hosted_button_id" value="MGMFZHE4QB2LW">
+                        <%= submit_tag 'Add to Cart',
+                                       :class => 'btn btn-large btn-warning add-to-cart',
+                                       :id => 'neueve-cream',
+                                       :name => 'submit' %>
+                        <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                    </form>
+                </div>
+
+                <br>
+
+                4.1 Stars on <%= link_to image_tag('amazon-4-stars.png', :size => "95x42"),
+                                         create_url('https://www.amazon.com/',
+                                                    ['NeuEve-Cream',
+                                                     'product-reviews',
+                                                     'B00CHY132G'],
+                                                    {
+                                                            ie:'UTF8',
+                                                            reviewerType:'all_reviews',
+                                                            showViewpoints:0,
+                                                            sortBy:'helpful',
+                                                            pageNumber:1,
+                                                            filterByStar:'positive',
+                                                            _encoding:'UTF8',
+                                                            tag:'neu08-20',
+                                                            linkCode:'ur2',
+                                                            linkId:'6UZATQATJAIEJXXD',
+                                                            camp:1789,
+                                                            creative: 9325
+                                                    }, 'R2RKRAUBBIC4B9'),
+                                         :class => 'amazon-review',
+                                         :id => 'neueve-cream',
+                                         :target => '_blank' %><br>
+
+                <%= link_to 'Amazon Reviews of NeuEve Cream'.html_safe,
+                            create_url('https://www.amazon.com/',
+                                       ['NeuEve-Cream',
+                                        'product-reviews',
+                                        'B00CHY132G'],
+                                       {
+                                               ie:'UTF8',
+                                               reviewerType:'all_reviews',
+                                               showViewpoints:0,
+                                               sortBy:'helpful',
+                                               pageNumber:1,
+                                               filterByStar:'positive',
+                                               _encoding:'UTF8',
+                                               tag:'neu08-20',
+                                               linkCode:'ur2',
+                                               linkId:'6UZATQATJAIEJXXD',
+                                               camp:1789,
+                                               creative: 9325
+                                       }, 'R2RKRAUBBIC4B9'),
+                            :class => 'amazon-review',
+                            :id => 'neueve-cream',
+                            :target => '_blank' %>
+
             </div>
         </td>
     </tr>
