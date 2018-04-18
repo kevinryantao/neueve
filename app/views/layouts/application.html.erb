@@ -4,13 +4,17 @@
   <title><%= full_title(yield(:title)) %></title>
   <%= javascript_include_tag "jquery.js" %>
   <%= stylesheet_link_tag "application", :media => "all" %>
-  <%= stylesheet_link_tag "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.min.css", :media => "all" %>
+
   <%= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Droid+Serif",
           "https://fonts.googleapis.com/css?family=Droid+Sans",
           "https://fonts.googleapis.com/css?family=Quintessential" %>
   <%= javascript_include_tag "application", :async => true %>
   <%= javascript_include_tag "https://js.stripe.com/v1/", :async => true %>
-  <%= csrf_meta_tags %>
+    <%= javascript_include_tag "fontawesome-all.js", :async => true %>
+    <!--<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+
+
+    <%= csrf_meta_tags %>
 
     <%= render "layouts/shim" %>
   <%= render "layouts/googleanalytics" %>
