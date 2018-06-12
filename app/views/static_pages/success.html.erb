@@ -227,44 +227,48 @@
           while (match = search.exec(query)) {
               urlParams[decode(match[1])] = decode(match[2]);
           }
-          ga('require', 'ecommerce');
-          ga('ecommerce:addTransaction', {
-              'id': urlParams['tx'],                     // Transaction ID. Required.
-              'revenue': urlParams['amt']               // Grand Total.
-          });
-          ga('ecommerce:send');
+
+          <% if @pdt_data.present? && @pdt_data.size > 0 %>
+
+              <% if @pdt_data['num_cart_items'].to_i > 0 %>
+                <% for i in 1..@pdt_data['num_cart_items'].to_i %>
+                  ga('ec:addProduct', {
+                      'id': <%= @pdt_data["item_number#{i}"] %>,
+                      'name': <%= @pdt_data["item_name#{i}"] %>,
+                      'brand': 'NeuEve',
+                      'category': 'ala-carte',
+                      'price': <%= @pdt_data["mc_gross#{i}"] %>,
+                      'quantity': <%= @pdt_data["quantity#{i}"] %>
+                  });
+                <% end %>
+              <% else %>
+                  ga('ec:addProduct', {
+                      'id': <%= @pdt_data["option_selection1"] %>,
+                      'name': <%= @pdt_data["item_name"] %>,
+                      'brand': 'NeuEve',
+                      'category': 'subscription',
+                      'price': <%= @pdt_data["mc_gross"] %>,
+                      'quantity': 1
+                  });
+              <% end %>
+
+              ga('ec:setAction', 'purchase', {                              // Transaction details are provided in an actionFieldObject.
+                  'id': <%= @pdt_data['txn_id'] %>,                         // (Required) Transaction id (string).
+                  'affiliation': 'NeuEve Store - Online',                   // Affiliation (string).
+                  'revenue': <%= @pdt_data['payment_gross'] %>,             // Revenue (currency).
+                  'tax': <%= @pdt_data['tax'] %>,                           // Tax (currency).
+                  'shipping': <%= @pdt_data['mc_shipping'] %>               // Shipping (currency).
+              });
+          <% end %>
+
           // Send to Facebook Pixel
           fbq('track', 'Purchase', {value: urlParams['amt'], currency: 'USD'});
       })();
 
 </script>
 
-
-<!-- Google Code for Successful Order Conversion Page -->
-<script type="text/javascript">
-      /* <![CDATA[ */
-      var google_conversion_id = 1039056375;
-      var google_conversion_language = "en";
-      var google_conversion_format = "1";
-      var google_conversion_color = "ffffff";
-      var google_conversion_label = "3PP2CJflwgUQ9_u67wM";
-      var google_conversion_value = 50.00;
-      var google_remarketing_only = false;
-      /* ]]> */
-
-</script>
-<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
-</script>
-<noscript>
-    <div style="display:inline;">
-        <img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices
-    .com/pagead/conversion/1039056375/?value=50.00&amp;label=3PP2CJflwgUQ9_u67wM&amp;guid=ON&amp;script=0"/>
-    </div>
-
-
-</noscript>
-
 <!-- BEGIN GCR Opt-in Module Code -->
+<!--
 <script src="https://apis.google.com/js/platform.js?onload=renderOptIn" async defer></script>
 <script>
     window.renderOptIn = function() {
@@ -280,6 +284,7 @@
         });
     }
 </script>
+-->
 <!-- END GCR Opt-in Module Code -->
 
 <!-- BEGIN GCR Language Code -->
