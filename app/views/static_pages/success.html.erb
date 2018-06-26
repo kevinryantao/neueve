@@ -215,7 +215,48 @@
 
 
 <script type="text/javascript">
-      var urlParams;
+    <% if @pdt_data.present? && @pdt_data.size > 0 %>
+
+        <% if @pdt_data['num_cart_items'].to_i > 0 %>
+            <% for i in 1..@pdt_data['num_cart_items'].to_i %>
+                ga('ec:addProduct', {
+                    'id': '<%= @pdt_data["item_number#{i}"] %>',
+                    'name': '<%= @pdt_data["item_name#{i}"] %>',
+                    'brand': 'NeuEve',
+                    'category': 'ala-carte',
+                    'price': '<%= @pdt_data["mc_gross_#{i}"] %>',
+                    'quantity': '<%= @pdt_data["quantity#{i}"] %>'
+                });
+            <% end %>
+        <% else %>
+            ga('ec:addProduct', {
+                'id': '<%= @pdt_data["option_selection1"] %>',
+                'name': '<%= @pdt_data["item_name"] %>',
+                'brand': 'NeuEve',
+                'category': 'subscription',
+                'price': '<%= @pdt_data["mc_gross"] %>',
+                'quantity': '1'
+            });
+        <% end %>
+
+        ga('ec:setAction', 'purchase', {                              // Transaction details are provided in an actionFieldObject.
+            'id': '<%= @pdt_data['txn_id'] %>',                         // (Required) Transaction id (string).
+            'affiliation': 'NeuEve Store - Online',                   // Affiliation (string).
+            'revenue': '<%= @pdt_data['payment_gross'] %>',             // Revenue (currency).
+            'tax': '<%= @pdt_data['tax'] %>',                           // Tax (currency).
+            'shipping': '<%= @pdt_data['mc_shipping'] %>'               // Shipping (currency).
+        });
+
+        <!-- Event snippet for NeuEve Purchase conversion page -->
+        gtag('event', 'conversion', {
+          'send_to': 'AW-1039056375/-bxQCMDw24QBEPf7uu8D',
+          'value': <%= @pdt_data['payment_gross'] %>,
+          'currency': 'USD',
+          'transaction_id': '<%= @pdt_data['txn_id'] %>'
+        });
+    <% end %>
+
+    var urlParams;
       (window.onpopstate = function () {
           var match,
                   pl = /\+/g,  // Regex for replacing addition symbol with a space
@@ -229,40 +270,6 @@
           while (match = search.exec(query)) {
               urlParams[decode(match[1])] = decode(match[2]);
           }
-
-          <% if @pdt_data.present? && @pdt_data.size > 0 %>
-
-              <% if @pdt_data['num_cart_items'].to_i > 0 %>
-                <% for i in 1..@pdt_data['num_cart_items'].to_i %>
-                  ga('ec:addProduct', {
-                      'id': '<%= @pdt_data["item_number#{i}"] %>',
-                      'name': '<%= @pdt_data["item_name#{i}"] %>',
-                      'brand': 'NeuEve',
-                      'category': 'ala-carte',
-                      'price': '<%= @pdt_data["mc_gross_#{i}"] %>',
-                      'quantity': '<%= @pdt_data["quantity#{i}"] %>'
-                  });
-                <% end %>
-              <% else %>
-                  ga('ec:addProduct', {
-                      'id': '<%= @pdt_data["option_selection1"] %>',
-                      'name': '<%= @pdt_data["item_name"] %>',
-                      'brand': 'NeuEve',
-                      'category': 'subscription',
-                      'price': '<%= @pdt_data["mc_gross"] %>',
-                      'quantity': '1'
-                  });
-              <% end %>
-
-              ga('ec:setAction', 'purchase', {                              // Transaction details are provided in an actionFieldObject.
-                  'id': '<%= @pdt_data['txn_id'] %>',                         // (Required) Transaction id (string).
-                  'affiliation': 'NeuEve Store - Online',                   // Affiliation (string).
-                  'revenue': '<%= @pdt_data['payment_gross'] %>',             // Revenue (currency).
-                  'tax': '<%= @pdt_data['tax'] %>',                           // Tax (currency).
-                  'shipping': '<%= @pdt_data['mc_shipping'] %>'               // Shipping (currency).
-              });
-          <% end %>
-
           // Send to Facebook Pixel
           fbq('track', 'Purchase', {value: urlParams['amt'], currency: 'USD'});
       })();
