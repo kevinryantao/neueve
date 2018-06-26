@@ -10,31 +10,34 @@
  */
 
 $('.view-cart').on('click', function () {
-    ga('send', 'event', 'button', 'click', 'View Cart');
-    fbq('track', 'InitiateCheckout');
+  ga('send', 'event', 'button', 'click', 'View Cart');
+  fbq('track', 'InitiateCheckout');
 });
 
 $('.add-to-cart').on('click', function () {
-    ga('send', 'event', 'button', 'click', 'Add To Cart ' + this.id);
-    var value = 52;
-    if (this.id == 'neueve-cream') {
-        value = 35;
-    }
-    var uetq = uetq || [];
-    uetq.push({'ec': 'button', 'ea': 'click', 'el': 'Add To Cart ' + this.id, 'ev': value });
-    fbq('track', 'AddToCart');
+  ga('send', 'event', 'button', 'click', 'Add To Cart ' + this.id);
+  var value = 55;
+  if (this.id == 'neueve-cream') {
+    value = 38;
+  }
+  if (this.id == 'bv-clearing-kit') {
+    value = 38;
+  }
+  var uetq = uetq || [];
+  uetq.push({'ec': 'button', 'ea': 'click', 'el': 'Add To Cart ' + this.id, 'ev': value});
+  fbq('track', 'AddToCart');
 });
 
 $('.subscribe-button').on('click', function () {
-    ga('send', 'event', 'button', 'click', 'Subscribe');
-    var uetq = uetq || [];
-    uetq.push({'ec': 'button', 'ea': 'click', 'el': 'Subscribe', 'ev': 52 });
-    // Send to Facebook Pixel
-    fbq('track', 'Purchase', {value: 52, currency: 'USD'});
+  ga('send', 'event', 'button', 'click', 'Subscribe');
+  var uetq = uetq || [];
+  uetq.push({'ec': 'button', 'ea': 'click', 'el': 'Subscribe', 'ev': 52});
+  // Send to Facebook Pixel
+  fbq('track', 'Purchase', {value: 52, currency: 'USD'});
 });
 
 $('a.amazon-review').on('click', function () {
-    ga('send', 'event', 'amazon-review-link', 'click', "Viewed Amazon Review for " + this.id);
+  ga('send', 'event', 'amazon-review-link', 'click', "Viewed Amazon Review for " + this.id);
 });
 
 $('a.below-your-belt').on('click', function () {
@@ -44,6 +47,6 @@ $('a.below-your-belt').on('click', function () {
 setTimeout("ga('send', 'event', 'adjusted bounce rate', 'page visit seconds', 15)", 15000);
 setTimeout("ga('send', 'event', 'adjusted bounce rate', 'page visit seconds', 30)", 30000);
 setTimeout("ga('send', 'event', 'adjusted bounce rate', 'page visit seconds', 60)", 60000);
-setTimeout("ga('send', 'event', 'adjusted bounce rate', 'page visit seconds', 120)",120000);
-setTimeout("ga('send', 'event', 'adjusted bounce rate', 'page visit seconds', 240)",240000);
-setTimeout("ga('send', 'event', 'adjusted bounce rate', 'page visit seconds', 480)",480000);
+setTimeout("ga('send', 'event', 'adjusted bounce rate', 'page visit seconds', 120)", 120000);
+setTimeout("ga('send', 'event', 'adjusted bounce rate', 'page visit seconds', 240)", 240000);
+setTimeout("ga('send', 'event', 'adjusted bounce rate', 'page visit seconds', 480)", 480000);
