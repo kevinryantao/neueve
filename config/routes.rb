@@ -45,6 +45,8 @@ Lavax::Application.routes.draw do
 
   match "/bacterial_vaginosis_testimonials" => "static_pages#bv_testimonials", :via => :get
 
+  get '/blog' => redirect("/blog/")
+
   match "*path" => redirect("/"), via: :all
 
   # The priority is based upon order of creation:
