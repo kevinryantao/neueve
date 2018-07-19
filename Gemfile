@@ -57,7 +57,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'
 
 #Reverse Proxy to bring in blog.neueve.com under neueve.com/blog
-gem 'rack-reverse-proxy', :require => 'rack/reverse_proxy'
+gem 'rack-reverse-proxy', :require => 'rack/reverse_proxy', :git => 'git://github.com/waterlink/rack-reverse-proxy.git'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
