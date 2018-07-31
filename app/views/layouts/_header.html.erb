@@ -2,26 +2,8 @@
     <div class="navbar-inner">
         <nav>
             <ul class="nav pull-left">
-                <li class="dropdown mega-dropdown">
-                    <a class="dropdown-toggle">
-                        <i class="fas fa-search" aria-hidden="true"></i>
-                    </a>
-                    <ul class="dropdown-menu search-box" role="menu">
-                        <li>
-                            <script>
-                                (function() {
-                                    var cx = '017871404147966635691:gk_h6msffxa';
-                                    var gcse = document.createElement('script');
-                                    gcse.type = 'text/javascript';
-                                    gcse.async = true;
-                                    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-                                    var s = document.getElementsByTagName('script')[0];
-                                    s.parentNode.insertBefore(gcse, s);
-                                })();
-                            </script>
-                            <gcse:search></gcse:search>
-                        </li>
-                    </ul>
+                <li class="">
+                    <%= link_to ('NeuEve'), root_path %>
                 </li>
             </ul>
             <ul class="nav pull-right">
@@ -70,9 +52,3 @@
     </div>
 </header>
 
-<div align="center">
-    <%= link_to image_tag('NeuEve_logo-pink-paper.jpg',
-                          :width => '100%',
-                          :alt => 'NeuEve: Bringing new evenings to women. Natural Feminine Suppository and Cream. Our
-                          goal is to make a positive impact on the world by helping women and saving marriages.'), root_path %>
-</div>
