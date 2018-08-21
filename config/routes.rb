@@ -47,6 +47,8 @@ Lavax::Application.routes.draw do
 
   get '/blog' => redirect("/blog/")
 
+  match "/dilators" => "static_pages#dilators", :via => :get
+
   match "*path" => redirect("/"), via: :all
 
   # The priority is based upon order of creation:
