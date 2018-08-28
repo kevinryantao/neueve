@@ -300,7 +300,7 @@
                 _rfsn._addItem({
                     'sku': '<%= @pdt_data["item_number#{i}"] %>',
                     'quantity': '<%= @pdt_data["quantity#{i}"] %>',
-                    'price': '<%= @pdt_data["mc_gross_#{i}"].to_f/@pdt_data["quantity#{i}"] %>'
+                    'price': '<%= (@pdt_data["mc_gross_#{i}"].to_f)/(@pdt_data["quantity#{i}"].to_i) %>'
                 });
             <% end %>
         <% else %>
