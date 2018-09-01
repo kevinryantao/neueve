@@ -1,16 +1,39 @@
 <% provide(:title, 'About') %>
 <% provide(:description, 'Learn about the story of Dr. Renjie Chang and how she invented NeuEve.') %>
-<% provide(:last_modified, 'March 30, 2018') %>
+<% provide(:last_modified, 'August 31, 2018') %>
 
 <div class="jumbotron">
   <h1>About Us</h1>
 </div>
 
+<h3>
+    Questions?
+</h3>
 <div>
     See our <%= link_to 'frequently asked questions and answers here.', faq_path %>
-    <br>
-    Our e-mail address is <%= mail_to "contact@neueve.com" %>.
 </div>
+<h4>Email:</h4>
+<p>
+    <%= mail_to "contact@neueve.com" %>
+</p>
+<h4>Address:</h4>
+<p>
+    965 W Chicago Ave, Chicago, IL 60642
+</p>
+<h4>Phone Number (we do NOT accept orders over the phone):</h4>
+<p>
+    224-578-2854 - This is Kevin's personal cell phone, please only call during normal business hours! Thanks!
+</p>
+<h4>Business hours (Central Standard Time):</h4>
+<ul>
+    <li>Monday: 11am - 5pm</li>
+    <li>Tuesday: 10am - 5pm</li>
+    <li>Wednesday: 10am - 5pm</li>
+    <li>Thursday: 10am - 5pm</li>
+    <li>Friday: 10am - 5pm</li>
+</ul>
+
+
 
 <div align="center">
     <%= link_to image_tag('amazon-5-stars.jpg', :size => "95x42"),'http://amzn.to/2g6tUUf', target: '_blank' %>
