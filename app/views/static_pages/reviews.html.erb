@@ -1,0 +1,26 @@
+<% provide(:title, 'Customer Reviews | NeuEve') %>
+<% provide(:description, 'Honest and unbiased product reviews from our customers. We do not pay, "suggest", or "coach" the product reviews.') %>
+<% provide(:last_modified, 'September 7, 2018') %>
+
+
+<h1>Customer Reviews</h1>
+
+<div id="stamped-reviews-widget" data-widget-type="full-page" data-random="false" data-product-image="true"></div>
+
+<hr>
+
+<h3>Write a Review:</h3>
+
+Click the product you'd like to review below, and then click blue "Write a Review" button that shows up! Thanks!
+<ul>
+    <li><%= link_to 'Cream', cream_path(:anchor => 'reviews') %></li>
+    <li><%= link_to 'Silk', silk_path(:anchor => 'reviews') %></li>
+    <li><%= link_to 'Silver', silver_path(:anchor => 'reviews') %></li>
+    <li><%= link_to 'Gold', gold_path(:anchor => 'reviews') %></li>
+    <li><%= link_to 'BV Clear Kit', bacterial_vaginosis_vaginal_odor_path(:anchor => 'reviews') %></li>
+    <li><%= link_to 'Applicator', applicator_path(:anchor => 'reviews') %></li>
+</ul>
+
+<hr>
+
+<%= render 'layouts/testimonial_disclaimer' %>
