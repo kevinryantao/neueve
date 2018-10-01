@@ -554,19 +554,21 @@
   <tr>
     <td colspan="4">
       <div align="center">
-        <%= image_tag("100-guarantee-tiny.png",
+        <%= image_tag("100satisfactionguarantee.jpg",
                       :size => "300x300",
                       :class => "applicator",
                       alt: '100% Customer Satisfaction Guarantee'
             ) %>
         <br>
 
-        We offer a 100% customer satisfaction guarantee on all of our products.
-        <br>
-        We are so confident our products will make a noticeable difference in your wellness that if any product
-        <br>
-        does not meet your highest expectations, return the product within 30 days for a full credit or exchange.
-        <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+          Our organic ingredients are the best quality.
+          <br>
+          Our suppositories and creams are packed with vitamins and nutrients.
+          <br>
+          We are so confident you will be satisfied with NeuEve that we will give you your money back if you are unsatisfied.
+          <br>
+
+        <!-- <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
           <input type="hidden" name="cmd" value="_s-xclick">
           <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
 ">
@@ -574,7 +576,11 @@
                 <i class="fa fa-shopping-cart" aria-hidden="true"></i> View Your Shopping Cart
           <% end %>
           <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-        </form>
+        </form> -->
+
+          <br>
+
+          <%= link_to 'Satisfaction Guarantee Terms', satisfaction_path %>
       </div>
     </td>
   </tr>
