@@ -52,6 +52,8 @@ Lavax::Application.routes.draw do
 
   match "/reviews" => "static_pages#reviews", :via => :get
 
+  match "/satisfaction" => "static_pages#satisfaction", :via => :get
+
   match "*path" => redirect("/"), via: :all
 
   # The priority is based upon order of creation:
