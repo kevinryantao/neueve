@@ -48,14 +48,14 @@ module FaqHelper
       FaqQuestion.new('newInfection', 'I have a long distance new boyfriend and we had intimacy lately after using
         NeuEve. Now, I have an infection and have to go to my gynecologist to get treatment. <strong>Could
         your suppository cause my infection?</strong>'),
-      FaqQuestion.new('bv', 'I tried your BV Clear Starter Kit but did not receive the desired outcome.  My BV
+      FaqQuestion.new('bv', 'I tried your BV Clear but did not receive the desired outcome.  My BV
         symptoms did not diminish.  Could you tell me what to do next?'),
       FaqQuestion.new('clindamycin', 'I was just diagnosed with BV by my gynecologist.  He prescribed me
 clindamycin vaginal cream for seven days.  When can I start using your product and
 which product would be best to use after a seven day round of antibiotic cream?'),
-      FaqQuestion.new('bv_clear_kit', 'Why does the BV Clear Kit works for other women but not for me?'),
-      FaqQuestion.new('bv_antibiotics', 'I was interested in purchasing your BV Clear Kit. Does it clear odor only or does it get rid of BV completely? <strong>Antibiotics</strong> have not been working for me.'),
-      FaqQuestion.new('bv_how_to_use', 'How to use the BV Clear Kit?'),
+      FaqQuestion.new('bv_clear_kit', 'Why does the BV Clear works for other women but not for me?'),
+      FaqQuestion.new('bv_antibiotics', 'I was interested in purchasing your BV Clear. Does it clear odor only or does it get rid of BV completely? <strong>Antibiotics</strong> have not been working for me.'),
+      FaqQuestion.new('bv_how_to_use', 'How to use the BV Clear?'),
       FaqQuestion.new('still_bv', 'An OB/GYN has been treating me for several months. BV was confirmed, but none of the prescription drugs worked. After using one box of NeuEve Gold, I noticed some relief, but symptoms are not cleared. Should I order another box until it is cleared? Any advice?')
 
   ])
