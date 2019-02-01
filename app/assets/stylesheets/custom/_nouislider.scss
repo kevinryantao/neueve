@@ -1,0 +1,36 @@
+/*
+* ===================================================
+*     NoUI Slider theming
+* ===================================================
+*/
+
+.noUi-target {
+    background: #ddd;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+    height: 3px;
+}
+
+.noUi-horizontal .noUi-handle {
+    width: 3px;
+    height: 14px;
+    left: 0;
+    right: -2px !important;
+    top: -5px;
+    background: #222 !important;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+    box-shadow: none;
+    outline: none;
+}
+
+.noUi-horizontal .noUi-handle::before,
+.noUi-horizontal .noUi-handle::after {
+    display: none;
+}
+
+.noUi-connect {
+    background: #222;
+}

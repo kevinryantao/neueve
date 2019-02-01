@@ -1,0 +1,52 @@
+/*
+* ===================================================
+*     Category sidebar
+* ===================================================
+*/
+
+.sidebar-block {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid $gray-200;
+    &:last-of-type {
+        border-bottom: none;
+    }
+    &:first-of-type {
+        padding-top: 0;
+    }
+}
+
+.sidebar-heading {
+    margin-bottom: 1.2rem;
+    font-weight: 400;
+    color: $gray-600;
+    @include uppercase;
+}
+
+.sidebar-badge {
+    margin-top: .2rem;
+    margin-bottom: .2rem;
+    padding: 0 0.8rem;
+    border-radius: 4rem;
+    background: $gray-200;
+    color: $gray-800;
+    font-size: 0.7em;
+}
+
+.nav-link {
+    &:hover,
+    &.active {
+        .sidebar-badge {
+            background: $white;
+            color: $body-color;
+        }
+    }
+}
+
+.nouislider-values {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    color: $gray-600;
+    font-size: $font-size-sm;
+}

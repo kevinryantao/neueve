@@ -1,0 +1,41 @@
+<% provide(:title, "#{params[:q]}") %>
+<% provide(:description, "Search Results for #{params[:q]}") %>
+
+
+<section class="hero">
+    <div class="container">
+        <!-- Breadcrumbs -->
+        <ol class="breadcrumb justify-content-center">
+            <li class="breadcrumb-item">
+                <%= link_to 'Home', root_path %>
+            </li>
+            <li class="breadcrumb-item active">Search</li>
+        </ol>
+        <!-- Hero Content-->
+        <div class="hero-content pb-5 text-center">
+            <h1 class="mb-5">Search Results for <%= params[:q] %></h1>
+        </div>
+    </div>
+</section>
+
+
+<section class="pb-5">
+    <div class="container">
+        <div class="row">
+            <div class="text-content text-lg">
+                <script>
+                    (function () {
+                        var cx = '017871404147966635691:gk_h6msffxa';
+                        var gcse = document.createElement('script');
+                        gcse.type = 'text/javascript';
+                        gcse.async = true;
+                        gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+                        var s = document.getElementsByTagName('script')[0];
+                        s.parentNode.insertBefore(gcse, s);
+                    })();
+                </script>
+                <gcse:searchresults-only></gcse:searchresults-only>
+            </div>
+        </div>
+    </div>
+</section>

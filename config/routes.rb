@@ -1,60 +1,37 @@
 Lavax::Application.routes.draw do
-  root :to => "static_pages#home"
+  root :to => 'static_pages#home'
 
-  match "/index.html" => "static_pages#home", :via => :get
+  match '/index.html' => 'static_pages#home', :via => :get
+  match '/about' => 'static_pages#about', :via => :get
+  match '/background' => 'static_pages#vaginal_dryness_atrophy_cause_treatment', :via => :get
+  match '/vaginal_dryness_atrophy_cause_treatment' => 'static_pages#vaginal_dryness_atrophy_cause_treatment', :via => :get
+  match '/vaginal_odor_cause_treatment' => 'static_pages#vaginal_odor_cause_treatment', :via => :get
+  match '/bacterial_vaginosis_vaginal_odor' => 'static_pages#bacterial_vaginosis', :via => :get
+  match '/bv' => redirect('/bacterial_vaginosis_vaginal_odor'), :via => :get
+  match '/contact' => 'static_pages#about', :via => :get
+  match '/comparison' => 'static_pages#comparison', :via => :get
+  match '/disclaimer' => 'static_pages#disclaimer', :via => :get
+  match '/faq' => 'static_pages#faq', :via => :get
+  match '/product' => 'static_pages#product', :via => :get
+  match '/testimonials' => 'static_pages#testimonials', :via => :get
+  match '/success' => 'static_pages#success', :via => :get
+  match '/cream' => 'static_pages#cream', :via => :get
+  match '/silk' => 'static_pages#silk', :via => :get
+  match '/silver' => 'static_pages#silver', :via => :get
+  match '/gold' => 'static_pages#gold', :via => :get
+  match '/applicator' => 'static_pages#applicator', :via => :get
+  match '/libido' => 'static_pages#libido', :via => :get
+  match '/kevin_tao' => 'static_pages#kevin_tao', :via => :get
+  match '/bacterial_vaginosis_testimonials' => 'static_pages#bv_testimonials', :via => :get
+  get '/blog' => redirect('/blog/')
+  match '/dilators' => 'static_pages#dilators', :via => :get
+  match '/dmannose' => 'static_pages#dmannose', :via => :get
+  match '/reviews' => 'static_pages#reviews', :via => :get
+  match '/satisfaction' => 'static_pages#satisfaction', :via => :get
 
-  match "/about" => "static_pages#about", :via => :get
+  match '/search' => 'static_pages#search', :via => :get
 
-  match "/background" => "static_pages#vaginal_dryness_atrophy_cause_treatment", :via => :get
-
-  match "/vaginal_dryness_atrophy_cause_treatment" => "static_pages#vaginal_dryness_atrophy_cause_treatment", :via => :get
-
-  match "/vaginal_odor_cause_treatment" => "static_pages#vaginal_odor_cause_treatment", :via => :get
-
-  match "/bacterial_vaginosis_vaginal_odor" => "static_pages#bacterial_vaginosis", :via => :get
-  match "/bv" => redirect('/bacterial_vaginosis_vaginal_odor'), :via => :get
-
-  match "/contact" => "static_pages#about", :via => :get
-
-  match "/comparison" => "static_pages#comparison", :via => :get
-
-  match "/disclaimer" => "static_pages#disclaimer", :via => :get
-
-  match "/faq" => "static_pages#faq", :via => :get
-
-  match "/product" => "static_pages#product", :via => :get
-
-  match "/testimonials" => "static_pages#testimonials", :via => :get
-
-  match "/success" => "static_pages#success", :via => :get
-
-  match "/cream" => "static_pages#cream", :via => :get
-
-  match "/silk" => "static_pages#silk", :via => :get
-  match "/silver" => "static_pages#silver", :via => :get
-  match "/gold" => "static_pages#gold", :via => :get
-
-  match "/applicator" => "static_pages#applicator", :via => :get
-
-  match "/original_price_secret_page" => "static_pages#original_priced_subscription", :via => :get
-
-  match "/libido" => "static_pages#libido", :via => :get
-
-  match "/kevin_tao" => "static_pages#kevin_tao", :via => :get
-
-  match "/bacterial_vaginosis_testimonials" => "static_pages#bv_testimonials", :via => :get
-
-  get '/blog' => redirect("/blog/")
-
-  match "/dilators" => "static_pages#dilators", :via => :get
-
-  match "/dmannose" => "static_pages#dmannose", :via => :get
-
-  match "/reviews" => "static_pages#reviews", :via => :get
-
-  match "/satisfaction" => "static_pages#satisfaction", :via => :get
-
-  match "*path" => redirect("/"), via: :all
+  match '*path' => redirect('/'), via: :all
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

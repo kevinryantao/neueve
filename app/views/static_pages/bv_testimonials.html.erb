@@ -2,59 +2,84 @@
 <% provide(:description, 'Tens of thousands of women quickly got relief from recurrent BV simply by using NeuEve. Here are their stories.') %>
 <% provide(:last_modified, 'December 12, 2018') %>
 
-<div class="jumbotron">
-    <h1>Testimonials for NeuEve BV Clear</h1>
-</div>
+<section class="hero">
+    <div class="container">
+        <!-- Breadcrumbs -->
+        <ol class="breadcrumb justify-content-center">
+            <li class="breadcrumb-item">
+                <%= link_to 'Home', root_path %>
+            </li>
+            <li class="breadcrumb-item active">Testimonials for NeuEve BV Clear</li>
+        </ol>
+        <!-- Hero Content-->
+        <div class="hero-content pb-5 text-center">
+            <h1 class="mb-5">Testimonials for NeuEve BV Clear</h1>
+        </div>
+    </div>
+</section>
 
-<div id="stamped-main-widget"
-     data-product-id="5000"
-     data-name="NeuEve BV Clear Kit"
-     data-url="https://www.neueve.com/bacterial_vaginosis_vaginal_odor"
-     data-image-url="https://d3ilh7i74k3q3i.cloudfront.net/assets/bv_clearing_kit_NeuEve-a6c89f3b4abed3b92442f16f7280e5522ae9a265d5256ab6cd2f17f67e3c945b.jpg"
-     data-description="Natural vaginal suppositories developed by a gynecologist, for balancing the natural pH and ending recurrent BV. The BV Clear Starter Kit has 3 Silver suppositories plus 1 bonus Gold suppository."
-     data-product-sku="bv-clear-kit">
-</div>
 
-<p>
-    The following is feedback we have received from real nurses:
-<p>
+<section class="pb-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-8 col-lg-10 mx-auto">
+                <div class="text-content text-lg">
 
-<ol>
-    <% @nurse_reviews.each do |review| %>
-        <li class="testimonial">
-            "<%= review %>"
-        </li>
-        <br>
-    <% end %>
-</ol>
 
-<p>
-    The following is feedback we have received from real people:
-<p>
+                    <div id="stamped-main-widget"
+                         data-product-id="5000"
+                         data-name="NeuEve BV Clear Kit"
+                         data-url="https://www.neueve.com/bacterial_vaginosis_vaginal_odor"
+                         data-image-url="https://d3ilh7i74k3q3i.cloudfront.net/assets/bv_clearing_kit_NeuEve-a6c89f3b4abed3b92442f16f7280e5522ae9a265d5256ab6cd2f17f67e3c945b.jpg"
+                         data-description="Natural vaginal suppositories developed by a gynecologist, for balancing the natural pH and ending recurrent BV. The BV Clear Starter Kit has 3 Silver suppositories plus 1 bonus Gold suppository."
+                         data-product-sku="bv-clear-kit">
+                    </div>
 
-<ol>
-    <% @long_reviews.each do |review| %>
-        <li class="testimonial">
-            "<%= review %>"
-        </li>
-        <br>
-    <% end %>
-</ol>
+                    <p>
+                        The following is feedback we have received from real nurses:
+                    <p>
 
-<p>
-    More testimonials from real people:
-<p>
+                    <ol>
+                        <% @nurse_reviews.each do |review| %>
+                            <li class="testimonial">
+                                "<%= review %>"
+                            </li>
+                            <br>
+                        <% end %>
+                    </ol>
 
-<ol>
-    <% @short_reviews.each do |review| %>
-        <li class="testimonial">
-            "<%= review %>"
-        </li>
-        <br>
-    <% end %>
-</ol>
+                    <p>
+                        The following is feedback we have received from real people:
+                    <p>
 
+                    <ol>
+                        <% @long_reviews.each do |review| %>
+                            <li class="testimonial">
+                                "<%= review %>"
+                            </li>
+                            <br>
+                        <% end %>
+                    </ol>
+
+                    <p>
+                        More testimonials from real people:
+                    <p>
+
+                    <ol>
+                        <% @short_reviews.each do |review| %>
+                            <li class="testimonial">
+                                "<%= review %>"
+                            </li>
+                            <br>
+                        <% end %>
+                    </ol>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 <%= render 'layouts/testimonial_disclaimer' %>
 
-<%= render 'layouts/order_now_bv'%>
+<%= render 'layouts/order_now_bv' %>

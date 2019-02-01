@@ -1,0 +1,76 @@
+/*
+* ===================================================
+*     Checkout
+* ===================================================
+*/
+
+.nav-pills.custom-nav {
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    overflow: hidden;
+}
+
+.custom-nav .nav-item {
+    background: $gray-100;
+    align-self: stretch;
+    &:last-of-type {
+        .nav-link {
+            border-right: none !important;
+            &::after {
+                display: none;
+            }
+        }
+    }
+}
+
+.custom-nav .nav-link {
+    position: relative;
+    height: 100%;
+    border: none !important;
+    background: none;
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+    text-align: center;
+    background: none;
+    border-radius: 0 !important;
+    @include uppercase;
+    color: $gray-700;
+    &.active {
+        background: $gray-700;
+        color: #fff;
+        &::after {
+            display: none;
+        }
+    }
+    &.disabled {
+        cursor: not-allowed !important;
+        background: $gray-100;
+        color: #999;
+    }
+    &::after {
+        content: '';
+        width: 1px;
+        height: 50%;
+        background: #ddd;
+        display: inline-block;
+        position: absolute;
+        top: 25%;
+        right: 0;
+    }
+}
+
+/* Checkout Media Query -------------------- */
+
+@include media-breakpoint-down(md) {
+    .custom-nav .nav-item {
+        width: 100% !important;
+        margin-bottom: 5px;
+        .nav-link {
+            border-right: none;
+            &::after {
+                display: none;
+            }
+        }
+    }
+}

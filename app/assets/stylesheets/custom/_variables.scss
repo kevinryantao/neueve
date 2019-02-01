@@ -1,0 +1,268 @@
+//
+// Color system
+//
+
+$white:    #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #868e96 !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black:    #000 !default;
+
+$grays: ();
+$grays: map-merge((
+  "gray-100": $gray-100,
+  "200": $gray-200,
+  "300": $gray-300,
+  "400": $gray-400,
+  "500": $gray-500,
+  "600": $gray-600,
+  "700": $gray-700,
+  "800": $gray-800,
+  "900": $gray-900
+), $grays);
+
+$violet:  #7a47c2;
+$blue:    #007bff !default;
+$indigo:  #6610f2 !default;
+$purple:  #6f42c1 !default;
+$pink:    #e83e8c !default;
+$red:     #dc3545 !default;
+$orange:  #fd7e14 !default;
+$yellow:  #ffd65a !default;
+$green:   #28a745 !default;
+$teal:    #20c997 !default;
+$cyan:    #17a2b8 !default;
+
+$colors: () !default;
+$colors: map-merge((
+  "blue":       $blue,
+  "indigo":     $indigo,
+  "purple":     $purple,
+  "pink":       $pink,
+  "red":        $red,
+  "orange":     $orange,
+  "yellow":     $yellow,
+  "green":      $green,
+  "teal":       $teal,
+  "cyan":       $cyan,
+  "white":      $white,
+  "gray":       $gray-600,
+  "gray-dark":  $gray-800
+), $colors);
+
+$headerHeight: 125px;
+
+@if $templateColour == red and not $primary {
+  $primary: #E63946;
+}
+@else if $templateColour == pink and not $primary{
+  $primary:  #ef5285;
+}
+@else if $templateColour == green and not $primary {
+  $primary:  #429244;
+}
+@else if $templateColour == blue and not $primary {
+  $primary:  #3494E6;
+}
+@else if $templateColour == sea and not $primary {
+  $primary:  #3D7582;
+}
+@else if $templateColour == violet and not $primary {
+  $primary:  #9a6ee2;
+}
+
+$secondary:     $gray-600 !default;
+$success:       $green !default;
+$info:          $cyan !default;
+$warning:       $yellow !default;
+$danger:        $red !default;
+$light:         $gray-100 !default;
+$dark:          $gray-800 !default;
+
+$theme-colors: () !default;
+$theme-colors: map-merge((
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "dark":       $dark,
+  "gray-100": $gray-100,
+  "gray-200": $gray-200,
+  "gray-300": $gray-300,
+  "gray-400": $gray-400,
+  "gray-500": $gray-500,
+  "gray-600": $gray-600,
+  "gray-700": $gray-700,
+  "gray-800": $gray-800,
+  "gray-900": $gray-900
+), $theme-colors);
+
+$spacer: 1rem !default;
+$spacers: ();
+$spacers: map-merge((
+  6: ($spacer * 6),
+  7: ($spacer * 8),
+  '5px': 5px,
+  '10px': 10px,
+  '30px': 30px
+), $spacers);
+
+$sizes: () !default;
+$sizes: map-merge($sizes,(
+  '100vh': 100vh,
+  '1rem': 1rem,
+  '2rem': 2rem,
+  '3rem': 3rem,
+  '6rem': 6rem
+));
+
+$grid-gutter-width:           30px !default;
+
+$body-color:                $gray-900 !default;
+
+$border-radius:          0 !default;;
+$border-radius-lg:       0 !default;;
+$border-radius-sm:       0 !default;;
+
+$font-family-serif:       'Playfair Display', serif !default;;
+$font-family-sans-serif:  'HK Grotesk', sans-serif !default;;
+$font-family-heading:     'HK Grotesk' , sans-serif !default;;
+$font-family-monospace:   Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;;
+$font-family-base:        $font-family-sans-serif !default;;
+
+$font-size-base:              .9rem !default;;
+$font-size-xl:                ($font-size-base * 2) !default;
+
+$lead-font-size:              ($font-size-base * 1.35) !default;
+
+$font-weight-light:           300 !default;
+$font-weight-normal:          400 !default;
+$font-weight-bold:            700 !default;
+
+$line-height-base:            1.5 !default;
+
+$h1-font-size:                $font-size-base * 4.5 !default;;
+$h2-font-size:                $font-size-base * 3 !default;;
+$h3-font-size:                $font-size-base * 2 !default;;
+$h4-font-size:                $font-size-base * 1.5 !default;;
+$h5-font-size:                $font-size-base * 1.25 !default;;
+$h6-font-size:                $font-size-base !default;;
+
+$headings-font-family:   $font-family-heading !default;;
+$headings-font-weight:   700 !default;;
+$headings-line-height:   1.1 !default;;
+
+$display1-size:               6rem !default;
+$display2-size:               5.5rem !default;
+$display3-size:               4.5rem !default;
+$display4-size:               3.5rem !default;
+
+$display1-weight:     400 !default;;
+$display2-weight:     400 !default;;
+$display3-weight:     400 !default;;
+$display4-weight:     400 !default;;
+
+$display1-size-small: $display1-size * .6 !default;;
+$display2-size-small: $display2-size * .6 !default;;
+$display3-size-small: $display3-size * .6 !default;;
+$display4-size-small: $display4-size * .6 !default;;
+
+$table-hover-bg:                $gray-100 !default;;
+$table-border-color:            $gray-200 !default;;
+
+$input-btn-line-height:       $line-height-base !default;
+$input-btn-focus-width:       .2rem !default;
+$input-btn-padding-y:         .5rem !default;;
+$input-btn-padding-x-lg:      1rem !default;;
+$input-btn-padding-y-lg:      1rem !default;;
+$input-btn-focus-box-shadow:  none !default;;
+
+$input-padding-y:             .6rem !default;;
+
+$input-height-inner:          ($font-size-base * $input-btn-line-height) + ($input-padding-y * 2) !default;
+
+$btn-padding-y:               .6rem !default;
+
+$btn-padding-y-lg:            1.5rem !default;
+$btn-padding-x-lg:            1.5rem !default;
+
+$btn-font-weight:             $font-weight-bold !default; 
+
+$input-focus-border-color:       lighten(theme-color("dark"), 25%) !default;
+
+$custom-control-indicator-checked-bg:           $gray-800 !default;
+$custom-control-indicator-checked-disabled-bg:  rgba($gray-800, .5) !default;
+
+$custom-select-focus-border-color:  $input-focus-border-color !default;
+$custom-select-focus-width:         $input-btn-focus-width !default;
+$custom-select-focus-box-shadow:    inset 0 1px 2px rgba($black, .075), 0 0 5px rgba($custom-select-focus-border-color, .5) !default;;
+
+$dropdown-padding-y:                0 !default;
+$dropdown-spacer:                   0 !default;
+$dropdown-border-color:             $gray-100 !default;
+$dropdown-box-shadow:               2px 2px 2px rgba(0, 0, 0, 0.1), -1px -1px 2px rgba(0, 0, 0, 0.1);
+$dropdown-link-hover-color:         darken($gray-900, 15%) !default;
+$dropdown-link-hover-bg:            $gray-100 !default;
+$dropdown-link-active-bg:           transparent !default;
+$dropdown-item-padding-y:           .7rem !default;
+$dropdown-item-padding-x:           1rem !default;
+
+$dropdown-header-color:             $gray-600 !default;
+
+$nav-pills-link-active-color:       $body-color !default;
+$nav-pills-link-active-bg:          $gray-200 !default;
+
+$navbar-padding-y:                  1.1rem  !default;
+$navbar-padding-y-collapsed:        .6rem  !default;
+$navbar-padding-x:                  $spacer !default;
+
+$navbar-brand-font-size:            1.2rem !default;
+
+$navbar-toggler-padding-y:          .2rem !default;
+
+$navbar-dark-color:                 rgba($white,.9) !default;
+$navbar-dark-hover-color:           $white !default;
+$navbar-dark-active-color:          $white !default;
+
+$navbar-light-color:                rgba($black,.65) !default;
+$navbar-light-hover-color:          rgba($black,.95) !default;
+$navbar-light-active-color:         rgba($black,.95) !default;
+$navbar-light-toggler-border-color: transparent !default;
+
+
+$navbar-dark-toggler-border-color: transparent !default;
+
+$pagination-color:                     $gray-600 !default;
+$pagination-active-color:              $white !default;
+$pagination-active-bg:                 theme-color("primary") !default;
+$pagination-active-border-color:       theme-color("primary") !default;
+
+$pagination-hover-color:             $gray-600 !default;
+
+$card-border-color:        $gray-200 !default;
+$card-inner-border-radius: 0 !default;
+
+$card-columns-count:                3 !default;
+$card-columns-gap:                  $grid-gutter-width !default;
+$card-columns-margin:               $grid-gutter-width !default;
+
+$badge-font-weight:           $font-weight-normal !default;
+
+$modal-content-border-width:        0 !default;
+$modal-lg:                          1000px !default;
+$modal-content-box-shadow-xs:       0 0 .5rem rgba($black, .3) !default;
+$modal-content-box-shadow-sm-up:    0 0  1rem rgba($black, .3) !default;
+
+$breadcrumb-padding-x:              0 !default;
+$breadcrumb-padding-y:              2rem !default;
+$breadcrumb-margin-bottom:          0 !default;
+$breadcrumb-bg:                     transparent !default;

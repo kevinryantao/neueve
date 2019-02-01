@@ -1,0 +1,33 @@
+/*
+* ===================================================
+*    Customer section
+* ===================================================
+*/
+
+.customer-profile {
+    text-align: center;
+    background: $gray-100;
+    padding: 2rem;
+}
+
+.customer-image {
+    padding: 0.5rem;
+    background: #fff;
+    max-width: 10rem;
+    margin-bottom: 1.5rem;
+}
+
+.customer-nav {
+    .list-group-item {
+        color: $gray-700;
+        font-size: 0.9rem;
+        border-color: $gray-200;
+        @include hover-focus {
+            background: $gray-100;
+        }
+        &.active {
+            background:  $gray-200;
+            border-color: $gray-200;
+        }
+    }
+}

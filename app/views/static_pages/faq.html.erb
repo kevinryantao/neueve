@@ -12,40 +12,82 @@
 </script>
 <script src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&Operation=GetScript&ID=OneJS&WS=1&MarketPlace=US"></script>
 
-<div class="jumbotron">
-    <h1>Frequently Asked Questions<sup>*</sup></h1>
-</div>
+
+<section class="hero">
+    <div class="container">
+        <!-- Breadcrumbs -->
+        <ol class="breadcrumb justify-content-center">
+            <li class="breadcrumb-item">
+                <%= link_to 'Home', root_path %>
+            </li>
+            <li class="breadcrumb-item active">FAQ</li>
+        </ol>
+        <!-- Hero Content-->
+        <div class="hero-content pb-5 text-center">
+            <h1 class="mb-5">Frequently Asked Questions</h1>
+        </div>
+    </div>
+</section>
+
+<section class="pb-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-8 col-lg-10 mx-auto">
+                <div class="text-content text-lg">
+
 <p>
     We have listed some questions and answers here. If your question is not included below, please send it to us via
     e-mail at <%= mail_to "contact@neueve.com" %>.
-    <br>
-    <br>
 </p>
 
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="pb-5">
+    <div class="container">
+
+
 <% for section in @sections %>
-    <h3><%= section.title %></h3>
+            <div class="py-4">
+    <h3 class="mb-5 text-muted"><%= section.title %></h3>
     <ol class="margin10">
         <% for question in section.questions %>
-            <li>
+            <li class="py-2">
                 <%= link_to question.question.html_safe, faq_path(:anchor => question.anchor) %>
             </li>
         <% end %>
     </ol>
+            </div>
+            <hr>
 <% end %>
 
-<br>
-<br>
+    </div>
+</section>
 
+
+<section class="pb-5">
+    <div class="container">
 <% for section in @sections %>
-    <h3><%= section.title %></h3>
+            <div class="py-4 text-content">
+    <h3 class="mb-5 text-muted"><%= section.title %></h3>
     <ol>
         <% for question in section.questions %>
-            <li class="faq-answer">
-                <h4><strong><em>
+            <li class="faq-answer py-2">
+                <h4 class="mb-5"><strong><em>
                     <%= link_to '', {}, name: question.anchor %> <%= question.question.html_safe %>
                 </em></strong></h4>
+                <div class="text-muted ">
                 <%= render "faq/question_partials/#{question.anchor}" %>
+                </div>
             </li>
         <% end %>
     </ol>
+            </div>
+            <hr>
 <% end %>
+
+    </div>
+</section>

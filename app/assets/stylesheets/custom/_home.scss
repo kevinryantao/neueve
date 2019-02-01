@@ -1,0 +1,132 @@
+/*
+* ===================================================
+*     Homepage Elements
+* ===================================================
+*/
+
+// Homepage full-screen slider
+
+.home-full-slider-wrapper {
+    min-height: 600px;
+    @include media-breakpoint-up(md) {
+        height: 100vh;
+    }
+}
+
+.home-full-slider {
+    position: relative;
+
+    .owl-nav {
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        height: 45px;
+        margin-top: 0;
+        .owl-next,
+        .owl-prev {
+            position: absolute;
+            top: 0;
+            left: 40px; // background: #fff !important;
+            z-index: 999;
+            padding: 0;
+            font-size: 1.4em !important;
+            margin: 0;
+        }
+        .owl-next {
+            left: auto;
+            right: 40px;
+        }
+    }
+
+    .home-full-item {
+        padding-top: $headerHeight;
+        padding-bottom: $headerHeight / 2;
+        min-height: 600px;
+        height: auto;
+    }
+    p.lead {
+        font-size: $font-size-base;
+    }
+
+    @include media-breakpoint-up(md) {
+        .home-full-item {
+            min-height: 100vh;
+        }        
+        p.lead {
+            font-size: $lead-font-size;
+        }
+    }
+}
+
+// Split-screen homepage
+
+.split-screen-column {
+    display: flex;
+    align-items: center;
+    background: center center $black no-repeat; 
+    background-size: cover; 
+    color: $white;
+    text-align: center;
+    height: auto;
+    @include media-breakpoint-up(lg) {
+        height: 100vh;
+    }
+}
+
+@include media-breakpoint-down(md) {
+    h1.split-screen-heading {
+        font-size: $h1-font-size * .5;
+    }
+    h2.split-screen-heading {
+        font-size: $h2-font-size * .5;
+    }
+    h3.split-screen-heading {
+        font-size: $h3-font-size * .5;
+    }
+}
+
+// Product slider
+
+.product-slider {
+    position: relative;
+    .product-slider-item {
+        margin-left: .8rem;
+        margin-right: .8rem;
+    }
+    .owl-nav {
+        .owl-prev,
+        .owl-next {
+            position: absolute;
+            top: 35%;
+            background: none;
+            transform: translateY(-50%);
+            z-index: 20;
+            position: absolute;
+        }
+        .owl-prev {
+            left: -80px;
+        }
+        .owl-next {
+            right: -80px;
+        }
+    }
+}
+
+// Parallax homepage
+
+.parallax-section {
+    padding-top: 14rem;
+    padding-bottom: 14rem;
+}
+
+.circle-slider-bg {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    background-size: contain !important;
+    @include media-breakpoint-down(sm) {
+        background-position: center bottom !important; 
+    }
+}

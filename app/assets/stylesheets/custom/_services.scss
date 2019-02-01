@@ -1,0 +1,37 @@
+/*
+* ===================================================
+*     Services block in footer
+* ===================================================
+*/
+
+.service-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    &:first-of-type {
+        padding-top: 0;
+    }
+    &:last-of-type {
+        padding-bottom: 0;
+    }
+
+    @include media-breakpoint-up(lg) {
+        border-right: 1px solid $gray-700;
+        text-align: left;
+        padding-top: 0;
+        padding-bottom: 0;
+        &:last-of-type {
+            border: none;
+        }
+    }
+}
+
+.service-icon {
+    width: 3rem !important;
+    height: 3rem !important;
+    margin-right: 1.5rem;
+    stroke-width: 2 !important; 
+}

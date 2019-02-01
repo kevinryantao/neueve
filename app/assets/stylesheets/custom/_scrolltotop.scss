@@ -1,0 +1,22 @@
+/*
+* ===================================================
+*     SCROLL TO TOP BUTTON
+* ===================================================
+*/
+
+#scrollTop {
+    display: none;
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: theme-color('dark');
+    border: solid 1px theme-color('dark');
+    text-align: center;
+    background: $white;
+    font-size: .8rem;
+    z-index: 999;
+    cursor: pointer;
+}

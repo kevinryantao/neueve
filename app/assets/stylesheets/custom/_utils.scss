@@ -1,0 +1,284 @@
+/*
+* ===================================================
+*    Custom Bootstrapious Utils
+* ===================================================
+*/
+.text-uppercase {
+    @include uppercase;
+}
+
+.text-sm {
+    font-size: $font-size-sm;
+}
+
+.text-lg {
+    font-size: $font-size-lg;
+}
+
+.text-xl {
+    font-size: $font-size-xl;
+}
+
+.text-serif {
+    font-family: $font-family-serif !important;
+}
+
+.text-shadow {
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+$spacing: .1em .2em .3em .4em .5em;
+
+@each $current-spacing in $spacing {
+    $i: index($spacing, $current-spacing);
+
+    .letter-spacing-#{$i} {
+        letter-spacing: #{$current-spacing};
+    }
+}
+
+$z-index: 10 20 30 40 50;
+
+@each $current-z-index in $z-index {
+    $i: index($z-index, $current-z-index);
+
+    .z-index-#{$i} {
+        z-index: #{$current-z-index};
+    }
+}
+
+@each $name,
+$value in $spacers {
+    .mt--#{$name} {
+        margin-top: -$value !important;
+    }
+}
+
+@each $color,
+$value in $theme-colors {
+    .text-hover-#{$color} {
+
+        &:focus,
+        &:hover {
+            color: $value !important;
+        }
+    }
+}
+
+.overflow-hidden {
+    overflow: hidden !important;
+}
+
+.overflow-visible {
+    overflow: visible !important;
+}
+
+.td-none {
+    text-decoration: none !important;
+}
+
+.tile-link {
+    position: absolute;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 30;
+}
+
+.bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+img.bg-image {
+    object-fit: cover;
+    font-family: 'object-fit: cover;';
+}
+
+.overlay-content {
+    position: relative;
+    z-index: 20;
+}
+
+// responsive collapse behaviour
+@each $breakpoint in map-keys($grid-breakpoints) {
+    $next: breakpoint-next($breakpoint, $grid-breakpoints);
+    $infix: breakpoint-infix($next, $grid-breakpoints);
+
+    .light-overlay#{$infix} {
+        position: relative;
+
+        @include media-breakpoint-up($next) {
+            position: relative;
+
+            &::after {
+                content: ' ';
+                width: 100%;
+                height: 100%;
+                background: #fff;
+                opacity: .3;
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+        }
+    }
+
+    .light-overlay#{$infix}-0 {
+        @include media-breakpoint-up($next) {
+            &::after {
+                display: none;
+            }
+        }
+    }
+
+    .dark-overlay {
+        position: relative;
+
+        @include media-breakpoint-up($next) {
+            &::after {
+                content: ' ';
+                width: 100%;
+                height: 100%;
+                background: #000;
+                opacity: .3;
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+        }
+    }
+
+    .dark-overlay#{$infix}-0 {
+        @include media-breakpoint-up($next) {
+            &::after {
+                display: none;
+            }
+        }
+    }
+}
+
+.full-screen {
+    height: calc(100vh - #{$headerHeight} - 2rem);
+}
+
+.mh-full-screen {
+    min-height: 100vh;
+
+    // hack for IE 11
+    @media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
+        height: 100vh;
+    }
+}
+
+.mh-full-screen-with-header {
+    min-height: calc(100vh - #{$headerHeight} - 2rem);
+
+    // hack for IE 11
+    @media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
+        height: calc(100vh - #{$headerHeight} - 2rem);
+    }
+}
+
+// responsive collapse behaviour
+@each $breakpoint in map-keys($grid-breakpoints) {
+    $next: breakpoint-next($breakpoint, $grid-breakpoints);
+    $infix: breakpoint-infix($next, $grid-breakpoints);
+
+    .expand#{$infix} {
+        @include media-breakpoint-up($next) {
+            display: block !important;
+        }
+    }
+}
+
+.block-toggler {
+    display: block;
+    position: relative;
+    @include uppercase;
+    color: $text-muted;
+
+    &[aria-expanded="true"],
+    &:focus {
+        color: $body-color;
+        text-decoration: none;
+    }
+
+    &:focus,
+    &:hover {
+        color: $body-color;
+        text-decoration: none;
+    }
+
+    &[data-toggle="collapse"] {
+        &::before {
+            content: '\f105';
+            display: inline-block;
+            transform: translateY(-50%);
+            font-family: "Font Awesome\ 5 Free";
+            font-weight: 900;
+            position: absolute;
+            top: 50%;
+            right: 0;
+        }
+    }
+
+    &[aria-expanded="true"] {
+        &::before {
+            content: '\f107';
+        }
+    }
+}
+
+.svg-icon {
+    width: 18px;
+    height: 18px;
+    stroke: currentColor;
+    stroke-width: 3;
+    vertical-align: text-bottom;
+    --layer1: currentColor;
+    --layer2: currentColor;
+
+    &.svg-icon-light {
+        stroke-width: 2;
+    }
+
+    &.svg-icon-heavy {
+        stroke-width: 4;
+    }
+}
+
+// responsive borders
+@each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+        $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+        .border#{$infix} {
+            border: $border-width solid $border-color !important;
+        }
+    }
+}
+
+// auto width for smallest viewports
+.w-xs-auto {
+    @include media-breakpoint-down(xs) {
+        width: auto !important;
+    }
+}
+
+// fixes for IE11
+@media screen and (-ms-high-contrast: active),
+screen and (-ms-high-contrast: none) {
+
+    .card-img-top,
+    .card-img-bottom,
+    .card-img {
+        height: 100%;
+    }
+}

@@ -2,84 +2,86 @@
 <% provide(:description, 'According to clinical trials, VuVa Magnetic Vaginal Dilators can help relieve pelvic pain and vaginismus.') %>
 <% provide(:last_modified, 'October 1, 2018') %>
 
-<br>
-<div class="jumbotron">
-    <h1>Dilators by VuVa</h1>
-</div>
+<section class="hero">
+    <div class="container">
+        <!-- Breadcrumbs -->
+        <ol class="breadcrumb justify-content-center">
+            <li class="breadcrumb-item">
+                <%= link_to 'Home', root_path %>
+            </li>
+            <li class="breadcrumb-item active">Dilators</li>
+        </ol>
+        <!-- Hero Content-->
+        <div class="hero-content pb-5 text-center">
+            <h1 class="mb-5">Dilators by VuVa</h1>
+        </div>
+    </div>
+</section>
 
-<table class='table table-bordered table-striped'>
-    <tr align="center" class="mobile-only">
-        <td style="background-color: #ffffff">
-            <div align="center">
-                <%= image_tag('dilators/vaginismus_dilators_neueve.jpg', :size => '600x450',
-                              alt: 'Magnetic vaginal dilators can help with vaginismus') %>
-            </div>
-        </td>
-    </tr>
-    <tr align="center">
-        <td style="background-color: #ffffff; vertical-align:middle" class="non-mobile-only">
-            <div align="center">
-                <%= image_tag('dilators/vaginismus_dilators_neueve.jpg', :class => 'img_pair',
-                              alt: 'Magnetic vaginal dilators can help with vaginismus') %>
-            </div>
-        </td>
-        <td style="vertical-align:middle">
-            <div align="center">
-                <div><strong>Vaginismus Dilator Set by VuVa</strong></div>
-                2 dilators (and bonus 4oz Slippery Stuff lube) <br>
-                <%= image_tag('dilators/vaginismus_dilators_neueve2.jpg', :class => 'seal', :size => "130x130",
-                              alt: 'Magnetic vaginal dilators can help with vaginismus') %>
-                <br>
 
-                $39.00
-                <br>
-
-                <%= link_to 'https://www.vuvatech.com/collections/frontpage/products/vaginismus-neodymium-dilator-starter-kit?afmc=2m', :class => 'formbutton btn btn-large btn-warning add-to-cart', :target => '_blank' do %>
-                    Buy Now
-                <% end %>
-            </div>
-        </td>
-    </tr>
-    <tr align="center" class="mobile-only">
-        <td style="background-color: #ffffff">
-            <div align="center">
-                <%= image_tag('dilators/pelvic_pain_dilator_neueve.jpg', :size => '600x450',
-                              alt: 'Magnetic vaginal dilators can help with pelvic pain') %>
-            </div>
-        </td>
-    </tr>
-    <tr align="center">
-        <td style="background-color: #ffffff; vertical-align:middle" class="non-mobile-only">
-            <div align="center">
-                <%= image_tag('dilators/pelvic_pain_dilator_neueve.jpg', :class => 'img_pair',
-                              alt: 'Magnetic vaginal dilators can help with pelvic pain') %>
-            </div>
-        </td>
-        <td style="vertical-align:middle">
-            <div align="center">
-                <div>
-                    <strong>
-                        Full Set of Magnetic Vaginal Dilators
-                    </strong>
+<section class="pb-5">
+    <div class="container">
+        <div class="mx-auto">
+            <div class="row align-items-center">
+                <div class="col-md-6 pb-3">
+                    <%= image_tag('dilators/vaginismus_dilators_neueve.jpg', :class => 'img_pair img-fluid',
+                                  alt: 'Magnetic vaginal dilators can help with vaginismus'
+                        ) %>
                 </div>
-                5 dilators (and bonus 4oz Slippery Stuff lube)
-                <br>
-                <%= image_tag('dilators/pelvic_pain_dilator_neueve2.jpg', :class => 'seal', :size => "280x280",
-                              alt: 'Magnetic vaginal dilators can help with pelvic pain') %>
-                <br>
-                $219.00
-                <br>
+                <div class="col-md-6 text-center">
+                    <div>
+                        <div><strong>Vaginismus Dilator Set by VuVa</strong></div>
+                        2 dilators (and bonus 4oz Slippery Stuff lube) <br>
+                        <%= image_tag('dilators/vaginismus_dilators_neueve2.jpg', :class => 'seal', :size => "88x130",
+                                      alt: 'Magnetic vaginal dilators can help with vaginismus') %>
+                        <br>
 
+                        $39.00
+                        <br>
 
-                <%= link_to 'https://www.vuvatech.com/collections/frontpage/products/full-set-of-vuva-magnetic-dilators?afmc=2m', :class => 'formbutton btn btn-large btn-warning add-to-cart', :target => '_blank' do %>
-                    Buy Now
-                <% end %>
+                        <%= link_to 'https://www.vuvatech.com/collections/frontpage/products/vaginismus-neodymium-dilator-starter-kit?afmc=2m', :class => 'formbutton btn btn-large btn-warning add-to-cart', :target => '_blank' do %>
+                            Buy Now
+                        <% end %>
+                    </div>           </div>
             </div>
+        </div>
+        <div class="mx-auto">
+            <div class="row align-items-center">
+                <div class="col-md-6 pb-3">
+                    <%= image_tag('dilators/pelvic_pain_dilator_neueve.jpg', :class => 'img_pair img-fluid',
+                                  alt: 'Magnetic vaginal dilators can help with pelvic pain'
+                        ) %>
+                </div>
+                <div class="col-md-6 text-center">
+                    <div>
+                        <div>
+                            <strong>
+                                Full Set of Magnetic Vaginal Dilators
+                            </strong>
+                        </div>
+                        5 dilators (and bonus 4oz Slippery Stuff lube)
+                        <br>
+                        <%= image_tag('dilators/pelvic_pain_dilator_neueve2.jpg', :class => 'seal', :size => "280x189",
+                                      alt: 'Magnetic vaginal dilators can help with pelvic pain') %>
+                        <br>
+                        $219.00
+                        <br>
 
-        </td>
-    </tr>
 
-</table>
+                        <%= link_to 'https://www.vuvatech.com/collections/frontpage/products/full-set-of-vuva-magnetic-dilators?afmc=2m', :class => 'formbutton btn btn-large btn-warning add-to-cart', :target => '_blank' do %>
+                            Buy Now
+                        <% end %>
+                    </div>              </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="pb-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-8 col-lg-10 mx-auto">
+                <div class="text-content text-lg">
 
 <h3>
     Description:
@@ -149,3 +151,9 @@
                 'http://www.bbc.com/future/story/20180725-the-health-condition-vulvodynia-is-painful-and-misunderstood',
                 :target => '_blank' %>
 </p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
