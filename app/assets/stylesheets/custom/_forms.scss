@@ -1,0 +1,63 @@
+/*
+* ===================================================
+*     Custom form controls
+* ===================================================
+*/
+
+// 1. Label
+.form-label {
+    color: $gray-600;
+    font-size: $font-size-sm;
+    @include uppercase;
+}
+
+// 2. Colour radio/checkbox element
+// Wrapper
+.colours-wrapper {
+    position: relative;
+}
+
+// Hide the actual input, not using display:none bcs of the form validation
+.input-invisible {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+}
+
+// Colour button
+.btn-colour {
+    position: relative;
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    margin-bottom: 0;
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 5px #fff, 0 0 0 1px $gray-400;
+    background-position: center;
+    background-size: cover;
+    cursor: pointer;
+    transition: border-color .1s;
+    &:hover {
+        box-shadow: inset 0 0 0 5px #fff, 0 0 0 1px $gray-600;
+    }
+    &.active {
+        box-shadow: inset 0 0 0 5px #fff, 0 0 0 2px $gray-700;
+    }
+}
+
+
+// 3. Underlined form control, i.e. Keep only border bottom
+.form-control.form-control-underlined {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    padding-left: 0;
+}
+
+// 4. no shadow on focus
+.focus-shadow-0 {
+    &:focus {
+        box-shadow: none !important;
+    }
+}

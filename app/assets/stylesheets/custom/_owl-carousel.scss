@@ -1,0 +1,152 @@
+/*
+* ===================================================
+*     Owl Carousel theming
+* ===================================================
+*/
+
+
+// Vars taken from the Owl Carousel source, just added
+// the owl- prefix
+
+$owl-color-base: #869791 !default;
+$owl-color-white: #FFF !default;
+$owl-color-gray: #D6D6D6 !default; //nav
+$owl-nav-color: $owl-color-white !default;
+$owl-nav-color-hover: $owl-color-white !default;
+$owl-nav-font-size: 14px !default;
+$owl-nav-rounded: 3px !default;
+$owl-nav-margin: 0 !default;
+$owl-nav-padding: 4px 7px !default;
+$owl-nav-background: $owl-color-gray !default;
+$owl-nav-background-hover: $owl-color-base !default;
+$owl-nav-disabled-opacity: 0.5 !default; //dots
+$owl-dot-width: 8px !default;
+$owl-dot-height: 8px !default;
+$owl-dot-rounded: 30px !default;
+$owl-dot-margin: 0 5px !default;
+$owl-dot-background: $gray-300 !default;
+$owl-dot-background-active: theme-color(dark) !default;
+
+.owl-theme {
+    button {
+        outline: none;
+    }
+    button:focus,
+    button:hover {
+        background: none;
+        outline: none;
+    }
+    .owl-item {
+        touch-action: initial !important;
+        perspective: 1000px !important;
+    } // Styling Next and Prev buttons
+    .owl-nav {
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        left: 0;
+        height: 50px;
+        transform: translateY(-50%);
+        text-align: center;
+        -webkit-tap-highlight-color: transparent;
+        [class*='owl-'] {
+            position: absolute;
+            top: 0;
+            left: 40px;
+            color: $owl-nav-color;
+            font-size: $owl-nav-font-size;
+            margin: $owl-nav-margin;
+            padding: $owl-nav-padding;
+            background: $owl-nav-background;
+            display: inline-block;
+            cursor: pointer;
+            border-radius: 3px;
+            &:hover {
+                background: $owl-nav-background-hover;
+                color: $owl-nav-color-hover;
+                text-decoration: none;
+            }
+        }
+        .owl-next {
+            left: auto;
+            right: 40px;
+        }
+        .disabled {
+            opacity: $owl-nav-disabled-opacity;
+            cursor: default;
+        }
+    } // Styling dots
+    .owl-nav.disabled+.owl-dots {
+        margin-top: 10px;
+    }
+    .owl-dots {
+        text-align: center;
+        -webkit-tap-highlight-color: transparent;
+        .owl-dot {
+            display: inline-block;
+            zoom: 1;
+            *display: inline;
+            span {
+                display: inline-block;
+                width: $owl-dot-width;
+                height: $owl-dot-height;
+                margin: $owl-dot-margin;
+                background: $owl-dot-background;
+                backface-visibility: visible;
+                transition: opacity 200ms ease;
+                border-radius: $owl-dot-rounded;
+            }
+            &.active,
+            &:hover {
+                span {
+                    background: $owl-dot-background-active;
+                }
+            }
+        }
+    }
+    &.owl-dots-modern {
+        .owl-dots {
+            position: absolute;
+            width: 100%;
+            bottom: 20px;
+            left: 0;
+            .owl-dot {
+                &.active {
+                    span {
+                        background: $white;
+                        position: relative;
+                        top: 2px;
+                        width: 12px !important;
+                        height: 12px !important;
+                    }
+                }
+            }
+        }
+    }
+    &.owl-dots-primary {
+        .owl-dots {
+            .owl-dot {
+                span {
+                    background: $gray-300;
+                }
+                &.active {
+                    span {
+                        background: theme-color('primary');
+                    }
+                }
+            }
+        }
+    }
+}
+
+.owl-nav {
+    .owl-prev,
+    .owl-next {
+        background: none !important;
+        color: theme-color('primary') !important;
+        font-size: 2em !important;
+        &.disabled {
+            color: #aaa !important;
+        }
+    }
+}

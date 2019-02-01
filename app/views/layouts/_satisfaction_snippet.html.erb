@@ -1,23 +1,29 @@
-<tr>
-    <td colspan="4" style="background-color: #eaeaea">
-        <div align="center">
-            <%= image_tag("100satisfactionguarantee.jpg",
-                          :size => "300x300",
-                          :class => "applicator",
-                          alt: '100% Customer Satisfaction Guarantee'
-                ) %>
-            <br>
+<section class="py-3" style="background-color:#eaeaea">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-8 col-lg-10 mx-auto text-center ">
 
-            Our organic ingredients are the best quality.
-            <br>
-            Our suppositories and creams are packed with vitamins and nutrients.
-            <br>
-            We are so confident you will be satisfied with NeuEve that we will give you your money back if you are unsatisfied.*
-            <br>
-            * Limited to one box per customer for life, to prevent abuse.
-            <br>
+                <%= image_tag("100satisfactionguarantee.jpg",
+                              :class => "applicator",
+                              alt: '100% Customer Satisfaction Guarantee'
+                    ) %>
+                <br>
+                <p class="mt-4">
+                    Our organic ingredients are the best quality.
+                </p>
+                <p>
+                    Our suppositories and creams are packed with vitamins and nutrients.
+                </p>
+                <p class="font-weight-bold">
+                    We are so confident you will be satisfied with NeuEve that we will give you your money back
+                    if you are unsatisfied.*
+                </p>
+                <p>
+                    * Limited to one box per customer for life, to prevent abuse.
+                </p>
+                <%= link_to 'Satisfaction Guarantee Terms', satisfaction_path %>
 
-            <%= link_to 'Satisfaction Guarantee Terms', satisfaction_path %>
+            </div>
         </div>
-    </td>
-</tr>
+    </div>
+</section>

@@ -1,760 +1,734 @@
-<br>
-<br>
+<section class="pb-5">
+    <div class="container">
+        <div class="row">
+            <div class="mx-auto">
+                <div class="text-content text-lg text-center">
+                    <h3>
+                        Which formula is right for me?
+                    </h3>
+                    <p>
+                        <%= link_to 'The right formula depends on age.', faq_path(:anchor => 'right_formula_atrophy') %>
+                    </p>
+                    <p>
+                        NeuEve Silk is milder than NeuEve Silver, and is
+                        designed for women with severe dryness and atrophy.
+                    </p>
+                    <p>
+                        Tip: For women with advanced vaginal dryness, using Cream daily plus the Silk formula twice/week
+                        works well.
+                    </p>
+                    <p>
+                        <%= image_tag('flowchart-tiny.png',
+                                      size: '600x400',
+                                      alt: 'If intercourse is very painful or not possible or atrophy is severe, start with
+                                  Silk formula. If intercourse is painful, or you have BV, start with the Silver formula.',
+                                      class: 'img-fluid') %>
+                    </p>
+                    <p>
+                        <%= link_to 'Frequently Asked Questions: How do I select the right NeuEve suppository formula?',
+                                    faq_path(:anchor => 'selectingFormula') %>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-<div align="center">
-    <h3>
-        Which formula is right for me?
-    </h3>
-    <%= link_to 'The right formula depends on age.', faq_path(:anchor => 'right_formula_atrophy') %>
-    <br>NeuEve Silk is milder than NeuEve Silver, and is
-    designed for women with severe dryness and atrophy.
-    <br>
-    Tip: For women with advanced vaginal dryness, using Cream daily plus the Silk formula twice/week works well.
-    <br>
-    <%= image_tag('flowchart-tiny.png',
-                  size: '500x400',
-                  alt: 'If intercourse is very painful or not possible or atrophy is severe, start with Silk formula.
-                  If intercourse is painful, or you have BV, start with the Silver formula.') %>
-    <br>
-    <%= link_to 'Frequently Asked Questions: How do I select the right NeuEve suppository formula?', faq_path(:anchor => 'selectingFormula') %>
-</div>
+<section class="pb-5">
+    <div class="container">
+        <div class="row">
+            <div class="mx-auto">
+                <h3>
+                    Try it for yourself, order NeuEve today!
+                </h3>
 
-<br>
-<h3>
-  Try it for yourself, order NeuEve today!
-</h3>
+                <table class='table table-bordered table-striped table-condensed'>
 
-<table class='table table-bordered table-striped table-condensed'>
+                    <tr align="center">
+                        <td style="background-color: #fafaf6" colspan="2">
+                            <div align="center">
+                                <%= image_tag('triple-neueve-white.jpg',
+                                              :class => 'img_pair img-fluid',
+                                              alt: 'NeuEve Vaginal Suppositories help alleviate symptoms of vaginal dryness, atrophy, and BV') %>
+                            </div>
+                        </td>
+                        <td style="background-color: #fdfdfa" colspan="2">
+                            <div align="center">
+                                <%= link_to image_tag('cream-red-flower-med.jpg',
+                                                      :class => 'img_pair img-fluid',
+                                                      alt: 'NeuEve Cream is a natural vaginal moisturizer that helps with vaginal itching'),
+                                            cream_path %>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th colspan="4" rowspan="1" class="title">Difference between Silk, Silver, and Gold Formulas
+                        </th>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <th>Silk (Mild)</th>
+                        <th>Silver (Advanced)</th>
+                        <th>Gold (Expert)</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Effect</strong></td>
+                        <td>Mild</td>
+                        <td>Moderate</td>
+                        <td>Strong</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Suitable for</strong></td>
+                        <td>Recovery</td>
+                        <td>Recovery & Maintenance</td>
+                        <td>Maintenance</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Each lasts</strong></td>
+                        <td>3-4 days</td>
+                        <td>5-6 days</td>
+                        <td>7-8 days</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Supplies per Month</strong></td>
+                        <td>8</td>
+                        <td>6</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <div align="center">
+                                <%= link_to 'More details on Silk vs. Silver vs. Gold', faq_path(:anchor => 'silkSilverGoldDifferences') %>
+                            </div>
+                        </td>
+                        <td colspan="2">
+                            <div align="center">
+                                <%= link_to 'More details on Cream', cream_path %>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
 
-  <tr align="center">
-    <td style="background-color: #fafaf6" colspan="2">
-      <div align="center">
-        <%= image_tag('triple-neueve-white.jpg',
-                      :class => 'img_pair',
-                      alt: 'NeuEve Vaginal Suppositories help alleviate symptoms of vaginal dryness, atrophy, and BV') %>
-      </div>
-    </td>
-    <td style="background-color: #fdfdfa" colspan="2">
-      <div align="center">
-        <%= link_to image_tag('cream-red-flower-med.jpg',
-                              :class => 'img_pair',
-                              alt: 'NeuEve Cream is a natural vaginal moisturizer that helps with vaginal itching'),
-                    cream_path %>
-      </div>
-    </td>
-  </tr>
-  <tr>
-    <th colspan="4" rowspan="1" class="title">Difference between Silk, Silver, and Gold Formulas</th>
-  </tr>
-  <tr>
-    <th></th>
-    <th>Silk (Mild)</th>
-    <th>Silver (Advanced)</th>
-    <th>Gold (Expert)</th>
-  </tr>
-  <tr>
-    <td><strong>Effect</strong></td>
-    <td>Mild</td>
-    <td>Moderate</td>
-    <td>Strong</td>
-  </tr>
-  <tr>
-    <td><strong>Suitable for</strong></td>
-    <td>Recovery</td>
-    <td>Recovery & Maintenance</td>
-    <td>Maintenance</td>
-  </tr>
-  <tr>
-    <td><strong>Each lasts</strong></td>
-    <td>3-4 days</td>
-    <td>5-6 days</td>
-    <td>7-8 days</td>
-  </tr>
-  <tr>
-    <td><strong>Supplies per Month</strong></td>
-    <td>8</td>
-    <td>6</td>
-    <td>4</td>
-  </tr>
-  <tr>
-    <td colspan="2">
-      <div align="center">
-        <%= link_to 'More details on Silk vs. Silver vs. Gold', faq_path(:anchor => 'silkSilverGoldDifferences') %>
-      </div>
-    </td>
-    <td colspan="2">
-      <div align="center">
-        <%= link_to 'More details on Cream', cream_path %>
-      </div>
-    </td>
-  </tr>
-</table>
+            </div>
+        </div>
+    </div>
+</section>
 
 
-<table class='table table-bordered table-striped'>
+<section class="pb-5">
+    <div class="container">
+        <div class="row mx-auto">
+            <table class='table table-bordered table-striped'>
 
-  <thead>
-  <tr>
-    <th colspan="4" class="title">
-      Ordering à la carte
-    </th>
-  </tr>
-  </thead>
+                <thead>
+                <tr>
+                    <th colspan="4" class="title">
+                        Ordering à la carte
+                    </th>
+                </tr>
+                </thead>
 
-  <tr>
-    <td colspan="2" style="vertical-align:middle">
-      <div itemscope itemtype="http://schema.org/Product" align="center">
-        <strong>
-          <div itemprop="name"><%= link_to "NeuEve Silk Formula (1 month supply)", silk_path %></div>
-          <meta itemprop="category" content="Health & Beauty > Personal Care > Feminine Sanitary Supplies > Feminine Deodorant"/>
-          <meta itemprop="description" content="Natural suppository for fighting odor, dryness, dyspareunia, and bacterial vaginosis (BV). Gynecologist-tested."/>
-        </strong>
-          8 suppositories<br>
+                <tr>
+                    <td colspan="2" style="vertical-align:middle">
+                        <div itemscope itemtype="http://schema.org/Product" align="center">
+                            <strong>
+                                <div itemprop="name"><%= link_to "NeuEve Silk Formula (1 month supply)", silk_path %></div>
+                                <meta itemprop="category" content="Health & Beauty > Personal Care > Feminine Sanitary Supplies > Feminine Deodorant"/>
+                                <meta itemprop="description" content="Natural suppository for fighting odor, dryness, dyspareunia, and bacterial vaginosis (BV). Gynecologist-tested."/>
+                            </strong>
+                            8 suppositories<br>
         <span itemprop="offers" itemscope itemtype="http://schema.org/Offer">
           <span itemprop="price">$54.95</span>
           <meta itemprop="priceCurrency" content="USD"/>
         </span>
-        <br>
+                            <br>
 
-        <div class="formbutton">
-          <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
-            <input type="hidden" name="cmd" value="_s-xclick">
-            <input type="hidden" name="hosted_button_id" value="QV8HRKJ34BXML">
-            <%= submit_tag 'Add to Cart', :class => 'btn btn-large btn-warning add-to-cart',
-                           :id => 'silk-formula',
-                           :name => 'submit' %>
-            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-          </form>
-        </div>
+                            <div class="formbutton">
+                                <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                                    <input type="hidden" name="cmd" value="_s-xclick">
+                                    <input type="hidden" name="hosted_button_id" value="QV8HRKJ34BXML">
 
-        <br>
+                                    <%= submit_tag 'Add to Cart', :class => 'btn btn-large btn-warning add-to-cart',
+                                                   :id => 'silk-formula',
+                                                   :name => 'submit' %>
+                                    <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                                </form>
+                            </div>
 
-        4.0 Stars on <%= link_to image_tag('amazon-4-stars.png', :size => "95x42"),
-                                 create_url('https://www.amazon.com/',
-                                            ['NeuEve-Dryness-Care-Starter-Formula',
-                                             'product-reviews',
-                                             'B0116BQ546'],
-                                            {
-                                                    ie:'UTF8',
-                                                    reviewerType:'all_reviews',
-                                                    showViewpoints:0,
-                                                    sortBy:'helpful',
-                                                    pageNumber:1,
-                                                    filterByStar:'positive',
-                                                    _encoding:'UTF8',
-                                                    tag:'neu08-20',
-                                                    linkCode:'ur2',
-                                                    linkId:'b5b6ff1845174b8d33158cb5d9062563',
-                                                    camp:1789,
-                                                    creative: 9325
-                                            }, 'R2UP18KU9MF9WO'),
-                                 :class => 'amazon-review',
-                                 :id => 'silk-formula',
-                                 :target => '_blank' %><br>
+                            <br>
 
-
-        <%= link_to 'Amazon Reviews of NeuEve Silk'.html_safe,
-                    create_url('https://www.amazon.com/',
-                               ['NeuEve-Dryness-Care-Starter-Formula',
-                                'product-reviews',
-                                'B0116BQ546'],
-                               {
-                                       ie:'UTF8',
-                                       reviewerType:'all_reviews',
-                                       showViewpoints:0,
-                                       sortBy:'helpful',
-                                       pageNumber:1,
-                                       filterByStar:'positive',
-                                       _encoding:'UTF8',
-                                       tag:'neu08-20',
-                                       linkCode:'ur2',
-                                       linkId:'b5b6ff1845174b8d33158cb5d9062563',
-                                       camp:1789,
-                                       creative: 9325
-                               }, 'R2UP18KU9MF9WO'),
-                    :class => 'amazon-review',
-                    :id => 'silk-formula',
-                    :target => '_blank'
-        %>
+                            4.0 Stars on <%= link_to image_tag('amazon-4-stars.png', :size => "95x42"),
+                                                     create_url('https://www.amazon.com/',
+                                                                ['NeuEve-Dryness-Care-Starter-Formula',
+                                                                 'product-reviews',
+                                                                 'B0116BQ546'],
+                                                                {
+                                                                        ie: 'UTF8',
+                                                                        reviewerType: 'all_reviews',
+                                                                        showViewpoints: 0,
+                                                                        sortBy: 'helpful',
+                                                                        pageNumber: 1,
+                                                                        filterByStar: 'positive',
+                                                                        _encoding: 'UTF8',
+                                                                        tag: 'neu08-20',
+                                                                        linkCode: 'ur2',
+                                                                        linkId: 'b5b6ff1845174b8d33158cb5d9062563',
+                                                                        camp: 1789,
+                                                                        creative: 9325
+                                                                }, 'R2UP18KU9MF9WO'),
+                                                     :class => 'amazon-review',
+                                                     :id => 'silk-formula',
+                                                     :target => '_blank' %><br>
 
 
-      </div>
-    </td>
+                            <%= link_to 'Amazon Reviews of NeuEve Silk'.html_safe,
+                                        create_url('https://www.amazon.com/',
+                                                   ['NeuEve-Dryness-Care-Starter-Formula',
+                                                    'product-reviews',
+                                                    'B0116BQ546'],
+                                                   {
+                                                           ie: 'UTF8',
+                                                           reviewerType: 'all_reviews',
+                                                           showViewpoints: 0,
+                                                           sortBy: 'helpful',
+                                                           pageNumber: 1,
+                                                           filterByStar: 'positive',
+                                                           _encoding: 'UTF8',
+                                                           tag: 'neu08-20',
+                                                           linkCode: 'ur2',
+                                                           linkId: 'b5b6ff1845174b8d33158cb5d9062563',
+                                                           camp: 1789,
+                                                           creative: 9325
+                                                   }, 'R2UP18KU9MF9WO'),
+                                        :class => 'amazon-review',
+                                        :id => 'silk-formula',
+                                        :target => '_blank'
+                            %>
 
-    <td colspan="2">
-      <div itemscope itemtype="http://schema.org/Product" align="center">
-        <strong>
-          <div itemprop="name">NeuEve Assorted Formulas (1 month supply)
-          </div>
-          <meta itemprop="category" content="Health & Beauty > Personal Care > Feminine Sanitary Supplies > Feminine Deodorant"/>
-          <meta itemprop="description" content="Natural suppository for fighting odor, dryness, dyspareunia, and bacterial vaginosis (BV). Gynecologist-tested."/>
-        </strong>
-          7 suppositories<br>(4 Silks, 2
-          Silvers, 1
-          Gold)<br>
+
+                        </div>
+                    </td>
+
+                    <td colspan="2">
+                        <div itemscope itemtype="http://schema.org/Product" align="center">
+                            <strong>
+                                <div itemprop="name">NeuEve Assorted Formulas (1 month supply)
+                                </div>
+                                <meta itemprop="category" content="Health & Beauty > Personal Care > Feminine Sanitary Supplies > Feminine Deodorant"/>
+                                <meta itemprop="description" content="Natural suppository for fighting odor, dryness, dyspareunia, and bacterial vaginosis (BV). Gynecologist-tested."/>
+                            </strong>
+                            7 suppositories<br>(4 Silks, 2
+                            Silvers, 1
+                            Gold)<br>
         <span itemprop="offers" itemscope itemtype="http://schema.org/Offer">
           <span itemprop="price">$65.95</span>
           <meta itemprop="priceCurrency" content="USD"/>
         </span>
-        <br>
+                            <br>
 
-        <div class="formbutton">
-          <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
-            <input type="hidden" name="cmd" value="_s-xclick">
-            <input type="hidden" name="hosted_button_id" value="NU5SQ9KGHKCLG">
-            <%= submit_tag 'Add to Cart',
-                           :class => 'btn btn-large btn-warning add-to-cart',
-                           :id => 'assorted-formulas',
-                           :name => 'submit' %>
-            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-          </form>
-        </div>
+                            <div class="formbutton">
+                                <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                                    <input type="hidden" name="cmd" value="_s-xclick">
+                                    <input type="hidden" name="hosted_button_id" value="NU5SQ9KGHKCLG">
+                                    <%= submit_tag 'Add to Cart',
+                                                   :class => 'btn btn-large btn-warning add-to-cart',
+                                                   :id => 'assorted-formulas',
+                                                   :name => 'submit' %>
+                                    <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                                </form>
+                            </div>
 
-        <br>
+                            <br>
 
-        3.5 Stars on <%= link_to image_tag('amazon-4-stars.png', :size => "95x42"),
-                                 create_url('https://www.amazon.com/',
-                                            ['NeuEve-Suppository-Assorted-Formulas-7',
-                                             'product-reviews',
-                                             'B00NN2Y04E'],
-                                            {
-                                                    ie:'UTF8',
-                                                    reviewerType:'all_reviews',
-                                                    showViewpoints:0,
-                                                    sortBy:'helpful',
-                                                    pageNumber:1,
-                                                    filterByStar:'positive',
-                                                    _encoding:'UTF8',
-                                                    tag:'neu08-20',
-                                                    linkCode:'ur2',
-                                                    linkId:'6CTMJS3GORUJIFI2',
-                                                    camp:1789,
-                                                    creative: 9325
-                                            }, 'R37K8JJC9M60N7'),
-                                 :class => 'amazon-review',
-                                 :id => 'assorted-formulas',
-                                 :target => '_blank' %><br>
+                            3.5 Stars on <%= link_to image_tag('amazon-4-stars.png', :size => "95x42"),
+                                                     create_url('https://www.amazon.com/',
+                                                                ['NeuEve-Suppository-Assorted-Formulas-7',
+                                                                 'product-reviews',
+                                                                 'B00NN2Y04E'],
+                                                                {
+                                                                        ie: 'UTF8',
+                                                                        reviewerType: 'all_reviews',
+                                                                        showViewpoints: 0,
+                                                                        sortBy: 'helpful',
+                                                                        pageNumber: 1,
+                                                                        filterByStar: 'positive',
+                                                                        _encoding: 'UTF8',
+                                                                        tag: 'neu08-20',
+                                                                        linkCode: 'ur2',
+                                                                        linkId: '6CTMJS3GORUJIFI2',
+                                                                        camp: 1789,
+                                                                        creative: 9325
+                                                                }, 'R37K8JJC9M60N7'),
+                                                     :class => 'amazon-review',
+                                                     :id => 'assorted-formulas',
+                                                     :target => '_blank' %><br>
 
-        <%= link_to 'Amazon Reviews of NeuEve Assorted Formulas'.html_safe,
-                    create_url('https://www.amazon.com/',
-                               ['NeuEve-Suppository-Assorted-Formulas-7',
-                                'product-reviews',
-                                'B00NN2Y04E'],
-                               {
-                                       ie:'UTF8',
-                                       reviewerType:'all_reviews',
-                                       showViewpoints:0,
-                                       sortBy:'helpful',
-                                       pageNumber:1,
-                                       filterByStar:'positive',
-                                       _encoding:'UTF8',
-                                       tag:'neu08-20',
-                                       linkCode:'ur2',
-                                       linkId:'6CTMJS3GORUJIFI2',
-                                       camp:1789,
-                                       creative: 9325
-                               }, 'R37K8JJC9M60N7'),
-                    :class => 'amazon-review',
-                    :id => 'assorted-formulas',
-                    :target => '_blank' %>
-      </div>
-    </td>
-  </tr>
-  <tr>
-    <td colspan="2">
-      <div itemscope itemtype="http://schema.org/Product" align="center">
-        <strong>
-          <div itemprop="name"><%= link_to "NeuEve Silver Formula (1 month supply)", silver_path %></div>
-          <meta itemprop="category" content="Health & Beauty > Personal Care > Feminine Sanitary Supplies > Feminine Deodorant"/>
-          <meta itemprop="description" content="Natural suppository for fighting odor, dryness, dyspareunia, and bacterial vaginosis (BV). Gynecologist-tested."/>
-        </strong>
-          6 suppositories<br>
+                            <%= link_to 'Amazon Reviews of NeuEve Assorted Formulas'.html_safe,
+                                        create_url('https://www.amazon.com/',
+                                                   ['NeuEve-Suppository-Assorted-Formulas-7',
+                                                    'product-reviews',
+                                                    'B00NN2Y04E'],
+                                                   {
+                                                           ie: 'UTF8',
+                                                           reviewerType: 'all_reviews',
+                                                           showViewpoints: 0,
+                                                           sortBy: 'helpful',
+                                                           pageNumber: 1,
+                                                           filterByStar: 'positive',
+                                                           _encoding: 'UTF8',
+                                                           tag: 'neu08-20',
+                                                           linkCode: 'ur2',
+                                                           linkId: '6CTMJS3GORUJIFI2',
+                                                           camp: 1789,
+                                                           creative: 9325
+                                                   }, 'R37K8JJC9M60N7'),
+                                        :class => 'amazon-review',
+                                        :id => 'assorted-formulas',
+                                        :target => '_blank' %>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <div itemscope itemtype="http://schema.org/Product" align="center">
+                            <strong>
+                                <div itemprop="name"><%= link_to "NeuEve Silver Formula (1 month supply)", silver_path %></div>
+                                <meta itemprop="category" content="Health & Beauty > Personal Care > Feminine Sanitary Supplies > Feminine Deodorant"/>
+                                <meta itemprop="description" content="Natural suppository for fighting odor, dryness, dyspareunia, and bacterial vaginosis (BV). Gynecologist-tested."/>
+                            </strong>
+                            6 suppositories<br>
         <span itemprop="offers" itemscope itemtype="http://schema.org/Offer">
           <span itemprop="price">$54.95</span>
           <meta itemprop="priceCurrency" content="USD"/>
         </span>
 
-        <br>
+                            <br>
 
-        <div class="formbutton">
-          <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
-            <input type="hidden" name="cmd" value="_s-xclick">
-            <input type="hidden" name="hosted_button_id" value="YBLLFZFMYNVT8">
-            <%= submit_tag 'Add to Cart',
-                           :class => 'btn btn-large btn-warning add-to-cart',
-                           :id => 'silver-formula',
-                           :name => 'submit' %>
-            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-          </form>
-        </div>
+                            <div class="formbutton">
+                                <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                                    <input type="hidden" name="cmd" value="_s-xclick">
+                                    <input type="hidden" name="hosted_button_id" value="YBLLFZFMYNVT8">
+                                    <%= submit_tag 'Add to Cart',
+                                                   :class => 'btn btn-large btn-warning add-to-cart',
+                                                   :id => 'silver-formula',
+                                                   :name => 'submit' %>
+                                    <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                                </form>
+                            </div>
 
-        <br>
-        4.4 Stars on <%= link_to image_tag('amazon-45-stars.png', :size => "95x42"),
-                                 create_url('https://www.amazon.com/',
-                                            ['NeuEve-Suppository-Silver-formula',
-                                             'product-reviews',
-                                             'B00CMIC35I'],
-                                            {
-                                                    ie:'UTF8',
-                                                    reviewerType:'all_reviews',
-                                                    showViewpoints:0,
-                                                    sortBy:'helpful',
-                                                    pageNumber:1,
-                                                    filterByStar:'positive',
-                                                    _encoding:'UTF8',
-                                                    tag:'neu08-20',
-                                                    linkCode:'ur2',
-                                                    linkId:'f5f767d63d5ccb2f9e6d9c295d516349',
-                                                    camp:1789,
-                                                    creative: 9325
-                                            }, nil),
-                                 :class => 'amazon-review',
-                                 :id => 'silver-formula',
-                                 :target => '_blank' %><br>
+                            <br>
+                            4.4 Stars on <%= link_to image_tag('amazon-45-stars.png', :size => "95x42"),
+                                                     create_url('https://www.amazon.com/',
+                                                                ['NeuEve-Suppository-Silver-formula',
+                                                                 'product-reviews',
+                                                                 'B00CMIC35I'],
+                                                                {
+                                                                        ie: 'UTF8',
+                                                                        reviewerType: 'all_reviews',
+                                                                        showViewpoints: 0,
+                                                                        sortBy: 'helpful',
+                                                                        pageNumber: 1,
+                                                                        filterByStar: 'positive',
+                                                                        _encoding: 'UTF8',
+                                                                        tag: 'neu08-20',
+                                                                        linkCode: 'ur2',
+                                                                        linkId: 'f5f767d63d5ccb2f9e6d9c295d516349',
+                                                                        camp: 1789,
+                                                                        creative: 9325
+                                                                }, nil),
+                                                     :class => 'amazon-review',
+                                                     :id => 'silver-formula',
+                                                     :target => '_blank' %><br>
 
-          <%= link_to 'Amazon Reviews of NeuEve Silver'.html_safe,
-                      create_url('https://www.amazon.com/',
-                                 ['NeuEve-Suppository-Silver-formula',
-                                  'product-reviews',
-                                  'B00CMIC35I'],
-                                 {
-                                         ie:'UTF8',
-                                         reviewerType:'all_reviews',
-                                         showViewpoints:0,
-                                         sortBy:'helpful',
-                                         pageNumber:1,
-                                         filterByStar:'positive',
-                                         _encoding:'UTF8',
-                                         tag:'neu08-20',
-                                         linkCode:'ur2',
-                                         linkId:'f5f767d63d5ccb2f9e6d9c295d516349',
-                                         camp:1789,
-                                         creative: 9325
-                                 }, nil),
-                      :class => 'amazon-review',
-                      :id => 'silver-formula',
-                      :target => '_blank' %>
-            <br>
-          <strong><%= link_to 'For first time buyers, please read THIS', faq_path(:anchor => 'right_formula_atrophy') %></strong>
-      </div>
-    </td>
-    <td colspan="2" style="vertical-align:middle">
-      <div itemscope itemtype="http://schema.org/Product" align="center">
-        <strong>
-          <div itemprop="name"><%= link_to "NeuEve Cream (2-3 months supply)", cream_path %><br>0.7 oz</div>
-          <meta itemprop="category" content="Health & Beauty > Personal Care > Feminine Sanitary Supplies > Feminine Deodorant"/>
-          <meta itemprop="description" content="Natural suppository for fighting odor, dryness, dyspareunia, and bacterial vaginosis (BV). Gynecologist-tested."/>
-        </strong>
+                            <%= link_to 'Amazon Reviews of NeuEve Silver'.html_safe,
+                                        create_url('https://www.amazon.com/',
+                                                   ['NeuEve-Suppository-Silver-formula',
+                                                    'product-reviews',
+                                                    'B00CMIC35I'],
+                                                   {
+                                                           ie: 'UTF8',
+                                                           reviewerType: 'all_reviews',
+                                                           showViewpoints: 0,
+                                                           sortBy: 'helpful',
+                                                           pageNumber: 1,
+                                                           filterByStar: 'positive',
+                                                           _encoding: 'UTF8',
+                                                           tag: 'neu08-20',
+                                                           linkCode: 'ur2',
+                                                           linkId: 'f5f767d63d5ccb2f9e6d9c295d516349',
+                                                           camp: 1789,
+                                                           creative: 9325
+                                                   }, nil),
+                                        :class => 'amazon-review',
+                                        :id => 'silver-formula',
+                                        :target => '_blank' %>
+                            <br>
+                            <strong><%= link_to 'For first time buyers, please read THIS', faq_path(:anchor => 'right_formula_atrophy') %></strong>
+                        </div>
+                    </td>
+                    <td colspan="2" style="vertical-align:middle">
+                        <div itemscope itemtype="http://schema.org/Product" align="center">
+                            <strong>
+                                <div itemprop="name"><%= link_to "NeuEve Cream (2-3 months supply)", cream_path %><br>0.7
+                                    oz
+                                </div>
+                                <meta itemprop="category" content="Health & Beauty > Personal Care > Feminine Sanitary Supplies > Feminine Deodorant"/>
+                                <meta itemprop="description" content="Natural suppository for fighting odor, dryness, dyspareunia, and bacterial vaginosis (BV). Gynecologist-tested."/>
+                            </strong>
         <span itemprop="offers" itemscope itemtype="http://schema.org/Offer">
           <span itemprop="price">$37.95</span>
           <meta itemprop="priceCurrency" content="USD"/>
         </span>
-        <br>
+                            <br>
 
-        <div class="formbutton">
-          <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
-            <input type="hidden" name="cmd" value="_s-xclick">
-            <input type="hidden" name="hosted_button_id" value="MGMFZHE4QB2LW">
-            <%= submit_tag 'Add to Cart',
-                           :class => 'btn btn-large btn-warning add-to-cart',
-                           :id => 'neueve-cream',
-                           :name => 'submit' %>
-            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-          </form>
-        </div>
+                            <div class="formbutton">
+                                <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                                    <input type="hidden" name="cmd" value="_s-xclick">
+                                    <input type="hidden" name="hosted_button_id" value="MGMFZHE4QB2LW">
+                                    <%= submit_tag 'Add to Cart',
+                                                   :class => 'btn btn-large btn-warning add-to-cart',
+                                                   :id => 'neueve-cream',
+                                                   :name => 'submit' %>
+                                    <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                                </form>
+                            </div>
 
-        <br>
+                            <br>
 
-        4.1 Stars on <%= link_to image_tag('amazon-4-stars.png', :size => "95x42"),
-                                 create_url('https://www.amazon.com/',
-                                            ['NeuEve-Cream',
-                                             'product-reviews',
-                                             'B00CHY132G'],
-                                            {
-                                                    ie:'UTF8',
-                                                    reviewerType:'all_reviews',
-                                                    showViewpoints:0,
-                                                    sortBy:'helpful',
-                                                    pageNumber:1,
-                                                    filterByStar:'positive',
-                                                    _encoding:'UTF8',
-                                                    tag:'neu08-20',
-                                                    linkCode:'ur2',
-                                                    linkId:'6UZATQATJAIEJXXD',
-                                                    camp:1789,
-                                                    creative: 9325
-                                            }, 'R2RKRAUBBIC4B9'),
-                                 :class => 'amazon-review',
-                                 :id => 'neueve-cream',
-                                 :target => '_blank' %><br>
+                            4.1 Stars on <%= link_to image_tag('amazon-4-stars.png', :size => "95x42"),
+                                                     create_url('https://www.amazon.com/',
+                                                                ['NeuEve-Cream',
+                                                                 'product-reviews',
+                                                                 'B00CHY132G'],
+                                                                {
+                                                                        ie: 'UTF8',
+                                                                        reviewerType: 'all_reviews',
+                                                                        showViewpoints: 0,
+                                                                        sortBy: 'helpful',
+                                                                        pageNumber: 1,
+                                                                        filterByStar: 'positive',
+                                                                        _encoding: 'UTF8',
+                                                                        tag: 'neu08-20',
+                                                                        linkCode: 'ur2',
+                                                                        linkId: '6UZATQATJAIEJXXD',
+                                                                        camp: 1789,
+                                                                        creative: 9325
+                                                                }, 'R2RKRAUBBIC4B9'),
+                                                     :class => 'amazon-review',
+                                                     :id => 'neueve-cream',
+                                                     :target => '_blank' %><br>
 
-        <%= link_to 'Amazon Reviews of NeuEve Cream'.html_safe,
-                    create_url('https://www.amazon.com/',
-                               ['NeuEve-Cream',
-                                'product-reviews',
-                                'B00CHY132G'],
-                               {
-                                       ie:'UTF8',
-                                       reviewerType:'all_reviews',
-                                       showViewpoints:0,
-                                       sortBy:'helpful',
-                                       pageNumber:1,
-                                       filterByStar:'positive',
-                                       _encoding:'UTF8',
-                                       tag:'neu08-20',
-                                       linkCode:'ur2',
-                                       linkId:'6UZATQATJAIEJXXD',
-                                       camp:1789,
-                                       creative: 9325
-                               }, 'R2RKRAUBBIC4B9'),
-                    :class => 'amazon-review',
-                    :id => 'neueve-cream',
-                    :target => '_blank' %>
+                            <%= link_to 'Amazon Reviews of NeuEve Cream'.html_safe,
+                                        create_url('https://www.amazon.com/',
+                                                   ['NeuEve-Cream',
+                                                    'product-reviews',
+                                                    'B00CHY132G'],
+                                                   {
+                                                           ie: 'UTF8',
+                                                           reviewerType: 'all_reviews',
+                                                           showViewpoints: 0,
+                                                           sortBy: 'helpful',
+                                                           pageNumber: 1,
+                                                           filterByStar: 'positive',
+                                                           _encoding: 'UTF8',
+                                                           tag: 'neu08-20',
+                                                           linkCode: 'ur2',
+                                                           linkId: '6UZATQATJAIEJXXD',
+                                                           camp: 1789,
+                                                           creative: 9325
+                                                   }, 'R2RKRAUBBIC4B9'),
+                                        :class => 'amazon-review',
+                                        :id => 'neueve-cream',
+                                        :target => '_blank' %>
 
-      </div>
-    </td>
-  </tr>
+                        </div>
+                    </td>
+                </tr>
 
 
-  <tr>
-    <td colspan="2" style="vertical-align:middle">
-      <div itemscope itemtype="http://schema.org/Product" align="center">
-        <strong>
-          <div itemprop="name"><%= link_to "NeuEve Gold Formula (1 month supply)", gold_path %></div>
-          <meta itemprop="category" content="Health & Beauty > Personal Care > Feminine Sanitary Supplies > Feminine Deodorant"/>
-          <meta itemprop="description" content="Natural suppository for fighting odor, dryness, dyspareunia, and bacterial vaginosis (BV). Gynecologist-tested."/>
-        </strong>
-          4 suppositories<br>
+                <tr>
+                    <td colspan="2" style="vertical-align:middle">
+                        <div itemscope itemtype="http://schema.org/Product" align="center">
+                            <strong>
+                                <div itemprop="name"><%= link_to "NeuEve Gold Formula (1 month supply)", gold_path %></div>
+                                <meta itemprop="category" content="Health & Beauty > Personal Care > Feminine Sanitary Supplies > Feminine Deodorant"/>
+                                <meta itemprop="description" content="Natural suppository for fighting odor, dryness, dyspareunia, and bacterial vaginosis (BV). Gynecologist-tested."/>
+                            </strong>
+                            4 suppositories<br>
         <span itemprop="offers" itemscope itemtype="http://schema.org/Offer">
           <span itemprop="price">$54.95</span>
           <meta itemprop="priceCurrency" content="USD"/>
         </span>
-        <br>
+                            <br>
 
-        <div class="formbutton">
-          <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
-            <input type="hidden" name="cmd" value="_s-xclick">
-            <input type="hidden" name="hosted_button_id" value="BW3C5YD36UAS8">
-            <%= submit_tag 'Add to Cart',
-                           :class => 'btn btn-large btn-warning add-to-cart',
-                           :id => 'gold-formula',
-                           :name => 'submit' %>
-            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-          </form>
+                            <div class="formbutton">
+                                <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                                    <input type="hidden" name="cmd" value="_s-xclick">
+                                    <input type="hidden" name="hosted_button_id" value="BW3C5YD36UAS8">
+                                    <%= submit_tag 'Add to Cart',
+                                                   :class => 'btn btn-large btn-warning add-to-cart',
+                                                   :id => 'gold-formula',
+                                                   :name => 'submit' %>
+                                    <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                                </form>
+                            </div>
+
+                            <br>
+
+                            3.5 Stars on <%= link_to image_tag('amazon-4-stars.png', :size => "95x42"),
+                                                     create_url('https://www.amazon.com/',
+                                                                ['NeuEve-Suppository-Gold-formula-6',
+                                                                 'product-reviews',
+                                                                 'B00CM1T35I'],
+                                                                {
+                                                                        ie: 'UTF8',
+                                                                        reviewerType: 'all_reviews',
+                                                                        showViewpoints: 0,
+                                                                        sortBy: 'helpful',
+                                                                        pageNumber: 1,
+                                                                        filterByStar: 'positive',
+                                                                        _encoding: 'UTF8',
+                                                                        tag: 'neu08-20',
+                                                                        linkCode: 'ur2',
+                                                                        linkId: 'HSNLHLCPIAWK6RZM',
+                                                                        camp: 1789,
+                                                                        creative: 9325
+                                                                }, 'R34NC759R1IWN8'),
+                                                     :class => 'amazon-review',
+                                                     :id => 'gold-formula',
+                                                     :target => '_blank' %><br>
+
+
+                            <%= link_to 'Amazon Reviews of NeuEve Gold'.html_safe,
+                                        create_url('https://www.amazon.com/',
+                                                   ['NeuEve-Suppository-Gold-formula-6',
+                                                    'product-reviews',
+                                                    'B00CM1T35I'],
+                                                   {
+                                                           ie: 'UTF8',
+                                                           reviewerType: 'all_reviews',
+                                                           showViewpoints: 0,
+                                                           sortBy: 'helpful',
+                                                           pageNumber: 1,
+                                                           filterByStar: 'positive',
+                                                           _encoding: 'UTF8',
+                                                           tag: 'neu08-20',
+                                                           linkCode: 'ur2',
+                                                           linkId: 'HSNLHLCPIAWK6RZM',
+                                                           camp: 1789,
+                                                           creative: 9325
+                                                   }, 'R34NC759R1IWN8'),
+                                        :class => 'amazon-review',
+                                        :id => 'gold-formula',
+                                        :target => '_blank' %>
+
+                            <br>
+                            <strong><%= link_to 'For first time buyers, please read THIS', faq_path(:anchor => 'right_formula_atrophy') %></strong>
+                            <br>
+                            If you have severe dryness, you <br>should order the mild Silk formula first.
+                        </div>
+                    </td>
+
+                    <td colspan="2" style="vertical-align:middle">
+                        <div itemscope itemtype="http://schema.org/Product" align="center">
+
+                            <strong>
+                                <div itemprop="name"><%= link_to "Suppository Applicator, Reusable", applicator_path %></div>
+                                <%= link_to image_tag('applicator.jpg',
+                                                      :size => "240x180",
+                                                      :class => 'applicator img-fluid',
+                                                      alt: 'NeuEve Suppository Applicator'
+                                            ), applicator_path %>
+                                <br>
+
+                                <meta itemprop="category" content="Health & Beauty > Personal Care > Feminine Sanitary Supplies > Feminine Deodorant"/>
+                                <meta itemprop="description" content="Natural suppository for fighting odor, dryness, dyspareunia, and bacterial vaginosis (BV). Gynecologist-tested."/>
+                            </strong>
+                            <span itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                              <span itemprop="price">$5.95</span>
+                              <meta itemprop="priceCurrency" content="USD"/>
+                            </span>
+                            <br>
+
+                            <div class="formbutton">
+                                <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                                    <input type="hidden" name="cmd" value="_s-xclick">
+                                    <input type="hidden" name="hosted_button_id" value="2R7PRXENKU33G">
+                                    <%= submit_tag 'Add to Cart',
+                                                   :class => 'btn btn-large btn-warning add-to-cart',
+                                                   :id => 'suppository-applicator',
+                                                   :name => 'submit' %>
+                                    <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                                </form>
+                            </div>
+
+                            <p>
+                                Makes the use of suppositories easier
+                            </p>
+                            <p>
+                                Made of plastic
+                            </p>
+                            <p>
+                                Rinse after each use
+                            </p>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th colspan="4">
+                        <p>Shipping is $5.95. Free shipping on all orders over $70!</p>
+                        <p>Shipping to Canada and Mexico is $8.95 USD, and only $3 USD for orders over $70.</p>
+                        <p>Shipping internationally is $15 USD, and only $9 USD for orders over $70.</p>
+                        <p>Note: Please check your PayPal account to make sure your shipping address is up to date.</p>
+                        <p>We always ship in discreet packaging.</p>
+                    </th>
+                </tr>
+
+            </table>
         </div>
+    </div>
+</section>
 
-        <br>
-
-        3.5 Stars on <%= link_to image_tag('amazon-4-stars.png', :size => "95x42"),
-                                 create_url('https://www.amazon.com/',
-                                            ['NeuEve-Suppository-Gold-formula-6',
-                                             'product-reviews',
-                                             'B00CM1T35I'],
-                                            {
-                                                    ie:'UTF8',
-                                                    reviewerType:'all_reviews',
-                                                    showViewpoints:0,
-                                                    sortBy:'helpful',
-                                                    pageNumber:1,
-                                                    filterByStar:'positive',
-                                                    _encoding:'UTF8',
-                                                    tag:'neu08-20',
-                                                    linkCode:'ur2',
-                                                    linkId:'HSNLHLCPIAWK6RZM',
-                                                    camp:1789,
-                                                    creative: 9325
-                                            }, 'R34NC759R1IWN8'),
-                                 :class => 'amazon-review',
-                                 :id => 'gold-formula',
-                                 :target => '_blank' %><br>
+<%= render 'layouts/satisfaction_snippet' %>
 
 
-        <%= link_to 'Amazon Reviews of NeuEve Gold'.html_safe,
-                    create_url('https://www.amazon.com/',
-                               ['NeuEve-Suppository-Gold-formula-6',
-                                'product-reviews',
-                                'B00CM1T35I'],
-                               {
-                                       ie:'UTF8',
-                                       reviewerType:'all_reviews',
-                                       showViewpoints:0,
-                                       sortBy:'helpful',
-                                       pageNumber:1,
-                                       filterByStar:'positive',
-                                       _encoding:'UTF8',
-                                       tag:'neu08-20',
-                                       linkCode:'ur2',
-                                       linkId:'HSNLHLCPIAWK6RZM',
-                                       camp:1789,
-                                       creative: 9325
-                               }, 'R34NC759R1IWN8'),
-                    :class => 'amazon-review',
-                    :id => 'gold-formula',
-                    :target => '_blank' %>
 
-        <br>
-          <strong><%= link_to 'For first time buyers, please read THIS', faq_path(:anchor => 'right_formula_atrophy') %></strong>
-          <br>
-        If you have severe dryness, you <br>should order the mild Silk formula first.
-      </div>
-    </td>
+<section class="pb-5 bg-gray-100">
+    <div class="container align-items-center p-5">
+        <h2 class="mb-5 text-center text-primary">Subscribe and Save</h2>
+        <div class="row mx-auto">
+            <div class="col-lg-6 text-muted">
+                <p>Free Shipping!</p>
+                <p>Save 10% for USA addresses!</p>
+                <p>Regular monthly shipments, hassle-free</p>
+                <p>Convenient automatic payment via PayPal</p>
+                <p>Easy change of subscription by sending us an email at <%= mail_to "contact@neueve.com" %></p>
+                <p>You're free to cancel at any time <strong>after 3 months</strong></p>
+                <p><%= link_to 'How to cancel a subscription', faq_path(:anchor => 'howToCancel') %></p>
+            </div>
 
-    <td colspan="2" style="vertical-align:middle">
-      <div itemscope itemtype="http://schema.org/Product" align="center">
+            <div class="col-lg-6">
+                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                    <input type="hidden" name="cmd" value="_s-xclick">
+                    <input type="hidden" name="hosted_button_id" value="QZJH87LLDYFCY">
+                    <input type="hidden" name="on0" value="Formula">
+                    <input type="hidden" name="currency_code" value="USD">
 
-        <strong>
-          <div itemprop="name"><%= link_to "Suppository Applicator, Reusable", applicator_path %></div>
-            <%= link_to image_tag('applicator.jpg',
-                        :size => "240x240",
-                        :class => 'applicator',
-                        alt: 'NeuEve Suppository Applicator'
-              ), applicator_path %>
-            <br>
-
-          <meta itemprop="category" content="Health & Beauty > Personal Care > Feminine Sanitary Supplies > Feminine Deodorant"/>
-          <meta itemprop="description" content="Natural suppository for fighting odor, dryness, dyspareunia, and bacterial vaginosis (BV). Gynecologist-tested."/>
-        </strong>
-        <span itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-          <span itemprop="price">$5.95</span>
-          <meta itemprop="priceCurrency" content="USD"/>
-        </span>
-        <br>
-
-        <div class="formbutton">
-          <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
-            <input type="hidden" name="cmd" value="_s-xclick">
-            <input type="hidden" name="hosted_button_id" value="2R7PRXENKU33G">
-            <%= submit_tag 'Add to Cart',
-                           :class => 'btn btn-large btn-warning add-to-cart',
-                           :id => 'suppository-applicator',
-                           :name => 'submit' %>
-            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-          </form>
-        </div>
-
-        <ul>
-          <li>Makes the use of suppositories easier</li>
-          <li>Made of plastic</li>
-          <li>Rinse after each use</li>
-        </ul>
-      </div>
-    </td>
-  </tr>
-
-  <tr>
-    <th colspan="4">
-      Shipping is $5.95. Free shipping on all orders over $70!<br><br>
-      Shipping to Canada and Mexico is $8.95 USD, and only $3 USD for orders over $70.<br>
-      Shipping internationally is $15 USD, and only $9 USD for orders over $70.<br><br>
-      Note:  Please check your PayPal account to make sure your shipping address is up to date.<br>
-        We always ship in discreet packaging.
-    </th>
-  </tr>
-
-    <%= render 'layouts/satisfaction_snippet' %>
-</table>
-
-
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-  <input type="hidden" name="cmd" value="_s-xclick">
-  <input type="hidden" name="hosted_button_id" value="QZJH87LLDYFCY">
-  <input type="hidden" name="on0" value="Formula">
-
-  <table class='table table-bordered table-striped'>
-    <thead>
-    <tr class="mobile-only">
-      <th colspan="4" class="title mobile-only">
-        Subscribe to NeuEve
-      </th>
-    </tr>
-    <tr>
-      <th colspan="2" class="title non-mobile-only">
-        Subscribe to NeuEve
-      </th>
-      <th colspan="2" class="title">
-        USA
-      </th>
-      <th colspan="2" class="title">
-        Canada or Mexico
-      </th>
-    </tr>
-    </thead>
-
-    <tr>
-      <td style="vertical-align: middle" colspan="2" class="non-mobile-only" rowspan="2">
-        <br>
-        Why subscribe to NeuEve?<br><br>
-        <ul>
-          <li>Free Shipping!</li>
-          <br>
-          <li>Save 10% for USA addresses!</li>
-          <br>
-          <li>Regular monthly shipments, hassle-free</li>
-          <br>
-          <li>Convenient automatic payment via PayPal</li>
-          <br>
-          <li>Easy change of subscription by sending us an email</li>
-          <br>
-          <li>You're free to cancel at any time <strong>after 3 months</strong></li>
-          <br>
-          <li><%= link_to 'How to cancel a subscription', faq_path(:anchor => 'howToCancel')%></li>
-        </ul>
-        <br>
-        <br><br><br>
-
-
-        <p>
-          Our goal is to make a positive impact on the world.<br>
-          We've chosen to accomplish that goal by <strong><em>saving marriages.</em></strong>
-        </p>
-      </td>
-
-
-      <td colspan="2">
-        Select your option:
-        <br>
-        <br>
-        <br>
-
-        <div itemscope itemtype="http://schema.org/Product">
-          <label class="radio">
-            <input type="radio" name="os0" value="NeuEve Silk (USA)">
-            <strong><span itemprop="name">NeuEve Silk Formula</span></strong><br>
-            <meta itemprop="category" content="Health & Beauty > Personal Care > Feminine Sanitary Supplies > Feminine Deodorant"/>
-            <meta itemprop="description" content="Natural suppository for fighting odor, dryness, dyspareunia, and bacterial vaginosis (BV). Gynecologist-tested."/>
+                    <div class="row">
+                        <div class="col-xl-6 bg-gray-200 p-3">
+                            <h4>USA</h4>
+                            <label class="radio">
+                                <input type="radio" name="os0" value="NeuEve Silk (USA)">
+                                <strong><span itemprop="name">NeuEve Silk Formula</span></strong><br>
+                                <meta itemprop="category" content="Health & Beauty > Personal Care > Feminine Sanitary Supplies > Feminine Deodorant"/>
+                                <meta itemprop="description" content="Natural suppository for fighting odor, dryness, dyspareunia, and bacterial vaginosis (BV). Gynecologist-tested."/>
             <span itemprop="offers" itemscope itemtype="http://schema.org/Offer">
               8 suppositories<br>
             <span itemprop="price">$49.75 per month + <del>$5.95</del> FREE shipping</span><br>
             <meta itemprop="priceCurrency" content="USD"/>
             </span>
-          </label>
-        </div>
-        <br>
-        <br>
-
-        <div itemscope itemtype="http://schema.org/Product">
-          <label class="radio">
-            <input type="radio" name="os0" value="NeuEve Silver (USA)" checked="checked">
-            <strong><span itemprop="name">NeuEve Silver Formula</span></strong><br>
-            <meta itemprop="category" content="Health & Beauty > Personal Care > Feminine Sanitary Supplies > Feminine Deodorant"/>
-            <meta itemprop="description" content="Natural suppository for fighting odor, dryness, dyspareunia, and bacterial vaginosis (BV). Gynecologist-tested."/>
+                            </label>
+                            <label class="radio">
+                                <input type="radio" name="os0" value="NeuEve Silver (USA)" checked="checked">
+                                <strong><span itemprop="name">NeuEve Silver Formula</span></strong><br>
+                                <meta itemprop="category" content="Health & Beauty > Personal Care > Feminine Sanitary Supplies > Feminine Deodorant"/>
+                                <meta itemprop="description" content="Natural suppository for fighting odor, dryness, dyspareunia, and bacterial vaginosis (BV). Gynecologist-tested."/>
             <span itemprop="offers" itemscope itemtype="http://schema.org/Offer">
               6 suppositories<br>
             <span itemprop="price">$49.75 per month + <del>$5.95</del> FREE shipping</span><br>
             <meta itemprop="priceCurrency" content="USD"/>
             </span>
-          </label>
-        </div>
-        <br>
-        <br>
-
-        <div itemscope itemtype="http://schema.org/Product">
-          <label class="radio">
-            <input type="radio" name="os0" value="NeuEve Gold (USA)">
-            <strong><span itemprop="name">NeuEve Gold Formula</span></strong><br>
-            <meta itemprop="category" content="Health & Beauty > Personal Care > Feminine Sanitary Supplies > Feminine Deodorant"/>
-            <meta itemprop="description" content="Natural suppository for fighting odor, dryness, dyspareunia, and bacterial vaginosis (BV). Gynecologist-tested."/>
+                            </label>
+                            <label class="radio">
+                                <input type="radio" name="os0" value="NeuEve Gold (USA)">
+                                <strong><span itemprop="name">NeuEve Gold Formula</span></strong><br>
+                                <meta itemprop="category" content="Health & Beauty > Personal Care > Feminine Sanitary Supplies > Feminine Deodorant"/>
+                                <meta itemprop="description" content="Natural suppository for fighting odor, dryness, dyspareunia, and bacterial vaginosis (BV). Gynecologist-tested."/>
             <span itemprop="offers" itemscope itemtype="http://schema.org/Offer">
               4 suppositories<br>
             <span itemprop="price">$49.75 per month + <del>$5.95</del> FREE shipping</span><br>
 
             <meta itemprop="priceCurrency" content="USD"/>
             </span>
-          </label>
-        </div>
-        <br>
-        <br>
-      </td>
+                            </label>
+                        </div>
 
-      <td colspan="2">
-        Subscribers get free shipping!
-        <br>
-        <br>
-        <br>
-
-        <div itemscope itemtype="http://schema.org/Product">
-          <label class="radio">
-            <input type="radio" name="os0" value="NeuEve Silk (Canada)">
-            <strong><span itemprop="name">NeuEve Silk Formula</span></strong><br>
-            <meta itemprop="category" content="Health & Beauty > Personal Care > Feminine Sanitary Supplies > Feminine Deodorant"/>
-            <meta itemprop="description" content="Natural suppository for fighting odor, dryness, dyspareunia, and bacterial vaginosis (BV). Gynecologist-tested."/>
+                        <div class="col-xl-6 bg-gray-300 p-3">
+                            <h4>Canada or Mexico</h4>
+                            <label class="radio">
+                                <input type="radio" name="os0" value="NeuEve Silk (Canada)">
+                                <strong><span itemprop="name">NeuEve Silk Formula</span></strong><br>
+                                <meta itemprop="category" content="Health & Beauty > Personal Care > Feminine Sanitary Supplies > Feminine Deodorant"/>
+                                <meta itemprop="description" content="Natural suppository for fighting odor, dryness, dyspareunia, and bacterial vaginosis (BV). Gynecologist-tested."/>
             <span itemprop="offers" itemscope itemtype="http://schema.org/Offer">
               8 suppositories<br>
             <span itemprop="price">$54.95 per month + <del>$8.95</del> FREE shipping</span><br>
             <meta itemprop="priceCurrency" content="USD"/>
             </span>
-          </label>
-        </div>
-        <br>
-        <br>
-
-        <div itemscope itemtype="http://schema.org/Product">
-          <label class="radio">
-            <input type="radio" name="os0" value="NeuEve Silver (Canada)">
-            <strong><span itemprop="name">NeuEve Silver Formula</span></strong><br>
-            <meta itemprop="category" content="Health & Beauty > Personal Care > Feminine Sanitary Supplies > Feminine Deodorant"/>
-            <meta itemprop="description" content="Natural suppository for fighting odor, dryness, dyspareunia, and bacterial vaginosis (BV). Gynecologist-tested."/>
+                            </label>
+                            <label class="radio">
+                                <input type="radio" name="os0" value="NeuEve Silver (Canada)">
+                                <strong><span itemprop="name">NeuEve Silver Formula</span></strong><br>
+                                <meta itemprop="category" content="Health & Beauty > Personal Care > Feminine Sanitary Supplies > Feminine Deodorant"/>
+                                <meta itemprop="description" content="Natural suppository for fighting odor, dryness, dyspareunia, and bacterial vaginosis (BV). Gynecologist-tested."/>
             <span itemprop="offers" itemscope itemtype="http://schema.org/Offer">
               6 suppositories<br>
             <span itemprop="price">$54.95 per month + <del>$8.95</del> FREE shipping</span><br>
             <meta itemprop="priceCurrency" content="USD"/>
             </span>
-          </label>
-        </div>
-        <br>
-        <br>
-
-        <div itemscope itemtype="http://schema.org/Product">
-          <label class="radio">
-            <input type="radio" name="os0" value="NeuEve Gold (Canada)">
-            <strong><span itemprop="name">NeuEve Gold Formula</span></strong><br>
-            <meta itemprop="category" content="Health & Beauty > Personal Care > Feminine Sanitary Supplies > Feminine Deodorant"/>
-            <meta itemprop="description" content="Natural suppository for fighting odor, dryness, dyspareunia, and bacterial vaginosis (BV). Gynecologist-tested."/>
+                            </label>
+                            <label class="radio">
+                                <input type="radio" name="os0" value="NeuEve Gold (Canada)">
+                                <strong><span itemprop="name">NeuEve Gold Formula</span></strong><br>
+                                <meta itemprop="category" content="Health & Beauty > Personal Care > Feminine Sanitary Supplies > Feminine Deodorant"/>
+                                <meta itemprop="description" content="Natural suppository for fighting odor, dryness, dyspareunia, and bacterial vaginosis (BV). Gynecologist-tested."/>
             <span itemprop="offers" itemscope itemtype="http://schema.org/Offer">
               4 suppositories<br>
             <span itemprop="price">$54.95 per month + <del>$8.95</del> FREE shipping</span><br>
 
             <meta itemprop="priceCurrency" content="USD"/>
             </span>
-          </label>
+                            </label>
+                        </div>
+                    </div>
+                    <div align="center">
+                        <%= submit_tag 'Subscribe', :class => 'btn btn-large btn-warning subscribe-button', :name => 'submit' %>
+                        <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                    </div>
+                </form>
+            </div>
         </div>
-      </td>
-    </tr>
-    <tr>
-      <td colspan="4">
-        <input type="hidden" name="currency_code" value="USD">
+    </div>
+</section>
 
-        <div align="center">
-          <%= submit_tag 'Subscribe', :class => 'btn btn-large btn-warning subscribe-button', :name => 'submit' %>
-          <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+<%= render 'layouts/disclaimer' %>
+
+<section class="bg-gray-100 text-dark-700 py-3">
+    <div class="container">
+        <div class="col-xl-8 col-10 mx-auto">
+            <div class="row">
+
+                <div class="col-md-3 col-6 service-column">
+                    <%= image_tag("hormone-free-trans.gif", :class => 'img-fluid seal',
+                                  alt: 'Hormone Free Seal') %>
+                </div>
+                <div class="col-md-3 col-6 service-column">
+                    <%= image_tag("no-chemical-logo-trans.gif", :class => 'img-fluid seal',
+                                  alt: 'No Chemical Seal') %>
+                </div>
+                <div class="col-md-3 col-6 service-column">
+                    <%= link_to image_tag('LeapingBunny-Logo.png', :class => 'img-fluid seal',
+                                          alt: 'Leaping Bunny Seal'), 'https://www.neueve.com/blog/cruelty-free-certified/' %>
+                </div>
+                <div class="col-md-3 col-6 service-column">
+                    <%= image_tag("made-in-usa-logo-vector-400x400.png", :class => "img-fluid seal",
+                                  alt: 'Made in USA Seal') %>
+                </div>
+
+            </div>
         </div>
-      </td>
-    </tr>
-    <tr>
-      <th colspan="6">
-        Subscribers get free shipping + 10% savings for USA addresses!
-          You're free to <%= link_to 'cancel', faq_path(:anchor => 'howToCancel')%> at any time <strong>after 3 months</strong>
-      </th>
-    </tr>
+    </div>
+</section>
 
-  </table>
-</form>
-
-<br>
-<%= render 'layouts/disclaimer'%>
-
-<div align="center">
-    <%= image_tag("hormone-free-trans.gif", :size => "160x160", :class => 'seal',
-                  alt: 'Hormone Free Seal') %>
-    &nbsp; &nbsp; &nbsp; &nbsp;
-    <%= image_tag("no-chemical-logo-trans.gif", :size => "160x160", :class => 'seal',
-                  alt: 'No Chemical Seal') %>
-    &nbsp; &nbsp; &nbsp; &nbsp;
-    <%= link_to image_tag('LeapingBunny-Logo.png', :size => '160x160', :class => 'seal',
-                          alt: 'Leaping Bunny Seal'), 'https://www.neueve.com/blog/cruelty-free-certified/' %>
-    &nbsp; &nbsp; &nbsp; &nbsp;
-    <%= image_tag("made-in-usa-logo-vector-400x400.png", :size => "160x160", :class => "seal",
-                  alt: 'Made in USA Seal') %>
-</div>
-
-<img src="https://ir-na.amazon-adsystem.com/e/ir?t=neu08-20&l=ur2&o=1" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+<img src="https://ir-na.amazon-adsystem.com/e/ir?t=neu08-20&l=ur2&o=1" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;"/>

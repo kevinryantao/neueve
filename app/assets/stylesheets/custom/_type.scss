@@ -1,0 +1,111 @@
+.hero-heading {
+    @include uppercase;
+    margin-bottom: 2rem;
+}
+
+@include media-breakpoint-down(md) {
+    h1.hero-heading {
+        font-size: $h1-font-size * .5;
+    }
+    h2.hero-heading {
+        font-size: $h2-font-size * .5;
+    }
+    h3.hero-heading {
+        font-size: $h3-font-size * .5;
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .display-1 {
+        font-size: $display1-size-small;
+    }
+    .display-2 {
+        font-size: $display2-size-small;
+    }
+    .display-3 {
+        font-size: $display3-size-small;
+    }
+    .display-4 {
+        font-size: $display4-size-small;
+    }
+}
+
+.text-content {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    ul,
+    ol,
+    blockquote {
+        margin-bottom: 2rem;
+    }
+}
+
+.icon-rounded {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    color: #fff;
+}
+
+.btn {
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: .3em;
+    line-height: 1;
+    @include button-size($btn-padding-y, $btn-padding-x, $font-size-sm - .1rem, $btn-line-height, $btn-border-radius);
+}
+
+.btn-lg {
+    @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $font-size-sm, $btn-line-height-lg, $btn-border-radius-lg);
+}
+
+.btn-sm {
+    @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $font-size-sm - .1rem, $btn-line-height-sm, $btn-border-radius-sm);
+}
+
+.dropdown-menu {
+    box-shadow: $dropdown-box-shadow;
+}
+
+.dropdown-header {
+    padding: 1rem $dropdown-item-padding-x;
+    @include uppercase;
+}
+
+.page-link {
+    @include uppercase;
+}
+
+.blockquote {
+    padding: $spacer;
+    border-left: 5px solid theme-color();
+}
+
+.nav-link {
+    color: $gray-800;
+}
+
+.nav-pills {
+    .nav-link:hover,
+    .nav-link:focus {
+        color: $nav-pills-link-active-color;
+        background-color: $nav-pills-link-active-bg;
+    }
+}
+
+a.accordion-link {
+    color: $gray-800;
+    @include uppercase;
+    &:focus {
+        text-decoration: none;
+        color: $gray-800;
+    }
+}

@@ -9,11 +9,28 @@ bakeries have their secret flavors or recipes. It is OK to consume a product wit
 
 <br>
 
-<div align="center">
-    <%= image_tag("hormone-free-trans.gif", :size => "160x160", :class => 'seal') %>
-    &nbsp; &nbsp; &nbsp;
-    <%= image_tag("no-chemical-logo-trans.gif", :size => "160x160", :class => 'seal') %>
-    &nbsp; &nbsp; &nbsp;
-    <%= link_to image_tag('LeapingBunny-Logo.png', :size => '160x160', :class => 'seal',
-                          alt: 'Leaping Bunny Seal'), 'https://www.neueve.com/blog/cruelty-free-certified/' %>
-</div>
+
+<section class="bg-gray-100 text-dark-700 py-3">
+    <div class="container">
+        <div class="col-xl-8 col-10 mx-auto">
+            <div class="row">
+                <div class="col-md-3 col-6 service-column">
+                    <%= image_tag("hormone-free-trans.gif", :class => 'img-fluid seal',
+                                  alt: 'Hormone Free Seal') %>
+                </div>
+                <div class="col-md-3 col-6 service-column">
+                    <%= image_tag("no-chemical-logo-trans.gif", :class => 'img-fluid seal',
+                                  alt: 'No Chemical Seal') %>
+                </div>
+                <div class="col-md-3 col-6 service-column">
+                    <%= link_to image_tag('LeapingBunny-Logo.png', :class => 'img-fluid seal',
+                                          alt: 'Leaping Bunny Seal'), 'https://www.neueve.com/blog/cruelty-free-certified/' %>
+                </div>
+                <div class="col-md-3 col-6 service-column">
+                    <%= image_tag("made-in-usa-logo-vector-400x400.png", :class => "img-fluid seal",
+                                  alt: 'Made in USA Seal') %>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

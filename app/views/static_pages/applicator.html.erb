@@ -2,107 +2,119 @@
 <% provide(:description, 'The NeuEve applicator is reusable and helps insert NeuEve vaginal suppositories. $5.95, FREE SHIPPING on orders >$70.') %>
 <% provide(:last_modified, 'October 1, 2018') %>
 
-<br>
-<div class="jumbotron">
-    <h1>Applicator for Vaginal Suppositories</h1>
-</div>
+<section class="hero">
+    <div class="container">
+        <!-- Breadcrumbs -->
+        <ol class="breadcrumb justify-content-center">
+            <li class="breadcrumb-item">
+                <%= link_to 'Home', root_path %>
+            </li>
+            <li class="breadcrumb-item active">Applicator</li>
+        </ol>
+        <!-- Hero Content-->
+        <div class="hero-content pb-5 text-center">
+            <h1 class="mb-5">Applicator for Vaginal Suppositories</h1>
+        </div>
+    </div>
+</section>
 
-<table class='table table-bordered table-striped'>
-    <tr align="center" class="mobile-only">
-        <td style="background-color: #ffffff">
-            <div align="center">
-                <%= image_tag('vaginal-suppository-applicator-NeuEve.jpg', :size => '600x450',
-                              alt: 'NeuEve Vaginal Suppository Applicator') %>
-            </div>
-        </td>
-    </tr>
-    <tr align="center">
-        <td style="background-color: #ffffff" class="non-mobile-only">
-            <div align="center">
-                <%= image_tag('vaginal-suppository-applicator-NeuEve.jpg', :class => 'img_pair',
-                              alt: 'NeuEve Vaginal Suppository Applicator') %>
-            </div>
-        </td>
-        <td style="vertical-align:middle">
-            <div itemscope itemtype="http://schema.org/Product" align="center">
-                <strong>
-                    <div itemprop="name">Suppository Applicator, Reusable</div>
-                    <meta itemprop="category" content="Health & Beauty > Personal Care > Feminine Sanitary Supplies > Feminine Deodorant"/>
-                    <meta itemprop="description" content="Natural suppository for fighting odor, dryness, dyspareunia, and bacterial vaginosis (BV). Gynecologist-tested."/>
-                </strong>
+<section class="pb-5">
+    <div class="container">
+        <div class="mx-auto">
+            <div class="row align-items-center">
+                <div class="col-md-6 pb-3">
+                    <%= image_tag('vaginal-suppository-applicator-NeuEve.jpg', :class => 'img_pair img-fluid',
+                                  alt: 'NeuEve Vaginal Suppository Applicator'
+                        ) %>
+                </div>
+                <div class="col-md-6 text-center">
+                        <div itemscope itemtype="http://schema.org/Product" class="align-middle">
+                            <strong>
+                                <div itemprop="name">Suppository Applicator, Reusable</div>
+                                <meta itemprop="category" content="Health & Beauty > Personal Care > Feminine Sanitary Supplies > Feminine Deodorant"/>
+                                <meta itemprop="description" content="Natural suppository for fighting odor, dryness, dyspareunia, and bacterial vaginosis (BV). Gynecologist-tested."/>
+                            </strong>
         <span itemprop="offers" itemscope itemtype="http://schema.org/Offer">
           <span itemprop="price">$5.95</span>
           <meta itemprop="priceCurrency" content="USD"/>
         </span>
-                <br>
+                            <br>
 
-                <div class="formbutton">
-                    <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
-                        <input type="hidden" name="cmd" value="_s-xclick">
-                        <input type="hidden" name="hosted_button_id" value="2R7PRXENKU33G">
-                        <%= submit_tag 'Add to Cart',
-                                       :class => 'btn btn-large btn-warning add-to-cart',
-                                       :id => 'suppository-applicator',
-                                       :name => 'submit' %>
-                        <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-                    </form>
+                            <div class="formbutton">
+                                <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                                    <input type="hidden" name="cmd" value="_s-xclick">
+                                    <input type="hidden" name="hosted_button_id" value="2R7PRXENKU33G">
+                                    <%= submit_tag 'Add to Cart',
+                                                   :class => 'btn btn-large btn-warning add-to-cart',
+                                                   :id => 'suppository-applicator',
+                                                   :name => 'submit' %>
+                                    <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                                </form>
+                            </div>
+
+                            <span class="stamped-product-reviews-badge stamped-main-badge" data-id="4000"></span>
+                            <hr>
+
+                            3.8 Stars on <%= link_to image_tag('amazon-4-stars.png', :size => "95x42"),
+                                                     create_url('https://www.amazon.com/',
+                                                                ['NeuEve®-Vaginal-Suppository-Applicator-Reusable',
+                                                                 'product-reviews',
+                                                                 'B00PTOCZVY'],
+                                                                {
+                                                                        ie: 'UTF8',
+                                                                        reviewerType: 'all_reviews',
+                                                                        showViewpoints: 0,
+                                                                        sortBy: 'helpful',
+                                                                        pageNumber: 1,
+                                                                        filterByStar: 'positive',
+                                                                        _encoding: 'UTF8',
+                                                                        tag: 'neu08-20',
+                                                                        linkCode: 'll2',
+                                                                        linkId: 'f0c33165cffe5d4b2714588f8de7638f',
+                                                                        camp: 1789,
+                                                                        creative: 9325
+                                                                }, 'R2UP18KU9MF9WO'),
+                                                     :class => 'amazon-review',
+                                                     :id => 'applicator',
+                                                     :target => '_blank' %><br>
+
+
+                            <%= link_to 'Amazon Reviews of NeuEve Applicator'.html_safe,
+                                        create_url('https://www.amazon.com/',
+                                                   ['NeuEve®-Vaginal-Suppository-Applicator-Reusable',
+                                                    'product-reviews',
+                                                    'B00PTOCZVY'],
+                                                   {
+                                                           ie: 'UTF8',
+                                                           reviewerType: 'all_reviews',
+                                                           showViewpoints: 0,
+                                                           sortBy: 'helpful',
+                                                           pageNumber: 1,
+                                                           filterByStar: 'positive',
+                                                           _encoding: 'UTF8',
+                                                           tag: 'neu08-20',
+                                                           linkCode: 'll2',
+                                                           linkId: 'f0c33165cffe5d4b2714588f8de7638f',
+                                                           camp: 1789,
+                                                           creative: 9325
+                                                   }, 'R2UP18KU9MF9WO'),
+                                        :class => 'amazon-review',
+                                        :id => 'applicator',
+                                        :target => '_blank'
+                            %>
+
+                        </div>
                 </div>
-
-                <span class="stamped-product-reviews-badge stamped-main-badge" data-id="4000"></span>
-                <hr>
-
-                3.8 Stars on <%= link_to image_tag('amazon-4-stars.png', :size => "95x42"),
-                                         create_url('https://www.amazon.com/',
-                                                    ['NeuEve®-Vaginal-Suppository-Applicator-Reusable',
-                                                     'product-reviews',
-                                                     'B00PTOCZVY'],
-                                                    {
-                                                            ie: 'UTF8',
-                                                            reviewerType: 'all_reviews',
-                                                            showViewpoints: 0,
-                                                            sortBy: 'helpful',
-                                                            pageNumber: 1,
-                                                            filterByStar: 'positive',
-                                                            _encoding: 'UTF8',
-                                                            tag: 'neu08-20',
-                                                            linkCode: 'll2',
-                                                            linkId: 'f0c33165cffe5d4b2714588f8de7638f',
-                                                            camp: 1789,
-                                                            creative: 9325
-                                                    }, 'R2UP18KU9MF9WO'),
-                                         :class => 'amazon-review',
-                                         :id => 'applicator',
-                                         :target => '_blank' %><br>
-
-
-                <%= link_to 'Amazon Reviews of NeuEve Applicator'.html_safe,
-                            create_url('https://www.amazon.com/',
-                                       ['NeuEve®-Vaginal-Suppository-Applicator-Reusable',
-                                        'product-reviews',
-                                        'B00PTOCZVY'],
-                                       {
-                                               ie: 'UTF8',
-                                               reviewerType: 'all_reviews',
-                                               showViewpoints: 0,
-                                               sortBy: 'helpful',
-                                               pageNumber: 1,
-                                               filterByStar: 'positive',
-                                               _encoding: 'UTF8',
-                                               tag: 'neu08-20',
-                                               linkCode: 'll2',
-                                               linkId: 'f0c33165cffe5d4b2714588f8de7638f',
-                                               camp: 1789,
-                                               creative: 9325
-                                       }, 'R2UP18KU9MF9WO'),
-                            :class => 'amazon-review',
-                            :id => 'applicator',
-                            :target => '_blank'
-                %>
-
             </div>
-        </td>
-    </tr>
-</table>
+        </div>
+    </div>
+</section>
+
+<section class="pb-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-8 col-lg-10 mx-auto">
+                <div class="text-content text-lg">
 
 <h3>
     Description:
@@ -171,6 +183,16 @@
     Fingers are more gentle and easier to get a painless insertion. After your dryness is largely relieved, they can
     start using an applicator, if you want, for better delivery of the suppository.
 </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="pb-5">
+    <div class="container">
+        <div class="py-4">
+            <div class="text-content text-lg">
 
 <%= link_to '', {}, name: 'reviews' %>
 <div id="stamped-main-widget"
@@ -181,17 +203,32 @@
      data-description="Makes the use of vaginal suppositories easier. Prevents melting in fingers. Washable and reusable. Rinse after each use. It is designed specially for delivering the NeuEve brand vaginal suppositories. It is not guaranteed to work for other brand of suppository unless the size matches. The internal diameter is 3.5/8 inch."
      data-product-sku="applicator">
 </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-<div align="center">
-    <%= image_tag("hormone-free-trans.gif", :size => "160x160", :class => 'seal',
-                  alt: 'Hormone Free Seal') %>
-    &nbsp; &nbsp; &nbsp; &nbsp;
-    <%= image_tag("no-chemical-logo-trans.gif", :size => "160x160", :class => 'seal',
-                  alt: 'No Chemical Seal') %>
-    &nbsp; &nbsp; &nbsp; &nbsp;
-    <%= link_to image_tag('LeapingBunny-Logo.png', :size => '160x160', :class => 'seal',
-                          alt: 'Leaping Bunny Seal'), 'https://www.neueve.com/blog/cruelty-free-certified/' %>
-    &nbsp; &nbsp; &nbsp; &nbsp;
-    <%= image_tag("made-in-usa-logo-vector-400x400.png", :size => "160x160", :class => "seal",
-                  alt: 'Made in USA Seal') %>
-</div>
+<section class="bg-gray-100 text-dark-700 py-3">
+    <div class="container">
+        <div class="col-xl-8 col-10 mx-auto">
+            <div class="row">
+                <div class="col-md-3 col-6 service-column">
+                    <%= image_tag("hormone-free-trans.gif", :class => 'img-fluid seal',
+                                  alt: 'Hormone Free Seal') %>
+                </div>
+                <div class="col-md-3 col-6 service-column">
+                    <%= image_tag("no-chemical-logo-trans.gif", :class => 'img-fluid seal',
+                                  alt: 'No Chemical Seal') %>
+                </div>
+                <div class="col-md-3 col-6 service-column">
+                    <%= link_to image_tag('LeapingBunny-Logo.png', :class => 'img-fluid seal',
+                                          alt: 'Leaping Bunny Seal'), 'https://www.neueve.com/blog/cruelty-free-certified/' %>
+                </div>
+                <div class="col-md-3 col-6 service-column">
+                    <%= image_tag("made-in-usa-logo-vector-400x400.png", :class => "img-fluid seal",
+                                  alt: 'Made in USA Seal') %>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

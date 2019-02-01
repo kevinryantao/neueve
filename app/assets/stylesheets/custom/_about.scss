@@ -1,0 +1,29 @@
+/*
+* ===================================================
+*     About
+* ===================================================
+*/
+
+.about-text-column {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-image-column {
+    position: relative;
+    min-height: 400px;
+
+    @include media-breakpoint-up(lg) {
+        min-height: 600px;
+    }
+}
+
+.about-text {
+    padding: 4rem 2rem;
+
+    @include media-breakpoint-up(lg) {
+        padding: 7rem;
+        max-width: 600px;
+    }
+}

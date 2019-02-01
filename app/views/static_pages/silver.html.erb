@@ -3,10 +3,23 @@
 helps painful sex and BV. $54.95, FREE SHIPPING on orders >$70.') %>
 <% provide(:last_modified, 'December 11, 2018') %>
 
-<br>
-<div class="jumbotron">
-    <h1>Silver</h1>
-</div>
+
+<section class="hero">
+    <div class="container">
+        <!-- Breadcrumbs -->
+        <ol class="breadcrumb justify-content-center">
+            <li class="breadcrumb-item">
+                <%= link_to 'Home', root_path %>
+            </li>
+            <li class="breadcrumb-item active">Silver</li>
+        </ol>
+        <!-- Hero Content-->
+        <div class="hero-content pb-5 text-center">
+            <h1 class="mb-5">Silver</h1>
+        </div>
+    </div>
+</section>
+
 
 <table class='table table-bordered table-striped'>
     <tr align="center" class="mobile-only">
@@ -156,6 +169,12 @@ helps painful sex and BV. $54.95, FREE SHIPPING on orders >$70.') %>
     </tr>
 </table>
 
+
+<section class="pb-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-8 col-lg-10 mx-auto">
+                <div class="text-content text-lg">
 <h3>
     Description:
 </h3>
@@ -206,7 +225,17 @@ helps painful sex and BV. $54.95, FREE SHIPPING on orders >$70.') %>
     (such as breast and ovarian cancer survivors and previvors). NeuEve is also perfect for women wanting to supplement
     their estrogen replacement therapy with something extra.
 </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
+
+<section class="pb-5">
+    <div class="container">
+        <div class="py-4">
+            <div class="text-content text-lg">
 <%= link_to '', {}, name: 'reviews' %>
 <div id="stamped-main-widget"
      data-product-id="2000"
@@ -216,6 +245,16 @@ helps painful sex and BV. $54.95, FREE SHIPPING on orders >$70.') %>
      data-description="NeuEve Silver is a natural vaginal suppository developed by a gynecologist. NeuEve Silver naturally moisturizes and heals painful sex (dyspareunia) and bacterial vaginosis. NeuEve Silver is made with vitamins and nutrients to nourish the vaginal tissues."
      data-product-sku="silver">
 </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="pb-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-8 col-lg-10 mx-auto">
+                <div class="text-content text-lg">
 
 <h3>
     Ingredients:
@@ -236,19 +275,46 @@ helps painful sex and BV. $54.95, FREE SHIPPING on orders >$70.') %>
     tenderness.
 </p>
 
-<div align="center">
-    <%= image_tag("hormone-free-trans.gif", :size => "160x160", :class=>'seal',
-                  alt: 'Hormone Free Seal') %>
-    &nbsp; &nbsp; &nbsp; &nbsp;
-    <%= image_tag("no-chemical-logo-trans.gif", :size => "160x160", :class=>'seal',
-                  alt: 'No Chemical Seal') %>
-    &nbsp; &nbsp; &nbsp; &nbsp;
-    <%= link_to image_tag('LeapingBunny-Logo.png', :size => '160x160', :class => 'seal',
-                          alt: 'Leaping Bunny Seal'), 'https://www.neueve.com/blog/cruelty-free-certified/' %>
-    &nbsp; &nbsp; &nbsp; &nbsp;
-    <%= image_tag("made-in-usa-logo-vector-400x400.png", :size => "160x160", :class => "seal",
-                  alt: 'Made in USA Seal') %>
-</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="bg-gray-100 text-dark-700 py-3">
+    <div class="container">
+        <div class="col-xl-8 col-10 mx-auto">
+            <div class="row">
+
+                <div class="col-md-3 col-6 service-column">
+                    <%= image_tag("hormone-free-trans.gif", :class => 'img-fluid seal',
+                                  alt: 'Hormone Free Seal') %>
+                </div>
+                <div class="col-md-3 col-6 service-column">
+                    <%= image_tag("no-chemical-logo-trans.gif", :class => 'img-fluid seal',
+                                  alt: 'No Chemical Seal') %>
+                </div>
+                <div class="col-md-3 col-6 service-column">
+                    <%= link_to image_tag('LeapingBunny-Logo.png', :class => 'img-fluid seal',
+                                          alt: 'Leaping Bunny Seal'), 'https://www.neueve.com/blog/cruelty-free-certified/' %>
+                </div>
+                <div class="col-md-3 col-6 service-column">
+                    <%= image_tag("made-in-usa-logo-vector-400x400.png", :class => "img-fluid seal",
+                                  alt: 'Made in USA Seal') %>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="pb-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-8 col-lg-10 mx-auto">
+                <div class="text-content text-lg">
 
 
 <h3>
@@ -337,3 +403,9 @@ Using at bedtime is desirable. Do not use during menses.
         </iframe>
     </div>
 </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
