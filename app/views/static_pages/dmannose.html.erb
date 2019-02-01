@@ -2,54 +2,42 @@
 <% provide(:description, 'Defend against Urinary Tract Infections with daily D-Mannose supplementation. Quick and Easy!') %>
 <% provide(:last_modified, 'October 1, 2018') %>
 
+<br>
+<div class="jumbotron">
+    <h1>D-Mannose for UTI Defense by Dmanna</h1>
+</div>
 
-<section class="hero">
-    <div class="container">
-        <!-- Breadcrumbs -->
-        <ol class="breadcrumb justify-content-center">
-            <li class="breadcrumb-item">
-                <%= link_to 'Home', root_path %>
-            </li>
-            <li class="breadcrumb-item active">D-Mannose</li>
-        </ol>
-        <!-- Hero Content-->
-        <div class="hero-content pb-5 text-center">
-            <h1 class="mb-5">D-Mannose for UTI Defense by Dmanna</h1>
-        </div>
-    </div>
-</section>
-
-<section class="pb-5">
-    <div class="container">
-        <div class="mx-auto">
-            <div class="row align-items-center">
-                <div class="col-md-6 pb-3">
-                    <%= image_tag('dmannose/defense_utis_dmannose_neueve.png', :class => 'img_pair img-fluid',
-                                  alt: 'Defend against urinary tract infections with daily d-mannose supplements'
-                        ) %>
-                </div>
-                <div class="col-md-6 text-center">
-                    <div align="center">
-                        <div><strong>D-Mannose Supplements by Dmanna</strong></div>
-                        35 Packets - 1 month supply <br>
-                        $29.00
-                        <br>
-
-                        <%= link_to 'https://infl.tv/efyF', :class => 'formbutton btn btn-large btn-warning add-to-cart', :target => '_blank' do %>
-                            Buy Now
-                        <% end %>
-                    </div>
-                </div>
+<table class='table table-bordered table-striped'>
+    <tr align="center" class="mobile-only">
+        <td style="background-color: #ffffff">
+            <div align="center">
+                <%= image_tag('dmannose/defense_utis_dmannose_neueve.png', :size => '600x450',
+                              alt: 'Defend against urinary tract infections with daily d-mannose supplements') %>
             </div>
-        </div>
-    </div>
-</section>
+        </td>
+    </tr>
+    <tr align="center">
+        <td style="background-color: #ffffff; vertical-align:middle" class="non-mobile-only">
+            <div align="center">
+                <%= image_tag('dmannose/defense_utis_dmannose_neueve.png', :class => 'img_pair',
+                              alt: 'Defend against urinary tract infections with daily d-mannose supplements') %>
+            </div>
+        </td>
+        <td style="vertical-align:middle">
+            <div align="center">
+                <div><strong>D-Mannose Supplements by Dmanna</strong></div>
+                35 Packets - 1 month supply <br>
+                $29.00
+                <br>
 
-<section class="pb-5">
-    <div class="container">
-        <div class="row">
-            <div class="col-xl-8 col-lg-10 mx-auto">
-                <div class="text-content text-lg">
+                <%= link_to 'https://infl.tv/efyF', :class => 'formbutton btn btn-large btn-warning add-to-cart', :target => '_blank' do %>
+                    Buy Now
+                <% end %>
+            </div>
+        </td>
+    </tr>
+
+</table>
 
 <h3>
     Description:
@@ -74,7 +62,7 @@
     </li>
 </ul>
 
-<%= image_tag('dmannose/use_dmannose_everyday_neueve.jpg', class:'img-fluid',
+<%= image_tag('dmannose/use_dmannose_everyday_neueve.jpg', :size => '600x450',
               alt: 'Urinary tract infection defense with daily d-mannose') %>
 
 <h3>
@@ -142,9 +130,3 @@
     Every purchase of <%= link_to 'Dmanna', 'https://infl.tv/efyF', target: '_blank' %> supports their mission to treat, educate and empower women and girls around the
     world through education.
 </p>
-
-                </div>
-            </div>
-        </div>
-    </div>
-</section>

@@ -1,5 +1,5 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
     <title><%= full_title(yield(:title)) %></title>
     <%= render "layouts/googleanalytics" %>
@@ -26,14 +26,13 @@
     <!-- Pinterest Domain Verification -->
     <meta name="p:domain_verify" content="fbd4f0ba8a75ae5ad8a92473521f80dd"/>
     <%= tag(:link, rel: 'manifest', href: asset_path('pwa_manifest.json')) %>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name=viewport content="width=device-width, initial-scale=1"/>
     <meta name="description" content="<%= full_description(yield(:description)) %>">
     <%= canonical_tag -%>
     <!--<meta name="description" content="NeuEve Suppositories and Cream are a natural remedy for vaginal dryness, atrophy, odor, itching, burning, painful sex and other discomforts of menopause. NeuEve is hormone-free and estrogen-free, and works by restoring and re-balancing your vaginal ecology.">-->
-
 </head>
 <body>
-
+<div class="container-fluid">
   <%= render "layouts/header" %>
   <% flash.each do |key, value| %>
       <div class="alert alert-<%= key %>"><%= value %></div>
@@ -45,17 +44,14 @@
           !yield(:title).include?('BV') &&
           !yield(:title).include?('Scholarship')) %>
 
-    <p class="text-center">
+    <p>
         Last modified: <%= yield(:last_modified) %>
     </p>
   <%= render "layouts/footer" %>
-
+</div>
 <%= render "layouts/remarketingtag" %>
 <%= render "layouts/refersion" %>
 <%= render "layouts/amz_associates_one_link" %>
-<div class="d-none">
-  <%= show_svg('orion-svg-sprite.svg') %>
-</div>
 </body>
 
 <%= render "layouts/googleanalyticspageview" %>

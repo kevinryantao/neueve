@@ -2,127 +2,87 @@
 <% provide(:description, 'For health reasons, we do not accept returns. If unsatisfied, we are happy to refund up to one month supply of product!') %>
 <% provide(:last_modified, 'October 1, 2018') %>
 
+<h1>NeuEve Satisfaction Guarantee and Return Policy</h1>
+<br>
+<h2>
+    NeuEve Return Policy
+</h2>
 
-<section class="hero">
-    <div class="container">
-        <!-- Breadcrumbs -->
-        <ol class="breadcrumb justify-content-center">
-            <li class="breadcrumb-item">
-                <%= link_to 'Home', root_path %>
-            </li>
-            <li class="breadcrumb-item active">NeuEve Satisfaction Guarantee and Return Policy</li>
-        </ol>
-        <!-- Hero Content-->
-        <div class="hero-content pb-5 text-center">
-            <h2 class="mb-5">NeuEve Satisfaction Guarantee and Return Policy</h2>
-        </div>
-    </div>
-</section>
+<div>
+    For health reasons, NeuEve vaginal products are not able to be restocked. We <strong>cannot</strong>
+    accept returns for NeuEve vaginal suppositories, NeuEve vaginal cream, or NeuEve vaginal applicators.
+</div>
 
+<br>
+<div align="center">
+    <%= image_tag("100satisfactionguarantee.jpg",
+                  :size => "400x400",
+                  :class => "applicator",
+                  alt: '100% Customer Satisfaction Guarantee'
+        ) %>
+</div>
 
-<section class="pb-5">
-    <div class="container">
-        <div class="row">
-            <div class="text-content text-lg col-xl-8 col-lg-10 mx-auto">
+<h2>
+    NeuEve Satisfaction Guarantee Policy
+</h2>
 
+<div>
+    Our organic ingredients are the best quality. Our suppositories and creams are completely jam-packed with vitamins
+    and nutrients. We are <em> so confident</em> you will be satisfied with NeuEve that we will give you your money back if you
+    are unsatisfied. * Limited to one box per customer for life, to prevent abuse.
+</div>
 
-                <h2>
-                    NeuEve Return Policy
-                </h2>
+<h3>Your Satisfaction is Our Priority</h3>
 
-                <p>
-                    For health reasons, NeuEve vaginal products are not able to be restocked. We
-                    <strong>cannot</strong>
-                    accept returns for NeuEve vaginal suppositories, NeuEve vaginal cream, or NeuEve vaginal
-                    applicators.
-                </p>
+<div>Do you have dry mouth or dry eyes? </div>
+<p>
+    If so, you may have Sjogren's Syndrome, and <%= link_to 'you should read this.', faq_path(anchor:'dryEyeMouth')%>
+</p>
 
-                <hr>
+<div>Are you using the right formula?</div>
+<p>
+    Starting off, if your age is:
+</p>
+<ul>
+    <li>
+        60+, then you should start with <%= link_to 'Silk', silk_path %> + <%= link_to 'Cream', cream_path %>
+    </li>
+    <li>
+        50-60, then you should start with <%= link_to 'Silk', silk_path %>
+    </li>
+    <li>
+        40-50, then you should start with <%= link_to 'Silver', silver_path %>
+    </li>
+    <li>
+        -40, then you should start with <%= link_to 'Gold', gold_path %>
+    </li>
+</ul>
 
-                <br>
-                <div align="center" class="pb-5">
-                    <%= image_tag("NeuEve-Satisfaction-Guarantee.jpg",
-                                  :class => "applicator",
-                                  alt: '100% Customer Satisfaction Guarantee'
-                        ) %>
-                </div>
+<div>
+    Do you have BV?
+</div>
+<p>
 
-                <h2>
-                    NeuEve Satisfaction Guarantee Policy
-                </h2>
-
-                <p>
-                    Our organic ingredients are the best quality. Our suppositories and creams are completely
-                    jam-packed with vitamins
-                    and nutrients. We are <em> so confident</em> you will be satisfied with NeuEve that we will give
-                    you your money back if you
-                    are unsatisfied. * Limited to one box per customer for life, to prevent abuse.
-                </p>
-
-                <h3>Your Satisfaction is Our Priority</h3>
-
-                <p class="lead">Do you have dry mouth or dry eyes?</p>
-                <p>
-                    If so, you may have Sjogren's Syndrome,
-                    and <%= link_to 'you should read this.', faq_path(anchor: 'dryEyeMouth') %>
-                </p>
-
-                <p class="lead">Are you using the right formula?</p>
-                <p>
-                    Starting off, if your age is:
-                </p>
-                <ul>
-                    <li>
-                        60+, then you should start with <%= link_to 'Silk', silk_path %>
-                        + <%= link_to 'Cream', cream_path %>
-                    </li>
-                    <li>
-                        50-60, then you should start with <%= link_to 'Silk', silk_path %>
-                    </li>
-                    <li>
-                        40-50, then you should start with <%= link_to 'Silver', silver_path %>
-                    </li>
-                    <li>
-                        -40, then you should start with <%= link_to 'Gold', gold_path %>
-                    </li>
-                </ul>
-
-                <p class="lead">
-                    Do you have BV?
-                </p>
-                <p>
-
-                    If you have a fishy odor and grayish-white discharge, then you probably have BV. If you have any
-                    other odor or any other
-                    colors, then you may have yeast infection, trichomoniasis, or some other issue, and we recommend
-                    you speak to your doctor.
-                </p>
-                <hr>
+    If you have a fishy odor and grayish-white discharge, then you probably have BV. If you have any other odor or any other
+    colors, then you may have yeast infection, trichomoniasis, or some other issue, and we recommend you speak to your doctor.
+</p>
+<hr>
 
 
-                <h3>Conditions and Terms of Satisfaction Guarantee</h3>
-                <h4>For Silk, Silver, Gold, and Cream</h4>
-                <p>
-                    Our product takes between 2 weeks to 1 month before you start noticing a difference. Most women
-                    say it takes between 1-4 months to have pain-free sex again. As NeuEve contains no estrogen or
-                    hormones, so you should not expect it to work as immediately as estrogen.
-                </p>
-                <p><strong>
-                    If you have used our product for 30 days, and have seen no progress, please email us
-                    at <%= mail_to "satisfaction@neueve.com" %>. We will fully refund you for up to one month’s
-                    supply of our product. This offer is limited to once per customer, for life.
-                </strong></p>
+<h3>Conditions and Terms of Satisfaction Guarantee</h3>
+<h4>For Silk, Silver, Gold, and Cream</h4>
+<p>
+Our product takes between 2 weeks to 1 month before you start noticing a difference. Most women say it takes between 1-4 months to have pain-free sex again. As NeuEve contains no estrogen or hormones, so you should not expect it to work as immediately as estrogen.
+</p>
+<p><strong>
+If you have used our product for 30 days, and have seen no progress, please email us at <%= mail_to "satisfaction@neueve.com" %>.  We will fully refund you for up to one month’s supply of our product. This offer is limited to once per customer, for life.
+</strong></p>
 
-                <h4>For BV Clear</h4>
+<h4>For BV Clear</h4>
 
-                <p><strong>
-                    If you are 100% sure that you have BV and you have finished using the entire box of BV Clear
-                    without progress, please email
-                    us at <%= mail_to "satisfaction@neueve.com" %>. We will fully refund you for the entire box of
-                    BV Clear. This offer is limited to
-                    once per customer, for life.</strong>
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
+<p><strong>
+If you are 100% sure that you have BV and you have finished using the entire box of BV Clear without progress, please email
+    us at <%= mail_to "satisfaction@neueve.com" %>. We will fully refund you for the entire box of BV Clear. This offer is limited to
+    once per customer, for life.</strong>
+</p>
+

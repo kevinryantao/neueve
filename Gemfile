@@ -2,7 +2,8 @@ source 'https://rubygems.org'
 ruby '2.6.0'
 
 gem 'rails', '~> 4.2'
-gem 'mini_racer'
+gem 'bootstrap-sass', '~> 3.3.7'
+gem 'therubyracer'
 gem 'better_errors'
 gem 'simple_form'
 gem 'protected_attributes'
@@ -18,7 +19,6 @@ gem 'kgio'
 gem 'memcachier'
 gem 'sitemap_generator'
 gem 'rails_12factor'
-gem 'bootstrap', '~> 4.2.1'
 
 gem 'typhoeus'
 
