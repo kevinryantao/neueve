@@ -10,45 +10,78 @@
                           goal is to make a positive impact on the world by helping women and saving marriages.'), root_path %>
 </div>-->
 
-<div class="jumbotron">
-  <h2>Natural Vaginal Moisturizers for Dryness and Atrophy</h2>
-</div>
 
-<h4>
+<section class="hero">
+    <div class="container">
+        <!-- Hero Content-->
+        <div class="hero-content pb-5 text-center">
+            <h1 class="mb-5">Natural Vaginal Moisturizers for Dryness and Atrophy</h1>
+        </div>
+    </div>
+</section>
+
+
+<section class="pb-5">
+    <div class="container">
+        <div class="row col-xl-8 col-lg-10 mx-auto">
+            <div class="row text-content text-lg">
+
+<p>
   NeuEve <%= link_to 'suppositories', product_path %> and <%= link_to 'cream', cream_path %> help ease menopausal
   discomforts: vaginal odor,
   dryness, atrophy, itching, burning, <%= link_to 'painful sex', 'https://en.wikipedia.org/wiki/Dyspareunia' %>,
   and <%= link_to 'bacterial
   vaginosis', bacterial_vaginosis_vaginal_odor_path %>.<sup>*</sup>
-</h4>
+</p>
 
-<h5>
+<p>
   <strong>100% all-natural food grade ingredients</strong> : <%= link_to 'Sustainable palm oil*', faq_path(:anchor => 'tropicalTraditions') %>, coconut oil, beeswax, tapioca starch, potato starch,
     evening primrose oil, sea buckthorn fruit oil, lavender essential oil, orange oil, vitamin
     E (d-α tocopherol), <%= link_to 'and a proprietary blend of nutrients.',
                  faq_path(:anchor => 'proprietaryBlend') %>
-</h5>
+</p>
 
-<h5>
+<p>
   NeuEve is gluten-free, hormone-free and estrogen-free.
   NeuEve does NOT contain any boric acid, petrochemicals, parabens, BHT, T.E.A, M.E.A, urea, glycols, PEG's, etc.
   NeuEve has <%= link_to 'never been tested on animals', 'https://www.neueve.com/blog/cruelty-free-certified/' %>, and does not contain any animal products.
-</h5>
+</p>
 
-<div align="center">
-    <%= image_tag("hormone-free-trans.gif", :size => "160x160", :class=>'seal',
-                  alt: 'Hormone Free Seal') %>
-    &nbsp; &nbsp; &nbsp; &nbsp;
-    <%= image_tag("no-chemical-logo-trans.gif", :size => "160x160", :class=>'seal',
-                  alt: 'No Chemical Seal') %>
-    &nbsp; &nbsp; &nbsp; &nbsp;
-    <%= link_to image_tag('LeapingBunny-Logo.png', :size => '160x160', :class => 'seal',
-                          alt: 'Leaping Bunny Seal'), 'https://www.neueve.com/blog/cruelty-free-certified/' %>
-    &nbsp; &nbsp; &nbsp; &nbsp;
-    <%= image_tag("made-in-usa-logo-vector-400x400.png", :size => "160x160", :class => "seal",
-                  alt: 'Made in USA Seal') %>
-</div>
+            </div>
+        </div>
+    </div>
+</section>
 
+<section class="bg-gray-100 text-dark-700 py-3 my-2">
+    <div class="container">
+        <div class="col-xl-8 col-10 mx-auto">
+            <div class="row">
+
+                <div class="col-md-3 col-6 service-column">
+                    <%= image_tag("hormone-free-trans.gif", :class => 'img-fluid seal',
+                                  alt: 'Hormone Free Seal') %>
+                </div>
+                <div class="col-md-3 col-6 service-column">
+                    <%= image_tag("no-chemical-logo-trans.gif", :class => 'img-fluid seal',
+                                  alt: 'No Chemical Seal') %>
+                </div>
+                <div class="col-md-3 col-6 service-column">
+                    <%= link_to image_tag('LeapingBunny-Logo.png', :class => 'img-fluid seal',
+                                          alt: 'Leaping Bunny Seal'), 'https://www.neueve.com/blog/cruelty-free-certified/' %>
+                </div>
+                <div class="col-md-3 col-6 service-column">
+                    <%= image_tag("made-in-usa-logo-vector-400x400.png", :class => "img-fluid seal",
+                                  alt: 'Made in USA Seal') %>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="pb-5">
+    <div class="container">
+        <div class="row">
+            <div class="mx-auto">
 <div class="non-mobile-only">
     <iframe width="100%"
             height="166"
@@ -131,54 +164,62 @@
 </table>
 <h6> <%= link_to 'Point-by-point explanation of this chart', comparison_path %></h6>
 
+                </div>
+            </div>
+        </div>
+</section>
+
 <%= render 'layouts/disclaimer' %>
 
-<br>
+<section class="pb-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-8 col-lg-10 mx-auto">
+                <div class="text-content text-lg">
 
-<div class="jumbotron">
   <h3>What customers have said about NeuEve:<sup>*</sup></h3>
-</div>                                 <!--
+                              <!--
 <br>
 The following is feedback we have received from satisfied customers:
 <br>                                  -->
 <ol>
-    <li class="testimonial">
+    <li class="testimonial py-2">
         “NeuEve is much better than what you said. I have got multiple orgasms that I had not experienced for years. Your product
         is amazing!”
     </li>
-    <li class="testimonial">
+    <li class="testimonial py-2">
         “The jelly lubricant lasts only minutes. It was annoying that we had to stop in the middle to reapply the jelly. NeuEve
         is fantastic! With only one suppository, we were able to have sex 3 times in a week. That is more than I had in the last
         year. After 1 week, it is still working. Sex is wonderful again.”
     </li>
-    <li class="testimonial">
+    <li class="testimonial py-2">
         “I had 10 years of atrophy and could not make love. With NeuEve, I am fully recovered. My doctor was impressed and became
         a NeuEve user herself.”
     </li>
-    <li class="testimonial">
+    <li class="testimonial py-2">
         "Since entering menopause, I have had vaginal dryness, and could not get close to my husband. This product is super.
         With only one application, all my issues are gone. I feel like a young woman again. My husband is happy too."
     </li>
-    <li class="testimonial">
+    <li class="testimonial py-2">
         “I have had this awful smell for many years and tried everything possible but nothing worked, not even prescription
         drugs. This product really works."
     </li>
-    <li class="testimonial">
+    <li class="testimonial py-2">
         “This thing works. The bad odor is gone and I feel really good. I plan to take a vacation with my husband to Florida
         next week. I am going to have some fun. Please send me more ASAP."
     </li>
-    <li class="testimonial">
+    <li class="testimonial py-2">
         "This suppository is fantastic! I have had all the symptoms of menopause: dry, odor and sexual pain. I have not had
         sex with my husband for years. Doctor prescribed vaginal estrogen suppositories, but they did not work for me. I
         used only 3 NeuEve’s suppositories and all my issues are gone. I feel great and can enjoy sex again. It has really
         saved my marriage."
     </li>
-    <li class="testimonial">
+    <li class="testimonial py-2">
 
         "Thank you! This product not only helps relieve dryness but also boosts sexual satisfaction. My husband and I both
         like it very much. Please send me more."
     </li>
-    <li class="testimonial">
+    <li class="testimonial py-2">
 
         “I am a breast cancer survivor. After the cancer treatment, I had vaginal shrinking and painful dryness. I could not
         have intimacy with my husband for 10 years. I tried various moisturizers, but they only caused more pain. When I used
@@ -188,10 +229,13 @@ The following is feedback we have received from satisfied customers:
 
 <%= link_to 'Read More Reviews', libido_path(:anchor => 'reviews') %>
 
-<br>
-<br>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
+
 <%= render 'layouts/testimonial_disclaimer' %>
-<br>
 
 <!--<div class="jumbotron non-mobile-only">-->
   <!--<h3>Find NeuEve at these stores in the Chicago area, or order online!</h3>-->
