@@ -2,126 +2,119 @@
 <% provide(:description, 'Fast All-Natural Remedy for BV for $37.95. NeuEve works quickly to rebalances your vaginal ecology. Satisfaction is 100% guaranteed.') %>
 <% provide(:last_modified, 'December 11, 2018') %>
 
-<section class="hero">
-    <div class="container">
-        <!-- Breadcrumbs -->
-        <ol class="breadcrumb justify-content-center">
-            <li class="breadcrumb-item">
-                <%= link_to 'Home', root_path %>
-            </li>
-            <li class="breadcrumb-item active">BV Clear</li>
-        </ol>
-        <!-- Hero Content-->
-        <div class="hero-content pb-5 text-center">
-            <h1 class="mb-5">Natural Relief for BV</h1>
-        </div>
-    </div>
-</section>
+<div class="jumbotron">
+  <h1>Natural Relief for BV, Especially Recurrent BV</h1>
+</div>
 
-<section class="pb-5">
-    <div class="container">
-        <div class="mx-auto">
-            <div class="row align-items-center">
-                <div class="col-md-6">
-                    <%= image_tag('BV_Clear.jpg', :class => 'img_pair img-fluid',
-                                  alt: 'NeuEve BV Clear is a 100% all-natural vaginal suppository. It does not contain any boric acid.'
-                        ) %>
-                </div>
-                <div class="col-md-6 align-middle text-center">
-                    <div class="" itemscope itemtype="http://schema.org/Product">
-                        <strong>
-                            <div itemprop="name">NeuEve BV Clear<br>3 suppositories</div>
-                            <meta itemprop="category"
-                                  content="Health & Beauty > Personal Care > Feminine Sanitary Supplies > Feminine Deodorant"/>
-                            <meta itemprop="description"
-                                  content="Natural suppositories for clearing bacterial vaginosis (BV). Gynecologist-tested."/>
-                        </strong>
+<table class='table table-bordered table-striped table-condensed'>
+  <thead>
+  <tr>
+    <th colspan="2" style="font-size:23px;" class="non-mobile-only">
+      NeuEve BV Clear
+    </th>
+      <th colspan="1" style="font-size:23px;" class="mobile-only">
+          NeuEve BV Clear
+      </th>
+  </tr>
+  </thead>
+    <tr align="center" class="mobile-only">
+        <td style="background-color: #ffffff">
+            <div align="center">
+                <%= image_tag('BV_Clear.jpg', :size => '600x450',
+                              alt: 'NeuEve BV Clear is a 100% all-natural vaginal suppository. It helps alleviate fishy vaginal odor and bacterial vaginosis.') %>
+            </div>
+        </td>
+    </tr>
+  <tr align="center">
+    <td style="background-color: #ffffff" class="non-mobile-only">
+      <div align="center">
+        <%= image_tag('BV_Clear.jpg', :class => 'img_pair',
+                      alt: 'NeuEve BV Clear is a 100% all-natural vaginal suppository. It helps alleviate fishy vaginal odor and bacterial vaginosis.') %>
+      </div>
+    </td>
+    <td style="vertical-align:middle">
+      <div itemscope itemtype="http://schema.org/Product" align="center">
+        <strong>
+          <div itemprop="name">NeuEve BV Clear<br>3 suppositories</div>
+          <meta itemprop="category"
+                content="Health & Beauty > Personal Care > Feminine Sanitary Supplies > Feminine Deodorant"/>
+          <meta itemprop="description"
+                content="Natural suppositories for clearing bacterial vaginosis (BV). Gynecologist-tested."/>
+        </strong>
                 <span itemprop="offers" itemscope itemtype="http://schema.org/Offer">
                 <span itemprop="price">$37.95</span>
                     <meta itemprop="priceCurrency" content="USD"/>
                 </span>
 
-                        <br>
+        <br>
 
 
-                        <div class="formbutton">
-                            <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
-                                <input type="hidden" name="cmd" value="_s-xclick">
-                                <input type="hidden" name="hosted_button_id" value="7RQ4AK4HQGNEU">
-                                <%= submit_tag 'Add to Cart',
-                                               :class => 'btn btn-large btn-warning add-to-cart',
-                                               :id => 'bv-clearing-kit',
-                                               :name => 'submit' %>
-                                <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1"
-                                     height="1">
-                            </form>
-                        </div>
-
-                        <span class="stamped-product-reviews-badge stamped-main-badge" data-id="5000"></span>
-                        <hr>
-
-                        3.3 Stars on <%= link_to image_tag('amazon-4-stars.png', :size => "95x42"),
-                                                 create_url('https://www.amazon.com/',
-                                                            ['NeuEve-Suppository-Clear-Starter-Kit',
-                                                             'product-reviews',
-                                                             'B00UDHYKAQ'],
-                                                            {
-                                                                    ie: 'UTF8',
-                                                                    reviewerType: 'all_reviews',
-                                                                    showViewpoints: 0,
-                                                                    sortBy: 'helpful',
-                                                                    pageNumber: 1,
-                                                                    filterByStar: 'positive',
-                                                                    _encoding: 'UTF8',
-                                                                    tag: 'neu08-20',
-                                                                    linkCode: 'll2',
-                                                                    linkId: '164b5e362a9613f2ba7b6068436f65a9',
-                                                                    camp: 1789,
-                                                                    creative: 9325
-                                                            }, 'R27AT6BW48A8FZ'),
-                                                 :class => 'amazon-review',
-                                                 :id => 'bv-clearing-kit',
-                                                 :target => '_blank' %><br>
-
-
-                        <%= link_to 'Amazon Reviews of NeuEve BV Clear'.html_safe,
-                                    create_url('https://www.amazon.com/',
-                                               ['NeuEve-Suppository-Clear-Starter-Kit',
-                                                'product-reviews',
-                                                'B00UDHYKAQ'],
-                                               {
-                                                       ie: 'UTF8',
-                                                       reviewerType: 'all_reviews',
-                                                       showViewpoints: 0,
-                                                       sortBy: 'helpful',
-                                                       pageNumber: 1,
-                                                       filterByStar: 'positive',
-                                                       _encoding: 'UTF8',
-                                                       tag: 'neu08-20',
-                                                       linkCode: 'll2',
-                                                       linkId: '164b5e362a9613f2ba7b6068436f65a9',
-                                                       camp: 1789,
-                                                       creative: 9325
-                                               }, 'R27AT6BW48A8FZ'),
-                                    :class => 'amazon-review',
-                                    :id => 'bv-clearing-kit',
-                                    :target => '_blank'
-                        %>
-                    </div>
-                </div>
-            </div>
-
-            <div class="py-3 mx-auto col-lg-8 justify-content-center">
-                <p>
-                    Shipping is $5.95. Free shipping on all orders over $70!<br><br>
-                    Shipping to Canada and Mexico is $8.95 USD, and only $3 USD for orders over $70.<br>
-                    Shipping internationally is $15 USD, and only $9 USD for orders over $70.<br><br>
-                    Note: Please check your PayPal account to make sure your shipping address is up to date.<br>
-                    We always ship in discreet packaging.
-                </p>
-            </div>
+        <div class="formbutton">
+          <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+            <input type="hidden" name="cmd" value="_s-xclick">
+            <input type="hidden" name="hosted_button_id" value="7RQ4AK4HQGNEU">
+            <%= submit_tag 'Add to Cart',
+                           :class => 'btn btn-large btn-warning add-to-cart',
+                           :id => 'bv-clearing-kit',
+                           :name => 'submit' %>
+            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1"
+                 height="1">
+          </form>
         </div>
-    </div>
-</section>
+
+          <span class="stamped-product-reviews-badge stamped-main-badge" data-id="5000"></span>
+          <hr>
+
+          3.3 Stars on <%= link_to image_tag('amazon-4-stars.png', :size => "95x42"),
+                                   create_url('https://www.amazon.com/',
+                                              ['NeuEve-Suppository-Clear-Starter-Kit',
+                                               'product-reviews',
+                                               'B00UDHYKAQ'],
+                                              {
+                                                      ie:'UTF8',
+                                                      reviewerType:'all_reviews',
+                                                      showViewpoints:0,
+                                                      sortBy:'helpful',
+                                                      pageNumber:1,
+                                                      filterByStar:'positive',
+                                                      _encoding:'UTF8',
+                                                      tag:'neu08-20',
+                                                      linkCode:'ll2',
+                                                      linkId:'164b5e362a9613f2ba7b6068436f65a9',
+                                                      camp:1789,
+                                                      creative: 9325
+                                              }, 'R27AT6BW48A8FZ'),
+                                   :class => 'amazon-review',
+                                   :id => 'bv-clearing-kit',
+                                   :target => '_blank' %><br>
+
+
+          <%= link_to 'Amazon Reviews of NeuEve BV Clear'.html_safe,
+                      create_url('https://www.amazon.com/',
+                                 ['NeuEve-Suppository-Clear-Starter-Kit',
+                                  'product-reviews',
+                                  'B00UDHYKAQ'],
+                                 {
+                                         ie:'UTF8',
+                                         reviewerType:'all_reviews',
+                                         showViewpoints:0,
+                                         sortBy:'helpful',
+                                         pageNumber:1,
+                                         filterByStar:'positive',
+                                         _encoding:'UTF8',
+                                         tag:'neu08-20',
+                                         linkCode:'ll2',
+                                         linkId:'164b5e362a9613f2ba7b6068436f65a9',
+                                         camp:1789,
+                                         creative: 9325
+                                 }, 'R27AT6BW48A8FZ'),
+                      :class => 'amazon-review',
+                      :id => 'bv-clearing-kit',
+                      :target => '_blank'
+          %>
+      </div>
+    </td>
+  </tr>
+</table>
 
 <%= render 'layouts/order_now_bv' %>

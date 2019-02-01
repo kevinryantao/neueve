@@ -1,126 +1,93 @@
+<h1>
+    Kevin Tao, Chief Digital Officer
+</h1>
 
-<section class="hero">
-    <div class="container">
-        <!-- Breadcrumbs -->
-        <ol class="breadcrumb justify-content-center">
-            <li class="breadcrumb-item">
-                <%= link_to 'Home', root_path %>
-            </li>
-            <li class="breadcrumb-item">
-                <%= link_to 'About', about_path %>
-            </li>
-            <li class="breadcrumb-item active">Kevin Tao</li>
-        </ol>
-        <!-- Hero Content-->
-        <div class="hero-content pb-5 text-center">
-            <h1 class="mb-5">Kevin Tao, Chief Digital Officer</h1>
-        </div>
-    </div>
-</section>
+<div align="center">
+    <%= image_tag('neueve_kevin_tao.jpg', size: '400x400', align: 'center') %>
+</div>
 
-<section class="pb-5">
-    <div class="container">
-        <div class="row">
-            <div class="col-xl-8 col-lg-10 mx-auto">
-                <div class="text-content text-lg">
+<p>
+    Hi, my name is Kevin Tao! I'm Dr. Chang's son. I am passionate about helping others. I strive to go above and beyond
+    in all my personal and professional relationships, to be helpful. I love to connect people.
+</p>
 
+<p>
+    At NeuEve, I'm in charge of all the marketing, tech and business development. My Myers-Brigg's personality type is
+    <%= link_to 'ENFP','https://www.16personalities.com/enfp-personality'%>, how that manifests is that I'm outgoing,
+    intuitive, feeling and perceiving. I am optimistic and see the world as full of possibilities and opportunities.
+    Above all else, what motivates me every day is learning.
+</p>
 
-                    <div align="center">
-                        <%= image_tag('neueve_kevin_tao.jpg', size: '400x400', align: 'center') %>
-                    </div>
+<p>
+    I graduated from Duke University in biomedical engineering, and worked for 6 years as a software developer.
+    My hobbies are rock-climbing and Magic: the Gathering.
+    Hit me up at <%= link_to 'kevin@neueve.com', 'mailto:kevin@neueve.com' %>
+</p>
 
-                    <p>
-                        Hi, my name is Kevin Tao! I'm Dr. Chang's son. I am passionate about helping others. I strive to
-                        go above and beyond
-                        in all my personal and professional relationships, to be helpful. I love to connect people.
-                    </p>
+<h2>
+    Featured Press:
+</h2>
 
-                    <p>
-                        At NeuEve, I'm in charge of all the marketing, tech and business development. My Myers-Brigg's
-                        personality type is
-                        <%= link_to 'ENFP', 'https://www.16personalities.com/enfp-personality' %>, how that manifests is
-                        that I'm outgoing,
-                        intuitive, feeling and perceiving. I am optimistic and see the world as full of possibilities
-                        and opportunities.
-                        Above all else, what motivates me every day is learning.
-                    </p>
-
-                    <p>
-                        I graduated from Duke University in biomedical engineering, and worked for 6 years as a software
-                        developer.
-                        My hobbies are rock-climbing and Magic: the Gathering.
-                        Hit me up at <%= link_to 'kevin@neueve.com', 'mailto:kevin@neueve.com' %>
-                    </p>
-
-                    <h2>
-                        Featured Press:
-                    </h2>
-
-                    <ul>
-                        <li>
-                            <%= link_to "Meet Kevin Tao, Chief Digital Officer at NeuEve - BusinessCollective", "https://businesscollective.com/kevin-tao-neueve/" %>
-                        </li>
-                        <li>
-                            <%= link_to "Networking Advice From Kevin Tao, Chief Digital Officer at NeuEve - BusinessCollective", "https://businesscollective.com/networking-advice-from-kevin-tao-chief-digital-officer-at-neueve/" %>
-                        </li>
-                        <li>
-                            <%= link_to "Meet Kevin Tao and Dr. Renjie Chang of NeuEve in Arlington Heights - VoyageChicago", "http://voyagechicago.com/interview/meet-kevin-tao-dr-renjie-chang-neueve-northwest-suburbs-arlington-heights/" %>
-                        </li>
-                    </ul>
+<ul>
+    <li>
+        <%= link_to "Meet Kevin Tao, Chief Digital Officer at NeuEve - BusinessCollective", "https://businesscollective.com/kevin-tao-neueve/" %>
+    </li>
+    <li>
+        <%= link_to "Networking Advice From Kevin Tao, Chief Digital Officer at NeuEve - BusinessCollective", "https://businesscollective.com/networking-advice-from-kevin-tao-chief-digital-officer-at-neueve/" %>
+    </li>
+    <li>
+        <%= link_to "Meet Kevin Tao and Dr. Renjie Chang of NeuEve in Arlington Heights - VoyageChicago", "http://voyagechicago.com/interview/meet-kevin-tao-dr-renjie-chang-neueve-northwest-suburbs-arlington-heights/" %>
+    </li>
+</ul>
 
 
-                    <h2>
-                        Press Mentions:
-                    </h2>
+<h2>
+    Press Mentions:
+</h2>
 
-                    <ul>
-                        <li>
-                            <%= link_to "Seven Ways To Succeed As An Entrepreneur In The Modern Business World - Forbes",
-                                        "https://www.forbes.com/sites/theyec/2017/10/18/seven-ways-to-succeed-as-an-entrepreneur-in-the-modern-business-world/#7ceaa79d755b" %>
-                        </li>
-                        <li>
-                            <%= link_to "How To Avoid 10 Of The Biggest Mistakes Of Entrepreneurship - Forbes",
-                                        "https://www.forbes.com/sites/theyec/2017/10/18/seven-ways-to-succeed-as-an-entrepreneur-in-the-modern-business-world/#7ceaa79d755b" %>
-                        </li>
-                        <li>
-                            <%= link_to "15 Personal Rules You Should Follow for Business Success - Huffington Post",
-                                        "https://www.huffingtonpost.com/entry/15-personal-rules-you-should-follow-for-business-success_us_5a3d075ee4b06cd2bd03d9de" %>
-                        </li>
-                        <li>
-                            <%= link_to "Want to sell on Amazon? 15 strategies for success - The Next Web",
-                                        "https://thenextweb.com/contributors/2018/01/19/want-sell-amazon-15-strategies-success/" %>
-                        </li>
-                        <li>
-                            <%= link_to "15 Free Tools to Learn the Basics of Coding - Business.com",
-                                        "https://www.business.com/articles/15-free-tools-to-learn-coding-basics/" %>
-                        </li>
-                        <li>
-                            <%= link_to "12 Mobile Apps to Stay Connected With Your Team - Business.com",
-                                        "https://www.business.com/articles/twelve-mobile-apps-to-connect-with-your-team/" %>
-                        </li>
-                        <li>
-                            <%= link_to "12 Technology-Based Tips to Improve Your Business’s Customer Support - Small Biz Technology",
-                                        "http://www.smallbiztechnology.com/archive/2018/01/12-technology-based-tips-to-improve-your-businesss-customer-support.html/" %>
-                        </li>
-                        <li>
-                            <%= link_to "Workplace Efficiency: These Self-Starters Are Moving the Needle - Quickbase",
-                                        "https://www.quickbase.com/blog/workplace-efficiency-these-self-starters-are-moving-the-needle" %>
-                        </li>
-                        <li>
-                            <%= link_to "15 Ways to Recharge Outside of the Office to Stay Inspired at Work - NoobPreneur",
-                                        "https://www.noobpreneur.com/2017/11/14/15-ways-to-recharge-outside-of-the-office-to-stay-inspired-at-work/" %>
-                        </li>
-                        <li>
-                            <%= link_to "Top 15 Dropshipping Tips & Ideas From The Pros - Fit Small Business",
-                                        "https://fitsmallbusiness.com/dropshipping-tips/" %>
-                        </li>
-                        <li>
-                            <%= link_to "11 Entrepreneurs Reflect on What They’ve Learned About Change - WorqIQ",
-                                        "https://worqiq.com/category/organizational-culture-and-climate-change/change-management/" %>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+<ul>
+    <li>
+        <%= link_to "Seven Ways To Succeed As An Entrepreneur In The Modern Business World - Forbes",
+                    "https://www.forbes.com/sites/theyec/2017/10/18/seven-ways-to-succeed-as-an-entrepreneur-in-the-modern-business-world/#7ceaa79d755b"%>
+    </li>
+    <li>
+        <%= link_to "How To Avoid 10 Of The Biggest Mistakes Of Entrepreneurship - Forbes",
+                    "https://www.forbes.com/sites/theyec/2017/10/18/seven-ways-to-succeed-as-an-entrepreneur-in-the-modern-business-world/#7ceaa79d755b"%>
+    </li>
+    <li>
+        <%= link_to "15 Personal Rules You Should Follow for Business Success - Huffington Post",
+                  "https://www.huffingtonpost.com/entry/15-personal-rules-you-should-follow-for-business-success_us_5a3d075ee4b06cd2bd03d9de"%>
+    </li>
+    <li>
+        <%= link_to "Want to sell on Amazon? 15 strategies for success - The Next Web",
+                    "https://thenextweb.com/contributors/2018/01/19/want-sell-amazon-15-strategies-success/" %>
+    </li>
+    <li>
+        <%= link_to "15 Free Tools to Learn the Basics of Coding - Business.com",
+                    "https://www.business.com/articles/15-free-tools-to-learn-coding-basics/" %>
+    </li>
+    <li>
+        <%= link_to "12 Mobile Apps to Stay Connected With Your Team - Business.com",
+                    "https://www.business.com/articles/twelve-mobile-apps-to-connect-with-your-team/" %>
+    </li>
+    <li>
+        <%= link_to "12 Technology-Based Tips to Improve Your Business’s Customer Support - Small Biz Technology",
+                    "http://www.smallbiztechnology.com/archive/2018/01/12-technology-based-tips-to-improve-your-businesss-customer-support.html/" %>
+    </li>
+    <li>
+        <%= link_to "Workplace Efficiency: These Self-Starters Are Moving the Needle - Quickbase",
+                    "https://www.quickbase.com/blog/workplace-efficiency-these-self-starters-are-moving-the-needle" %>
+    </li>
+    <li>
+        <%= link_to "15 Ways to Recharge Outside of the Office to Stay Inspired at Work - NoobPreneur",
+                    "https://www.noobpreneur.com/2017/11/14/15-ways-to-recharge-outside-of-the-office-to-stay-inspired-at-work/" %>
+    </li>
+    <li>
+        <%= link_to "Top 15 Dropshipping Tips & Ideas From The Pros - Fit Small Business",
+                    "https://fitsmallbusiness.com/dropshipping-tips/" %>
+    </li>
+    <li>
+        <%= link_to "11 Entrepreneurs Reflect on What They’ve Learned About Change - WorqIQ",
+                    "https://worqiq.com/category/organizational-culture-and-climate-change/change-management/" %>
+    </li>
+</ul>

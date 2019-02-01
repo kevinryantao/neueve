@@ -1,289 +1,261 @@
 <% provide(:title, 'Order Success!') %>
 
+<div class="jumbotron">
+    <h1>Thank you for your order!</h1>
+</div>
 
-<section class="hero">
-    <div class="container">
-        <!-- Hero Content-->
-        <div class="hero-content pb-5 text-center">
-            <h1 class="mb-5">Thank you for your order!</h1>
-        </div>
-    </div>
-</section>
+<p>
+    For any questions, suggestions, or to check the status of your order, email us
+    at <%= mail_to "contact@neueve.com" %>
+</p>
+<!--<p>-->
+    <!--<strong>-->
+        <!--When the weather is hot, the NeuEve suppositories or cream can become soft.  Please keep the product in a-->
+        <!--refrigerator (for cream keep the jar right side up) for >1 hour.  It will be ready for use at room temperature.-->
+    <!--</strong>-->
+<!--</p>-->
+<p>
+    <strong>
+        You will receive emailed confirmation and a tracking number in about 1-2 business days, from ShipBob, our
+        shipping partner.
+    </strong>
+</p>
 
-<section class="pb-5">
-    <div class="container">
-        <div class="row">
-            <div class="col-xl-8 col-lg-10 mx-auto">
-                <div class="text-content text-lg">
+<% if @pdt_data.present? && @pdt_data.size > 0 %>
 
+    <p>
+        <strong>
+            Please check the order information below to make sure your shipping address is up to date.
+            If it is not up to date, please update your address in PayPal and contact us by email to confirm.
+        </strong>
+    </p>
 
-                    <p>
-                        For any questions, suggestions, or to check the status of your order, email us
-                        at <%= mail_to "contact@neueve.com" %>
-                    </p>
-                    <!--<p>-->
-                    <!--<strong>-->
-                    <!--When the weather is hot, the NeuEve suppositories or cream can become soft.  Please keep the product in a-->
-                    <!--refrigerator (for cream keep the jar right side up) for >1 hour.  It will be ready for use at room temperature.-->
-                    <!--</strong>-->
-                    <!--</p>-->
-                    <p>
-                        <strong>
-                            You will receive emailed confirmation and a tracking number in about 1-2 business days, from
-                            ShipBob, our
-                            shipping partner.
-                        </strong>
-                    </p>
+    <table class='table table-bordered table-striped table-hover table-condensed'>
+        <thead>
+        <tr>
+            <th colspan="2">Order Details</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Customer Name</td>
+            <td><%= @pdt_data['first_name'] %> <%= @pdt_data['last_name'] %></td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td><%= @pdt_data['payer_email'] %></td>
+        </tr>
+        <tr>
+            <td>PayPal Transaction ID</td>
+            <td><%= @pdt_data['txn_id'] %></td>
+        </tr>
+        <tr>
+            <td>Address</td>
+            <td>
+                <%= @pdt_data['address_name'] %><br>
+                <%= @pdt_data['address_street'] %><br>
+                <%= @pdt_data['address_city'] %>, <%= @pdt_data['address_state'] %> <%= @pdt_data['address_zip'] %><br>
+                <%= @pdt_data['address_country'] %><br>
+            </td>
+        </tr>
+        <tr>
+            <td>Address Confirmation Status</td>
+            <td>
+                <%= @pdt_data['address_status'] %>
+                <%= @pdt_data['num_cart_items'] %>
+            </td>
+        </tr>
+        <tr>
+            <td>Total Payment Amount</td>
+            <td><%= @pdt_data['payment_gross'] %></td>
+        </tr>
+        <tr>
+            <th colspan="2">Items</th>
+        </tr>
+        <% if @pdt_data['num_cart_items'].to_i > 0 %>
+            <% for i in 1..@pdt_data['num_cart_items'].to_i %>
+                <tr>
+                    <td><%= @pdt_data["item_name#{i}"] %></td>
+                    <td>
+                        Quantity: <%= @pdt_data["quantity#{i}"] %>
+                    </td>
+                </tr>
+            <% end %>
+        <% else %>
+            <tr>
+                <td><%= @pdt_data["item_name"] %></td>
+                <td>
+                    <%= @pdt_data["option_selection1"] %>
+                </td>
+            </tr>
+        <% end %>
+        </tbody>
+    </table>
+<% end %>
 
-                    <% if @pdt_data.present? && @pdt_data.size > 0 %>
+<p>
+    <strong>IMPORTANT:</strong>
+    <br>
+    Please take calcium (1 g), and omega-3 supplements (either fish oil or flaxseed oil) daily to help NeuEve
+    work better.
+</p>
 
-                        <p>
-                            <strong>
-                                Please check the order information below to make sure your shipping address is up to
-                                date.
-                                If it is not up to date, please update your address in PayPal and contact us by email to
-                                confirm.
-                            </strong>
-                        </p>
+<p>
+    NeuEve will work right way if you have just begun to feel vaginal dryness. If you have experienced dryness for more
+    than a year, atrophy has occurred. NeuEve can reverse it, but it may take 1-4 months before recovering from painful
+    intercourse. Before full recovery, if you feel not enough lubrication with NeuEve alone, you can use a regular
+    lubricant during intercourse to ease the dryness, like women who use night cream for wrinkles may also use day
+    cream.
+</p>
 
-                        <table class='table table-bordered table-striped table-hover table-condensed'>
-                            <thead>
-                            <tr>
-                                <th colspan="2">Order Details</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td>Customer Name</td>
-                                <td><%= @pdt_data['first_name'] %> <%= @pdt_data['last_name'] %></td>
-                            </tr>
-                            <tr>
-                                <td>Email</td>
-                                <td><%= @pdt_data['payer_email'] %></td>
-                            </tr>
-                            <tr>
-                                <td>PayPal Transaction ID</td>
-                                <td><%= @pdt_data['txn_id'] %></td>
-                            </tr>
-                            <tr>
-                                <td>Address</td>
-                                <td>
-                                    <%= @pdt_data['address_name'] %><br>
-                                    <%= @pdt_data['address_street'] %><br>
-                                    <%= @pdt_data['address_city'] %>
-                                    , <%= @pdt_data['address_state'] %> <%= @pdt_data['address_zip'] %><br>
-                                    <%= @pdt_data['address_country'] %><br>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Address Confirmation Status</td>
-                                <td>
-                                    <%= @pdt_data['address_status'] %>
-                                    <%= @pdt_data['num_cart_items'] %>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Total Payment Amount</td>
-                                <td><%= @pdt_data['payment_gross'] %></td>
-                            </tr>
-                            <tr>
-                                <th colspan="2">Items</th>
-                            </tr>
-                            <% if @pdt_data['num_cart_items'].to_i > 0 %>
-                                <% for i in 1..@pdt_data['num_cart_items'].to_i %>
-                                    <tr>
-                                        <td><%= @pdt_data["item_name#{i}"] %></td>
-                                        <td>
-                                            Quantity: <%= @pdt_data["quantity#{i}"] %>
-                                        </td>
-                                    </tr>
-                                <% end %>
-                            <% else %>
-                                <tr>
-                                    <td><%= @pdt_data["item_name"] %></td>
-                                    <td>
-                                        <%= @pdt_data["option_selection1"] %>
-                                    </td>
-                                </tr>
-                            <% end %>
-                            </tbody>
-                        </table>
-                    <% end %>
+<p>
+    If you are a loving husband or boyfriend, you need to know NeuEve works slowly. Please be patient.
+    Please urinate after intimacy to prevent UTI. After using NeuEve for a while, you will feel like a young woman.
+</p>
+<p>
+    To prevent honeymoon bladder (UTI), we recommend you
+    take <%= link_to 'daily d-mannose supplements', 'https://infl.tv/dY6y', :target => '_blank' %>.
+</p>
 
-                    <p>
-                        <strong>IMPORTANT:</strong>
-                        <br>
-                        Please take calcium (1 g), and omega-3 supplements (either fish oil or flaxseed oil) daily to
-                        help NeuEve
-                        work better.
-                    </p>
+<br>
 
-                    <p>
-                        NeuEve will work right way if you have just begun to feel vaginal dryness. If you have
-                        experienced dryness for more
-                        than a year, atrophy has occurred. NeuEve can reverse it, but it may take 1-4 months before
-                        recovering from painful
-                        intercourse. Before full recovery, if you feel not enough lubrication with NeuEve alone, you can
-                        use a regular
-                        lubricant during intercourse to ease the dryness, like women who use night cream for wrinkles
-                        may also use day
-                        cream.
-                    </p>
+<p>
+    <strong>Here are some links to purchase calcium and either fish oil or flaxseed oil supplements</strong>
+</p>
 
-                    <p>
-                        If you are a loving husband or boyfriend, you need to know NeuEve works slowly. Please be
-                        patient.
-                        Please urinate after intimacy to prevent UTI. After using NeuEve for a while, you will feel like
-                        a young woman.
-                    </p>
-                    <p>
-                        To prevent honeymoon bladder (UTI), we recommend you
-                        take <%= link_to 'daily d-mannose supplements', 'https://infl.tv/dY6y', :target => '_blank' %>.
-                    </p>
-
-                    <br>
-
-                    <p>
-                        <strong>Here are some links to purchase calcium and either fish oil or flaxseed oil
-                            supplements</strong>
-                    </p>
-
-                    <table class="table table-bordered">
-                        <thead>
-                        <tr>
-                            <th width="33%">
-                                <%= link_to 'Calcium',
-                                            'http://www.amazon.com/gp/search?ie=UTF8&camp=1789&creative=9325&index=hpc&keywords=calcium%20supplements&linkCode=ur2&tag=neu08-20&linkId=P4JX7UT3MCPYF4I4',
-                                            :target => '_blank',
-                                            :class => 'amazon-referral'
-                                %>
-                            </th>
-                            <th width="33%">
-                                <%= link_to 'Fish Oil',
-                                            'http://www.amazon.com/gp/search?ie=UTF8&camp=1789&creative=9325&index=hpc&keywords=Fish%20Oil%20Supplements&linkCode=ur2&tag=neu08-20&linkId=HHDHND56DDC6FZG4',
-                                            :target => '_blank',
-                                            :class => 'amazon-referral'
-                                %>
-                            </th>
-                            <th width="33%">
-                                <%= link_to 'Flaxseed Oil',
-                                            'http://www.amazon.com/gp/search?ie=UTF8&camp=1789&creative=9325&index=hpc&keywords=Flaxseed%20Oil%20Supplements&linkCode=ur2&tag=neu08-20&linkId=6JQQPJFKN4C6TZS7',
-                                            :target => '_blank',
-                                            :class => 'amazon-referral'
-                                %>
-                            </th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td width="33%">
-                                <script type="text/javascript">
-                                    amzn_assoc_placement = "adunit0";
-                                    amzn_assoc_search_bar = "false";
-                                    amzn_assoc_tracking_id = "neu08-20";
-                                    amzn_assoc_search_bar_position = "top";
-                                    amzn_assoc_ad_mode = "search";
-                                    amzn_assoc_ad_type = "smart";
-                                    amzn_assoc_marketplace = "amazon";
-                                    amzn_assoc_region = "US";
-                                    amzn_assoc_title = "Calcium Supplements";
-                                    amzn_assoc_default_search_phrase = "calcium supplements";
-                                    amzn_assoc_default_category = "HealthPersonalCare";
-                                    amzn_assoc_textlinks = "";
-                                    amzn_assoc_linkid = "b1e3147811642585057c3c2ba3230b49";
-                                    amzn_assoc_rows = "1";
-                                </script>
-                                <script src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US"></script>
-                            </td>
-                            <td width="33%">
-                                <script type="text/javascript">
-                                    amzn_assoc_placement = "adunit0";
-                                    amzn_assoc_search_bar = "false";
-                                    amzn_assoc_tracking_id = "neu08-20";
-                                    amzn_assoc_search_bar_position = "top";
-                                    amzn_assoc_ad_mode = "search";
-                                    amzn_assoc_ad_type = "smart";
-                                    amzn_assoc_marketplace = "amazon";
-                                    amzn_assoc_region = "US";
-                                    amzn_assoc_title = "Fish Oil Supplements";
-                                    amzn_assoc_default_search_phrase = "fish oil supplements";
-                                    amzn_assoc_default_category = "HealthPersonalCare";
-                                    amzn_assoc_textlinks = "";
-                                    amzn_assoc_linkid = "b1e3147811642585057c3c2ba3230b49";
-                                    amzn_assoc_rows = "1";
-                                </script>
-                                <script src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US"></script>
-                            </td>
-                            <td width="33%">
-                                <script type="text/javascript">
-                                    amzn_assoc_placement = "adunit0";
-                                    amzn_assoc_search_bar = "false";
-                                    amzn_assoc_tracking_id = "neu08-20";
-                                    amzn_assoc_search_bar_position = "top";
-                                    amzn_assoc_ad_mode = "search";
-                                    amzn_assoc_ad_type = "smart";
-                                    amzn_assoc_marketplace = "amazon";
-                                    amzn_assoc_region = "US";
-                                    amzn_assoc_title = "Flaxseed Oil Supplements";
-                                    amzn_assoc_default_search_phrase = "flaxseed oil supplements";
-                                    amzn_assoc_default_category = "HealthPersonalCare";
-                                    amzn_assoc_textlinks = "";
-                                    amzn_assoc_linkid = "b1e3147811642585057c3c2ba3230b49";
-                                    amzn_assoc_rows = "1";
-                                </script>
-                                <script src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US"></script>
-                            </td>
-                        </tr>
-                        </tbody>
-                    </table>
-
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+<table class="table table-bordered">
+    <thead>
+    <tr>
+        <th width="33%">
+            <%= link_to 'Calcium',
+                        'http://www.amazon.com/gp/search?ie=UTF8&camp=1789&creative=9325&index=hpc&keywords=calcium%20supplements&linkCode=ur2&tag=neu08-20&linkId=P4JX7UT3MCPYF4I4',
+                        :target => '_blank',
+                        :class => 'amazon-referral',
+                        :style => 'color: white'
+            %>
+        </th>
+        <th width="33%">
+            <%= link_to 'Fish Oil',
+                        'http://www.amazon.com/gp/search?ie=UTF8&camp=1789&creative=9325&index=hpc&keywords=Fish%20Oil%20Supplements&linkCode=ur2&tag=neu08-20&linkId=HHDHND56DDC6FZG4',
+                        :target => '_blank',
+                        :class => 'amazon-referral',
+                        :style => 'color: white'
+            %>
+        </th>
+        <th width="33%">
+            <%= link_to 'Flaxseed Oil',
+                        'http://www.amazon.com/gp/search?ie=UTF8&camp=1789&creative=9325&index=hpc&keywords=Flaxseed%20Oil%20Supplements&linkCode=ur2&tag=neu08-20&linkId=6JQQPJFKN4C6TZS7',
+                        :target => '_blank',
+                        :class => 'amazon-referral',
+                        :style => 'color: white'
+            %>
+        </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td width="33%">
+            <script type="text/javascript">
+                amzn_assoc_placement = "adunit0";
+                amzn_assoc_search_bar = "false";
+                amzn_assoc_tracking_id = "neu08-20";
+                amzn_assoc_search_bar_position = "top";
+                amzn_assoc_ad_mode = "search";
+                amzn_assoc_ad_type = "smart";
+                amzn_assoc_marketplace = "amazon";
+                amzn_assoc_region = "US";
+                amzn_assoc_title = "Calcium Supplements";
+                amzn_assoc_default_search_phrase = "calcium supplements";
+                amzn_assoc_default_category = "HealthPersonalCare";
+                amzn_assoc_textlinks = "";
+                amzn_assoc_linkid = "b1e3147811642585057c3c2ba3230b49";
+                amzn_assoc_rows = "1";
+            </script>
+            <script src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US"></script>
+        </td>
+        <td width="33%">
+            <script type="text/javascript">
+                amzn_assoc_placement = "adunit0";
+                amzn_assoc_search_bar = "false";
+                amzn_assoc_tracking_id = "neu08-20";
+                amzn_assoc_search_bar_position = "top";
+                amzn_assoc_ad_mode = "search";
+                amzn_assoc_ad_type = "smart";
+                amzn_assoc_marketplace = "amazon";
+                amzn_assoc_region = "US";
+                amzn_assoc_title = "Fish Oil Supplements";
+                amzn_assoc_default_search_phrase = "fish oil supplements";
+                amzn_assoc_default_category = "HealthPersonalCare";
+                amzn_assoc_textlinks = "";
+                amzn_assoc_linkid = "b1e3147811642585057c3c2ba3230b49";
+                amzn_assoc_rows = "1";
+            </script>
+            <script src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US"></script>
+        </td>
+        <td width="33%">
+            <script type="text/javascript">
+                amzn_assoc_placement = "adunit0";
+                amzn_assoc_search_bar = "false";
+                amzn_assoc_tracking_id = "neu08-20";
+                amzn_assoc_search_bar_position = "top";
+                amzn_assoc_ad_mode = "search";
+                amzn_assoc_ad_type = "smart";
+                amzn_assoc_marketplace = "amazon";
+                amzn_assoc_region = "US";
+                amzn_assoc_title = "Flaxseed Oil Supplements";
+                amzn_assoc_default_search_phrase = "flaxseed oil supplements";
+                amzn_assoc_default_category = "HealthPersonalCare";
+                amzn_assoc_textlinks = "";
+                amzn_assoc_linkid = "b1e3147811642585057c3c2ba3230b49";
+                amzn_assoc_rows = "1";
+            </script>
+            <script src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US"></script>
+        </td>
+    </tr>
+    </tbody>
+</table>
 
 
 <script type="text/javascript">
     <% if @pdt_data.present? && @pdt_data.size > 0 %>
 
-    <% if @pdt_data['num_cart_items'].to_i > 0 %>
-    <% for i in 1..@pdt_data['num_cart_items'].to_i %>
-    ga('ec:addProduct', {
-        'id': '<%= @pdt_data["item_number#{i}"] %>',
-        'name': '<%= @pdt_data["item_name#{i}"] %>',
-        'brand': 'NeuEve',
-        'category': 'ala-carte',
-        'price': '<%= @pdt_data["mc_gross_#{i}"] %>',
-        'quantity': '<%= @pdt_data["quantity#{i}"] %>'
-    });
-    <% end %>
-    <% else %>
-    ga('ec:addProduct', {
-        'id': '<%= @pdt_data["option_selection1"] %>',
-        'name': '<%= @pdt_data["item_name"] %>',
-        'brand': 'NeuEve',
-        'category': 'subscription',
-        'price': '<%= @pdt_data["mc_gross"] %>',
-        'quantity': '1'
-    });
-    <% end %>
+        <% if @pdt_data['num_cart_items'].to_i > 0 %>
+            <% for i in 1..@pdt_data['num_cart_items'].to_i %>
+                ga('ec:addProduct', {
+                    'id': '<%= @pdt_data["item_number#{i}"] %>',
+                    'name': '<%= @pdt_data["item_name#{i}"] %>',
+                    'brand': 'NeuEve',
+                    'category': 'ala-carte',
+                    'price': '<%= @pdt_data["mc_gross_#{i}"] %>',
+                    'quantity': '<%= @pdt_data["quantity#{i}"] %>'
+                });
+            <% end %>
+        <% else %>
+            ga('ec:addProduct', {
+                'id': '<%= @pdt_data["option_selection1"] %>',
+                'name': '<%= @pdt_data["item_name"] %>',
+                'brand': 'NeuEve',
+                'category': 'subscription',
+                'price': '<%= @pdt_data["mc_gross"] %>',
+                'quantity': '1'
+            });
+        <% end %>
 
-    ga('ec:setAction', 'purchase', {                              // Transaction details are provided in an actionFieldObject.
-        'id': '<%= @pdt_data['txn_id'] %>',                         // (Required) Transaction id (string).
-        'affiliation': 'NeuEve Store - Online',                   // Affiliation (string).
-        'revenue': '<%= @pdt_data['payment_gross'] %>',             // Revenue (currency).
-        'tax': '<%= @pdt_data['tax'] %>',                           // Tax (currency).
-        'shipping': '<%= @pdt_data['mc_shipping'] %>'               // Shipping (currency).
-    });
+        ga('ec:setAction', 'purchase', {                              // Transaction details are provided in an actionFieldObject.
+            'id': '<%= @pdt_data['txn_id'] %>',                         // (Required) Transaction id (string).
+            'affiliation': 'NeuEve Store - Online',                   // Affiliation (string).
+            'revenue': '<%= @pdt_data['payment_gross'] %>',             // Revenue (currency).
+            'tax': '<%= @pdt_data['tax'] %>',                           // Tax (currency).
+            'shipping': '<%= @pdt_data['mc_shipping'] %>'               // Shipping (currency).
+        });
 
-    <!-- Event snippet for NeuEve Purchase conversion page -->
-    gtag('event', 'conversion', {
-        'send_to': 'AW-1039056375/-bxQCMDw24QBEPf7uu8D',
-        'value': <%= @pdt_data['payment_gross'] %>,
-        'currency': 'USD',
-        'transaction_id': '<%= @pdt_data['txn_id'] %>'
-    });
+        <!-- Event snippet for NeuEve Purchase conversion page -->
+        gtag('event', 'conversion', {
+          'send_to': 'AW-1039056375/-bxQCMDw24QBEPf7uu8D',
+          'value': <%= @pdt_data['payment_gross'] %>,
+          'currency': 'USD',
+          'transaction_id': '<%= @pdt_data['txn_id'] %>'
+        });
     <% end %>
 
     var urlParams;
@@ -324,13 +296,13 @@
             'ip_address': '<%= request.remote_ip %>'
         });
         <% if @pdt_data['num_cart_items'].to_i > 0 %>
-        <% for i in 1..@pdt_data['num_cart_items'].to_i %>
-        _rfsn._addItem({
-            'sku': '<%= @pdt_data["item_number#{i}"] %>',
-            'quantity': '<%= @pdt_data["quantity#{i}"] %>',
-            'price': '<%= (@pdt_data["mc_gross_#{i}"].to_f)/(@pdt_data["quantity#{i}"].to_i) %>'
-        });
-        <% end %>
+            <% for i in 1..@pdt_data['num_cart_items'].to_i %>
+                _rfsn._addItem({
+                    'sku': '<%= @pdt_data["item_number#{i}"] %>',
+                    'quantity': '<%= @pdt_data["quantity#{i}"] %>',
+                    'price': '<%= (@pdt_data["mc_gross_#{i}"].to_f)/(@pdt_data["quantity#{i}"].to_i) %>'
+                });
+            <% end %>
         <% else %>
         _rfsn._addItem({
             'sku': '<%= @pdt_data["option_selection1"] %>',

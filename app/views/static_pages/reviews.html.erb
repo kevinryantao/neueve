@@ -3,57 +3,24 @@
 <% provide(:last_modified, 'October 1, 2018') %>
 
 
-<section class="hero">
-    <div class="container">
-        <!-- Breadcrumbs -->
-        <ol class="breadcrumb justify-content-center">
-            <li class="breadcrumb-item">
-                <%= link_to 'Home', root_path %>
-            </li>
-            <li class="breadcrumb-item active">Customer Reviews</li>
-        </ol>
-        <!-- Hero Content-->
-        <div class="hero-content pb-5 text-center">
-            <h1 class="mb-5">Customer Reviews</h1>
-        </div>
-    </div>
-</section>
+<h1>Customer Reviews</h1>
 
-<section class="pb-5">
-    <div class="container">
-        <div class="py-4">
-            <div class="text-content text-lg">
+<hr>
+<h3>Write a Review:</h3>
 
-                <h3>Write a Review:</h3>
+Click the product you'd like to review below, and then click blue "Write a Review" button that shows up! Thanks!
+<ul>
+    <li><%= link_to 'Cream', cream_path(:anchor => 'reviews') %></li>
+    <li><%= link_to 'Silk', silk_path(:anchor => 'reviews') %></li>
+    <li><%= link_to 'Silver', silver_path(:anchor => 'reviews') %></li>
+    <li><%= link_to 'Gold', gold_path(:anchor => 'reviews') %></li>
+    <li><%= link_to 'BV Clear', bacterial_vaginosis_vaginal_odor_path(:anchor => 'reviews') %></li>
+    <li><%= link_to 'Applicator', applicator_path(:anchor => 'reviews') %></li>
+</ul>
 
-                Click the product you'd like to review below, and then click blue "Write a Review" button that shows
-                up! Thanks!
-                <ul>
-                    <li><%= link_to 'Cream', cream_path(:anchor => 'reviews') %></li>
-                    <li><%= link_to 'Silk', silk_path(:anchor => 'reviews') %></li>
-                    <li><%= link_to 'Silver', silver_path(:anchor => 'reviews') %></li>
-                    <li><%= link_to 'Gold', gold_path(:anchor => 'reviews') %></li>
-                    <li><%= link_to 'BV Clear', bacterial_vaginosis_vaginal_odor_path(:anchor => 'reviews') %></li>
-                    <li><%= link_to 'Applicator', applicator_path(:anchor => 'reviews') %></li>
-                </ul>
+<hr>
+<h3>Reviews of NeuEve</h3>
+<div id="stamped-reviews-widget" data-widget-type="full-page" data-random="false" data-product-image="true"></div>
 
-                <hr>
-                <h3>Reviews of NeuEve</h3>
-                <div id="stamped-reviews-widget" data-widget-type="full-page" data-random="false" data-product-image="true"></div>
-
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="pb-5">
-    <div class="container">
-        <div class="row">
-            <div class="col-xl-8 col-lg-10 mx-auto">
-
-            </div>
-        </div>
-    </div>
-</section>
 
 <%= render 'layouts/testimonial_disclaimer' %>
