@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title><%= full_title(yield(:title)) %></title>
+    <%= render "layouts/googleanalytics" %>
+    <%= javascript_include_tag "jquery.js" %>
+    <%= stylesheet_link_tag "application", :media => "all" %>
+
+    <%= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Droid+Serif",
+                            "https://fonts.googleapis.com/css?family=Droid+Sans",
+                            "https://fonts.googleapis.com/css?family=Quintessential" %>
+    <%= javascript_include_tag "application", :async => true %>
+    <%= javascript_include_tag "https://js.stripe.com/v1/", :async => true %>
+    <%= javascript_include_tag "fontawesome-all.js", :async => true %>
+    <!--<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+
+    <%= csrf_meta_tags %>
+
+    <%= render "layouts/shim" %>
+    <%= render "layouts/googletag" %>
+    <%= render "layouts/bingconversions" %>
+    <%= render "layouts/facebookpixel" %>
+    <%= render "layouts/favicon" %>
+    <%= render "layouts/tidiochat" %>
+    <%= render "layouts/stamped" %>
+    <!-- Pinterest Domain Verification -->
+    <meta name="p:domain_verify" content="fbd4f0ba8a75ae5ad8a92473521f80dd"/>
+    <%= tag(:link, rel: 'manifest', href: asset_path('pwa_manifest.json')) %>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="<%= full_description(yield(:description)) %>">
+    <%= canonical_tag -%>
+    <!--<meta name="description" content="NeuEve Suppositories and Cream are a natural remedy for vaginal dryness, atrophy, odor, itching, burning, painful sex and other discomforts of menopause. NeuEve is hormone-free and estrogen-free, and works by restoring and re-balancing your vaginal ecology.">-->
+
+</head>
+<body>
+
+  <%= render "layouts/header" %>
+
+
+  <section class="pb-5">
+      <div class="container">
+          <div class="row col-xl-8 col-lg-10 mx-auto text-content text-lg bg-gray-200 text-muted p-2">
+              <h4>Immunome Research archive hosted by NeuEve</h4>
+              <p>
+                  Immunome Research was a scientific journal published from 2005-2010 about cutting edge immunology
+                  research, integrating genomics, and bioinformatics. NeuEve supports science, so we have put the
+                  articles originally published in Immunome Research back online.
+              </p>
+          </div>
+      </div>
+  </section>
+
+  <% flash.each do |key, value| %>
+      <div class="alert alert-<%= key %>"><%= value %></div>
+  <% end %>
+  <%= yield %>
+  <%= render "layouts/footer" %>
+
+<%= render "layouts/remarketingtag" %>
+<%= render "layouts/refersion" %>
+<%= render "layouts/amz_associates_one_link" %>
+<div class="d-none">
+  <%= show_svg('orion-svg-sprite.svg') %>
+</div>
+</body>
+
+<%= render "layouts/googleanalyticspageview" %>
+</html>

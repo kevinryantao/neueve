@@ -31,6 +31,73 @@ Lavax::Application.routes.draw do
 
   match '/search' => 'static_pages#search', :via => :get
 
+  # Immunome Research Paths
+  match '/content/1/1/1' => 'immunome_research#1_1_1', :via => :get
+  match '/content/1/1/2' => 'immunome_research#1_1_2', :via => :get
+  match '/content/1/1/3' => 'immunome_research#1_1_3', :via => :get
+  match '/content/1/1/4' => 'immunome_research#1_1_4', :via => :get
+  match '/content/1/1/5' => 'immunome_research#1_1_5', :via => :get
+  match '/content/1/1/6' => 'immunome_research#1_1_6', :via => :get
+
+  match '/content/2/1/1' => 'immunome_research#2_1_1', :via => :get
+  match '/content/2/1/2' => 'immunome_research#2_1_2', :via => :get
+  match '/content/2/1/3' => 'immunome_research#2_1_3', :via => :get
+  match '/content/2/1/4' => 'immunome_research#2_1_4', :via => :get
+
+  match '/content/3/1/1' => 'immunome_research#3_1_1', :via => :get
+  match '/content/3/1/2' => 'immunome_research#3_1_2', :via => :get
+  match '/content/3/1/3' => 'immunome_research#3_1_3', :via => :get
+  match '/content/3/1/4' => 'immunome_research#3_1_4', :via => :get
+  match '/content/3/1/5' => 'immunome_research#3_1_5', :via => :get
+  match '/content/3/1/6' => 'immunome_research#3_1_6', :via => :get
+  match '/content/3/1/7' => 'immunome_research#3_1_7', :via => :get
+  match '/content/3/1/8' => 'immunome_research#3_1_8', :via => :get
+  match '/content/3/1/9' => 'immunome_research#3_1_9', :via => :get
+  match '/content/3/1/10' => 'immunome_research#3_1_10', :via => :get
+
+  match '/content/4/1/1' => 'immunome_research#4_1_1', :via => :get
+  match '/content/4/1/2' => 'immunome_research#4_1_2', :via => :get
+  match '/content/4/1/3' => 'immunome_research#4_1_3', :via => :get
+  match '/content/4/1/4' => 'immunome_research#4_1_4', :via => :get
+  match '/content/4/1/5' => 'immunome_research#4_1_5', :via => :get
+  match '/content/4/1/6' => 'immunome_research#4_1_6', :via => :get
+  match '/content/4/1/7' => 'immunome_research#4_1_7', :via => :get
+
+  match '/content/5/1/1' => 'immunome_research#5_1_1', :via => :get
+  match '/content/5/1/2' => 'immunome_research#5_1_2', :via => :get
+  match '/content/5/1/3' => 'immunome_research#5_1_3', :via => :get
+  match '/content/5/1/4' => 'immunome_research#5_1_4', :via => :get
+  match '/content/5/1/5' => 'immunome_research#5_1_5', :via => :get
+
+  match '/content/6/1/1' => 'immunome_research#6_1_1', :via => :get
+  match '/content/6/1/2' => 'immunome_research#6_1_2', :via => :get
+  match '/content/6/1/3' => 'immunome_research#6_1_3', :via => :get
+  match '/content/6/1/4' => 'immunome_research#6_1_4', :via => :get
+  match '/content/6/1/5' => 'immunome_research#6_1_5', :via => :get
+  match '/content/6/1/6' => 'immunome_research#6_1_6', :via => :get
+  match '/content/6/1/7' => 'immunome_research#6_1_7', :via => :get
+  match '/content/6/1/8' => 'immunome_research#6_1_8', :via => :get
+  match '/content/6/1/9' => 'immunome_research#6_1_9', :via => :get
+  match '/content/6/1/10' => 'immunome_research#6_1_10', :via => :get
+  match '/content/6/1/11' => 'immunome_research#6_1_11', :via => :get
+  match '/content/6/1/12' => 'immunome_research#6_1_12', :via => :get
+  match '/content/6/1/13' => 'immunome_research#6_1_13', :via => :get
+
+  match '/content/6/S1/S1' => 'immunome_research#6_S1_S1', :via => :get
+  match '/content/6/S1/S2' => 'immunome_research#6_S1_S2', :via => :get
+  match '/content/6/S1/S3' => 'immunome_research#6_S1_S3', :via => :get
+  match '/content/6/S1/S4' => 'immunome_research#6_S1_S4', :via => :get
+  match '/content/6/S1/S5' => 'immunome_research#6_S1_S5', :via => :get
+  match '/content/6/S1/S6' => 'immunome_research#6_S1_S6', :via => :get
+
+  match '/content/6/S2/S1' => 'immunome_research#6_S2_S1', :via => :get
+  match '/content/6/S2/S2' => 'immunome_research#6_S2_S2', :via => :get
+  match '/content/6/S2/S3' => 'immunome_research#6_S2_S3', :via => :get
+  match '/content/6/S2/S4' => 'immunome_research#6_S2_S4', :via => :get
+  match '/content/6/S2/S5' => 'immunome_research#6_S2_S5', :via => :get
+  match '/content/6/S2/S6' => 'immunome_research#6_S2_S6', :via => :get
+  match '/content/6/S2/S7' => 'immunome_research#6_S2_S7', :via => :get
+
   match '*path' => redirect('/'), via: :all
 
   # The priority is based upon order of creation:
