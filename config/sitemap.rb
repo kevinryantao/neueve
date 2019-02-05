@@ -28,7 +28,7 @@ SitemapGenerator::Sitemap.create do
   #   Article.find_each do |article|
   #     add article_path(article), :lastmod => article.updated_at
   #   end
-  add about_path, priority: 0.5
+  add about_path, priority: 1
   add background_path, priority: 1
   add vaginal_dryness_atrophy_cause_treatment_path, priority: 1
   add vaginal_odor_cause_treatment_path, priority: 1
@@ -49,4 +49,64 @@ SitemapGenerator::Sitemap.create do
   add reviews_path, priority: 1
   add dmannose_path, priority: 1
   add dilators_path, priority: 1
+
+  # Immunome Research Paths
+  add '/content/1/1/1', priority: 0.25
+  add '/content/1/1/2', priority: 0.25
+  add '/content/1/1/3', priority: 0.25
+  add '/content/1/1/4', priority: 0.25
+  add '/content/1/1/5', priority: 0.25
+  add '/content/1/1/6', priority: 0.25
+  add '/content/2/1/1', priority: 0.25
+  add '/content/2/1/2', priority: 0.25
+  add '/content/2/1/3', priority: 0.25
+  add '/content/2/1/4', priority: 0.25
+  add '/content/3/1/1', priority: 0.25
+  add '/content/3/1/2', priority: 0.25
+  add '/content/3/1/3', priority: 0.25
+  add '/content/3/1/4', priority: 0.25
+  add '/content/3/1/5', priority: 0.25
+  add '/content/3/1/6', priority: 0.25
+  add '/content/3/1/7', priority: 0.25
+  add '/content/3/1/8', priority: 0.25
+  add '/content/3/1/9', priority: 0.25
+  add '/content/3/1/10', priority: 0.25
+  add '/content/4/1/1', priority: 0.25
+  add '/content/4/1/2', priority: 0.25
+  add '/content/4/1/3', priority: 0.25
+  add '/content/4/1/4', priority: 0.25
+  add '/content/4/1/5', priority: 0.25
+  add '/content/4/1/6', priority: 0.25
+  add '/content/4/1/7', priority: 0.25
+  add '/content/5/1/1', priority: 0.25
+  add '/content/5/1/2', priority: 0.25
+  add '/content/5/1/3', priority: 0.25
+  add '/content/5/1/4', priority: 0.25
+  add '/content/5/1/5', priority: 0.25
+  add '/content/6/1/1', priority: 0.25
+  add '/content/6/1/2', priority: 0.25
+  add '/content/6/1/3', priority: 0.25
+  add '/content/6/1/4', priority: 0.25
+  add '/content/6/1/5', priority: 0.25
+  add '/content/6/1/6', priority: 0.25
+  add '/content/6/1/7', priority: 0.25
+  add '/content/6/1/8', priority: 0.25
+  add '/content/6/1/9', priority: 0.25
+  add '/content/6/1/10', priority: 0.25
+  add '/content/6/1/11', priority: 0.25
+  add '/content/6/1/12', priority: 0.25
+  add '/content/6/1/13', priority: 0.25
+  add '/content/6/S1/S1', priority: 0.25
+  add '/content/6/S1/S2', priority: 0.25
+  add '/content/6/S1/S3', priority: 0.25
+  add '/content/6/S1/S4', priority: 0.25
+  add '/content/6/S1/S5', priority: 0.25
+  add '/content/6/S1/S6', priority: 0.25
+  add '/content/6/S2/S1', priority: 0.25
+  add '/content/6/S2/S2', priority: 0.25
+  add '/content/6/S2/S3', priority: 0.25
+  add '/content/6/S2/S4', priority: 0.25
+  add '/content/6/S2/S5', priority: 0.25
+  add '/content/6/S2/S6', priority: 0.25
+  add '/content/6/S2/S7', priority: 0.25
 end

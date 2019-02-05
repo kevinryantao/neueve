@@ -4,4 +4,9 @@
 # User-Agent: *
 # Disallow: /
 
+User-Agent: *
+Disallow: /search
+Disallow: /success
+
 Sitemap: https://www.neueve.com/sitemap.xml.gz
+Sitemap: https://www.neueve.com/blog/sitemap_index.xml

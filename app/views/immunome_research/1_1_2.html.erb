@@ -1,0 +1,1079 @@
+<% provide(:title, 'An ontology for immune epitopes: application to the design of a broad scope
+                                        database of immune reactivities') %>
+<% provide(:description, "Epitopes can be defined as the molecular structures bound by specific receptors, which are recognized during immune responses. The Immune Epitope Database and Analysis Resource (IEDB) project will catalog and organize information regarding antibody and T cell epitopes from infectious pathogens, experimental antigens and self-antigens, with a priority on NIAID Category A-C pathogens (
+                    http://www2.niaid.nih.gov/Biodefense/bandc_priority.htm
+
+                  ) and emerging/re-emerging infectious diseases. Both intrinsic structural and phylogenetic features, as well as information relating to the interactions of the epitopes with the host's immune system will be catalogued. To effectively represent and communicate the information related to immune epitopes, a formal ontology was developed. The semantics of the epitope domain and related concepts were captured as a hierarchy of classes, which represent the general and specialized relationships between the various concepts. A complete listing of classes and their properties can be found at
+                    http://www.immuneepitope.org/ontology/index.html
+
+                  . The IEDB's ontology is the first ontology specifically designed to capture both intrinsic chemical and biochemical information relating to immune epitopes with information relating to the interaction of these structures with molecules derived from the host immune system. We anticipate that the development of this type of ontology and associated databases will facilitate rigorous description of data related to immune epitopes, and might ultimately lead to completely new methods for describing and modeling immune responses.") %>
+
+
+<section class="pb-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-8 col-lg-10 mx-auto">
+                <div class="text-content text-lg">
+
+                    <main class="c-content-layout__main">
+                        <article itemscope="" itemtype="http://schema.org/ScholarlyArticle">
+
+
+                            <div class="FulltextWrapper">
+                                <ul class="c-article-identifiers u-reset-list">
+                                    <li class="c-article-identifiers__item" data-test="article-category">Database</li>
+                                    <li class="c-article-identifiers__item" data-test="open-access">
+                                        <span class="u-text-open-access">Open Access</span>
+                                    </li>
+
+
+                                </ul>
+                            </div>
+
+                            <div class="FulltextWrapper">
+                                <div xmlns="" xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:meta="http://www.springer.com/app/meta" class="MainTitleSection">
+                                    <h1 xmlns="http://www.w3.org/1999/xhtml" class="ArticleTitle" itemprop="headline" lang="en">An
+                                        ontology for immune epitopes: application to the design of a broad scope
+                                        database of immune reactivities</h1></div>
+                                <div xmlns="" xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:meta="http://www.springer.com/app/meta" class="AuthorNames" data-author-affiliations="true">
+                                    <ul class="u-listReset">
+                                        <li class="Author hasAffil" data-jumpto="Aff" data-test="author-name">
+                                            <span xmlns:func="http://oscar.fig.bmc.com" xmlns="http://www.w3.org/1999/xhtml" class="AuthorName" itemprop="author" itemscope="" itemtype="http://schema.org/Person">Muthuraman&nbsp;Sathiamurthy</span><sup>
+                                            <a href="#Aff1_2" class="AffiliationID">1_2</a>
+                                        </sup>,
+                                        </li>
+                                        <li class="Author hasAffil" data-jumpto="Aff" data-test="author-name">
+                                            <span xmlns:func="http://oscar.fig.bmc.com" xmlns="http://www.w3.org/1999/xhtml" class="AuthorName" itemprop="author" itemscope="" itemtype="http://schema.org/Person">Bjoern&nbsp;Peters</span><sup>
+                                            <a href="#Aff1_2" class="AffiliationID">1_2</a>
+                                        </sup>,
+                                        </li>
+                                        <li class="Author hasAffil" data-jumpto="Aff" data-test="author-name">
+                                            <span xmlns:func="http://oscar.fig.bmc.com" xmlns="http://www.w3.org/1999/xhtml" class="AuthorName" itemprop="author" itemscope="" itemtype="http://schema.org/Person">Huynh-Hoa&nbsp;Bui</span><sup>
+                                            <a href="#Aff1_2" class="AffiliationID">1_2</a>
+                                        </sup>,
+                                        </li>
+                                        <li class="Author hasAffil" data-jumpto="Aff" data-test="author-name">
+                                            <span xmlns:func="http://oscar.fig.bmc.com" xmlns="http://www.w3.org/1999/xhtml" class="AuthorName" itemprop="author" itemscope="" itemtype="http://schema.org/Person">John&nbsp;Sidney</span><sup>
+                                            <a href="#Aff1_2" class="AffiliationID">1_2</a>
+                                        </sup>,
+                                        </li>
+                                        <li class="Author hasAffil" data-jumpto="Aff" data-test="author-name">
+                                            <span xmlns:func="http://oscar.fig.bmc.com" xmlns="http://www.w3.org/1999/xhtml" class="AuthorName" itemprop="author" itemscope="" itemtype="http://schema.org/Person">John&nbsp;Mokili</span><sup>
+                                            <a href="#Aff1_2" class="AffiliationID">1_2</a>
+                                        </sup>,
+                                        </li>
+                                        <li class="Author hasAffil" data-jumpto="Aff" data-test="author-name">
+                                            <span xmlns:func="http://oscar.fig.bmc.com" xmlns="http://www.w3.org/1999/xhtml" class="AuthorName" itemprop="author" itemscope="" itemtype="http://schema.org/Person">Stephen&nbsp;S&nbsp;Wilson</span><sup>
+                                            <a href="#Aff1_2" class="AffiliationID">1_2</a>
+                                        </sup>,
+                                        </li>
+                                        <li class="Author hasAffil" data-jumpto="Aff" data-test="author-name">
+                                            <span xmlns:func="http://oscar.fig.bmc.com" xmlns="http://www.w3.org/1999/xhtml" class="AuthorName" itemprop="author" itemscope="" itemtype="http://schema.org/Person">Ward&nbsp;Fleri</span><sup>
+                                            <a href="#Aff1_2" class="AffiliationID">1_2</a>
+                                        </sup>,
+                                        </li>
+                                        <li class="Author hasAffil" data-jumpto="Aff" data-test="author-name">
+                                            <span xmlns:func="http://oscar.fig.bmc.com" xmlns="http://www.w3.org/1999/xhtml" class="AuthorName" itemprop="author" itemscope="" itemtype="http://schema.org/Person">Deborah&nbsp;L&nbsp;McGuinness</span><sup>
+                                            <a href="#Aff2_2" class="AffiliationID">2_2</a>
+                                        </sup>,
+                                        </li>
+                                        <li class="Author hasAffil" data-jumpto="Aff" data-test="author-name">
+                                            <span xmlns:func="http://oscar.fig.bmc.com" xmlns="http://www.w3.org/1999/xhtml" class="AuthorName" itemprop="author" itemscope="" itemtype="http://schema.org/Person">Philip&nbsp;E&nbsp;Bourne</span><sup>
+                                            <a href="#Aff3_2" class="AffiliationID">3_2</a>
+                                        </sup> and
+                                        </li>
+                                        <li class="Author hasAffil" data-jumpto="Aff" data-test="author-name">
+                                            <span xmlns:func="http://oscar.fig.bmc.com" xmlns="http://www.w3.org/1999/xhtml" class="AuthorName" itemprop="author" itemscope="" itemtype="http://schema.org/Person">Alessandro&nbsp;Sette</span><sup>
+                                            <a href="#Aff1_2" class="AffiliationID">1_2</a>
+                                        </sup>
+                                            <a href="mailto:alex@liai.org" class="EmailAuthor" title="Email author">
+                                                <span class="ContactIcon" aria-hidden="true"></span><span class="u-srOnly">Email author</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div xmlns="" xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:meta="http://www.springer.com/app/meta" class="ArticleContextInformation">
+                                    <div class="ContextInformation">
+                                        <div class="ContextInformationJournalTitles">
+                                            <span class="ArticleCitation"><span itemscope="" itemtype="http://schema.org/Periodical" itemid="#periodical"><span xmlns="http://www.w3.org/1999/xhtml" class="JournalTitle">Immunome Research</span></span><span class="ArticleCitation_Year">2005</span><span class="ArticleCitation_Volume"><strong itemprop="isPartOf" itemtype="http://schema.org/PublicationVolume"><link itemprop="isPartOf" href="#periodical">1</strong>:2</span></span>
+                                        </div>
+                                        <p class="ArticleDOI">
+                                            <a itemprop="sameAs" class="u-text-inherit" href="https://doi.org/10.1186/1745-7580-1-2">https://doi.org/10.1186/1745-7580-1-2</a>
+                                        </p>
+                                        <p class="Copyright">© &nbsp;Sathiamurthy et al.&nbsp;2005</p></div>
+                                </div>
+                                <ul class="ArticleHistory u-reset-list">
+                                    <li class="History HistoryReceived"><strong>Received: </strong><span>26&nbsp;June&nbsp;2005</span>
+                                    </li>
+                                    <li class="History HistoryAccepted"><strong>Accepted: </strong><span>20&nbsp;September&nbsp;2005</span>
+                                    </li>
+                                    <li class="History HistoryOnlineDate">
+                                        <strong>Published: </strong><span itemprop="datePublished">20&nbsp;September&nbsp;2005</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+
+                            <div class="FulltextWrapper">
+                                <section xmlns="" xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:meta="http://www.springer.com/app/meta" class="Abstract Section1 RenderAsSection1 c-section" id="Abs1_2" lang="en">
+                                    <h2 class="c-section__heading">
+                                        <a href="#Abstract" data-test="abstract-heading" data-disable-click-event-default="">Abstract</a>
+                                    </h2>
+                                    <div class="c-section__content" id="Abstract">
+                                        <div xmlns:func="http://oscar.fig.bmc.com" xmlns="http://www.w3.org/1999/xhtml" class="AbstractSection" id="ASec1_2">
+                                            <h3 xmlns="" class="Heading">Background</h3>
+                                            <p class="Para">Epitopes can be defined as the molecular structures bound by
+                                                specific receptors, which are recognized during immune responses. The
+                                                Immune Epitope Database and Analysis Resource (IEDB) project will
+                                                catalog and organize information regarding antibody and T cell epitopes
+                                                from infectious pathogens, experimental antigens and self-antigens, with
+                                                a priority on NIAID Category A-C pathogens (<span class="ExternalRef"><a href="http://www2.niaid.nih.gov/Biodefense/bandc_priority.htm" target="_blank" class="ext-link"><span class="RefSource">http://www2.niaid.nih.gov/Biodefense/bandc_priority.htm</span></a></span>)
+                                                and emerging/re-emerging infectious diseases. Both intrinsic structural
+                                                and phylogenetic features, as well as information relating to the
+                                                interactions of the epitopes with the host's immune system will be
+                                                catalogued.
+                                            </p>
+                                        </div>
+                                        <div xmlns:func="http://oscar.fig.bmc.com" xmlns="http://www.w3.org/1999/xhtml" class="AbstractSection" id="ASec2_2">
+                                            <h3 xmlns="" class="Heading">Description</h3>
+                                            <p class="Para">To effectively represent and communicate the information
+                                                related to immune epitopes, a formal ontology was developed. The
+                                                semantics of the epitope domain and related concepts were captured as a
+                                                hierarchy of classes, which represent the general and specialized
+                                                relationships between the various concepts. A complete listing of
+                                                classes and their properties can be found at <span class="ExternalRef"><a href="http://www.immuneepitope.org/ontology/index.html" target="_blank" class="ext-link"><span class="RefSource">http://www.immuneepitope.org/ontology/index.html</span></a></span>.
+                                            </p>
+                                        </div>
+                                        <div xmlns:func="http://oscar.fig.bmc.com" xmlns="http://www.w3.org/1999/xhtml" class="AbstractSection" id="ASec3_2">
+                                            <h3 xmlns="" class="Heading">Conclusion</h3>
+                                            <p class="Para">The IEDB's ontology is the first ontology specifically
+                                                designed to capture both intrinsic chemical and biochemical information
+                                                relating to immune epitopes with information relating to the interaction
+                                                of these structures with molecules derived from the host immune system.
+                                                We anticipate that the development of this type of ontology and
+                                                associated databases will facilitate rigorous description of data
+                                                related to immune epitopes, and might ultimately lead to completely new
+                                                methods for describing and modeling immune responses.</p>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section xmlns:func="http://oscar.fig.bmc.com" class="KeywordGroup Section1 RenderAsSection1 c-section" lang="en">
+                                    <h2 xmlns="" xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:meta="http://www.springer.com/app/meta" class="Heading js-ToggleCollapseSection c-section__heading" data-sticky-update="true">
+                                        <a href="#Keywords" data-toggle="collapse" data-toggle-disable-clickoff="" data-target="Keywords">Keywords</a>
+                                    </h2>
+                                    <div class="js-CollapseSection CollapseSection c-section__content" data-test="collapse-section" id="Keywords">
+                                        <ul class="c-keywords">
+                                            <li class="c-keywords__item" itemprop="about">Gene Ontology</li>
+                                            <li class="c-keywords__item" itemprop="about">Class Hierarchy</li>
+                                            <li class="c-keywords__item" itemprop="about">Formal Ontology</li>
+                                            <li class="c-keywords__item" itemprop="about">Data Dictionary</li>
+                                            <li class="c-keywords__item" itemprop="about">Extrinsic Feature</li>
+                                        </ul>
+                                    </div>
+                                </section>
+                                <section xmlns="" xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:meta="http://www.springer.com/app/meta" id="Sec1_2" class="Section1 RenderAsSection1 c-section">
+                                    <h2 class="Heading js-ToggleCollapseSection c-section__heading" data-sticky-update="true">
+                                        <a href="#Background" data-toggle="collapse" data-toggle-disable-clickoff="" data-target="Background">Background</a>
+                                    </h2>
+                                    <div class="js-CollapseSection CollapseSection c-section__content" id="Background" data-test="collapse-section">
+                                        <p xmlns:func="http://oscar.fig.bmc.com" xmlns="http://www.w3.org/1999/xhtml" class="Para">An
+                                            epitope can be defined as the molecular structure recognized by the products
+                                            of immune responses. According to this definition, epitopes are the specific
+                                            molecular entities engaged in binding to antibody molecules or specific T
+                                            cell receptors. An extended definition also includes the specific molecules
+                                            binding in the peptide binding sites of MHC receptors. We have previously
+                                            described [<span class="CitationRef"><a href="#CR1_2" data-toggle="citation">1</a></span>]
+                                            the general design of the Immune Epitope Database and Analysis Resource
+                                            (IEDB), a broad program recently initiated by National Institute of Allergy
+                                            and Infectious Diseases (NIAID). The overall goal of the IEDB is to catalog
+                                            and organize a large body of information regarding antibody and T cell
+                                            epitopes from infectious pathogens and other sources
+                                            [<span class="CitationRef"><a href="#CR2_2" data-toggle="citation">2</a></span>].
+                                            Priority will be placed on NIAID Category A-C pathogens
+                                            (<span class="ExternalRef"><a href="http://www2.niaid.nih.gov/Biodefense/bandc_priority.htm" target="_blank" class="ext-link"><span class="RefSource">http://www2.niaid.nih.gov/Biodefense/bandc_priority.htm</span></a></span>)
+                                            and emerging/re-emerging infectious diseases. Epitopes of human and
+                                            non-human primates, rodents, and other species for which detailed
+                                            information is available will be included. It is envisioned that this new
+                                            effort will catalyze the development of new methods to predict and model
+                                            immune responses, will aid in the discovery and development of new vaccines
+                                            and diagnostics, and will assist in basic immunological investigations.
+                                        </p>
+                                        <p xmlns:func="http://oscar.fig.bmc.com" xmlns="http://www.w3.org/1999/xhtml" class="Para">The
+                                            IEDB will catalog structural and phylogenetic information about epitopes,
+                                            information about their capacity to bind to specific receptors (i.e. MHC,
+                                            TCR, BCR, Antibodies), as well as the type of immune response observed
+                                            following engagement of the receptors (RFP-NIH-NIAID-DAIT-03/31:
+                                            <span class="ExternalRef"><a href="http://www.niaid.nih.gov/contract/archive/rfp0331.pdf" target="_blank" class="ext-link"><span class="RefSource">http://www.niaid.nih.gov/contract/archive/rfp0331.pdf</span></a></span>).
+                                        </p>
+                                        <p xmlns:func="http://oscar.fig.bmc.com" xmlns="http://www.w3.org/1999/xhtml" class="Para">In
+                                            broad terms, the database will contain two general categories of data and
+                                            information associated with immune epitopes – intrinsic and extrinsic
+                                            (context-dependent data). Intrinsic features of an epitope are those
+                                            characteristics that can be unequivocally defined and are specified within
+                                            the epitope sequence/structure itself. Examples of intrinsic features are
+                                            the epitope's sequence, structural features, and binding interactions with
+                                            other immune system molecules. To describe an immune response associated
+                                            with a specific epitope, context information also needs to be taken into
+                                            account. Contextual information includes, for example, the species of the
+                                            host, the route and dose of immunization, the health status and genetic
+                                            makeup of the host, and the presence of adjuvants. In this respect, the IEDB
+                                            project transcends the strict boundaries of database development and reaches
+                                            into a systems biology application, attempting for the first time to
+                                            integrate structural information about epitopes with comprehensive details
+                                            describing their complex interaction with the immune system of the host, be
+                                            it an infected organism or a vaccine recipient [<span class="CitationRef"><a href="#CR1_2" data-toggle="citation">1</a></span><span>, <span class="CitationRef"><a href="#CR2" data-toggle="citation">2</a></span>, </span><span class="CitationRef"><a href="#CR3_2" data-toggle="citation">3</a></span>].
+                                        </p>
+                                        <p xmlns:func="http://oscar.fig.bmc.com" xmlns="http://www.w3.org/1999/xhtml" class="Para">For
+                                            these reasons, it was apparent at the outset of the project that it was
+                                            crucial to develop a rigorous conceptual framework to represent the
+                                            knowledge related to the epitopes. Such a framework was key to sharing
+                                            information and ideas among developers, scientists, and potential users, and
+                                            to allowing the design of an effective logical structure of the database
+                                            itself. Accordingly, we decided to develop a formal ontology. Over the
+                                            years, the term "ontology" has been defined and utilized in many ways by the
+                                            knowledge engineering community [<span class="CitationRef"><a href="#CR4_2" data-toggle="citation">4</a></span>].
+                                            We will adopt the definition of "ontology" as "the explicit formal
+                                            specifications of the terms in a domain and the relationships among them"
+                                            [<span class="CitationRef"><a href="#CR5_2" data-toggle="citation">5</a></span>].
+                                            According to Noy and McGuinness [<span class="CitationRef"><a href="#CR6_2" data-toggle="citation">6</a></span>],
+                                            "ontology defines a common vocabulary for researchers who need to share
+                                            information in a domain and helps separate domain knowledge from operational
+                                            knowledge". Thus, availability of a formal ontology is relevant in designing
+                                            a database, in cataloging the information, in communicating the database
+                                            structure to researchers, developers and users, and in integrating multiple
+                                            database schema designs and applications.
+                                        </p>
+                                        <p xmlns:func="http://oscar.fig.bmc.com" xmlns="http://www.w3.org/1999/xhtml" class="Para">Several
+                                            existing databases catalog epitope related data. We gratefully acknowledge
+                                            that we have been able use these previous experiences in the design and
+                                            implementation of the IEDB. MHCPEP [<span class="CitationRef"><a href="#CR7_2" data-toggle="citation">7</a></span>],
+                                            SYFPEITHI [<span class="CitationRef"><a href="#CR8_2" data-toggle="citation">8</a></span>],
+                                            FIMM [<span class="CitationRef"><a href="#CR9_2" data-toggle="citation">9</a></span>],
+                                            HLA Ligand Database [<span class="CitationRef"><a href="#CR10_2" data-toggle="citation">10</a></span>],
+                                            HIV Immunology Database [<span class="CitationRef"><a href="#CR11_2" data-toggle="citation">11</a></span>],
+                                            JenPep [<span class="CitationRef"><a href="#CR12_2" data-toggle="citation">12</a></span>],
+                                            AntiJen [<span class="CitationRef"><a href="#CR13_2" data-toggle="citation">13</a></span>],
+                                            and MHCBN [<span class="CitationRef"><a href="#CR14_2" data-toggle="citation">14</a></span>]
+                                            are all publicly available epitope related databases. In general, these
+                                            databases provide information relating to epitopes, but do not catalog
+                                            in-depth information relating to their interactions with the host's immune
+                                            system. It should also be noted that none of these databases has published a
+                                            formal ontology, but all of them rely on informal or implicit ontologies. We
+                                            have taken into account as much as possible these ontologies, inferring
+                                            their structure by informal communications with database developers or
+                                            perusal of the databases websites.
+                                        </p>
+                                        <p xmlns:func="http://oscar.fig.bmc.com" xmlns="http://www.w3.org/1999/xhtml" class="Para">The
+                                            ontology developed for IEDB and described herein complements two explicit
+                                            ontologies that are presently available: the IMGT-Ontology and the Gene
+                                            Ontology (GO). The IMGT-Ontology [<span class="CitationRef"><a href="#CR15_2" data-toggle="citation">15</a></span>]
+                                            was created for the international ImMunoGeneTics Database (IMGT), which is
+                                            an integrated database specializing in antigen receptors (immunoglobulin and
+                                            T Cell receptors) and MHC molecules of all vertebrate species. This is, to
+                                            the best of our knowledge, the first ontology in the domain of
+                                            immunogenetics and immunoinformatics. The GO project
+                                            [<span class="CitationRef"><a href="#CR16_2" data-toggle="citation">16</a></span>]
+                                            provides structured, controlled vocabularies that cover several domains of
+                                            molecular and cellular biology. GO provides an excellent framework for
+                                            genes, gene products, and their sequences, but it does not address the
+                                            specific epitope substructure of the gene products. The IMGT provides an
+                                            excellent ontological framework for the immune receptors but lacks
+                                            information relating to the epitopes themselves. Therefore it was necessary
+                                            to expand the available ontologies and to create an ontology specifically
+                                            designed to represent the information of immune receptor interaction with
+                                            immune epitopes. Wherever possible, the IEDB ontology conforms to standard
+                                            vocabularies for capturing values for certain fields. For capturing disease
+                                            names, IEDB uses the International Classification for Diseases (ICD-10)
+                                            [<span class="CitationRef"><a href="#CR17_2" data-toggle="citation">17</a></span>].
+                                            The NCBI Taxonomy database nomenclature [<span class="CitationRef"><a href="#CR18_2" data-toggle="citation">18</a></span>,
+                                            <span class="CitationRef"><a href="#CR19_2" data-toggle="citation">19</a></span>]
+                                            is used to capture species and strain names, and HLA Allele names are
+                                            consistent with the HLA nomenclature reports [<span class="CitationRef"><a href="#CR20_2" data-toggle="citation">20</a></span>].
+                                        </p>
+                                    </div>
+                                </section>
+                                <section xmlns="" xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:meta="http://www.springer.com/app/meta" id="Sec2_2" class="Section1 RenderAsSection1 c-section">
+                                    <h2 class="Heading js-ToggleCollapseSection c-section__heading" data-sticky-update="true">
+                                        <a href="#ConstructionandContent" data-toggle="collapse" data-toggle-disable-clickoff="" data-target="ConstructionandContent">Construction
+                                            and Content
+                                        </a>
+                                    </h2>
+                                    <div class="js-CollapseSection CollapseSection c-section__content" id="ConstructionandContent" data-test="collapse-section">
+                                        <p xmlns:func="http://oscar.fig.bmc.com" xmlns="http://www.w3.org/1999/xhtml" class="Para">The
+                                            IEDB is being developed as a web-accessible database using Oracle 10g and
+                                            Enterprise Java (J2EE). Industry standard software design has been followed
+                                            and it is expected that IEDB will be available for public users by the end
+                                            of 2005.</p>
+                                        <p xmlns:func="http://oscar.fig.bmc.com" xmlns="http://www.w3.org/1999/xhtml" class="Para">Protégé
+                                            <span class="ExternalRef"><a href="http://protege.stanford.edu" target="_blank" class="ext-link"><span class="RefSource">http://protege.stanford.edu</span></a></span>
+                                            was used to design and document the IEDB ontology. Protégé is a free, open
+                                            source ontology editor and knowledge-base framework, written in Java. It
+                                            provides an environment for creating ontologies and the terms used in those
+                                            ontologies. Protégé supports class, slot, and instance creation, allowing
+                                            users to specify relationships between appropriate entities. Two features
+                                            that IEDB ontology effort used extensively were Protégé's support for
+                                            creating ontology terms and for viewing the term hierarchies and the
+                                            definitions. The support for a central repository on ontologies, along with
+                                            browsing support, is key in reviewing and reusing ontologies.
+                                        </p>
+                                        <p xmlns:func="http://oscar.fig.bmc.com" xmlns="http://www.w3.org/1999/xhtml" class="Para">While
+                                            there are several open source tools available [<span class="CitationRef"><a href="#CR21_2" data-toggle="citation">21</a></span>]
+                                            for developing ontologies, we selected Protégé because of its extensibility
+                                            to a variety of plug-ins that are readily available for integration. It also
+                                            has the ability to export to different formats including the Ontology Web
+                                            Language (OWL) (<span class="ExternalRef"><a href="http://www.w3.org/TR/owl-features/" target="_blank" class="ext-link"><span class="RefSource">http://www.w3.org/TR/owl-features/</span></a></span>),
+                                            which allows interoperability with other ontologies.
+                                        </p>
+                                        <div xmlns:func="http://oscar.fig.bmc.com" xmlns="http://www.w3.org/1999/xhtml" class="Para">We
+                                            have previously described some of the general concepts relating to the IEDB
+                                            design [<span class="CitationRef"><a href="#CR1_2" data-toggle="citation">1</a></span>,
+                                            <span class="CitationRef"><a href="#CR2_2" data-toggle="citation">2</a></span>].
+                                            More information relating to various aspects of the project can be accessed
+                                            at <span class="ExternalRef"><a href="http://www.immuneepitope.org/" target="_blank" class="ext-link"><span class="RefSource">http://www.immuneepitope.org/</span></a></span>.
+                                            Herein, we report a detailed description of the novel aspects of the IEDB
+                                            ontology. In designing our application architecture, we have followed the
+                                            common system engineering practice of first determining the scope and nature
+                                            of the data involved. A first essential step is to understand the semantics
+                                            of the domain and to capture that knowledge in an agreed-upon format.
+                                            Arranging the domain concepts in a taxonomy is one of the initial organizing
+                                            steps in the ontology design process. The class hierarchy represents the
+                                            generalization and specialization relationships between the various classes
+                                            of objects in a domain [<span class="CitationRef"><a href="#CR6_2" data-toggle="citation">6</a></span>].
+                                            Briefly, classes describe concepts in the domain. Subclasses represent
+                                            concepts (classes) that are more specific than the superclass and these
+                                            subclasses can have their own unique properties. Slots represent properties
+                                            of the classes. For example, in Figure <span class="InternalRef"><a href="#Fig1_2">1</a></span>,
+                                            we see that there is a class named Reference and three more specific
+                                            subclasses of Reference: Journal Article, Patent Application, and Direct
+                                            Submission. Figure <span class="InternalRef"><a href="#Fig1_2">1</a></span>
+                                            also shows that the class Epitope has a number of properties (slots)
+                                            associated with it such as "has Epitope Structure" and "has Epitope Source".
+                                            <figure xmlns="" class="Figure" id="Fig1_2">
+                                                <div xmlns="http://www.w3.org/1999/xhtml" class="MediaObject">
+                                                    <a target="_blank" rel="noopener" href="https://media.springernature.com/full/springer-static/image/art%3A10.1186%2F1745-7580-1-2/MediaObjects/12996_2005_Article_2_Fig1_HTML.jpg">
+                                                        <img class="c-lazy-image u-js-shown" src="https://media.springernature.com/lw5/springer-static/image/art%3A10.1186%2F1745-7580-1-2/MediaObjects/12996_2005_Article_2_Fig1_HTML.jpg" alt="Figure 1" data-lazy-load="true" data-src="https://media.springernature.com/lw785/springer-static/image/art%3A10.1186%2F1745-7580-1-2/MediaObjects/12996_2005_Article_2_Fig1_HTML.jpg">
+
+                                                            <img src="https://media.springernature.com/lw785/springer-static/image/art%3A10.1186%2F1745-7580-1-2/MediaObjects/12996_2005_Article_2_Fig1_HTML.jpg" alt="Figure 1"></img>
+
+                                                    </a>
+                                                </div>
+                                                <figcaption class="Caption" lang="en">
+                                                    <div xmlns="http://www.w3.org/1999/xhtml" class="CaptionContent">
+                                                        <span class="CaptionNumber">Figure 1</span>
+                                                        <p xmlns="" class="SimplePara">Overview of IEDB Class
+                                                            Hierarchy.</p>
+                                                    </div>
+                                                </figcaption>
+                                            </figure>
+                                        </div>
+                                        <section id="Sec3_2" class="Section2 RenderAsSection2">
+                                            <h3 class="Heading">The IEDB Ontology: Reference, Epitope Structure, Epitope
+                                                Source, and Assay Information classes</h3>
+                                            <p xmlns:func="http://oscar.fig.bmc.com" xmlns="http://www.w3.org/1999/xhtml" class="Para">Our
+                                                approach for creating the class hierarchy was a top-down development
+                                                process where we defined each class in a domain and then identified its
+                                                properties before building the hierarchy. The main classes identified
+                                                for IEDB are Reference, Epitope Structure, Epitope Source, MHC Binding,
+                                                Naturally Processed Ligand, T Cell Response, and B Cell Response (Figure
+                                                <span class="InternalRef"><a href="#Fig1_2">1</a></span>). The Epitope
+                                                class is the main class that encompasses all the individual concepts
+                                                that were identified. The individual concepts are related to other
+                                                classes. The primary relationships use the sub-class relationship or use
+                                                a property (shown in the figures by the arcs labeled "has") that has a
+                                                restriction on the type of the value that may fill that slot.
+                                            </p>
+                                            <div xmlns:func="http://oscar.fig.bmc.com" xmlns="http://www.w3.org/1999/xhtml" class="Para">"Reference"
+                                                is the class encompassing information related to the data source from
+                                                which an epitope and its related information are extracted into the
+                                                IEDB. We have identified three broad subclasses of References that
+                                                describe where epitope information will be obtained. They are Journal
+                                                Article, Patent Application, and Direct Submission. The complete listing
+                                                of slots (fields) encompassed by the Journal Article, Patent
+                                                Application, and Submission classes are provided in Figure
+                                                <span class="InternalRef"><a href="#Fig2_2">2</a></span>. The Journal
+                                                Article class refers to manuscripts published in peer-reviewed journals.
+                                                The Patent Application class captures all the reference fields for a
+                                                patent application that contain epitope information. The Submission
+                                                class captures information about sources that contribute data to the
+                                                IEDB directly. Data deposited by the Large Scale Antibody and T Cell
+                                                Epitope Discovery contracts [<span class="CitationRef"><a href="#CR3_2" data-toggle="citation">3</a></span>]
+                                                and those transferred from other websites fall into this class.
+                                                <figure xmlns="" class="Figure" id="Fig2_2">
+                                                    <div xmlns="http://www.w3.org/1999/xhtml" class="MediaObject">
+                                                        <a target="_blank" rel="noopener" href="https://media.springernature.com/full/springer-static/image/art%3A10.1186%2F1745-7580-1-2/MediaObjects/12996_2005_Article_2_Fig2_HTML.jpg">
+                                                            <img class="c-lazy-image u-js-shown" src="https://media.springernature.com/lw5/springer-static/image/art%3A10.1186%2F1745-7580-1-2/MediaObjects/12996_2005_Article_2_Fig2_HTML.jpg" alt="Figure 2" data-lazy-load="true" data-src="https://media.springernature.com/lw785/springer-static/image/art%3A10.1186%2F1745-7580-1-2/MediaObjects/12996_2005_Article_2_Fig2_HTML.jpg">
+
+                                                                <img src="https://media.springernature.com/lw785/springer-static/image/art%3A10.1186%2F1745-7580-1-2/MediaObjects/12996_2005_Article_2_Fig2_HTML.jpg" alt="Figure 2"></img>
+
+                                                        </a>
+                                                    </div>
+                                                    <figcaption class="Caption" lang="en">
+                                                        <div xmlns="http://www.w3.org/1999/xhtml" class="CaptionContent">
+                                                            <span class="CaptionNumber">Figure 2</span>
+                                                            <p xmlns="" class="SimplePara">Detailed classification of
+                                                                Reference class showing its subclasses and slots.</p>
+                                                        </div>
+                                                    </figcaption>
+                                                </figure>
+                                            </div>
+                                            <div xmlns:func="http://oscar.fig.bmc.com" xmlns="http://www.w3.org/1999/xhtml" class="Para">The
+                                                Epitope Structure and Epitope Source classes capture intrinsic features
+                                                of an epitope. The Epitope Structure class captures the physical and
+                                                chemical features of an epitope. Virtually any molecular structure may
+                                                provoke an immune response, such as proteins, carbohydrates, DNA, and
+                                                lipids. In the Epitope Structure class, structural information relating
+                                                to linear sequences and 2-D structures of the epitope, if available, are
+                                                catalogued. The Epitope Source class captures the phylogenetic source of
+                                                an epitope, including species of origin, gene name, protein name, and
+                                                links to other databases for more detailed information about proteins
+                                                and genes. Figures <span class="InternalRef"><a href="#Fig3_2">3A</a></span>
+                                                and <span class="InternalRef"><a href="#Fig3_2">3B</a></span> show the
+                                                listings of properties (slots/fields) encompassing the Epitope Structure
+                                                and Epitope Source classes.
+                                                <figure xmlns="" class="Figure" id="Fig3_2">
+                                                    <div xmlns="http://www.w3.org/1999/xhtml" class="MediaObject">
+                                                        <a target="_blank" rel="noopener" href="https://media.springernature.com/full/springer-static/image/art%3A10.1186%2F1745-7580-1-2/MediaObjects/12996_2005_Article_2_Fig3_HTML.jpg">
+                                                            <img class="c-lazy-image u-js-shown" src="https://media.springernature.com/lw5/springer-static/image/art%3A10.1186%2F1745-7580-1-2/MediaObjects/12996_2005_Article_2_Fig3_HTML.jpg" alt="Figure 3" data-lazy-load="true" data-src="https://media.springernature.com/lw785/springer-static/image/art%3A10.1186%2F1745-7580-1-2/MediaObjects/12996_2005_Article_2_Fig3_HTML.jpg">
+
+                                                                <img src="https://media.springernature.com/lw785/springer-static/image/art%3A10.1186%2F1745-7580-1-2/MediaObjects/12996_2005_Article_2_Fig3_HTML.jpg" alt="Figure 3"></img>
+
+                                                        </a>
+                                                    </div>
+                                                    <figcaption class="Caption" lang="en">
+                                                        <div xmlns="http://www.w3.org/1999/xhtml" class="CaptionContent">
+                                                            <span class="CaptionNumber">Figure 3</span>
+                                                            <p xmlns="" class="SimplePara">Detailed listing of
+                                                                properties of Epitope Structure (A), Epitope Source (B),
+                                                                and Assay Information (C) class.</p>
+                                                        </div>
+                                                    </figcaption>
+                                                </figure>
+                                            </div>
+                                            <p xmlns:func="http://oscar.fig.bmc.com" xmlns="http://www.w3.org/1999/xhtml" class="Para">The
+                                                experimental data and information about specific experiments and the
+                                                methodology utilized are captured in the Assay Information class. The
+                                                name of the assay used, the type of response measured in the assay, and
+                                                the readout of the assay are examples of information captured in the
+                                                Assay Information class. This important class is used as a superclass of
+                                                several other classes (and thus its properties are inherited by those
+                                                classes). A complete listing the properties (slots/fields) in the Assay
+                                                Information class is shown in Figure <span class="InternalRef"><a href="#Fig3_2">3C</a></span>.
+                                            </p>
+                                        </section>
+                                        <section id="Sec4_2" class="Section2 RenderAsSection2">
+                                            <h3 class="Heading">Immunization, Antigen, and Antigen Presenting Cell
+                                                classes</h3>
+                                            <div xmlns:func="http://oscar.fig.bmc.com" xmlns="http://www.w3.org/1999/xhtml" class="Para">As
+                                                with Assay Information, the classes Immunization, Antigen, and Antigen
+                                                Presenting Cell are used in multiple other class descriptions. Features
+                                                relating to the induction of the immune response are captured in the
+                                                Immunization class (Figure <span class="InternalRef"><a href="#Fig4_2">4A</a></span>).
+                                                It has relationships to other classes like Immunized Species, Immunogen,
+                                                In vivo Immunization, and In vitro Immunization. Immunized Species
+                                                contains information relating to the host that is being immunized. The
+                                                Immunogen class describes the molecules that induce the immune response
+                                                and an associated carrier molecule, if present. Features relating to how
+                                                the immunogen was introduced to the immunized species are captured under
+                                                the In vivo and In vitro Immunization classes.
+                                                <figure xmlns="" class="Figure" id="Fig4_2">
+                                                    <div xmlns="http://www.w3.org/1999/xhtml" class="MediaObject">
+                                                        <a target="_blank" rel="noopener" href="https://media.springernature.com/full/springer-static/image/art%3A10.1186%2F1745-7580-1-2/MediaObjects/12996_2005_Article_2_Fig4_HTML.jpg">
+                                                            <img class="c-lazy-image u-js-shown" src="https://media.springernature.com/lw5/springer-static/image/art%3A10.1186%2F1745-7580-1-2/MediaObjects/12996_2005_Article_2_Fig4_HTML.jpg" alt="Figure 4" data-lazy-load="true" data-src="https://media.springernature.com/lw785/springer-static/image/art%3A10.1186%2F1745-7580-1-2/MediaObjects/12996_2005_Article_2_Fig4_HTML.jpg">
+
+                                                                <img src="https://media.springernature.com/lw785/springer-static/image/art%3A10.1186%2F1745-7580-1-2/MediaObjects/12996_2005_Article_2_Fig4_HTML.jpg" alt="Figure 4"></img>
+
+                                                        </a>
+                                                    </div>
+                                                    <figcaption class="Caption" lang="en">
+                                                        <div xmlns="http://www.w3.org/1999/xhtml" class="CaptionContent">
+                                                            <span class="CaptionNumber">Figure 4</span>
+                                                            <p xmlns="" class="SimplePara">High-level classification of
+                                                                Immunization (A), Antigen (B), and Antigen Presenting
+                                                                Cells (C) class.</p>
+                                                        </div>
+                                                    </figcaption>
+                                                </figure>
+                                            </div>
+                                            <p xmlns:func="http://oscar.fig.bmc.com" xmlns="http://www.w3.org/1999/xhtml" class="Para">Similarly,
+                                                antigens are defined as the whole molecules that react with the products
+                                                of an immune response (as opposed to the epitopes which are the specific
+                                                structures, contained within the antigen that engages the immune
+                                                receptor). Information relating to the antigen and any associated
+                                                carrier molecule is captured in the Antigen class (Figure
+                                                <span class="InternalRef"><a href="#Fig4_2">4B</a></span>). During
+                                                immune responses, antigen-presenting cells process antigens and present
+                                                peptide epitopes complexed with MHC molecules. This information is
+                                                captured in the Antigen Presenting Cells class, which has a relationship
+                                                to the MHC Molecules and the Source Species classes (Figure
+                                                <span class="InternalRef"><a href="#Fig4_2">4C</a></span>). The Source
+                                                Species class describes the species information from which the antigen
+                                                presenting cells are derived.
+                                            </p>
+                                        </section>
+                                        <section id="Sec5_2" class="Section2 RenderAsSection2">
+                                            <h3 class="Heading">The MHC Binding, Naturally Processed Ligand, T Cell
+                                                Response, and B Cell Response classes</h3>
+                                            <div xmlns:func="http://oscar.fig.bmc.com" xmlns="http://www.w3.org/1999/xhtml" class="Para">The
+                                                MHC Binding class captures the details relating to the interaction of
+                                                the epitope with specific MHC molecules and information relating to the
+                                                MHC molecule along with any available Epitope-MHC complex structure
+                                                details. This class also has a slot that is restricted to be an instance
+                                                of the Assay Information class (Figure <span class="InternalRef"><a href="#Fig5_2">5A</a></span>).
+                                                <figure xmlns="" class="Figure" id="Fig5_2">
+                                                    <div xmlns="http://www.w3.org/1999/xhtml" class="MediaObject">
+                                                        <a target="_blank" rel="noopener" href="https://media.springernature.com/full/springer-static/image/art%3A10.1186%2F1745-7580-1-2/MediaObjects/12996_2005_Article_2_Fig5_HTML.jpg">
+                                                            <img class="c-lazy-image u-js-shown" src="https://media.springernature.com/lw5/springer-static/image/art%3A10.1186%2F1745-7580-1-2/MediaObjects/12996_2005_Article_2_Fig5_HTML.jpg" alt="Figure 5" data-lazy-load="true" data-src="https://media.springernature.com/lw785/springer-static/image/art%3A10.1186%2F1745-7580-1-2/MediaObjects/12996_2005_Article_2_Fig5_HTML.jpg">
+
+                                                                <img src="https://media.springernature.com/lw785/springer-static/image/art%3A10.1186%2F1745-7580-1-2/MediaObjects/12996_2005_Article_2_Fig5_HTML.jpg" alt="Figure 5"></img>
+
+                                                        </a>
+                                                    </div>
+                                                    <figcaption class="Caption" lang="en">
+                                                        <div xmlns="http://www.w3.org/1999/xhtml" class="CaptionContent">
+                                                            <span class="CaptionNumber">Figure 5</span>
+                                                            <p xmlns="" class="SimplePara">High-level classification of
+                                                                MHC Binding (A) and Naturally Processed Ligand (B)
+                                                                class.</p>
+                                                        </div>
+                                                    </figcaption>
+                                                </figure>
+                                            </div>
+                                            <p xmlns:func="http://oscar.fig.bmc.com" xmlns="http://www.w3.org/1999/xhtml" class="Para">Extrinsic
+                                                features of an epitope are captured by Naturally Processed Ligand, T
+                                                Cell Response, and B Cell Response classes. Extrinsic features are
+                                                context-dependent attributes, being dependent upon specific experimental
+                                                conditions. The Naturally Processed Ligand class captures data related
+                                                to epitopes that are naturally processed and presented on the cell
+                                                surface. This class has properties that are instances of classes
+                                                including Antigen Presenting Cell, Antigen, and Assay Information
+                                                (Figure <span class="InternalRef"><a href="#Fig5_2">5B</a></span>).
+                                            </p>
+                                            <p xmlns:func="http://oscar.fig.bmc.com" xmlns="http://www.w3.org/1999/xhtml" class="Para">The
+                                                Naturally Processed Ligand class differs from the MHC Binding class in
+                                                that information related to the antigen that was processed and the cell
+                                                types in which the processing occurred is represented. MHC Binding class
+                                                captures data relating to in vitro MHC binding assays, which assess the
+                                                epitope's binding capacity to the MHC molecule. Hence the MHC Binding
+                                                class does requires neither the Antigen class not the Antigen Presenting
+                                                Cells class. In general, naturally processed ligands are assessed in the
+                                                absence of a T cell response, for example, identified by direct elution
+                                                from MHC molecules extracted from infected cells or antigen presenting
+                                                cells. Thus, the Immunization class is not used as a value restriction
+                                                by the Naturally Processed Ligand class.</p>
+                                            <div xmlns:func="http://oscar.fig.bmc.com" xmlns="http://www.w3.org/1999/xhtml" class="Para">The
+                                                T Cell Response class captures all of the T cell mediated
+                                                immunity-related information (Figure <span class="InternalRef"><a href="#Fig6_2">6A</a></span>).
+                                                It has properties that are of type: Immunization, Effector Cells,
+                                                Antigen Presenting Cell, Antigen, Assay Information, and Epitope-MHC-TCR
+                                                Complex. The Effector Cell class describes the cells that are elicited
+                                                upon immunization and that acquire measurable functions as a result. The
+                                                B Cell Response class describes antibody responses that are related to
+                                                the epitope (Figure <span class="InternalRef"><a href="#Fig6_2">6B</a></span>).
+                                                This class has properties that are of type: Immunization, Antibody
+                                                Molecule, Antigen, Assay Information, and Antigen-Antibody Complex.
+                                                Because B cell responses do not require MHC binding and antigen
+                                                presenting cells, the respective classes related to MHC Molecule and
+                                                Antigen Presenting Cells are not used as restrictions on properties of
+                                                the B Cell Response class.
+                                                <figure xmlns="" class="Figure" id="Fig6_2">
+                                                    <div xmlns="http://www.w3.org/1999/xhtml" class="MediaObject">
+                                                        <a target="_blank" rel="noopener" href="https://media.springernature.com/full/springer-static/image/art%3A10.1186%2F1745-7580-1-2/MediaObjects/12996_2005_Article_2_Fig6_HTML.jpg">
+                                                            <img class="c-lazy-image u-js-shown" src="https://media.springernature.com/lw5/springer-static/image/art%3A10.1186%2F1745-7580-1-2/MediaObjects/12996_2005_Article_2_Fig6_HTML.jpg" alt="Figure 6" data-lazy-load="true" data-src="https://media.springernature.com/lw785/springer-static/image/art%3A10.1186%2F1745-7580-1-2/MediaObjects/12996_2005_Article_2_Fig6_HTML.jpg">
+
+                                                                <img src="https://media.springernature.com/lw785/springer-static/image/art%3A10.1186%2F1745-7580-1-2/MediaObjects/12996_2005_Article_2_Fig6_HTML.jpg" alt="Figure 6"></img>
+
+                                                        </a>
+                                                    </div>
+                                                    <figcaption class="Caption" lang="en">
+                                                        <div xmlns="http://www.w3.org/1999/xhtml" class="CaptionContent">
+                                                            <span class="CaptionNumber">Figure 6</span>
+                                                            <p xmlns="" class="SimplePara">High-level classification of
+                                                                T Cell Response (A) and B Cell Response (B) class.</p>
+                                                        </div>
+                                                    </figcaption>
+                                                </figure>
+                                            </div>
+                                        </section>
+                                        <section id="Sec6_2" class="Section2 RenderAsSection2">
+                                            <h3 class="Heading">Classes capturing 3D structures</h3>
+                                            <p xmlns:func="http://oscar.fig.bmc.com" xmlns="http://www.w3.org/1999/xhtml" class="Para">There
+                                                are three classes that capture information about the 3D structure of
+                                                complexes: Epitope-MHC Complex, Epitope-MHC-TCR Complex, and
+                                                Antigen-Antibody Complex. The Epitope-MHC Complex, Epitope-MHC-TCR
+                                                Complex, and Antigen-Antibody Complex classes are used as restrictions
+                                                on properties of the MHC Binding, T Cell Response, and B Cell Response
+                                                classes respectively (Figures <span class="InternalRef"><a href="#Fig5_2">5A</a></span>,
+                                                <span class="InternalRef"><a href="#Fig6_2">6A</a></span>, and
+                                                <span class="InternalRef"><a href="#Fig6_2">6B</a></span>). These
+                                                Complex classes capture the Protein Data Bank (PDB) Identifier, which
+                                                provides detailed information about 3D structures. The Protein Data Bank
+                                                [<span class="CitationRef"><a href="#CR22_2" data-toggle="citation">22</a></span>,
+                                                <span class="CitationRef"><a href="#CR23_2" data-toggle="citation">23</a></span>]
+                                                contains approximately 1600 3D structures that are of immunological
+                                                interest. Other information that is not available in PDB, such as the
+                                                atom pairs that are involved in the interactions between molecules, the
+                                                specific residues, the contact area of the molecules, and allosteric
+                                                effect, is also captured here.
+                                            </p>
+                                        </section>
+                                        <section id="Sec7_2" class="Section2 RenderAsSection2">
+                                            <h3 class="Heading">IEDB Class Hierarchy and Data Dictionary</h3>
+                                            <p xmlns:func="http://oscar.fig.bmc.com" xmlns="http://www.w3.org/1999/xhtml" class="Para">Each
+                                                class has numerous slots that capture detailed information associated
+                                                with epitopes. As mentioned above, a complete list of all the classes,
+                                                their properties, and relationship, can be found at
+                                                <span class="ExternalRef"><a href="http://www.immuneepitope.org/ontology/index.html" target="_blank" class="ext-link"><span class="RefSource">http://www.immuneepitope.org/ontology/index.html</span></a></span>.
+                                                One of the files provided as supplementary material contains two
+                                                examples of how two literature references [<span class="CitationRef"><a href="#CR24_2" data-toggle="citation">24</a></span>,
+                                                <span class="CitationRef"><a href="#CR25_2" data-toggle="citation">25</a></span>]
+                                                containing epitope information are extracted into the IEDB ontology
+                                                (<span class="InternalRef"><a href="#MOESM1_2">additional file 1</a></span>).
+                                                Along with the class hierarchy, the IEDB's data dictionary
+                                                (<span class="InternalRef"><a href="#MOESM2_2">additional file 2</a></span>)
+                                                provides more detailed information about the fields that are defined for
+                                                the IEDB. The data dictionary contains a textual overview description
+                                                and a listing of fields that are required to be completed for IEDB
+                                                entries. The data dictionary also allows database users to provide
+                                                comments and suggestions to IEDB team to enhance the formal ontology.
+                                            </p>
+                                        </section>
+                                    </div>
+                                </section>
+                                <section xmlns="" xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:meta="http://www.springer.com/app/meta" id="Sec8_2" class="Section1 RenderAsSection1 c-section">
+                                    <h2 class="Heading js-ToggleCollapseSection c-section__heading" data-sticky-update="true">
+                                        <a href="#UtilityandDiscussion" data-toggle="collapse" data-toggle-disable-clickoff="" data-target="UtilityandDiscussion">Utility
+                                            and Discussion
+                                        </a>
+                                    </h2>
+                                    <div class="js-CollapseSection CollapseSection c-section__content" id="UtilityandDiscussion" data-test="collapse-section">
+                                        <p xmlns:func="http://oscar.fig.bmc.com" xmlns="http://www.w3.org/1999/xhtml" class="Para">The
+                                            IEDB will be a comprehensive resource pertaining to epitopes of the immune
+                                            system. By extensively curating both intrinsic and extrinsic features
+                                            associated with epitopes, the IEDB is expected to provide substantially
+                                            greater detail about specific epitopes than any other databases presently
+                                            available. The IEDB will be populated with data derived from three main
+                                            sources, namely the peer-reviewed literature, patent applications, and
+                                            direct submission. Epitope data published in the literature and patent
+                                            applications are curated manually by the IEDB's curation team. Data from
+                                            already existing epitope databases, whose authors have agreed to share their
+                                            data, will also be imported into the IEDB. Apart from these, a main data
+                                            source will be the direct submission of data from the Large-scale Antibody
+                                            and T Cell Epitope Discovery programs [<span class="CitationRef"><a href="#CR3_2" data-toggle="citation">3</a></span>]
+                                            that are funded by NIAID. Presently, fourteen contracts have been awarded
+                                            under this program, and all of them will submit their data to the IEDB.
+                                            Direct antibody and T cell epitope submissions will also be sought from the
+                                            broader research community, with an emphasis on antibody epitopes to NIAID
+                                            Category A-C pathogens. Because of the large scale of the IEDB project, a
+                                            formal ontology is critical to ensure consistency in the representation of
+                                            data.
+                                        </p>
+                                        <p xmlns:func="http://oscar.fig.bmc.com" xmlns="http://www.w3.org/1999/xhtml" class="Para">Communication
+                                            between database developers, researchers, analysis tool developers, and team
+                                            members is crucial, and can be performed in harmony only when a common
+                                            vocabulary is established. An ontology, which is an explicit formal
+                                            specification of the terms in the domain and relationships among them, is an
+                                            effective way to share the knowledge contained in that domain. Accordingly,
+                                            since the IEDB's domain is epitope-related data, we have created an ontology
+                                            that captures detailed conceptual structure related to these data.</p>
+                                        <p xmlns:func="http://oscar.fig.bmc.com" xmlns="http://www.w3.org/1999/xhtml" class="Para">The
+                                            development of this ontology has relevance for the expansion and
+                                            modification of the epitope knowledge base. Our ontology design defines
+                                            individual concepts as separate classes and then defined relationships
+                                            between these classes and other objects in the domain. These classes serve
+                                            to restrict the values that will describe properties of objects in the
+                                            database. For example, the species is a separate concept defined in its own
+                                            class. Depending on the context, this can refer to an immunized species or
+                                            the species from which antigen presenting cells are derived. Similarly MHC
+                                            Molecules is defined as a separate class, and it is used as a value
+                                            restriction by concepts like MHC Binding and Antigen Presenting Cells.
+                                            Defining concepts as separate classes and using them to restrict the values
+                                            of properties in other classes facilitates the expansion and modification of
+                                            our ontology. Adding properties (slots) to concepts is a task easily
+                                            accomplished when there are well-defined class descriptions that may serve
+                                            as value restrictions on the properties, and providing that these class
+                                            descriptions are general enough to apply in all instances. We have ensured
+                                            in our design that each concept is atomic and that it can be re-used by
+                                            various classes.</p>
+                                        <p xmlns:func="http://oscar.fig.bmc.com" xmlns="http://www.w3.org/1999/xhtml" class="Para">The
+                                            development of a formal ontology is valuable to database users and in
+                                            particular to scientists contributing data to, and downloading data from,
+                                            the IEDB. We anticipate that the availability of a formal ontology will
+                                            ensure that a common language and shared understanding of concepts will
+                                            inspire this type of communication, thus ensuring maximum efficiency and
+                                            accuracy. The formal ontology developed will most likely require refinement
+                                            and fine tuning when users provide suggestions and new technologies for
+                                            performing experiments are discovered. The IEDB website will provide
+                                            mechanisms for the users to provide suggestions and participate in the
+                                            enhancement of the ontology. The IEDB Data Dictionary has a separate column
+                                            for the users to provide comments on specific data fields. The IEDB website
+                                            will also host web forms that will guide users to conform to the ontology
+                                            definitions when submitting data. Apart from the web forms, an XML schema
+                                            definition (XSD) will be available on the website for users to inspect and
+                                            use in their data submission. Users will also be able to download epitope
+                                            records from the website.</p>
+                                        <p xmlns:func="http://oscar.fig.bmc.com" xmlns="http://www.w3.org/1999/xhtml" class="Para">In
+                                            the process of developing new ontologies, it is good practice to leverage
+                                            existing community standards. In our initial analysis, we confirmed that
+                                            there were no explicit ontologies that efficiently captured epitope details
+                                            as per the scope of the IEDB program. As mentioned above, we have utilized,
+                                            as much as possible, inferred ontologies from existing epitope databases.
+                                            Among the ontologies that we analyzed, IMGT-Ontology and Gene Ontology were
+                                            the only two formal ontologies that were related to the epitope domain. The
+                                            IMGT-Ontology was designed for the ImMunoGeneTics database. IMGT is an
+                                            integrated database specializing in antigen receptors (immunoglobulins and
+                                            T-cell receptors) and the major histocompatibility complex of all vertebrate
+                                            species. The ontology developed for this database has specific immunological
+                                            content, describing the classification and specification of terms needed for
+                                            immunogenetics. The IEDB does conform to IMGT's standards about receptors
+                                            and MHC molecule chains in the sense that all the chain names follow IMGT's
+                                            controlled vocabulary.</p>
+                                        <p xmlns:func="http://oscar.fig.bmc.com" xmlns="http://www.w3.org/1999/xhtml" class="Para">GO
+                                            provides structured controlled vocabularies for genes, gene products, and
+                                            sequences annotated for many organisms. The IEDB complements GO in terms of
+                                            epitopes of immunological interest since GO is incomplete in this area.
+                                            Antigens, which are primary sources of epitopes, are annotated in GO. Thus,
+                                            in essence, the IEDB could be utilized to provide an extension of GO for
+                                            antigens that contain epitope-related information.</p></div>
+                                </section>
+                                <section xmlns="" xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:meta="http://www.springer.com/app/meta" id="Sec9_2" class="Section1 RenderAsSection1 c-section">
+                                    <h2 class="Heading js-ToggleCollapseSection c-section__heading" data-sticky-update="true">
+                                        <a href="#Conclusion" data-toggle="collapse" data-toggle-disable-clickoff="" data-target="Conclusion">Conclusion</a>
+                                    </h2>
+                                    <div class="js-CollapseSection CollapseSection c-section__content" id="Conclusion" data-test="collapse-section">
+                                        <p xmlns:func="http://oscar.fig.bmc.com" xmlns="http://www.w3.org/1999/xhtml" class="Para">Perhaps
+                                            the most important element in the development of the IEDB ontology is that,
+                                            to the best of our knowledge, this represents the first immunological
+                                            ontology specifically designed to capture both intrinsic biochemical and
+                                            extrinsic context dependent information. In this respect, it is similar in
+                                            spirit, but different in approach, from other knowledge resources relating
+                                            to systems biology. We anticipate that the development of this type of
+                                            ontology and associated databases might lead to completely new methods for
+                                            describing and modeling immune responses. Accordingly, this new program
+                                            might represent a novel tool to assist in the design, testing, and
+                                            development of new ways to combat infectious diseases and other immune
+                                            related pathologies such as cancer and autoimmune diseases.</p></div>
+                                </section>
+                                <section xmlns="" xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:meta="http://www.springer.com/app/meta" id="Sec10_2" class="Section1 RenderAsSection1 c-section">
+                                    <h2 class="Heading js-ToggleCollapseSection c-section__heading" data-sticky-update="true">
+                                        <a href="#Availability" data-toggle="collapse" data-toggle-disable-clickoff="" data-target="Availability">Availability</a>
+                                    </h2>
+                                    <div class="js-CollapseSection CollapseSection c-section__content" id="Availability" data-test="collapse-section">
+                                        <p xmlns:func="http://oscar.fig.bmc.com" xmlns="http://www.w3.org/1999/xhtml" class="Para">A
+                                            complete listing of IEDB's class hierarchy and its properties is available
+                                            at <span class="ExternalRef"><a href="http://www.immuneepitope.org/ontology/index.html" target="_blank" class="ext-link"><span class="RefSource">http://www.immuneepitope.org/ontology/index.html</span></a></span>
+                                        </p>
+                                    </div>
+                                </section>
+                                <section xmlns="" xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:meta="http://www.springer.com/app/meta" class="AbbreviationGroup Section1 RenderAsSection1 c-section">
+                                    <h2 class="Heading js-ToggleCollapseSection c-section__heading" data-sticky-update="true">
+                                        <a href="#ListofAbbreviationsUsed" data-toggle="collapse" data-toggle-disable-clickoff="" data-target="ListofAbbreviationsUsed">List
+                                            of Abbreviations Used
+                                        </a>
+                                    </h2>
+                                    <div class="js-CollapseSection CollapseSection c-section__content" data-test="collapse-section" id="ListofAbbreviationsUsed">
+                                        <div class="DefinitionList">
+                                            <dl class="DefinitionListEntry">
+                                                <dt class="Term"><dfn>IEDB:&nbsp;</dfn></dt>
+                                                <dd class="Description">
+                                                    <p xmlns:func="http://oscar.fig.bmc.com" xmlns="http://www.w3.org/1999/xhtml" class="Para">Immune
+                                                        Epitope Database and Analysis Resource</p>
+                                                </dd>
+                                            </dl>
+                                            <dl class="DefinitionListEntry">
+                                                <dt class="Term"><dfn>MHC:&nbsp;</dfn></dt>
+                                                <dd class="Description">
+                                                    <p xmlns:func="http://oscar.fig.bmc.com" xmlns="http://www.w3.org/1999/xhtml" class="Para">Major
+                                                        Histocompatibility Complex</p>
+                                                </dd>
+                                            </dl>
+                                            <dl class="DefinitionListEntry">
+                                                <dt class="Term"><dfn>TCR:&nbsp;</dfn></dt>
+                                                <dd class="Description">
+                                                    <p xmlns:func="http://oscar.fig.bmc.com" xmlns="http://www.w3.org/1999/xhtml" class="Para">T
+                                                        Cell Receptor</p>
+                                                </dd>
+                                            </dl>
+                                            <dl class="DefinitionListEntry">
+                                                <dt class="Term"><dfn>BCR:&nbsp;</dfn></dt>
+                                                <dd class="Description">
+                                                    <p xmlns:func="http://oscar.fig.bmc.com" xmlns="http://www.w3.org/1999/xhtml" class="Para">B
+                                                        Cell Receptor</p>
+                                                </dd>
+                                            </dl>
+                                            <dl class="DefinitionListEntry">
+                                                <dt class="Term"><dfn>IMGT:&nbsp;</dfn></dt>
+                                                <dd class="Description">
+                                                    <p xmlns:func="http://oscar.fig.bmc.com" xmlns="http://www.w3.org/1999/xhtml" class="Para">Immunogenetics
+                                                        Database</p>
+                                                </dd>
+                                            </dl>
+                                            <dl class="DefinitionListEntry">
+                                                <dt class="Term"><dfn>GO:&nbsp;</dfn></dt>
+                                                <dd class="Description">
+                                                    <p xmlns:func="http://oscar.fig.bmc.com" xmlns="http://www.w3.org/1999/xhtml" class="Para">Gene
+                                                        Ontology</p>
+                                                </dd>
+                                            </dl>
+                                            <dl class="DefinitionListEntry">
+                                                <dt class="Term"><dfn>J2EE:&nbsp;</dfn></dt>
+                                                <dd class="Description">
+                                                    <p xmlns:func="http://oscar.fig.bmc.com" xmlns="http://www.w3.org/1999/xhtml" class="Para">Java
+                                                        2 Enterprise Edition</p>
+                                                </dd>
+                                            </dl>
+                                            <dl class="DefinitionListEntry">
+                                                <dt class="Term"><dfn>OWL:&nbsp;</dfn></dt>
+                                                <dd class="Description">
+                                                    <p xmlns:func="http://oscar.fig.bmc.com" xmlns="http://www.w3.org/1999/xhtml" class="Para">Ontology
+                                                        Web Language</p>
+                                                </dd>
+                                            </dl>
+                                            <dl class="DefinitionListEntry">
+                                                <dt class="Term"><dfn>PDB:&nbsp;</dfn></dt>
+                                                <dd class="Description">
+                                                    <p xmlns:func="http://oscar.fig.bmc.com" xmlns="http://www.w3.org/1999/xhtml" class="Para">Protein
+                                                        Data Bank</p>
+                                                </dd>
+                                            </dl>
+                                            <dl class="DefinitionListEntry">
+                                                <dt class="Term"><dfn>NIAID:&nbsp;</dfn></dt>
+                                                <dd class="Description">
+                                                    <p xmlns:func="http://oscar.fig.bmc.com" xmlns="http://www.w3.org/1999/xhtml" class="Para">National
+                                                        Institute of Allergy and Infectious Diseases</p>
+                                                </dd>
+                                            </dl>
+                                            <dl class="DefinitionListEntry">
+                                                <dt class="Term"><dfn>XML:&nbsp;</dfn></dt>
+                                                <dd class="Description">
+                                                    <p xmlns:func="http://oscar.fig.bmc.com" xmlns="http://www.w3.org/1999/xhtml" class="Para">Extensible
+                                                        Markup Language</p>
+                                                </dd>
+                                            </dl>
+                                            <dl class="DefinitionListEntry">
+                                                <dt class="Term"><dfn>XSD:&nbsp;</dfn></dt>
+                                                <dd class="Description">
+                                                    <p xmlns:func="http://oscar.fig.bmc.com" xmlns="http://www.w3.org/1999/xhtml" class="Para">XML
+                                                        Schema Definition</p>
+                                                </dd>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section xmlns="" xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:meta="http://www.springer.com/app/meta" class="Section1 RenderAsSection1 c-section" data-test="declarations-section" id="Decs">
+                                    <h2 class="Heading js-ToggleCollapseSection c-section__heading" data-sticky-update="true">
+                                        <a href="#Declarations" data-toggle="collapse" data-toggle-disable-clickoff="" data-target="Declarations">Declarations</a>
+                                    </h2>
+                                    <div class="js-CollapseSection CollapseSection c-section__content" data-test="collapse-section" id="Declarations">
+                                        <div xmlns:func="http://oscar.fig.bmc.com" xmlns="http://www.w3.org/1999/xhtml" class="Acknowledgments">
+                                            <h3 xmlns="" class="Heading">Acknowledgements</h3>
+                                            <p xmlns="" class="SimplePara">This work was supported by the National
+                                                Institutes of Health Contract HHSN26620040006C. The authors like to
+                                                thank Bette Korber, Marie-Paule LeFranc, William Hildebrand, Vladimir
+                                                Brusic, Anne De Groot, Darren Flower, Pam Surko, Scott Stewart, and
+                                                Scott Way for the helpful discussions. The authors also thank Alison
+                                                Deckhut for critical review of the manuscript.</p></div>
+                                        <aside class="Appendix" id="AppESM1_2">
+
+                                            <h3 class="Heading">Electronic supplementary material</h3>
+                                            <div id="widgetContainer" data-test="figshare-container"></div>
+                                            <div xmlns:func="http://oscar.fig.bmc.com" xmlns="http://www.w3.org/1999/xhtml" class="Para">
+                                                <div class="MediaObject" id="MOESM1_2">
+                                                    <div xmlns="" class="esm-item ">
+                                                        <div xmlns="http://www.w3.org/1999/xhtml" class="caption-container">
+                                                            <a class="filename" href="https://static-content.springer.com/esm/art%3A10.1186%2F1745-7580-1-2/MediaObjects/1745-7580-1-2-S1.pdf">1745-7580-1-2-S1.pdf</a>
+                                                            <span xmlns="" class="SimplePara">Additional File 1: Sample Curation. This file contains a table that shows how epitope and its related information were extracted from a literature reference and mapped into the IEDB ontology. (PDF 397 KB)</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="MediaObject" id="MOESM2_2">
+                                                    <div xmlns="" class="esm-item ">
+                                                        <div xmlns="http://www.w3.org/1999/xhtml" class="caption-container">
+                                                            <a class="filename" href="https://static-content.springer.com/esm/art%3A10.1186%2F1745-7580-1-2/MediaObjects/1745-7580-1-2-S2.pdf">1745-7580-1-2-S2.pdf</a>
+                                                            <span xmlns="" class="SimplePara">Additional File 2: IEDB Data Dictionary v12-5. The Data Dictionary contains the textual overview description and a listing of fields that are captured for IEDB. (PDF 486 KB)</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </aside>
+                                        <aside xmlns:func="http://oscar.fig.bmc.com" xmlns="http://www.w3.org/1999/xhtml" class="ArticleNote ArticleNoteMisc">
+                                            <h3 xmlns="" class="Heading">Authors' contributions</h3>
+                                            <p xmlns="" class="SimplePara">MS generated the formal ontology using
+                                                Protégé. MS, BP, HB, JS, and AS designed the initial ontology. SW, JM,
+                                                WF, DM, PB provided critical insight in enhancing the initial design and
+                                                creating the formal ontology. All authors participated in the
+                                                preparation of the manuscript.</p></aside>
+                                    </div>
+                                </section>
+                            </div>
+                            <div class="FulltextWrapper">
+                                <section xmlns="" xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:meta="http://www.springer.com/app/meta" class="Section1 RenderAsSection1 c-section Affiliations" id="Aff">
+                                    <h2 class="Heading js-ToggleCollapseSection c-section__heading" data-sticky-update="true">
+                                        <a href="#Author-Affiliations" data-toggle="collapse" data-toggle-disable-clickoff="" data-target="Author-Affiliations">Authors’
+                                            Affiliations
+                                        </a>
+                                    </h2>
+                                    <div class="js-CollapseSection CollapseSection c-section__content c-section__content" data-test="collapse-section" id="Author-Affiliations">
+                                        <div xmlns:func="http://oscar.fig.bmc.com" xmlns="http://www.w3.org/1999/xhtml" class="Affiliation" id="Aff1_2">
+                                            <span class="AffiliationNumber">(1)</span>
+                                            <div class="AffiliationText">La Jolla Institute of Allergy and Immunology,
+                                                3030 Bunker Hill Street, Suite 326, San Diego, California&nbsp;92109,
+                                                USA
+                                            </div>
+                                        </div>
+                                        <div xmlns:func="http://oscar.fig.bmc.com" xmlns="http://www.w3.org/1999/xhtml" class="Affiliation" id="Aff2_2">
+                                            <span class="AffiliationNumber">(2)</span>
+                                            <div class="AffiliationText">Knowledge Systems, Artificial Intelligence
+                                                Laboratory, Stanford University and McGuinness Associates, Stanford, CA&nbsp;94305,
+                                                USA
+                                            </div>
+                                        </div>
+                                        <div xmlns:func="http://oscar.fig.bmc.com" xmlns="http://www.w3.org/1999/xhtml" class="Affiliation" id="Aff3_2">
+                                            <span class="AffiliationNumber">(3)</span>
+                                            <div class="AffiliationText">San Diego Supercomputer Center, P.O. Box 85608,
+                                                San Diego, California&nbsp;92186-5608, USA
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                            <div class="FulltextWrapper">
+                                <section xmlns="" xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:meta="http://www.springer.com/app/meta" class="Section1 RenderAsSection1 c-section SectionTypeMaterialsAndMethods" id="Bib1_2">
+                                    <h2 class="Heading js-ToggleCollapseSection c-section__heading" data-sticky-update="true">
+                                        <a href="#References" data-toggle="collapse" data-toggle-disable-clickoff="" data-target="References">References</a>
+                                    </h2>
+                                    <div class="js-CollapseSection CollapseSection c-section__content" data-test="collapse-section" id="References">
+                                        <ol class="BibliographyWrapper">
+                                            <li class="Citation">
+                                                <cite class="CitationContent" id="CR1_2" itemprop="citation" itemscope="" itemtype="http://schema.org/ScholarlyArticle"><span itemprop="headline">Peters B, Sidney J, Bourne P, Bui HH, Buus S, Doh G, Fleri W, Kronenberg M, Kubo R, Lund O, Nemazee D, Ponomarenko JV, Sathiamurthy M, Schoenberger SP, Stewart S, Surko P, Way S, Wilson S, Sette A: The design and implementation of the immune epitope database and analysis resource.
+                  Immunogenetics 2005.<span xmlns:func="http://oscar.fig.bmc.com" xmlns="http://www.w3.org/1999/xhtml" class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" href="https://scholar.google.com/scholar?hl=en&amp;q=Peters%20B%2C%20Sidney%20J%2C%20Bourne%20P%2C%20Bui%20HH%2C%20Buus%20S%2C%20Doh%20G%2C%20Fleri%20W%2C%20Kronenberg%20M%2C%20Kubo%20R%2C%20Lund%20O%2C%20Nemazee%20D%2C%20Ponomarenko%20JV%2C%20Sathiamurthy%20M%2C%20Schoenberger%20SP%2C%20Stewart%20S%2C%20Surko%20P%2C%20Way%20S%2C%20Wilson%20S%2C%20Sette%20A%3A%20The%20design%20and%20implementation%20of%20the%20immune%20epitope%20database%20and%20analysis%20resource.%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20Immunogenetics%202005."><span><span>Google Scholar</span></span></a></span></span></span><span class="Occurrences"></span></cite>
+                                            </li>
+                                            <li class="Citation">
+                                                <cite class="CitationContent" id="CR2_2" itemprop="citation" itemscope="" itemtype="http://schema.org/ScholarlyArticle"><span itemprop="headline">Peters B, Sidney J, Bourne P, Bui HH, Buus S, Doh G, Fleri W, Kronenberg M, Kubo R, Lund O, Nemazee D, Ponomarenko JV, Sathiamurthy M, Schoenberger S, Stewart S, Surko P, Way S, Wilson S, Sette A: <strong class="EmphasisTypeBold">The immune epitope database and analysis resource: from vision to blueprint.</strong>
+                  <em class="EmphasisTypeItalic">PLoS Biol</em> 2005, <strong class="EmphasisTypeBold">3:</strong>e91.</span><span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a target="_blank" rel="noopener" href="https://doi.org/10.1371/journal.pbio.0030091"><span><span>View Article</span></span></a></span><span class="Occurrence OccurrencePID"><a target="_blank" rel="noopener nofollow" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&amp;db=PubMed&amp;dopt=Abstract&amp;list_uids=15760272"><span><span>PubMed</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" href="http://scholar.google.com/scholar_lookup?title=The%20immune%20epitope%20database%20and%20analysis%20resource%3A%20from%20vision%20to%20blueprint&amp;author=B.%20Peters&amp;author=J.%20Sidney&amp;author=P.%20Bourne&amp;author=HH.%20Bui&amp;author=S.%20Buus&amp;author=G.%20Doh&amp;author=W.%20Fleri&amp;author=M.%20Kronenberg&amp;author=R.%20Kubo&amp;author=O.%20Lund&amp;author=D.%20Nemazee&amp;author=JV.%20Ponomarenko&amp;author=M.%20Sathiamurthy&amp;author=S.%20Schoenberger&amp;author=S.%20Stewart&amp;author=P.%20Surko&amp;author=S.%20Way&amp;author=S.%20Wilson&amp;author=A.%20Sette&amp;journal=PLoS%20Biol&amp;volume=3&amp;pages=e91&amp;publication_year=2005"><span><span>Google Scholar</span></span></a></span></span></cite>
+                                            </li>
+                                            <li class="Citation">
+                                                <cite class="CitationContent" id="CR3_2" itemprop="citation" itemscope="" itemtype="http://schema.org/ScholarlyArticle"><span itemprop="headline">Sette A, Fleri W, Peters B, Sathiamurthy M, Bui HH, Wilson S: <strong class="EmphasisTypeBold">A roadmap for the immunomics of category A-C pathogens.</strong>
+                  <em class="EmphasisTypeItalic">Immunity</em> 2005, <strong class="EmphasisTypeBold">22:</strong>155–161.</span><span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a target="_blank" rel="noopener" href="https://doi.org/10.1016/j.immuni.2005.01.009"><span><span>View Article</span></span></a></span><span class="Occurrence OccurrencePID"><a target="_blank" rel="noopener nofollow" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&amp;db=PubMed&amp;dopt=Abstract&amp;list_uids=15773067"><span><span>PubMed</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" href="http://scholar.google.com/scholar_lookup?title=A%20roadmap%20for%20the%20immunomics%20of%20category%20A-C%20pathogens&amp;author=A.%20Sette&amp;author=W.%20Fleri&amp;author=B.%20Peters&amp;author=M.%20Sathiamurthy&amp;author=HH.%20Bui&amp;author=S.%20Wilson&amp;journal=Immunity&amp;volume=22&amp;pages=155-161&amp;publication_year=2005"><span><span>Google Scholar</span></span></a></span></span></cite>
+                                            </li>
+                                            <li class="Citation">
+                                                <cite class="CitationContent" id="CR4_2" itemprop="citation" itemscope="" itemtype="http://schema.org/ScholarlyArticle"><span itemprop="headline">Guarino N, Giaretta P: <strong class="EmphasisTypeBold">Ontologies and Knowledge Bases: Towards a Terminological Clarification.</strong>
+                  <em class="EmphasisTypeItalic">Towards Very Large Knowledge Bases: Knowledge Building and Knowledge Sharing</em>
+                  <em class="EmphasisTypeItalic">(Edited by: Mars NJI).</em> Amsterdam, IOS Press 1995, 25–32.</span><span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" href="http://scholar.google.com/scholar_lookup?title=Ontologies%20and%20Knowledge%20Bases%3A%20Towards%20a%20Terminological%20Clarification&amp;author=N.%20Guarino&amp;author=P.%20Giaretta&amp;pages=25-32&amp;publication_year=1995"><span><span>Google Scholar</span></span></a></span></span></cite>
+                                            </li>
+                                            <li class="Citation">
+                                                <cite class="CitationContent" id="CR5_2" itemprop="citation" itemscope="" itemtype="http://schema.org/ScholarlyArticle"><span itemprop="headline">Gruber T: <strong class="EmphasisTypeBold">A Translational Approach to Portable Ontologies.</strong>
+                  <em class="EmphasisTypeItalic">Knowledge Acquisition</em> 1993, <strong class="EmphasisTypeBold">5:</strong>199–220.</span><span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a target="_blank" rel="noopener" href="https://doi.org/10.1006/knac.1993.1008"><span><span>View Article</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" href="http://scholar.google.com/scholar_lookup?title=A%20Translational%20Approach%20to%20Portable%20Ontologies&amp;author=T.%20Gruber&amp;journal=Knowledge%20Acquisition&amp;volume=5&amp;pages=199-220&amp;publication_year=1993"><span><span>Google Scholar</span></span></a></span></span></cite>
+                                            </li>
+                                            <li class="Citation">
+                                                <cite class="CitationContent" id="CR6_2" itemprop="citation" itemscope="" itemtype="http://schema.org/ScholarlyArticle"><span itemprop="headline">Noy NF, McGuinness DL: Ontology Development 101: A Guide to Creating Your First Ontology.
+                  Stanford Knowledge Systems Laboratory technical report KSL-01–05 and Stanford Medical Informatics technical report SMI-2001–0880 2001.<span xmlns:func="http://oscar.fig.bmc.com" xmlns="http://www.w3.org/1999/xhtml" class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" href="https://scholar.google.com/scholar?hl=en&amp;q=Noy%20NF%2C%20McGuinness%20DL%3A%20Ontology%20Development%20101%3A%20A%20Guide%20to%20Creating%20Your%20First%20Ontology.%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20Stanford%20Knowledge%20Systems%20Laboratory%20technical%20report%20KSL-01%E2%80%9305%20and%20Stanford%20Medical%20Informatics%20technical%20report%20SMI-2001%E2%80%930880%202001."><span><span>Google Scholar</span></span></a></span></span></span><span class="Occurrences"></span></cite>
+                                            </li>
+                                            <li class="Citation">
+                                                <cite class="CitationContent" id="CR7_2" itemprop="citation" itemscope="" itemtype="http://schema.org/ScholarlyArticle"><span itemprop="headline">Brusic V, Rudy G, Harrison LC: <strong class="EmphasisTypeBold">MHCPEP, a database of MHC-binding peptides: update 1997.</strong>
+                  <em class="EmphasisTypeItalic">Nucleic Acids Res</em> 1998, <strong class="EmphasisTypeBold">26:</strong>368–371.</span><span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a target="_blank" rel="noopener" href="https://doi.org/10.1093/nar/26.1.368"><span><span>View Article</span></span></a></span><span class="Occurrence OccurrencePID"><a target="_blank" rel="noopener nofollow" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&amp;db=PubMed&amp;dopt=Abstract&amp;list_uids=9399876"><span><span>PubMed</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" href="http://scholar.google.com/scholar_lookup?title=MHCPEP%2C%20a%20database%20of%20MHC-binding%20peptides%3A%20update%201997&amp;author=V.%20Brusic&amp;author=G.%20Rudy&amp;author=LC.%20Harrison&amp;journal=Nucleic%20Acids%20Res&amp;volume=26&amp;pages=368-371&amp;publication_year=1998"><span><span>Google Scholar</span></span></a></span></span></cite>
+                                            </li>
+                                            <li class="Citation">
+                                                <cite class="CitationContent" id="CR8_2" itemprop="citation" itemscope="" itemtype="http://schema.org/ScholarlyArticle"><span itemprop="headline">Rammensee H, Bachmann J, Emmerich NP, Bachor OA, Stevanovic S: <strong class="EmphasisTypeBold">SYFPEITHI: database for MHC ligands and peptide motifs.</strong>
+                  <em class="EmphasisTypeItalic">Immunogenetics</em> 1999, <strong class="EmphasisTypeBold">50:</strong>213–219.</span><span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a target="_blank" rel="noopener" href="https://doi.org/10.1007/s002510050595"><span><span>View Article</span></span></a></span><span class="Occurrence OccurrencePID"><a target="_blank" rel="noopener nofollow" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&amp;db=PubMed&amp;dopt=Abstract&amp;list_uids=10602881"><span><span>PubMed</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" href="http://scholar.google.com/scholar_lookup?title=SYFPEITHI%3A%20database%20for%20MHC%20ligands%20and%20peptide%20motifs&amp;author=H.%20Rammensee&amp;author=J.%20Bachmann&amp;author=NP.%20Emmerich&amp;author=OA.%20Bachor&amp;author=S.%20Stevanovic&amp;journal=Immunogenetics&amp;volume=50&amp;pages=213-219&amp;publication_year=1999"><span><span>Google Scholar</span></span></a></span></span></cite>
+                                            </li>
+                                            <li class="Citation">
+                                                <cite class="CitationContent" id="CR9_2" itemprop="citation" itemscope="" itemtype="http://schema.org/ScholarlyArticle"><span itemprop="headline">Schonbach C, Koh JL, Flower DR, Wong L, Brusic V: <strong class="EmphasisTypeBold">FIMM, a database of functional molecular immunology: update 2002.</strong>
+                  <em class="EmphasisTypeItalic">Nucleic Acids Res</em> 2002, <strong class="EmphasisTypeBold">30:</strong>226–229.</span><span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a target="_blank" rel="noopener" href="https://doi.org/10.1093/nar/30.1.226"><span><span>View Article</span></span></a></span><span class="Occurrence OccurrencePID"><a target="_blank" rel="noopener nofollow" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&amp;db=PubMed&amp;dopt=Abstract&amp;list_uids=11752300"><span><span>PubMed</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" href="http://scholar.google.com/scholar_lookup?title=FIMM%2C%20a%20database%20of%20functional%20molecular%20immunology%3A%20update%202002&amp;author=C.%20Schonbach&amp;author=JL.%20Koh&amp;author=DR.%20Flower&amp;author=L.%20Wong&amp;author=V.%20Brusic&amp;journal=Nucleic%20Acids%20Res&amp;volume=30&amp;pages=226-229&amp;publication_year=2002"><span><span>Google Scholar</span></span></a></span></span></cite>
+                                            </li>
+                                            <li class="Citation">
+                                                <cite class="CitationContent" id="CR10_2" itemprop="citation" itemscope="" itemtype="http://schema.org/ScholarlyArticle"><span itemprop="headline">Sathiamurthy M, Hickman HD, Cavett JW, Zahoor A, Prilliman K, Metcalf S, Fernandez Vina M, Hildebrand WH: <strong class="EmphasisTypeBold">Population of the HLA ligand database.</strong>
+                  <em class="EmphasisTypeItalic">Tissue Antigens</em> 2003, <strong class="EmphasisTypeBold">61:</strong>12–19.</span><span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a target="_blank" rel="noopener" href="https://doi.org/10.1034/j.1399-0039.2003.610102.x"><span><span>View Article</span></span></a></span><span class="Occurrence OccurrencePID"><a target="_blank" rel="noopener nofollow" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&amp;db=PubMed&amp;dopt=Abstract&amp;list_uids=12622773"><span><span>PubMed</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" href="http://scholar.google.com/scholar_lookup?title=Population%20of%20the%20HLA%20ligand%20database&amp;author=M.%20Sathiamurthy&amp;author=HD.%20Hickman&amp;author=JW.%20Cavett&amp;author=A.%20Zahoor&amp;author=K.%20Prilliman&amp;author=S.%20Metcalf&amp;author=M.%20Fernandez%20Vina&amp;author=WH.%20Hildebrand&amp;journal=Tissue%20Antigens&amp;volume=61&amp;pages=12-19&amp;publication_year=2003"><span><span>Google Scholar</span></span></a></span></span></cite>
+                                            </li>
+                                            <li class="Citation">
+                                                <cite class="CitationContent" id="CR11_2" itemprop="citation" itemscope="" itemtype="http://schema.org/ScholarlyArticle"><span itemprop="headline">Korber BTM, Brander C, Haynes BF, Koup R, Moore JP, Walker BD, Watkins DI: <strong class="EmphasisTypeBold">HIV Immunology and HIV/SIV Vaccine Databases.</strong> , Los Alamos National Laboratory, Theoretical Biology and Biophysics.Los Alamos, New Mexico. LA-UR 04–8162 2003.</span><span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" href="http://scholar.google.com/scholar_lookup?title=HIV%20Immunology%20and%20HIV%2FSIV%20Vaccine%20Databases&amp;author=BTM.%20Korber&amp;author=C.%20Brander&amp;author=BF.%20Haynes&amp;author=R.%20Koup&amp;author=JP.%20Moore&amp;author=BD.%20Walker&amp;author=DI.%20Watkins&amp;publication_year=2003"><span><span>Google Scholar</span></span></a></span></span></cite>
+                                            </li>
+                                            <li class="Citation">
+                                                <cite class="CitationContent" id="CR12_2" itemprop="citation" itemscope="" itemtype="http://schema.org/ScholarlyArticle"><span itemprop="headline">Blythe MJ, Doytchinova IA, Flower DR: <strong class="EmphasisTypeBold">JenPep: a database of quantitative functional peptide data for immunology.</strong>
+                  <em class="EmphasisTypeItalic">Bioinformatics</em> 2002, <strong class="EmphasisTypeBold">18:</strong>434–439.</span><span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a target="_blank" rel="noopener" href="https://doi.org/10.1093/bioinformatics/18.3.434"><span><span>View Article</span></span></a></span><span class="Occurrence OccurrencePID"><a target="_blank" rel="noopener nofollow" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&amp;db=PubMed&amp;dopt=Abstract&amp;list_uids=11934742"><span><span>PubMed</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" href="http://scholar.google.com/scholar_lookup?title=JenPep%3A%20a%20database%20of%20quantitative%20functional%20peptide%20data%20for%20immunology&amp;author=MJ.%20Blythe&amp;author=IA.%20Doytchinova&amp;author=DR.%20Flower&amp;journal=Bioinformatics&amp;volume=18&amp;pages=434-439&amp;publication_year=2002"><span><span>Google Scholar</span></span></a></span></span></cite>
+                                            </li>
+                                            <li class="Citation">
+                                                <cite class="CitationContent" id="CR13_2" itemprop="citation" itemscope="" itemtype="http://schema.org/ScholarlyArticle"><span itemprop="headline"><strong class="EmphasisTypeBold">AntiJen Database</strong>
+[<span xmlns:func="http://oscar.fig.bmc.com" xmlns="http://www.w3.org/1999/xhtml" class="ExternalRef"><a href="http://www.jenner.ac.uk/antijen/" target="_blank" class="ext-link"><span class="RefSource">http://www.jenner.ac.uk/antijen/</span></a></span>]</span><span class="Occurrences"></span></cite>
+                                            </li>
+                                            <li class="Citation">
+                                                <cite class="CitationContent" id="CR14_2" itemprop="citation" itemscope="" itemtype="http://schema.org/ScholarlyArticle"><span itemprop="headline">Bhasin M, Singh H, Raghava GP: <strong class="EmphasisTypeBold">MHCBN: a comprehensive database of MHC binding and non-binding peptides.</strong>
+                  <em class="EmphasisTypeItalic">Bioinformatics</em> 2003, <strong class="EmphasisTypeBold">19:</strong>665–666.</span><span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a target="_blank" rel="noopener" href="https://doi.org/10.1093/bioinformatics/btg055"><span><span>View Article</span></span></a></span><span class="Occurrence OccurrencePID"><a target="_blank" rel="noopener nofollow" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&amp;db=PubMed&amp;dopt=Abstract&amp;list_uids=12651731"><span><span>PubMed</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" href="http://scholar.google.com/scholar_lookup?title=MHCBN%3A%20a%20comprehensive%20database%20of%20MHC%20binding%20and%20non-binding%20peptides&amp;author=M.%20Bhasin&amp;author=H.%20Singh&amp;author=GP.%20Raghava&amp;journal=Bioinformatics&amp;volume=19&amp;pages=665-666&amp;publication_year=2003"><span><span>Google Scholar</span></span></a></span></span></cite>
+                                            </li>
+                                            <li class="Citation">
+                                                <cite class="CitationContent" id="CR15_2" itemprop="citation" itemscope="" itemtype="http://schema.org/ScholarlyArticle"><span itemprop="headline">Giudicelli V, Lefranc MP: <strong class="EmphasisTypeBold">Ontology for immunogenetics: the IMGT-ONTOLOGY.</strong>
+                  <em class="EmphasisTypeItalic">Bioinformatics</em> 1999, <strong class="EmphasisTypeBold">15:</strong>1047–1054.</span><span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a target="_blank" rel="noopener" href="https://doi.org/10.1093/bioinformatics/15.12.1047"><span><span>View Article</span></span></a></span><span class="Occurrence OccurrencePID"><a target="_blank" rel="noopener nofollow" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&amp;db=PubMed&amp;dopt=Abstract&amp;list_uids=10745995"><span><span>PubMed</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" href="http://scholar.google.com/scholar_lookup?title=Ontology%20for%20immunogenetics%3A%20the%20IMGT-ONTOLOGY&amp;author=V.%20Giudicelli&amp;author=MP.%20Lefranc&amp;journal=Bioinformatics&amp;volume=15&amp;pages=1047-1054&amp;publication_year=1999"><span><span>Google Scholar</span></span></a></span></span></cite>
+                                            </li>
+                                            <li class="Citation">
+                                                <cite class="CitationContent" id="CR16_2" itemprop="citation" itemscope="" itemtype="http://schema.org/ScholarlyArticle"><span itemprop="headline">Harris MA, Clark J, Ireland A, Lomax J, Ashburner M, Foulger R, Eilbeck K, Lewis S, Marshall B, Mungall C, Richter J, Rubin GM, Blake JA, Bult C, Dolan M, Drabkin H, Eppig JT, Hill DP, Ni L, Ringwald M, Balakrishnan R, Cherry JM, Christie KR, Costanzo MC, Dwight SS, Engel S, Fisk DG, Hirschman JE, Hong EL, Nash RS, Sethuraman A, Theesfeld CL, Botstein D, Dolinski K, Feierbach B, Berardini T, Mundodi S, Rhee SY, Apweiler R, Barrell D, Camon E, Dimmer E, Lee V, Chisholm R, Gaudet P, Kibbe W, Kishore R, Schwarz EM, Sternberg P, Gwinn M, Hannick L, Wortman J, Berriman M, Wood V, de la Cruz N, Tonellato P, Jaiswal P, Seigfried T, White R: <strong class="EmphasisTypeBold">The Gene Ontology (GO) database and informatics resource.</strong>
+                  <em class="EmphasisTypeItalic">Nucleic Acids Res</em> 2004, <strong class="EmphasisTypeBold">32:</strong>D258–61.</span><span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a target="_blank" rel="noopener" href="https://doi.org/10.1093/nar/gkh066"><span><span>View Article</span></span></a></span><span class="Occurrence OccurrencePID"><a target="_blank" rel="noopener nofollow" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&amp;db=PubMed&amp;dopt=Abstract&amp;list_uids=14681407"><span><span>PubMed</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" href="http://scholar.google.com/scholar_lookup?title=The%20Gene%20Ontology%20%28GO%29%20database%20and%20informatics%20resource&amp;author=MA.%20Harris&amp;author=J.%20Clark&amp;author=A.%20Ireland&amp;author=J.%20Lomax&amp;author=M.%20Ashburner&amp;author=R.%20Foulger&amp;author=K.%20Eilbeck&amp;author=S.%20Lewis&amp;author=B.%20Marshall&amp;author=C.%20Mungall&amp;author=J.%20Richter&amp;author=GM.%20Rubin&amp;author=JA.%20Blake&amp;author=C.%20Bult&amp;author=M.%20Dolan&amp;author=H.%20Drabkin&amp;author=JT.%20Eppig&amp;author=DP.%20Hill&amp;author=L.%20Ni&amp;author=M.%20Ringwald&amp;author=R.%20Balakrishnan&amp;author=JM.%20Cherry&amp;author=KR.%20Christie&amp;author=MC.%20Costanzo&amp;author=SS.%20Dwight&amp;author=S.%20Engel&amp;author=DG.%20Fisk&amp;author=JE.%20Hirschman&amp;author=EL.%20Hong&amp;author=RS.%20Nash&amp;author=A.%20Sethuraman&amp;author=CL.%20Theesfeld&amp;author=D.%20Botstein&amp;author=K.%20Dolinski&amp;author=B.%20Feierbach&amp;author=T.%20Berardini&amp;author=S.%20Mundodi&amp;author=SY.%20Rhee&amp;author=R.%20Apweiler&amp;author=D.%20Barrell&amp;author=E.%20Camon&amp;author=E.%20Dimmer&amp;author=V.%20Lee&amp;author=R.%20Chisholm&amp;author=P.%20Gaudet&amp;author=W.%20Kibbe&amp;author=R.%20Kishore&amp;author=EM.%20Schwarz&amp;author=P.%20Sternberg&amp;author=M.%20Gwinn&amp;author=L.%20Hannick&amp;author=J.%20Wortman&amp;author=M.%20Berriman&amp;author=V.%20Wood&amp;author=N.%20de%20la%20Cruz&amp;author=P.%20Tonellato&amp;author=P.%20Jaiswal&amp;author=T.%20Seigfried&amp;author=R.%20White&amp;journal=Nucleic%20Acids%20Res&amp;volume=32&amp;pages=D258-61&amp;publication_year=2004"><span><span>Google Scholar</span></span></a></span></span></cite>
+                                            </li>
+                                            <li class="Citation">
+                                                <cite class="CitationContent" id="CR17_2" itemprop="citation" itemscope="" itemtype="http://schema.org/ScholarlyArticle"><span itemprop="headline"><strong class="EmphasisTypeBold">International Classification of Diseases (ICD)</strong>
+[<span xmlns:func="http://oscar.fig.bmc.com" xmlns="http://www.w3.org/1999/xhtml" class="ExternalRef"><a href="http://www.who.int/classifications/icd/en/" target="_blank" class="ext-link"><span class="RefSource">http://www.who.int/classifications/icd/en/</span></a></span>]</span><span class="Occurrences"></span></cite>
+                                            </li>
+                                            <li class="Citation">
+                                                <cite class="CitationContent" id="CR18_2" itemprop="citation" itemscope="" itemtype="http://schema.org/ScholarlyArticle"><span itemprop="headline">Benson DA, Karsch-Mizrachi I, Lipman DJ, Ostell J, Rapp BA, Wheeler DL: <strong class="EmphasisTypeBold">GenBank.</strong>
+                  <em class="EmphasisTypeItalic">Nucleic Acids Res</em> 2000, <strong class="EmphasisTypeBold">28:</strong>15–18.</span><span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a target="_blank" rel="noopener" href="https://doi.org/10.1093/nar/28.1.15"><span><span>View Article</span></span></a></span><span class="Occurrence OccurrencePID"><a target="_blank" rel="noopener nofollow" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&amp;db=PubMed&amp;dopt=Abstract&amp;list_uids=10592170"><span><span>PubMed</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" href="http://scholar.google.com/scholar_lookup?title=GenBank&amp;author=DA.%20Benson&amp;author=I.%20Karsch-Mizrachi&amp;author=DJ.%20Lipman&amp;author=J.%20Ostell&amp;author=BA.%20Rapp&amp;author=DL.%20Wheeler&amp;journal=Nucleic%20Acids%20Res&amp;volume=28&amp;pages=15-18&amp;publication_year=2000"><span><span>Google Scholar</span></span></a></span></span></cite>
+                                            </li>
+                                            <li class="Citation">
+                                                <cite class="CitationContent" id="CR19_2" itemprop="citation" itemscope="" itemtype="http://schema.org/ScholarlyArticle"><span itemprop="headline">Wheeler DL, Chappey C, Lash AE, Leipe DD, Madden TL, Schuler GD, Tatusova TA, Rapp BA: <strong class="EmphasisTypeBold">Database resources of the National Center for Biotechnology Information.</strong>
+                  <em class="EmphasisTypeItalic">Nucleic Acids Res</em> 2000, <strong class="EmphasisTypeBold">28:</strong>10–14.</span><span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a target="_blank" rel="noopener" href="https://doi.org/10.1093/nar/28.1.10"><span><span>View Article</span></span></a></span><span class="Occurrence OccurrencePID"><a target="_blank" rel="noopener nofollow" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&amp;db=PubMed&amp;dopt=Abstract&amp;list_uids=10592169"><span><span>PubMed</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" href="http://scholar.google.com/scholar_lookup?title=Database%20resources%20of%20the%20National%20Center%20for%20Biotechnology%20Information&amp;author=DL.%20Wheeler&amp;author=C.%20Chappey&amp;author=AE.%20Lash&amp;author=DD.%20Leipe&amp;author=TL.%20Madden&amp;author=GD.%20Schuler&amp;author=TA.%20Tatusova&amp;author=BA.%20Rapp&amp;journal=Nucleic%20Acids%20Res&amp;volume=28&amp;pages=10-14&amp;publication_year=2000"><span><span>Google Scholar</span></span></a></span></span></cite>
+                                            </li>
+                                            <li class="Citation">
+                                                <cite class="CitationContent" id="CR20_2" itemprop="citation" itemscope="" itemtype="http://schema.org/ScholarlyArticle"><span itemprop="headline">Marsh SG, Albert ED, Bodmer WF, Bontrop RE, Dupont B, Erlich HA, Geraghty DE, Hansen JA, Hurley CK, Mach B, Mayr WR, Parham P, Petersdorf EW, Sasazuki T, Schreuder GM, Strominger JL, Svejgaard A, Terasaki PI, Trowsdale J: <strong class="EmphasisTypeBold">Nomenclature for Factors of the HLA System, 2004.</strong>
+                  <em class="EmphasisTypeItalic">Hum Immunol</em> 2005, <strong class="EmphasisTypeBold">66:</strong>571–636.</span><span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a target="_blank" rel="noopener" href="https://doi.org/10.1016/j.humimm.2005.02.002"><span><span>View Article</span></span></a></span><span class="Occurrence OccurrencePID"><a target="_blank" rel="noopener nofollow" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&amp;db=PubMed&amp;dopt=Abstract&amp;list_uids=15935895"><span><span>PubMed</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" href="http://scholar.google.com/scholar_lookup?title=Nomenclature%20for%20Factors%20of%20the%20HLA%20System%2C%202004&amp;author=SG.%20Marsh&amp;author=ED.%20Albert&amp;author=WF.%20Bodmer&amp;author=RE.%20Bontrop&amp;author=B.%20Dupont&amp;author=HA.%20Erlich&amp;author=DE.%20Geraghty&amp;author=JA.%20Hansen&amp;author=CK.%20Hurley&amp;author=B.%20Mach&amp;author=WR.%20Mayr&amp;author=P.%20Parham&amp;author=EW.%20Petersdorf&amp;author=T.%20Sasazuki&amp;author=GM.%20Schreuder&amp;author=JL.%20Strominger&amp;author=A.%20Svejgaard&amp;author=PI.%20Terasaki&amp;author=J.%20Trowsdale&amp;journal=Hum%20Immunol&amp;volume=66&amp;pages=571-636&amp;publication_year=2005"><span><span>Google Scholar</span></span></a></span></span></cite>
+                                            </li>
+                                            <li class="Citation">
+                                                <cite class="CitationContent" id="CR21_2" itemprop="citation" itemscope="" itemtype="http://schema.org/ScholarlyArticle"><span itemprop="headline">Duineveld AJ, Stoter R, Weiden MR, Kenepa B, Benjamins VR: <strong class="EmphasisTypeBold">Wondertools? A comparative study of ontological engineering tools.</strong>
+                  <em class="EmphasisTypeItalic">International Journal of Human-Computer Studies</em> 2000, <strong class="EmphasisTypeBold">52:</strong>1111--1133.</span><span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a target="_blank" rel="noopener" href="https://doi.org/10.1006/ijhc.1999.0366"><span><span>View Article</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" href="http://scholar.google.com/scholar_lookup?title=Wondertools%3F%20A%20comparative%20study%20of%20ontological%20engineering%20tools&amp;author=AJ.%20Duineveld&amp;author=R.%20Stoter&amp;author=MR.%20Weiden&amp;author=B.%20Kenepa&amp;author=VR.%20Benjamins&amp;journal=International%20Journal%20of%20Human-Computer%20Studies&amp;volume=52&amp;pages=1111--1133&amp;publication_year=2000"><span><span>Google Scholar</span></span></a></span></span></cite>
+                                            </li>
+                                            <li class="Citation">
+                                                <cite class="CitationContent" id="CR22_2" itemprop="citation" itemscope="" itemtype="http://schema.org/ScholarlyArticle"><span itemprop="headline">Berman HM, Westbrook J, Feng Z, Gilliland G, Bhat TN, Weissig H, Shindyalov IN, Bourne PE: <strong class="EmphasisTypeBold">The Protein Data Bank.</strong>
+                  <em class="EmphasisTypeItalic">Nucleic Acids Res</em> 2000, <strong class="EmphasisTypeBold">28:</strong>235–242.</span><span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a target="_blank" rel="noopener" href="https://doi.org/10.1093/nar/28.1.235"><span><span>View Article</span></span></a></span><span class="Occurrence OccurrencePID"><a target="_blank" rel="noopener nofollow" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&amp;db=PubMed&amp;dopt=Abstract&amp;list_uids=10592235"><span><span>PubMed</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" href="http://scholar.google.com/scholar_lookup?title=The%20Protein%20Data%20Bank&amp;author=HM.%20Berman&amp;author=J.%20Westbrook&amp;author=Z.%20Feng&amp;author=G.%20Gilliland&amp;author=TN.%20Bhat&amp;author=H.%20Weissig&amp;author=IN.%20Shindyalov&amp;author=PE.%20Bourne&amp;journal=Nucleic%20Acids%20Res&amp;volume=28&amp;pages=235-242&amp;publication_year=2000"><span><span>Google Scholar</span></span></a></span></span></cite>
+                                            </li>
+                                            <li class="Citation">
+                                                <cite class="CitationContent" id="CR23_2" itemprop="citation" itemscope="" itemtype="http://schema.org/ScholarlyArticle"><span itemprop="headline">Berman HM, Bhat TN, Bourne PE, Feng Z, Gilliland G, Weissig H, Westbrook J: <strong class="EmphasisTypeBold">The Protein Data Bank and the challenge of structural genomics.</strong>
+                  <em class="EmphasisTypeItalic">Nat Struct Biol</em> 2000, <strong class="EmphasisTypeBold">7 Suppl:</strong>957–959.</span><span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a target="_blank" rel="noopener" href="https://doi.org/10.1038/80734"><span><span>View Article</span></span></a></span><span class="Occurrence OccurrencePID"><a target="_blank" rel="noopener nofollow" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&amp;db=PubMed&amp;dopt=Abstract&amp;list_uids=11103999"><span><span>PubMed</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" href="http://scholar.google.com/scholar_lookup?title=The%20Protein%20Data%20Bank%20and%20the%20challenge%20of%20structural%20genomics&amp;author=HM.%20Berman&amp;author=TN.%20Bhat&amp;author=PE.%20Bourne&amp;author=Z.%20Feng&amp;author=G.%20Gilliland&amp;author=H.%20Weissig&amp;author=J.%20Westbrook&amp;journal=Nat%20Struct%20Biol&amp;volume=7%20Suppl&amp;pages=957-959&amp;publication_year=2000"><span><span>Google Scholar</span></span></a></span></span></cite>
+                                            </li>
+                                            <li class="Citation">
+                                                <cite class="CitationContent" id="CR24_2" itemprop="citation" itemscope="" itemtype="http://schema.org/ScholarlyArticle"><span itemprop="headline">Terajima M, Cruz J, Raines G, Kilpatrick ED, Kennedy JS, Rothman AL, Ennis FA: <strong class="EmphasisTypeBold">Quantitation of CD8+ T cell responses to newly identified HLA-A*0201-restricted T cell epitopes conserved among vaccinia and variola (smallpox) viruses.</strong>
+                  <em class="EmphasisTypeItalic">J Exp Med</em> 2003, <strong class="EmphasisTypeBold">197:</strong>927–932.</span><span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a target="_blank" rel="noopener" href="https://doi.org/10.1084/jem.20022222"><span><span>View Article</span></span></a></span><span class="Occurrence OccurrencePID"><a target="_blank" rel="noopener nofollow" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&amp;db=PubMed&amp;dopt=Abstract&amp;list_uids=12668642"><span><span>PubMed</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" href="http://scholar.google.com/scholar_lookup?title=Quantitation%20of%20CD8%2B%20T%20cell%20responses%20to%20newly%20identified%20HLA-A%2A0201-restricted%20T%20cell%20epitopes%20conserved%20among%20vaccinia%20and%20variola%20%28smallpox%29%20viruses&amp;author=M.%20Terajima&amp;author=J.%20Cruz&amp;author=G.%20Raines&amp;author=ED.%20Kilpatrick&amp;author=JS.%20Kennedy&amp;author=AL.%20Rothman&amp;author=FA.%20Ennis&amp;journal=J%20Exp%20Med&amp;volume=197&amp;pages=927-932&amp;publication_year=2003"><span><span>Google Scholar</span></span></a></span></span></cite>
+                                            </li>
+                                            <li class="Citation">
+                                                <cite class="CitationContent" id="CR25_2" itemprop="citation" itemscope="" itemtype="http://schema.org/ScholarlyArticle"><span itemprop="headline">Lin Y, Shen X, Yang RF, Li YX, Ji YY, He YY, Shi MD, Lu W, Shi TL, Wang J, Wang HX, Jiang HL, Shen JH, Xie YH, Wang Y, Pei G, Shen BF, Wu JR, Sun B: <strong class="EmphasisTypeBold">Identification of an epitope of SARS-coronavirus nucleocapsid protein.</strong>
+                  <em class="EmphasisTypeItalic">Cell Res</em> 2003, <strong class="EmphasisTypeBold">13:</strong>141–145.</span><span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a target="_blank" rel="noopener" href="https://doi.org/10.1038/sj.cr.7290158"><span><span>View Article</span></span></a></span><span class="Occurrence OccurrencePID"><a target="_blank" rel="noopener nofollow" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&amp;db=PubMed&amp;dopt=Abstract&amp;list_uids=12862314"><span><span>PubMed</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" href="http://scholar.google.com/scholar_lookup?title=Identification%20of%20an%20epitope%20of%20SARS-coronavirus%20nucleocapsid%20protein&amp;author=Y.%20Lin&amp;author=X.%20Shen&amp;author=RF.%20Yang&amp;author=YX.%20Li&amp;author=YY.%20Ji&amp;author=YY.%20He&amp;author=MD.%20Shi&amp;author=W.%20Lu&amp;author=TL.%20Shi&amp;author=J.%20Wang&amp;author=HX.%20Wang&amp;author=HL.%20Jiang&amp;author=JH.%20Shen&amp;author=YH.%20Xie&amp;author=Y.%20Wang&amp;author=G.%20Pei&amp;author=BF.%20Shen&amp;author=JR.%20Wu&amp;author=B.%20Sun&amp;journal=Cell%20Res&amp;volume=13&amp;pages=141-145&amp;publication_year=2003"><span><span>Google Scholar</span></span></a></span></span></cite>
+                                            </li>
+                                        </ol>
+                                    </div>
+                                </section>
+                                <section xmlns="" xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:meta="http://www.springer.com/app/meta" class="Section1 RenderAsSection1 c-section" id="CopyrightMessage">
+                                    <h2 class="Heading js-ToggleCollapseSection c-section__heading" data-sticky-update="true">
+                                        <a href="#Sathiamurthyetal" data-toggle="collapse" data-toggle-disable-clickoff="" data-target="Sathiamurthyetal">Copyright</a>
+                                    </h2>
+                                    <div class="js-CollapseSection CollapseSection c-section__content" data-test="collapse-section" id="Sathiamurthyetal">
+                                        <div xmlns="http://www.w3.org/1999/xhtml" class="ArticleCopyright">©&nbsp;Sathiamurthy
+                                            et al.&nbsp;2005
+                                            <div class="CopyrightComment">
+                                                <p xmlns="" class="SimplePara">This article is published under license
+                                                    to BioMed Central Ltd. This is an Open Access article distributed
+                                                    under the terms of the Creative Commons Attribution License
+                                                    (<span xmlns:func="http://oscar.fig.bmc.com" xmlns="http://www.w3.org/1999/xhtml" class="ExternalRef"><a href="http://creativecommons.org/licenses/by/2.0" target="_blank" class="ext-link"><span class="RefSource">http://creativecommons.org/licenses/by/2.0</span></a></span>),
+                                                    which permits unrestricted use, distribution, and reproduction in
+                                                    any medium, provided the original work is properly cited.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+
+
+                        </article>
+                    </main>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

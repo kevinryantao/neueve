@@ -39,3 +39,107 @@
   }
 }
 
+// The following rules are for immunome-research articles only and should not affect the main site.
+
+table td .SimplePara {
+  @extend .m-0;
+}
+
+.Caption .SimplePara {
+  @extend .m-0;
+}
+
+.Caption {
+  @extend .text-muted;
+  @extend .text-sm;
+  @extend .mt-3;
+}
+
+.Table {
+  @extend .text-sm;
+}
+
+.Table table {
+  @extend .table;
+  @extend .table-sm;
+  @extend .table-bordered;
+}
+
+.TableFooter {
+  @extend .text-muted;
+  @extend .text-sm;
+}
+
+.FigureTable {
+  @extend .my-4;
+}
+
+.Figure {
+  @extend .p-2;
+  @extend .my-4;
+  @extend .mx-2;
+  @extend .border;
+}
+
+.MediaObject {
+  @extend .mb-4;
+}
+
+.Occurrence {
+  @extend .mr-2;
+}
+
+cite {
+  font-style: normal;
+}
+
+.Citation {
+  @extend .my-3;
+}
+
+h2.c-section__heading {
+  @extend .bg-gray-200;
+  @extend .py-2;
+  @extend .px-4;
+}
+
+.c-section__heading a {
+  @extend .text-dark;
+  @extend .text-decoration-none;
+}
+
+.Section1 {
+  @extend .pt-4;
+}
+
+.ArticleTitle {
+  @extend .h3;
+}
+
+.u-listReset, .u-reset-list {
+  @extend .list-inline;
+}
+
+.Author, .History {
+  @extend .list-inline-item;
+}
+
+.ArticleDOI, .Copyright {
+  display: inline-block;
+}
+
+.FulltextWrapper .ArticleCitation span {
+  @extend .mr-1;
+}
+
+.c-article-identifiers {
+  @extend .d-none
+}
+
+.c-lazy-image {
+  @extend .img-fluid
+}
+
+.c-teaser {
+  @extend .d-none;
+}
