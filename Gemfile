@@ -18,7 +18,7 @@ gem 'kgio'
 gem 'memcachier'
 gem 'sitemap_generator'
 gem 'rails_12factor'
-gem 'bootstrap', '~> 4.2.1'
+gem 'bootstrap', '~> 4.3.1'
 
 gem 'typhoeus'
 
