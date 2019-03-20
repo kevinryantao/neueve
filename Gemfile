@@ -27,8 +27,7 @@ gem 'typhoeus'
 
 
 group :development do
-  gem 'sqlite3'
-  gem 'annotate'
+  gem 'sqlite3', "~> 1.3.13"
 end
 
 group :production do
