@@ -39,6 +39,43 @@
   }
 }
 
+
+.alternative-product {
+  @extend .border;
+  @extend .py-3;
+  @extend .px-4;
+  @extend .col-6;
+  @extend .col-md-4;
+  @extend .text-xl;
+  @extend .font-weight-bold;
+  @extend .text-center;
+}
+
+
+.alternative-cell {
+  @extend .border;
+  @extend .py-3;
+  @extend .px-4;
+  @extend .col-6;
+  @extend .col-md-4;
+  @extend .text-lg;
+  @extend .text-muted;
+  @extend .text-center;
+}
+
+.alternative-category {
+  @extend .border;
+  @extend .py-3;
+  @extend .px-4;
+  @extend .col-md-4;
+  @extend .font-weight-bold;
+  @extend .text-lg;
+}
+
+.alternative-row {
+  @extend .row;
+}
+
 // The following rules are for immunome-research articles only and should not affect the main site.
 
 table td .SimplePara {

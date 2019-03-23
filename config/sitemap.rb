@@ -50,6 +50,9 @@ SitemapGenerator::Sitemap.create do
   add dmannose_path, priority: 1
   add dilators_path, priority: 1
 
+  # Alternatives Paths
+  add premarin_cream_alternative_path, priority: 1
+
   # Immunome Research Paths
   add '/content/1/1/1', priority: 0.25
   add '/content/1/1/2', priority: 0.25

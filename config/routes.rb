@@ -31,6 +31,8 @@ Lavax::Application.routes.draw do
 
   match '/search' => 'static_pages#search', :via => :get
 
+  match '/premarin-cream-alternative' => 'alternatives#premarin_cream', :via => :get
+
   # Immunome Research Paths
   match '/content/1/1/1' => 'immunome_research#1_1_1', :via => :get
   match '/content/1/1/2' => 'immunome_research#1_1_2', :via => :get
