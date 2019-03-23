@@ -1,4 +1,6 @@
 <% provide(:title, 'A Better Premarin Cream Alternative') %>
+<% provide(:description, 'NeuEve is a natural Premarin Cream alternative that you can use with a clear conscience. See why women are switching from Premarin to NeuEve.') %>
+<% provide(:last_modified, 'March 23, 2019') %>
 
 
 <section class="hero">
@@ -15,7 +17,7 @@
         </ol>
         <!-- Hero Content-->
         <div class="hero-content pb-5 text-center">
-            <h1 class="hero-heading">A Premarin Cream Alternative with Zero Estrogen</h1>
+            <h1 class="hero-heading">A Natural Premarin Cream Alternative with Zero Estrogen</h1>
         </div>
     </div>
 </section>
@@ -37,22 +39,21 @@
                 <%= image_tag 'Dr-Renjie-Chang-Founder-NeuEve.jpg', class: 'bg-image' %>
             </div>
         </div>
-        <!--<div class="row">-->
-            <!--<div class="col-lg-6 about-text-column order-lg-2">-->
-                <!--<div class="about-text">-->
-                    <!--<h6 class="text-uppercase text-muted letter-spacing-5 mb-1">Sell today</h6>-->
-                    <!--<h2 class="mb-4">A Real Testimonial</h2>-->
-                    <!--<p class="text-lg text-muted">My vaginal dryness is so severe that I am unable to have a pap smear.-->
-                        <!--I tried estrogen vaginal cream but it aggravated my fibroid tumors and caused severe pain in my-->
-                        <!--abdomen. After taking NeuEve Silk Formula for a month I, now, feel confident that I can take the-->
-                        <!--exam. It has also improved my sex life. My husband and I are now able to have intercourse, again,-->
-                        <!--after going three years without it.</p>-->
-                <!--</div>-->
-            <!--</div>-->
-            <!--<div class="col-lg-6 p-lg-0 about-image-column order-lg-1">-->
-                <!--<%= image_tag 'natural_vaginal_cream_NeuEve.jpg', class: 'bg-image' %>-->
-            <!--</div>-->
-        <!--</div>-->
+        <div class="row">
+            <div class="col-lg-6 about-text-column order-lg-2">
+                <div class="about-text">
+                    <h2 class="mb-4">Clean Ingredients and a Clear Conscience</h2>
+                    <p class="text-lg text-muted">NeuEve is made out of real, natural ingredients you can pronounce:</p>
+                    <p class="text-muted"><%= link_to 'Sustainable palm oil*', faq_path(:anchor => 'tropicalTraditions') %>, coconut oil, beeswax,
+                        evening primrose oil, sea buckthorn fruit oil, lavender
+                        essential oil, orange oil, vitamin E (d-α
+                        tocopherol), <%= link_to 'and a proprietary blend of nutrients', faq_path(:anchor => 'proprietaryBlend') %>.</p>
+                </div>
+            </div>
+            <div class="col-lg-6 p-lg-0 about-image-column order-lg-1">
+                <%= image_tag 'natural_vaginal_cream_NeuEve.jpg', class: 'bg-image' %>
+            </div>
+        </div>
     </div>
 </section>
 
@@ -113,7 +114,7 @@
                 <i class='fas fa-check'></i>
             </div>
             <div class="alternative-cell  ">
-                <i class='fas fa-times'></i><br>
+                <i class='fas fa-times'></i>
                 <%= link_to 'Snopes: Premarin is made from Horse Urine', 'https://www.snopes.com/fact-check/premarin/', target: '_blank'%>
             </div>
         </div>
@@ -125,7 +126,7 @@
                 <i class='fas fa-check'></i>
             </div>
             <div class="alternative-cell  ">
-                <i class='fas fa-times'></i><br>
+                <i class='fas fa-times'></i>
                 <%= link_to "Study: Men Absorb Estrogen from Vaginal Estrogen Cream During Sex", "https://www.ncbi.nlm.nih.gov/pubmed/18251358", target: '_blank' %>
             </div>
         </div>
@@ -135,11 +136,11 @@
                 Cruelty-Free
             </div>
             <div class="alternative-cell  ">
-                <i class='fas fa-check'></i><br>
+                <i class='fas fa-check'></i>
                 <%= link_to 'Certified Cruelty Free', 'https://www.neueve.com/blog/cruelty-free-certified/', target: '_blank'%>
             </div>
             <div class="alternative-cell  ">
-                <i class='fas fa-times'></i><br>
+                <i class='fas fa-times'></i>
                 <%= link_to 'Source: Undercover Investigation of PMU Farms', 'http://www.fundforanimals.org/duchess-sanctuary/about-the-duchess-sanctuary/pregnant-mare-urine.html', target: '_blank'%>
             </div>
         </div>
@@ -152,7 +153,7 @@
                 <i class='fas fa-check'></i>
             </div>
             <div class="alternative-cell  ">
-                <i class='fas fa-times'></i><br>
+                <i class='fas fa-times'></i>
                 <%= link_to 'Full List of Premarin Cream Side Effects', 'https://www.drugs.com/sfx/premarin-vaginal-side-effects.html#for-professionals', target: '_blank'%>
             </div>
         </div>
@@ -161,7 +162,7 @@
                 Satisfaction Guarantee
             </div>
             <div class="alternative-cell  ">
-                <i class='fas fa-check'></i> <br>
+                <i class='fas fa-check'></i>
                 <%= link_to 'Policy Details', :anchor => "satisfaction" %>
             </div>
             <div class="alternative-cell  ">
