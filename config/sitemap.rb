@@ -53,6 +53,7 @@ SitemapGenerator::Sitemap.create do
   # Alternatives Paths
   add premarin_cream_alternative_path, priority: 1
   add prempro_alternative_path, priority: 1
+  add estrace_cream_alternative_path, priority: 1
 
   # Immunome Research Paths
   add '/content/1/1/1', priority: 0.25
