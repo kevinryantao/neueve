@@ -35,7 +35,7 @@ Lavax::Application.routes.draw do
   match '/premarin-cream-alternative' => 'alternatives#premarin_cream', :via => :get
   match '/prempro-alternative' => 'alternatives#prempro', :via => :get
   match '/estrace-cream-alternative' => 'alternatives#estrace_cream', :via => :get
-
+  match '/vagifem-alternative' => 'alternatives#vagifem', :via => :get
 
 
   # Immunome Research Paths
