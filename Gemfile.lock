@@ -217,7 +217,7 @@ DEPENDENCIES
   actionpack-page_caching
   better_errors
   bootstrap (~> 4.3.1)
-  canonical-rails (~> 0.2.2)
+  canonical-rails (~> 0.2.5)
   coffee-rails (~> 4.1.0)
   dalli
   font-awesome-rails
