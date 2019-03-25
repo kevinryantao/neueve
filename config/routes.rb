@@ -97,6 +97,13 @@ Lavax::Application.routes.draw do
   match '/content/6/S1/S5' => 'immunome_research#6_S1_S5', :via => :get
   match '/content/6/S1/S6' => 'immunome_research#6_S1_S6', :via => :get
 
+  match '/content/6/s1/s1' => 'immunome_research#6_S1_S1', :via => :get
+  match '/content/6/s1/s2' => 'immunome_research#6_S1_S2', :via => :get
+  match '/content/6/s1/s3' => 'immunome_research#6_S1_S3', :via => :get
+  match '/content/6/s1/s4' => 'immunome_research#6_S1_S4', :via => :get
+  match '/content/6/s1/s5' => 'immunome_research#6_S1_S5', :via => :get
+  match '/content/6/s1/s6' => 'immunome_research#6_S1_S6', :via => :get
+
   match '/content/6/S2/S1' => 'immunome_research#6_S2_S1', :via => :get
   match '/content/6/S2/S2' => 'immunome_research#6_S2_S2', :via => :get
   match '/content/6/S2/S3' => 'immunome_research#6_S2_S3', :via => :get
@@ -104,6 +111,14 @@ Lavax::Application.routes.draw do
   match '/content/6/S2/S5' => 'immunome_research#6_S2_S5', :via => :get
   match '/content/6/S2/S6' => 'immunome_research#6_S2_S6', :via => :get
   match '/content/6/S2/S7' => 'immunome_research#6_S2_S7', :via => :get
+
+  match '/content/6/s2/s1' => 'immunome_research#6_S2_S1', :via => :get
+  match '/content/6/s2/s2' => 'immunome_research#6_S2_S2', :via => :get
+  match '/content/6/s2/s3' => 'immunome_research#6_S2_S3', :via => :get
+  match '/content/6/s2/s4' => 'immunome_research#6_S2_S4', :via => :get
+  match '/content/6/s2/s5' => 'immunome_research#6_S2_S5', :via => :get
+  match '/content/6/s2/s6' => 'immunome_research#6_S2_S6', :via => :get
+  match '/content/6/s2/s7' => 'immunome_research#6_S2_S7', :via => :get
 
   match '*path' => redirect('/'), via: :all
 
