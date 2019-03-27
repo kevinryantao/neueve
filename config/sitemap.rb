@@ -56,6 +56,8 @@ SitemapGenerator::Sitemap.create do
   add estrace_cream_alternative_path, priority: 1
   add vagifem_alternative_path, priority: 1
   add yuvafem_alternative_path, priority: 1
+  add estring_alternative_path, priority: 1
+
 
 
   # Immunome Research Paths
