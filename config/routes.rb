@@ -37,6 +37,7 @@ Lavax::Application.routes.draw do
   match '/estrace-cream-alternative' => 'alternatives#estrace_cream', :via => :get
   match '/vagifem-alternative' => 'alternatives#vagifem', :via => :get
   match '/yuvafem-alternative' => 'alternatives#yuvafem', :via => :get
+  match '/estring-alternative' => 'alternatives#estring', :via => :get
 
 
   # Immunome Research Paths

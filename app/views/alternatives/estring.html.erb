@@ -1,0 +1,228 @@
+<% provide(:title, 'A Better Estring Alternative') %>
+<% provide(:description, 'NeuEve is a natural Estring alternative that you can use with peace of mind. See why women are switching from Estring to NeuEve.') %>
+<% provide(:last_modified, 'March 25, 2019') %>
+
+
+<section class="hero">
+    <div class="container">
+        <!-- Breadcrumbs -->
+        <ol class="breadcrumb justify-content-center">
+            <li class="breadcrumb-item">
+                <%= link_to 'Home', root_path %>
+            </li>
+            <li class="breadcrumb-item">
+                <%= link_to 'Comparison', comparison_path %>
+            </li>
+            <li class="breadcrumb-item active">Estring vs NeuEve for Vaginal Atrophy</li>
+        </ol>
+        <!-- Hero Content-->
+        <div class="hero-content pb-5 text-center">
+            <h1 class="hero-heading">A Natural Estring Alternative with No Estrogen</h1>
+        </div>
+    </div>
+</section>
+
+
+<section class="pb-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 about-text-column">
+                <div class="about-text">
+                    <h2 class="mb-4">The natural Estring alternative you've been looking for.</h2>
+                    <p class="text-lg text-muted">NeuEve is a Estring alternative, invented by a gynecologist. NeuEve
+                        has no hormones, no estrogen, and
+                        is 100% plant-based.</p>
+                    <p class="text-lg text-muted">NeuEve uses vitamins and essential oils to naturally rebalance vaginal pH and nourish vaginal tissues to relieve vaginal dryness.</p>
+                    <p class="text-lg text-muted">Read on for a NeuEve vs Estring comparison.</p>
+
+                </div>
+            </div>
+            <div class="col-lg-6 p-lg-0 about-image-column">
+                <%= image_tag 'Dr-Renjie-Chang-Founder-NeuEve.jpg', class: 'bg-image' %>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 about-text-column order-lg-2">
+                <div class="about-text">
+                    <h2 class="mb-4">Natural, Wholesome Ingredients</h2>
+                    <p class="text-lg text-muted">Safe ingredients you can pronounce:</p>
+                    <p class="text-muted"><%= link_to 'Sustainable palm oil*', faq_path(:anchor => 'tropicalTraditions') %>
+                        , coconut oil, beeswax,
+                        evening primrose oil, sea buckthorn fruit oil, lavender
+                        essential oil, orange oil, vitamin E (d-α
+                        tocopherol), <%= link_to 'and a proprietary blend of nutrients', faq_path(:anchor => 'proprietaryBlend') %>
+                        .</p>
+                    <p class="text-lg text-muted">The hardest to pronounce is “sea buckthorn”, seriously! It’s actually quite a tongue-twister.</p>
+                </div>
+            </div>
+            <div class="col-lg-6 p-lg-0 about-image-column order-lg-1">
+                <%= image_tag 'silver_NeuEve_vaginal_suppository.jpg', class: 'bg-image' %>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="pb-5">
+    <div class="container">
+        <div class="alternative-row ">
+            <div class="alternative-product offset-md-4">
+                NeuEve
+            </div>
+            <div class="alternative-product  ">
+                Estring
+            </div>
+        </div>
+        <div class="alternative-row ">
+            <div class="alternative-category ">
+                Pricing
+            </div>
+            <div class="alternative-cell  ">
+                $55/mo or $49/mo if you Subscribe
+            </div>
+            <div class="alternative-cell  ">
+                <p>
+                    Price without Insurance:
+                    <%= link_to '$481 for 1 ring ($160/mo for 3 mo)', 'https://www.drugs.com/price-guide/estring', target: '_blank', rel: 'nofollow' %>.
+                </p>
+                <p>
+                    Apply to <%=link_to "Pfizer's Patient Assistance Program", 'https://www.pfizerrxpathways.com/', target: '_blank', rel: 'nofollow'%>  with proof of income and you may get it for free.
+                </p>
+                <p>
+                    The price of Estring has almost <strong>doubled</strong> from $284 in 2013.
+                    <%= link_to '- New York Times', 'https://www.nytimes.com/2018/06/03/health/vagina-womens-health-drug-prices.html', target: '_blank' %>
+                </p>
+            </div>
+        </div>
+        <div class="alternative-row ">
+            <div class="alternative-category ">
+                Contains No Hormones
+            </div>
+            <div class="alternative-cell  ">
+                <i class='fas fa-check'></i>
+                Nonhormonal approaches are the first-line for atrophy symptoms experienced by women during or after
+                treatment for breast cancer.
+                <%= link_to '- ACOG', 'https://www.acog.org/Clinical-Guidance-and-Publications/Committee-Opinions/Committee-on-Gynecologic-Practice/The-Use-of-Vaginal-Estrogen-in-Women-With-a-History-of-Estrogen-Dependent-Breast-Cancer', target: '_blank' %>
+            </div>
+            <div class="alternative-cell  ">
+                <i class='fas fa-times'></i>
+            </div>
+        </div>
+        <div class="alternative-row ">
+            <div class="alternative-category ">
+                Contains No Estrogen
+            </div>
+            <div class="alternative-cell  ">
+                <i class='fas fa-check'></i>
+
+            </div>
+            <div class="alternative-cell  ">
+                <i class='fas fa-times'></i>
+            </div>
+        </div>
+        <div class="alternative-row ">
+            <div class="alternative-category ">
+                100% Plant-Based Ingredients
+            </div>
+            <div class="alternative-cell  ">
+                <i class='fas fa-check'></i>
+                NeuEve Cream Ingredients:
+                <div class="text-sm">
+                    <%= link_to 'Sustainable palm oil*', faq_path(:anchor => 'tropicalTraditions') %>, coconut oil,
+                    beeswax,
+                    evening primrose oil, sea buckthorn fruit oil, lavender
+                    essential oil, orange oil, vitamin E (d-α
+                    tocopherol), <%= link_to 'and a proprietary blend of nutrients', faq_path(:anchor => 'proprietaryBlend') %>
+                    .
+                </div>
+            </div>
+            <div class="alternative-cell ">
+                <i class='fas fa-times'></i>
+                <%= link_to 'Estring Ingredients:', 'https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=aa530dfd-3a48-46b9-9678-a7bc48316e41&audience=consumer', target: '_blank' %>
+                <div class="text-sm">
+                    ESTRING® (estradiol vaginal ring) is a slightly opaque ring with a whitish core containing a drug reservoir of 2 mg estradiol. Estradiol, silicone polymers and barium sulfate are combined to form the ring.
+                </div>
+            </div>
+        </div>
+        <div class="alternative-row ">
+            <div class="alternative-category ">
+                Safe for Male Sexual Partner
+            </div>
+            <div class="alternative-cell  ">
+                <i class='fas fa-check'></i>
+            </div>
+            <div class="alternative-cell  ">
+                <i class='fas fa-times'></i>
+                Your male partner might absorb estrogen during sex.
+                <%= link_to "- Mayo Clinic", "https://www.mayoclinic.org/drugs-supplements/estrogen-vaginal-route/precautions/drg-20069459", target: '_blank' %>
+            </div>
+        </div>
+
+        <div class="alternative-row ">
+            <div class="alternative-category ">
+                Cruelty-Free
+            </div>
+            <div class="alternative-cell  ">
+                <i class='fas fa-check'></i>
+                <%= link_to 'Certified Cruelty Free', 'https://www.neueve.com/blog/cruelty-free-certified/', target: '_blank' %>
+            </div>
+            <div class="alternative-cell  ">
+                <i class='fas fa-times'></i>
+                <%= link_to 'Pfizer does Animal Testing', 'https://www.pfizer.com/research/research_clinical_trials/laboratory_animal_care', target: '_blank', rel:'nofollow' %>
+                <hr>
+                <div class="text-sm">
+                "Silicone elastomer (Silastic Q7-4750) was implanted into the proximal vagina of six rabbits; 8 other
+                rabbits served as sham-operated controls. The animals were sacrificed after 72 hours and the
+                vaginas were examined. "
+                <%= link_to '- Estring Animal Toxicology Studies', 'https://www.pfizer.ca/sites/g/files/g10050796/f/201711/Estring_PM_E_208652_16Nov2017.pdf', target: '_blank', rel:'nofollow' %>
+                </div>
+            </div>
+        </div>
+
+        <div class="alternative-row ">
+            <div class="alternative-category ">
+                No Side Effects
+            </div>
+            <div class="alternative-cell  ">
+                <i class='fas fa-check'></i>
+            </div>
+            <div class="alternative-cell  ">
+                <i class='fas fa-times'></i>
+                <%= link_to 'Full List of Estring Side Effects', 'https://www.drugs.com/sfx/estring-side-effects.html#for-professionals', target: '_blank' %>
+            </div>
+        </div>
+        <div class="alternative-row ">
+            <div class="alternative-category ">
+                Satisfaction Guarantee
+            </div>
+            <div class="alternative-cell  ">
+                <i class='fas fa-check'></i>
+                <%= link_to 'Policy Details', :anchor => "satisfaction" %>
+            </div>
+            <div class="alternative-cell  ">
+                <i class='fas fa-times'></i>
+            </div>
+        </div>
+        <div class="alternative-row ">
+            <div class="alternative-category ">
+                Live Chat, Text, Phone & Email Support
+            </div>
+            <div class="alternative-cell  ">
+                <i class='fas fa-check'></i> We even have a <%= link_to 'private Facebook support group', 'https://www.facebook.com/groups/pelvichealthallies', target: '_blank' %>!
+            </div>
+            <div class="alternative-cell  ">
+                <i class='fas fa-times'></i>
+            </div>
+        </div>
+        <div class="alternative-row ">
+            <div class="alternative-category ">
+                Easy to Order Online without Prescription & Delivered to your Doorstep
+            </div>
+            <div class="alternative-cell  ">
+                <i class='fas fa-check'></i>
+            </div>
+            <div class="alternative-cell  ">
+                <i class='fas fa-times'></i>
+            </div>
+        </div>
+    </div>
+</section>
