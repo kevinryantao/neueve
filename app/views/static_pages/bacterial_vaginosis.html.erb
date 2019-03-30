@@ -36,26 +36,47 @@
                             <meta itemprop="description"
                                   content="Natural suppositories for clearing bacterial vaginosis (BV). Gynecologist-tested."/>
                         </strong>
-                <span itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-                <span itemprop="price">$42.95</span>
-                    <meta itemprop="priceCurrency" content="USD"/>
-                </span>
 
-                        <br>
+                        <div class="row">
+                                <div class="col-6">
+                                    <span itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                                    <span itemprop="price">$42.95</span>
+                                        <meta itemprop="priceCurrency" content="USD"/>
+                                    </span>
+                                    <br>
+                                    <div class="formbutton">
+                                        <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                                            <input type="hidden" name="cmd" value="_s-xclick">
+                                            <input type="hidden" name="hosted_button_id" value="7RQ4AK4HQGNEU">
+                                            <%= button_tag(type: 'submit',
+                                                           class: 'btn btn-large btn-warning add-to-cart',
+                                                           id: 'bv-clearing-kit',
+                                                           name: 'submit') do %>
+                                                <svg class="svg-icon"><use xlink:href="#add-to-cart-1"></use></svg>
+                                                Add to Cart
+                                            <% end %>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    $37.95/mo
+                                    <div class="formbutton">
+                                        <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                                            <input type="hidden" name="cmd" value="_s-xclick">
+                                            <input type="hidden" name="hosted_button_id" value="N2UB5H7CFVVN8">
+                                            <%= button_tag(type: 'submit',
+                                                           class: 'btn btn-large btn-warning subscribe',
+                                                           id: 'bv-clearing-kit',
+                                                           name: 'submit') do %>
+                                                <i class="fas fa-sync-alt svg-icon"></i>
+                                                Subscribe
+                                            <% end %>
+                                        </form>
+                                    </div>
 
+                                </div>
+                            </div>
 
-                        <div class="formbutton">
-                            <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
-                                <input type="hidden" name="cmd" value="_s-xclick">
-                                <input type="hidden" name="hosted_button_id" value="7RQ4AK4HQGNEU">
-                                <%= submit_tag 'Add to Cart',
-                                               :class => 'btn btn-large btn-warning add-to-cart',
-                                               :id => 'bv-clearing-kit',
-                                               :name => 'submit' %>
-                                <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1"
-                                     height="1">
-                            </form>
-                        </div>
 
                         <span class="stamped-product-reviews-badge stamped-main-badge" data-id="5000"></span>
                         <hr>
