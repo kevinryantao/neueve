@@ -48,10 +48,14 @@ vaginal atrophy. $59.95, FREE SHIPPING.') %>
                             <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
                                 <input type="hidden" name="cmd" value="_s-xclick">
                                 <input type="hidden" name="hosted_button_id" value="QV8HRKJ34BXML">
-                                <%= submit_tag 'Add to Cart', :class => 'btn btn-large btn-warning add-to-cart',
-                                               :id => 'silk-formula',
-                                               :name => 'submit' %>
-                                <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+
+                                <%= button_tag(type: 'submit',
+                                               class: 'btn btn-large btn-warning add-to-cart',
+                                               id: 'silk-formula',
+                                               name: 'submit') do %>
+                                    <svg class="svg-icon"><use xlink:href="#add-to-cart-1"></use></svg>
+                                    Add to Cart
+                                <% end %>
                             </form>
                         </div>
 
@@ -144,11 +148,13 @@ vaginal atrophy. $59.95, FREE SHIPPING.') %>
                             <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
                                 <input type="hidden" name="cmd" value="_s-xclick">
                                 <input type="hidden" name="hosted_button_id" value="VAM2KZ4Y869SG">
-                                <%= submit_tag 'Add 4 Boxes to Cart',
-                                               :class => 'btn btn-large btn-warning add-to-cart',
-                                               :id => 'silk-formula',
-                                               :name => 'submit' %>
-                                <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                                <%= button_tag(type: 'submit',
+                                               class: 'btn btn-large btn-warning add-to-cart',
+                                               id: 'silk-formula',
+                                               name: 'submit') do %>
+                                    <svg class="svg-icon"><use xlink:href="#add-to-cart-1"></use></svg>
+                                    Add 4 Boxes to Cart
+                                <% end %>
                             </form>
                         </div>
                     </div>
