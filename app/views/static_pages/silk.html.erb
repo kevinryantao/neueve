@@ -38,25 +38,46 @@ vaginal atrophy. $59.95, FREE SHIPPING.') %>
                         </strong>
                         8 suppositories
                         <br>
-        <span itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-          <span itemprop="price">$59.95</span>
-          <meta itemprop="priceCurrency" content="USD"/>
-        </span>
-                        <br>
 
-                        <div class="formbutton">
-                            <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
-                                <input type="hidden" name="cmd" value="_s-xclick">
-                                <input type="hidden" name="hosted_button_id" value="QV8HRKJ34BXML">
+                        <div class="row">
+                            <div class="col-6">
+                                <span itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                                  <span itemprop="price">$59.95</span>
+                                  <meta itemprop="priceCurrency" content="USD"/>
+                                </span>
 
-                                <%= button_tag(type: 'submit',
-                                               class: 'btn btn-large btn-warning add-to-cart',
-                                               id: 'silk-formula',
-                                               name: 'submit') do %>
-                                    <svg class="svg-icon"><use xlink:href="#add-to-cart-1"></use></svg>
-                                    Add to Cart
-                                <% end %>
-                            </form>
+                                <div class="formbutton">
+                                    <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                                        <input type="hidden" name="cmd" value="_s-xclick">
+                                        <input type="hidden" name="hosted_button_id" value="QV8HRKJ34BXML">
+
+                                        <%= button_tag(type: 'submit',
+                                                       class: 'btn btn-large btn-warning add-to-cart',
+                                                       id: 'silk-formula',
+                                                       name: 'submit') do %>
+                                            <svg class="svg-icon"><use xlink:href="#add-to-cart-1"></use></svg>
+                                            Add to Cart
+                                        <% end %>
+                                    </form>
+                                </div>
+
+                            </div>
+                            <div class="col-6">
+                                $49.75 / mo
+                                <div class="formbutton">
+                                    <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                                        <input type="hidden" name="cmd" value="_s-xclick">
+                                        <input type="hidden" name="hosted_button_id" value="P6SSR5KBG2HTA">
+                                        <%= button_tag(type: 'submit',
+                                                       class: 'btn btn-large btn-warning subscribe',
+                                                       id: 'silk-formula',
+                                                       name: 'submit') do %>
+                                            <i class="fas fa-sync-alt svg-icon"></i>
+                                            Subscribe
+                                        <% end %>
+                                    </form>
+                                </div>
+                            </div>
                         </div>
 
                         <span class="stamped-product-reviews-badge stamped-main-badge" data-id="1000"></span>
