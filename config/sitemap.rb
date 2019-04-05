@@ -58,6 +58,7 @@ SitemapGenerator::Sitemap.create do
   add yuvafem_alternative_path, priority: 1
   add estring_alternative_path, priority: 1
 
+  add monalisa_touch_alternative_path, priority: 1
 
 
   # Immunome Research Paths
