@@ -39,6 +39,9 @@ Lavax::Application.routes.draw do
   match '/yuvafem-alternative' => 'alternatives#yuvafem', :via => :get
   match '/estring-alternative' => 'alternatives#estring', :via => :get
 
+  match '/monalisa-touch-alternative' => 'alternatives#monalisa_touch', :via => :get
+
+
 
   # Immunome Research Paths
   match '/content/1/1/1' => 'immunome_research#1_1_1', :via => :get
