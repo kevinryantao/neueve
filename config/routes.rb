@@ -40,6 +40,8 @@ Lavax::Application.routes.draw do
   match '/estring-alternative' => 'alternatives#estring', :via => :get
 
   match '/monalisa-touch-alternative' => 'alternatives#monalisa_touch', :via => :get
+  match '/thermiva-alternative' => 'alternatives#thermiva', :via => :get
+
 
 
 
