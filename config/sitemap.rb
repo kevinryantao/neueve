@@ -60,6 +60,7 @@ SitemapGenerator::Sitemap.create do
 
   add monalisa_touch_alternative_path, priority: 1
   add thermiva_alternative_path, priority: 1
+  add femilift_alternative_path, priority: 1
 
 
   # Immunome Research Paths
