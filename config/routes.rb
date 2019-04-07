@@ -31,7 +31,7 @@ Lavax::Application.routes.draw do
 
   match '/search' => 'static_pages#search', :via => :get
 
-  # Alternative Paths
+  # Estrogen Alternative Paths
   match '/premarin-cream-alternative' => 'alternatives#premarin_cream', :via => :get
   match '/prempro-alternative' => 'alternatives#prempro', :via => :get
   match '/estrace-cream-alternative' => 'alternatives#estrace_cream', :via => :get
@@ -39,6 +39,10 @@ Lavax::Application.routes.draw do
   match '/yuvafem-alternative' => 'alternatives#yuvafem', :via => :get
   match '/estring-alternative' => 'alternatives#estring', :via => :get
 
+  # DHEA Alternative Paths
+  match '/intrarosa-alternative' => 'alternatives#intrarosa', :via => :get
+
+  # Laser Alternative Paths
   match '/monalisa-touch-alternative' => 'alternatives#monalisa_touch', :via => :get
   match '/thermiva-alternative' => 'alternatives#thermiva', :via => :get
   match '/femilift-alternative' => 'alternatives#femilift', :via => :get

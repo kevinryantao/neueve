@@ -58,6 +58,10 @@ SitemapGenerator::Sitemap.create do
   add yuvafem_alternative_path, priority: 1
   add estring_alternative_path, priority: 1
 
+  # DHEA
+  add intrarosa_alternative_path, priority: 1
+
+  # Lasers
   add monalisa_touch_alternative_path, priority: 1
   add thermiva_alternative_path, priority: 1
   add femilift_alternative_path, priority: 1
