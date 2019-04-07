@@ -38,6 +38,8 @@ Lavax::Application.routes.draw do
   match '/vagifem-alternative' => 'alternatives#vagifem', :via => :get
   match '/yuvafem-alternative' => 'alternatives#yuvafem', :via => :get
   match '/estring-alternative' => 'alternatives#estring', :via => :get
+  match '/estrogel-alternative' => 'alternatives#estrogel', :via => :get
+
 
   # DHEA Alternative Paths
   match '/intrarosa-alternative' => 'alternatives#intrarosa', :via => :get
