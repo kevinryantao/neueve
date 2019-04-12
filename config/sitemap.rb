@@ -68,6 +68,8 @@ SitemapGenerator::Sitemap.create do
   add thermiva_alternative_path, priority: 1
   add femilift_alternative_path, priority: 1
 
+  # Douches
+  add summers_eve_alternative_path, priority: 1
 
   # Immunome Research Paths
   add '/content/1/1/1', priority: 0.25
