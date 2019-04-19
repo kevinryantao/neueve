@@ -1,4 +1,5 @@
 class StaticPagesController < ApplicationController
+  include MailwizzApiHelper
 
   TRANSACTION_IDS_SENT_CACHE = {}
 
@@ -148,26 +149,29 @@ class StaticPagesController < ApplicationController
     # if it's a subscription, send a subscription Email
     # if it's ala carte, send an ala carte email
 
-    if !TRANSACTION_IDS_SENT_CACHE[paypal_transaction_id] #can send a max of one email per txn id
+    email = @pdt_data["payer_email"]
+    uuid = mailwizz_get_uuid_by_email(email)
+    if uuid != nil
+      old_mailwizz_data = ajax_mailwizz_get_subscriber(uuid)
+      # Avoids sending out same email twice
+      if paypal_transaction_id != old_mailwizz_data['LAST_TXN_ID']
+        if @pdt_data["txn_type"] == 'cart'
+          TransactionalMailer.alacarte_email(@pdt_data).deliver_now
+        elsif @pdt_data["txn_type"] == 'subscr_payment'
+          TransactionalMailer.subscription_email(@pdt_data).deliver_now
+        end
+        new_mailwizz_data = create_or_update_mailwizz_data(@pdt_data, old_mailwizz_data)
+        ajax_mailwizz_update_subscriber(uuid, new_mailwizz_data)
+      end
+    else # new customer
+      mailwizz_data = create_or_update_mailwizz_data(@pdt_data)
       if @pdt_data["txn_type"] == 'cart'
         TransactionalMailer.alacarte_email(@pdt_data).deliver_now
-        TRANSACTION_IDS_SENT_CACHE[paypal_transaction_id] = true
-
-        if is_bv_user(@pdt_data)
-          ajax_mailwizz_add_subscriber(@pdt_data["payer_email"], @pdt_data["first_name"], @pdt_data["last_name"], :bv)
-        else
-          ajax_mailwizz_add_subscriber(@pdt_data["payer_email"], @pdt_data["first_name"], @pdt_data["last_name"], :purchase)
-        end
-
       elsif @pdt_data["txn_type"] == 'subscr_payment'
         TransactionalMailer.subscription_email(@pdt_data).deliver_now
-        TRANSACTION_IDS_SENT_CACHE[paypal_transaction_id] = true
-
-        ajax_mailwizz_add_subscriber(@pdt_data["payer_email"], @pdt_data["first_name"], @pdt_data["last_name"], :subscriber)
       end
+      ajax_mailwizz_add_subscriber(mailwizz_data)
     end
-
-    @estimated_delivery_date = 7.days.from_now.strftime("%Y-%m-%d")
   end
 
   def ajax_paypal_pdt(transaction_id)
@@ -208,46 +212,6 @@ class StaticPagesController < ApplicationController
     end
     result_hash
   end
-
-  def ajax_mailwizz_add_subscriber(email, first_name, last_name, segment)
-    case segment
-      when :bv
-        list = 'co284xlkzpd15'
-      when :subscriber
-        list = 'vn950gce653f0'
-      when :purchase
-        list = 'gk6598t9f5aff'
-      else
-        list = 'rk386syp21bf2' # test
-    end
-
-    payload = "EMAIL=#{email}&FNAME=#{first_name}&LNAME=#{last_name}"
-    request = Typhoeus::Request.new(
-        "http://ec2-34-203-205-175.compute-1.amazonaws.com/api/lists/#{list}/subscribers/",
-        method: :post,
-        body: payload,
-        headers: { 'Content-Type' => 'application/x-www-form-urlencoded',
-                   'x-mw-public-key' => ENV['MAILWIZZ_PUBLIC_KEY'],
-                   'x-mw-timestamp' => Time.now.to_i
-        },
-        ssl_verifypeer: false,
-        ssl_verifyhost: 0,
-        verbose: true,
-        timeout: 10
-    )
-    request.on_complete do |response|
-      if response.success?
-        Rails.logger.info(response.response_body)
-        return response.response_body
-      else
-        error_response = response.body
-        Rails.logger.error("Mailwizz Add Subscriber Failed with Error: #{error_response}, payload: #{payload}")
-        return nil
-      end
-    end
-    request.run
-  end
-
 
   def is_bv_user(pdt_hash)
     (1..(pdt_hash["num_cart_items"].to_i)).each do |i|

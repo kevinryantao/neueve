@@ -76,6 +76,9 @@ GEM
     css_parser (1.7.0)
       addressable
     dalli (2.7.10)
+    debase (0.2.2)
+      debase-ruby_core_source (>= 0.10.2)
+    debase-ruby_core_source (0.10.4)
     erubi (1.8.0)
     erubis (2.7.0)
     ethon (0.12.0)
@@ -165,6 +168,9 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.10.0)
       ffi (~> 1.0)
+    rb-readline (0.5.5)
+    ruby-debug-ide (0.6.1)
+      rake (>= 0.8.1)
     sass (3.7.3)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
@@ -220,6 +226,7 @@ DEPENDENCIES
   canonical-rails (~> 0.2.5)
   coffee-rails (~> 4.1.0)
   dalli
+  debase
   font-awesome-rails
   heroku-deflater
   jquery-rails
@@ -236,6 +243,8 @@ DEPENDENCIES
   rails (~> 4.2)
   rails-observers
   rails_12factor
+  rb-readline
+  ruby-debug-ide
   sass-rails (~> 5.0.4)
   simple_form
   sitemap_generator
