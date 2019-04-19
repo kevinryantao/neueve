@@ -28,6 +28,11 @@ gem 'typhoeus'
 
 group :development do
   gem 'sqlite3', "~> 1.3.13"
+  gem 'rb-readline'
+
+# To use debugger
+  gem 'debase'
+  gem 'ruby-debug-ide'
 end
 
 group :production do
@@ -70,5 +75,3 @@ gem 'rack-reverse-proxy', :require => 'rack/reverse_proxy', :git => 'git://githu
 # Deploy with Capistrano
 # gem 'capistrano'
 
-# To use debugger
-# gem 'debugger'
