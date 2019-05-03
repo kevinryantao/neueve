@@ -81,8 +81,50 @@
                         </div>
 
                         <span class="stamped-product-reviews-badge stamped-main-badge" data-id="0"></span>
-                        <hr>
 
+                    </div>
+                    <hr>
+                    <div itemscope itemtype="http://schema.org/Product" align="center">
+                        <strong>
+                            <div itemprop="name">Four Jars of NeuEve Cream</div>
+
+                            <meta itemprop="category" content="Health & Beauty > Personal Care > Feminine Sanitary Supplies > Feminine Deodorant"/>
+                            <meta itemprop="description" content="NeuEve Cream is a natural vaginal moisturizer that alleviates itching and burning.
+                              It was designed for women with severe atrophy and painful sex."/>
+                        </strong>
+                        4 x 0.7 oz = 2.8 oz Total
+                        <br>
+                        <div>
+                            Bulk Discount:
+                        </div>
+                        <span itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                          <strike>$172</strike> <i class="fas fa-long-arrow-alt-right"></i> <span itemprop="price">$160</span>
+                          <meta itemprop="priceCurrency" content="USD"/>
+                        </span>
+
+                        <div>
+                            Save $12!
+                        </div>
+                        <br>
+
+                        <div class="formbutton">
+                            <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                                <input type="hidden" name="cmd" value="_s-xclick">
+                                <input type="hidden" name="hosted_button_id" value="UNGK5G3CWJX92">
+                                <%= button_tag(type: 'submit',
+                                               class: 'btn btn-large btn-warning add-to-cart',
+                                               id: 'neueve-cream',
+                                               name: 'submit') do %>
+                                    <svg class="svg-icon">
+                                        <use xlink:href="#add-to-cart-1"></use>
+                                    </svg>
+                                    Add 4 Boxes to Cart
+                                <% end %>
+                            </form>
+                        </div>
+                    </div>
+                    <hr>
+                    <div align="center">
                         4.1 Stars on <%= link_to image_tag('amazon-4-stars.png', :size => "95x42"),
                                                  create_url('https://www.amazon.com/',
                                                             ['NeuEve-Cream',
@@ -130,7 +172,6 @@
                                     :target => '_blank' %>
 
                     </div>
-
                 </div>
             </div>
         </div>
