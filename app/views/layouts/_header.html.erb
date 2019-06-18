@@ -1,113 +1,119 @@
 <header class="header">
-    <div class="top-bar">
-        <div class="container-fluid">
-            <div class="row d-flex align-items-center">
-                <div class="col-7 d-sm-block">
-                    <ul class="list-inline mb-0">
-                        <li class="list-inline-item pr-3 mr-0">
-                            <svg class="svg-icon"><use xlink:href="#shipping-box-1"></use></svg>
-                            Free Shipping
+    <div class="top-wrapper">
+
+        <div class="top-bar">
+            <div class="container-fluid">
+                <div class="row d-flex align-items-center">
+                    <div class="col-7 d-sm-block">
+                        <ul class="list-inline mb-0">
+                            <li class="list-inline-item pr-3 mr-0">
+                                <svg class="svg-icon">
+                                    <use xlink:href="#shipping-box-1"></use>
+                                </svg>
+                                Free Shipping
+                            </li>
+                            <li class="list-inline-item px-3 border-left d-none d-md-inline-block">
+                                <i class="far fa-smile-beam svg-icon"></i>
+                                <%= link_to 'Satisfaction Guaranteed', :anchor => "satisfaction" %>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-5 d-flex justify-content-end">
+                        <i class="fas fa-sync-alt svg-icon"></i> &nbsp;
+                        <%= link_to "Subscribe & Save", :anchor => "subscribe" %>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-white navbar-airy navbar-sticky">
+            <div class="container-fluid">
+                <%= link_to (image_tag('NeuEve-logo-alpha.png', class: 'navbar-brand-svg', height: '38px')), root_path, class: 'navbar-brand' %>
+
+                <!--<%= link_to ('NeuEve'), root_path, class: 'navbar-brand' %> -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <%= link_to 'About', about_path, class: 'nav-link' %>
                         </li>
-                        <li class="list-inline-item px-3 border-left d-none d-md-inline-block">
-                            <i class="far fa-smile-beam svg-icon"></i>
-                            <%= link_to 'Satisfaction Guaranteed', :anchor => "satisfaction" %>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Products
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <%= link_to 'Cream - for Severe Atrophy', cream_path, class: "dropdown-item" %>
+                                <%= link_to 'Silk - for Dryness & Atrophy', silk_path, class: "dropdown-item" %>
+                                <%= link_to 'Silver - for Perimenopause', silver_path, class: "dropdown-item" %>
+                                <%= link_to 'Gold - for Painful Sex', gold_path, class: "dropdown-item" %>
+                                <%= link_to 'BV Clear - for Recurrent BV', bacterial_vaginosis_vaginal_odor_path, class: "dropdown-item" %>
+                                <%= link_to 'Applicator', applicator_path, class: "dropdown-item" %>
+                                <div class="dropdown-divider"></div>
+                                <%= link_to 'Dilators', dilators_path, class: "dropdown-item" %>
+                                <%= link_to 'D-Mannose', dmannose_path, class: "dropdown-item" %>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Symptoms
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <%= link_to 'Bacterial Vaginosis', bacterial_vaginosis_vaginal_odor_path, class: "dropdown-item" %>
+                                <%= link_to 'Vaginal Odor', vaginal_odor_cause_treatment_path, class: "dropdown-item" %>
+                                <%= link_to 'Vaginal Dryness and Atrophy', vaginal_dryness_atrophy_cause_treatment_path, class: "dropdown-item" %>
+                                <%= link_to 'Libido', libido_path, class: "dropdown-item" %>
+                                <%= link_to 'Customer Reviews', reviews_path, class: "dropdown-item" %>
+                                <%= link_to 'Comparison', comparison_path, class: "dropdown-item" %>
+                                <%= link_to 'Testimonials for Vaginal Dryness', testimonials_path, class: "dropdown-item" %>
+                                <%= link_to 'Testimonials for BV', bacterial_vaginosis_testimonials_path, class: "dropdown-item" %>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <%= link_to 'Blog', 'https://www.neueve.com/blog/', class: 'nav-link' %>
+                        </li>
+                        <li class="nav-item">
+                            <%= link_to 'FAQ', faq_path, class: 'nav-link' %>
                         </li>
                     </ul>
-                </div>
-                <div class="col-5 d-flex justify-content-end">
-                    <i class="fas fa-sync-alt svg-icon"></i> &nbsp;
-                    <%= link_to "Subscribe & Save", :anchor => "subscribe" %>
+
+                    <div class="right-col d-flex align-items-center justify-content-between justify-content-lg-end my-3 my-lg-0">
+
+                        <%= form_tag(search_path, method: :get, class: "form-inline my-2 my-lg-0") do %>
+                            <%= text_field_tag :q, params[:q], class: "form-control mr-sm-2 col-9", type: "search", placeholder: "Search", 'aria-label': "Search" %>
+                            <button type="submit" class="btn btn-outline-dark my-2 my-sm-0">
+                                <svg class="svg-icon">
+                                    <use xlink:href="#search-1"></use>
+                                </svg>
+                            </button>
+                        <% end %>
+
+                        <!-- Manage Subscription -->
+                        <div class="nav-item user">
+                            <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_subscr-find&alias=TERMWE8J86S96" class="navbar-icon-link">
+                                <svg class="svg-icon">
+                                    <use xlink:href="#male-user-1"></use>
+                                </svg>
+                                <span class="text-sm ml-2 ml-lg-0 text-uppercase text-sm font-weight-bold d-none d-sm-inline d-lg-none">Manage Subscription</span>
+                            </a>
+                        </div>
+
+                        <!-- Cart Dropdown-->
+                        <div class="nav-item">
+                            <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_cart&business=neueve%2esuppositories%40gmail%2ecom&display=1" class="navbar-icon-link">
+                                <svg class="svg-icon">
+                                    <use xlink:href="#cart-1"></use>
+                                </svg>
+                                <span class="text-sm ml-2 ml-lg-0 text-uppercase text-sm font-weight-bold d-none d-sm-inline d-lg-none">View Cart</span>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
+        </nav>
+
     </div>
-
-    <nav class="navbar navbar-expand-lg navbar-light bg-white navbar-airy navbar-sticky">
-        <div class="container-fluid">
-            <%= link_to (image_tag('NeuEve-logo-alpha.png', class: 'navbar-brand-svg', height: '38px')), root_path, class: 'navbar-brand' %>
-
-            <!--<%= link_to ('NeuEve'), root_path, class: 'navbar-brand' %> -->
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mx-auto">
-                    <li class="nav-item">
-                        <%= link_to 'About', about_path, class: 'nav-link' %>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Products
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <%= link_to 'Cream - for Severe Atrophy', cream_path, class: "dropdown-item" %>
-                            <%= link_to 'Silk - for Dryness & Atrophy', silk_path, class: "dropdown-item" %>
-                            <%= link_to 'Silver - for Perimenopause', silver_path, class: "dropdown-item" %>
-                            <%= link_to 'Gold - for Painful Sex', gold_path, class: "dropdown-item" %>
-                            <%= link_to 'BV Clear - for Recurrent BV', bacterial_vaginosis_vaginal_odor_path, class: "dropdown-item" %>
-                            <%= link_to 'Applicator', applicator_path, class: "dropdown-item" %>
-                            <div class="dropdown-divider"></div>
-                            <%= link_to 'Dilators', dilators_path, class: "dropdown-item" %>
-                            <%= link_to 'D-Mannose', dmannose_path, class: "dropdown-item" %>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Symptoms
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <%= link_to 'Bacterial Vaginosis', bacterial_vaginosis_vaginal_odor_path, class: "dropdown-item" %>
-                            <%= link_to 'Vaginal Odor', vaginal_odor_cause_treatment_path, class: "dropdown-item" %>
-                            <%= link_to 'Vaginal Dryness and Atrophy', vaginal_dryness_atrophy_cause_treatment_path, class: "dropdown-item" %>
-                            <%= link_to 'Libido', libido_path, class: "dropdown-item" %>
-                            <%= link_to 'Customer Reviews', reviews_path, class: "dropdown-item" %>
-                            <%= link_to 'Comparison', comparison_path, class: "dropdown-item" %>
-                            <%= link_to 'Testimonials for Vaginal Dryness', testimonials_path, class: "dropdown-item" %>
-                            <%= link_to 'Testimonials for BV', bacterial_vaginosis_testimonials_path, class: "dropdown-item" %>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <%= link_to 'Blog', 'https://www.neueve.com/blog/', class: 'nav-link' %>
-                    </li>
-                    <li class="nav-item">
-                        <%= link_to 'FAQ', faq_path, class: 'nav-link' %>
-                    </li>
-                </ul>
-
-                <div class="right-col d-flex align-items-center justify-content-between justify-content-lg-end my-3 my-lg-0">
-
-                    <%= form_tag(search_path, method: :get, class: "form-inline my-2 my-lg-0") do %>
-                        <%= text_field_tag :q, params[:q], class: "form-control mr-sm-2 col-9", type: "search", placeholder: "Search", 'aria-label': "Search" %>
-                        <button type="submit" class="btn btn-outline-dark my-2 my-sm-0">
-                            <svg class="svg-icon">
-                                <use xlink:href="#search-1"></use>
-                            </svg>
-                        </button>
-                    <% end %>
-
-                    <!-- Manage Subscription -->
-                    <div class="nav-item user">
-                        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_subscr-find&alias=TERMWE8J86S96" class="navbar-icon-link">
-                            <svg class="svg-icon">
-                                <use xlink:href="#male-user-1"></use>
-                            </svg>
-                            <span class="text-sm ml-2 ml-lg-0 text-uppercase text-sm font-weight-bold d-none d-sm-inline d-lg-none">Manage Subscription</span>
-                        </a>
-                    </div>
-
-                    <!-- Cart Dropdown-->
-                    <div class="nav-item">
-                        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_cart&business=neueve%2esuppositories%40gmail%2ecom&display=1" class="navbar-icon-link">
-                            <svg class="svg-icon">
-                                <use xlink:href="#cart-1"></use>
-                            </svg>
-                            <span class="text-sm ml-2 ml-lg-0 text-uppercase text-sm font-weight-bold d-none d-sm-inline d-lg-none">View Cart</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </nav>
 </header>

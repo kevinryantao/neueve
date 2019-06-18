@@ -39,12 +39,14 @@
 
 // Used for navbar w/ transparent background, when it gets
 // fixed, it gets also a white background
-.navbar.fixed-top.bg-fixed-white {
-    background: $white !important;
+.navbar.fixed-top.bg-fixed-white,
+.fixed-top .navbar {
+  background: $white !important;
 }
 
-.navbar.fixed-top {
-    box-shadow: 2px 2px 2px rgba($black, 0.1);
+.navbar.fixed-top,
+.fixed-top .navbar {
+  box-shadow: 2px 2px 2px rgba($black, 0.1);
 }
 
 .navbar {
@@ -70,10 +72,10 @@
         margin-top: $navbar-padding-y;
     }
 
-    /* align with the navbar bottom */
-    .megamenu {
-        margin-top: 0px;
-    }
+  /* align with the navbar bottom */
+  .megamenu {
+    margin-top: -1px;
+  }
 }
 
 // Increase nav links' paddings a bit on xl screens
@@ -100,9 +102,10 @@
 // Dark links against a light background
 .navbar-light,
 .navbar-hover-light:hover,
-.navbar-fixed-light.fixed-top {
-    .navbar-brand {
-        color: $navbar-light-active-color;
+.navbar-fixed-light.fixed-top,
+.fixed-top .navbar-fixed-light {
+  .navbar-brand {
+    color: $navbar-light-active-color;
 
         @include hover-focus {
             color: $navbar-light-active-color;
@@ -198,7 +201,7 @@
     }
 }
 
-// similar to nav-link but this is used for the icon links 
+// similar to nav-link but this is used for the icon links
 // on the right
 .navbar-icon-link {
     display: flex;
@@ -239,6 +242,7 @@
 // and hover-light navbar variants
 .navbar-light,
 .navbar-fixed-light.fixed-top,
+.fixed-top .navbar-fixed-light,
 .navbar-hover-light:hover {
     .navbar-icon-link {
         color: $navbar-light-active-color;
