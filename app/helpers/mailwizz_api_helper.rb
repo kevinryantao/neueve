@@ -92,7 +92,7 @@ module MailwizzApiHelper
           mailwizz_data['CREAM_COUNT'] = mailwizz_data['CREAM_COUNT'].to_i + 1
         else
       end
-      mailwizz_data['CART_ITEM_COUNT'] = mailwizz_data['CART_ITEM_COUNT'] + 1
+      mailwizz_data['CART_ITEM_COUNT'] = mailwizz_data['CART_ITEM_COUNT'].to_i + 1
     end
 
     mailwizz_data
