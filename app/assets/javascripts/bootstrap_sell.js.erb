@@ -120,8 +120,8 @@ $(function () {
     event.preventDefault();
     $(this).ekkoLightbox({
       alwaysShowClose: true,
-      leftArrow: '<span><img src="' + basePath + 'img/prev.svg" class="nav-arrow nav-arrow-left" alt="" width="50"></span>',
-      rightArrow: '<span><img src="' + basePath + 'img/next.svg" class="nav-arrow nav-arrow-right" alt="" width="50"></span>'
+      leftArrow: '<span><img src="' + "<%= asset_path 'bootstrap_sell/prev.svg' %>" + '" class="nav-arrow nav-arrow-left" alt="" width="50"></span>',
+      rightArrow: '<span><img src="' + "<%= asset_path 'bootstrap_sell/next.svg' %>" + '" class="nav-arrow nav-arrow-right" alt="" width="50"></span>'
     });
   });
 
@@ -240,8 +240,8 @@ $(function () {
     margin: 0,
     smartSpeed: 500,
     responsiveClass: true,
-    navText: ['<img src="' + basePath + 'img/prev-dark.svg" alt="" width="50">',
-      '<img src="' + basePath + 'img/next-dark.svg" alt="" width="50">'],
+    navText: ['<img src="' + "<%= asset_path 'bootstrap_sell/prev-dark.svg' %>" + '" alt="" width="50">',
+      '<img src="' + "<%= asset_path 'bootstrap_sell/next-dark.svg' %>" + '" alt="" width="50">'],
     responsive: {
       0: {
         items: 1,
@@ -283,8 +283,8 @@ $(function () {
     margin: 0,
     smartSpeed: 500,
     responsiveClass: true,
-    navText: ['<img src="' + basePath + 'img/prev.svg" alt="" width="50">',
-      '<img src="' + basePath + 'img/next.svg" alt="" width="50">'],
+    navText: ['<img src="' + "<%= asset_path 'bootstrap_sell/prev.svg' %>" + '" alt="" width="50">',
+      '<img src="' + "<%= asset_path 'bootstrap_sell/next.svg' %>" + '" alt="" width="50">'],
     responsive: {
       0: {
         items: 1,
@@ -328,8 +328,8 @@ $(function () {
     margin: 0,
     smartSpeed: 500,
     responsiveClass: true,
-    navText: ['<img src="' + basePath + 'img/prev.svg" alt="" width="50">',
-      '<img src="' + basePath + 'img/next.svg" alt="" width="50">'],
+    navText: ['<img src="' + "<%= asset_path 'bootstrap_sell/prev.svg' %>" + '" alt="" width="50">',
+      '<img src="' + "<%= asset_path 'bootstrap_sell/next.svg' %>" + '" alt="" width="50">'],
     responsive: {
       0: {
         items: 1,
@@ -372,8 +372,8 @@ $(function () {
     margin: 0,
     nav: false,
     dots: true,
-    navText: ['<img src="' + basePath + 'img/prev.svg" alt="" width="50">',
-      '<img src="' + basePath + 'img/next.svg" alt="" width="50">'],
+    navText: ['<img src="' + "<%= asset_path 'bootstrap_sell/prev.svg' %>" + '" alt="" width="50">',
+      '<img src="' + "<%= asset_path 'bootstrap_sell/next.svg' %>" + '" alt="" width="50">'],
     smartSpeed: 400,
     responsiveClass: true,
     responsive: {
@@ -397,17 +397,8 @@ $(function () {
     items: 1,
     thumbs: true,
     thumbsPrerendered: true,
-    responsiveClass: true,
-    responsive: {
-      0: {
-        items: 1,
-        dots: true,
-      },
-      768: {
-        items: 1,
-        dots: false
-      }
-    }
+    dots: false,
+    responsiveClass: false
   });
 
 
@@ -502,6 +493,9 @@ $(function () {
         mapTypeId: google.maps.MapTypeId.ROADMAP
       }
       var map = new google.maps.Map(mapCanvas, mapOptions);
+
+        // If we need this we can use "<%= asset_path 'bootstrap_sell/prev-dark.svg' %>" examples to set this
+        var basePath = 'placeholder';
 
       var markerImage = basePath + 'img/marker.png';
 

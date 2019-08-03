@@ -39,6 +39,11 @@
   }
 }
 
+.owl-thumb-item img {
+  width: 110px;
+  height: auto;
+}
+
 
 .alternative-product {
   @extend .border;
