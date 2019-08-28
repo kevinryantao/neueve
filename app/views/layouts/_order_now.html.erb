@@ -621,17 +621,16 @@
             </div>
 
             <div class="col-lg-6">
-                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-                    <input type="hidden" name="cmd" value="_s-xclick">
-                    <input type="hidden" name="hosted_button_id" value="QZJH87LLDYFCY">
-                    <input type="hidden" name="on0" value="Formula">
-                    <input type="hidden" name="currency_code" value="USD">
 
                     <div class="row">
                         <div class="col-xl-6 bg-gray-200 p-3">
                             <h4>USA</h4>
-                            <label class="radio">
-                                <input type="radio" name="os0" value="NeuEve Silk (USA)">
+
+                            <div class="row">
+
+                            <div class="col-lg-12 col-6">
+                            <div class="card ">
+                                <div class="card-body">
                                 <strong><span itemprop="name">NeuEve Silk Formula</span></strong><br>
                                 <meta itemprop="category" content="Health & Beauty > Personal Care > Feminine Sanitary Supplies > Feminine Deodorant"/>
                                 <meta itemprop="description" content="Natural suppository for fighting odor, dryness, dyspareunia, and bacterial vaginosis (BV). Gynecologist-tested."/>
@@ -640,9 +639,26 @@
             <span itemprop="price">$49.75 per month</span><br>
             <meta itemprop="priceCurrency" content="USD"/>
             </span>
-                            </label>
-                            <label class="radio">
-                                <input type="radio" name="os0" value="NeuEve Silver (USA)" checked="checked">
+                            <div class="formbutton">
+                                <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                                    <input type="hidden" name="cmd" value="_s-xclick">
+                                    <input type="hidden" name="hosted_button_id" value="P6SSR5KBG2HTA">
+                                    <%= button_tag(type: 'submit',
+                                                   class: 'btn btn-large btn-warning subscribe',
+                                                   id: 'silk-formula',
+                                                   name: 'submit') do %>
+                                        <i class="fas fa-sync-alt svg-icon"></i>
+                                        Subscribe
+                                    <% end %>
+                                </form>
+                            </div>
+                                </div>
+                            </div>
+                            </div>
+
+                            <div class="col-lg-12 col-6">
+                            <div class="card">
+                                <div class="card-body">
                                 <strong><span itemprop="name">NeuEve Silver Formula</span></strong><br>
                                 <meta itemprop="category" content="Health & Beauty > Personal Care > Feminine Sanitary Supplies > Feminine Deodorant"/>
                                 <meta itemprop="description" content="Natural suppository for fighting odor, dryness, dyspareunia, and bacterial vaginosis (BV). Gynecologist-tested."/>
@@ -651,9 +667,26 @@
             <span itemprop="price">$49.75 per month</span><br>
             <meta itemprop="priceCurrency" content="USD"/>
             </span>
-                            </label>
-                            <label class="radio">
-                                <input type="radio" name="os0" value="NeuEve Gold (USA)">
+
+                            <div class="formbutton">
+                                <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                                    <input type="hidden" name="cmd" value="_s-xclick">
+                                    <input type="hidden" name="hosted_button_id" value="N7WDAKA7N9ZQJ">
+                                    <%= button_tag(type: 'submit',
+                                                   class: 'btn btn-large btn-warning subscribe',
+                                                   id: 'silver-formula',
+                                                   name: 'submit') do %>
+                                        <i class="fas fa-sync-alt svg-icon"></i>
+                                        Subscribe
+                                    <% end %>
+                                </form>
+                            </div>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="col-lg-12 col-6">
+                                <div class="card">
+                                    <div class="card-body">
                                 <strong><span itemprop="name">NeuEve Gold Formula</span></strong><br>
                                 <meta itemprop="category" content="Health & Beauty > Personal Care > Feminine Sanitary Supplies > Feminine Deodorant"/>
                                 <meta itemprop="description" content="Natural suppository for fighting odor, dryness, dyspareunia, and bacterial vaginosis (BV). Gynecologist-tested."/>
@@ -663,11 +696,35 @@
 
             <meta itemprop="priceCurrency" content="USD"/>
             </span>
-                            </label>
+                            <div class="formbutton">
+                                <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                                    <input type="hidden" name="cmd" value="_s-xclick">
+                                    <input type="hidden" name="hosted_button_id" value="BTXQMQ7X3MHQW">
+                                    <%= button_tag(type: 'submit',
+                                                   class: 'btn btn-large btn-warning subscribe',
+                                                   id: 'gold-formula',
+                                                   name: 'submit') do %>
+                                        <i class="fas fa-sync-alt svg-icon"></i>
+                                        Subscribe
+                                    <% end %>
+                                </form>
+                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
                         </div>
 
+
                         <div class="col-xl-6 bg-gray-300 p-3">
-                            <h4>Canada or Mexico</h4>
+                            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                                <input type="hidden" name="cmd" value="_s-xclick">
+                                <input type="hidden" name="hosted_button_id" value="QZJH87LLDYFCY">
+                                <input type="hidden" name="on0" value="Formula">
+                                <input type="hidden" name="currency_code" value="USD">
+
+                                <h4>Canada or Mexico</h4>
                             <label class="radio">
                                 <input type="radio" name="os0" value="NeuEve Silk (Canada)">
                                 <strong><span itemprop="name">NeuEve Silk Formula</span></strong><br>
@@ -701,14 +758,18 @@
 
             <meta itemprop="priceCurrency" content="USD"/>
             </span>
+
                             </label>
+                            <div align="center">
+                                <%= submit_tag 'Subscribe (CAN/MEX)', :class => 'btn btn-large btn-warning subscribe-button', :name => 'submit' %>
+                                <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                            </div>
+
+                            </form>
                         </div>
                     </div>
-                    <div align="center">
-                        <%= submit_tag 'Subscribe', :class => 'btn btn-large btn-warning subscribe-button', :name => 'submit' %>
-                        <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-                    </div>
-                </form>
+
+
             </div>
         </div>
     </div>
