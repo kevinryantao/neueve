@@ -184,3 +184,29 @@ h2.c-section__heading {
 .c-teaser {
   @extend .d-none;
 }
+
+// HK Grotesk
+
+@font-face {
+  font-family: 'HK Grotesk';
+  src: font-url("<%= asset_path('hkgrotesk/hkgrotesk-bold-webfont.woff2') %>") format('woff2'),
+  font-url("<%= asset_path('hkgrotesk/hkgrotesk-bold-webfont.woff') %>") format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HK Grotesk';
+  src: font-url("<%= asset_path('hkgrotesk/hkgrotesk-light-webfont.woff2') %>") format('woff2'),
+  font-url("<%= asset_path('hkgrotesk/hkgrotesk-light-webfont.woff') %>") format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HK Grotesk';
+  src: font-url("<%= asset_path('hkgrotesk/hkgrotesk-regular-webfont.woff2') %>") format('woff2'),
+  font-url("<%= asset_path('hkgrotesk/hkgrotesk-regular-webfont.woff') %>") format('woff');
+  font-weight: normal;
+  font-style: normal;
+}

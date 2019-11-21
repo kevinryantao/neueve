@@ -64,6 +64,8 @@ module Lavax
 
     config.cache_store = :dalli_store
 
+    # Adding fonts to the path
+    config.assets.paths << Rails.root.join("app", "assets", "fonts")
 
   end
 end
