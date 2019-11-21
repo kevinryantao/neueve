@@ -11,6 +11,8 @@ if defined? Rack::Cors
                  http://www.neueve.com
                 https://neueve.herokuapp.com
                  http://neueve.herokuapp.com
+                https://neueve-cedar-14.herokuapp.com
+                 http://neueve-cedar-14.herokuapp.com
             ]
       resource '/assets/*'
     end
