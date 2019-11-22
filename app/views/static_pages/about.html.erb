@@ -1,169 +1,124 @@
 <% provide(:title, 'About') %>
 <% provide(:description, 'Learn about the story of Dr. Renjie Chang and how she invented NeuEve.') %>
-<% provide(:last_modified, 'November 20, 2019') %>
+<% provide(:last_modified, 'November 22, 2019') %>
 
-
-<section class="hero">
-    <div class="container">
-        <!-- Breadcrumbs -->
-        <ol class="breadcrumb justify-content-center">
-            <li class="breadcrumb-item">
-                <%= link_to 'Home', root_path %>
-            </li>
-            <li class="breadcrumb-item active">About Us</li>
-        </ol>
-        <!-- Hero Content-->
-        <div class="hero-content pb-5 text-center">
-            <h1 class="hero-heading">About Us</h1>
+<section class="mh-full-screen dark-overlay py-7 d-flex align-items-center justify-content-center">
+    <%= image_tag "lifestyle/FeedingDeerDaigaEllaby.jpg", class: "bg-image" %>
+    <div class="overlay-content w-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 text-white">
+                    <h6 class="text-uppercase text-white letter-spacing-5 mb-3"> About us</h6>
+                    <h1 class="display-3 font-weight-bold text-shadow mb-5">We are NeuEve</h1>
+                    <p class="text-lg">
+                        We want to live in a world where kindness, love and helping others can make a big impact.</p>
+                </div>
+            </div>
         </div>
     </div>
 </section>
 
+<section>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-6 about-text-column bg-gray-100">
+                <div class="about-text">
+                    <h6 class="text-uppercase text-muted letter-spacing-5 mb-1">Origin Story</h6>
+                    <h2 class="mb-4">The Challenge</h2>
+                    <p class="text-muted">
+                        NeuEve's founders: <u>Dr. Renjie Chang</u> and <u><%= link_to "Kevin Tao", kevin_tao_path %></u>
+                    </p>
+                    <p class="text-lg text-muted">
+                        As a gynecologist, it’s very common for friends to seek out Renjie for free medical advice.</p>
+                    <p class="text-lg text-muted">
+                        When Renjie and her friends started going through menopause, one problem stood out to her as
+                        very important and unaddressed.</p>
+                    <p class="text-lg text-muted">
+                        Her friends reluctantly shared their stories of memories of
+                        once passionate romance, physical and emotional pain, and fears of loss.</p>
+                </div>
+            </div>
+            <div class="col-lg-6 p-lg-0 about-image-column">
+                <%= image_tag "Dr-Renjie-Chang-Founder-NeuEve.jpg", class: "bg-image" %>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 about-text-column order-lg-2">
+                <div class="about-text">
+                    <h6 class="text-uppercase text-muted letter-spacing-5 mb-1">Origin Story</h6>
+                    <h2 class="mb-4">The Invention</h2>
+                    <p class="text-lg text-muted">
+                        Renjie was not the kind of person that can be happy with only saying supportive words. She always preferred action.
+                    </p>
+                    <p class="text-lg text-muted">
+                        She buried herself for weeks underground in her lab surrounded with medical science journals and natural ingredients.
+                    </p>
+                    <p class="text-lg text-muted">
+                        Despite the increasing worries of her husband and her son, she did not emerge until she had a prototype of the very first batch of NeuEve.
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-6 p-lg-0 about-image-column order-lg-1">
+                <%= image_tag "product/general/NeuEve_GreenBkgrd.jpg", class: "bg-image" %>
+            </div>
+        </div>
+    </div>
+</section>
 
-<section class="pb-5">
+<section class="py-6">
     <div class="container">
         <div class="row">
-            <div class="col-xl-8 col-lg-10 mx-auto">
-                <div class="text-content text-lg">
+            <div class="col-lg-5">
+                <h6 class="text-uppercase text-muted letter-spacing-5 mb-1">Principles</h6>
+                <h2 class="mb-4">What We Stand For</h2>
+            </div>
+            <div class="col-lg-6 ml-lg-auto">
+                <div class="row">
+                    <div class="col-sm-6 mb-4">
+                        <h4>Love</h4>
+                        <p class="text-muted">We invented NeuEve to promote love.</p>
+                        <p class="text-muted">Love means trust, and trust means taking a chance.</p>
+                        <p class="text-muted">Our <%= link_to '100% Satisfaction Guarantee', satisfaction_path %> is our way of taking a chance to show that we love and trust you.</p>
+                        <p class="text-muted">Love also means support in good times and bad, so we created a private <%= link_to 'Pelvic Health support group', 'https://www.facebook.com/groups/pelvichealthallies' %> for you.</p>
 
 
-                    <div class="card mb-3" style="">
-                        <div class="card-body">
-                            <h5 class="card-title">NeuEve Return Policy</h5>
-                            <p class="card-text">For health reasons, NeuEve vaginal products are not able to be restocked. We <strong>cannot</strong>
-                                accept returns for NeuEve vaginal suppositories, NeuEve vaginal cream, or NeuEve vaginal applicators.</p>
-                            <%= link_to 'NeuEve Return Policy + Satisfaction Guarantee Policy Details', satisfaction_path, class: 'card-link' %>
+                    </div>
+                    <div class="col-sm-6 mb-4">
+                        <h4>Science</h4>
+                        <p class="text-muted">We believe that science is the power to help others and make a difference.</p>
+                        <p class="text-muted">We support the scientific community:</p>
+                        <ul>
+                            <li>
+                                <p class="text-muted">We give out scholarships to grad students for women's health.
+                                    [<%= link_to '1','https://www.neueve.com/blog/meet-ana-palmeire-de-oliveira-winner-of-the-neueve-award-for-best-contribution-in-vulvo-vaginitis-research/' %>,
+                                    <%= link_to '2','https://www.neueve.com/blog/meet-julian-marschalek-winner-of-the-neueve-award-for-best-contribution-in-vulvo-vaginitis-research/' %>]</p>
+                            </li>
+                            <li>
+                                <p class="text-muted">We revived all of the content of a
+                                    <%= link_to 'medical journal','https://www.neueve.com/blog/immunome-research-archive/' %>
+                                    that went offline and out of print.</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-12 mb-4">
+                        <h4>Doing What is Right</h4>
+                        <p class="text-muted">Ethics are the core of who we are.</p>
+                        <p class="text-muted">We invented NeuEve because other products contain hormones and harmful chemicals.</p>
+                        <p class="text-muted">
+                            In the women's health products space, many companies and their shareholders don't seem to care about anything other than making money.</p>
+                        <p class="text-muted">We're changing that.</p>
+                        <p class="text-muted">We are <%= link_to 'certified cruelty free','https://www.neueve.com/blog/cruelty-free-certified/' %> and we are members of 1% for the Planet.</p>
+                        <div class="row">
+                            <div class="col-6 text-center">
+                                <%= link_to image_tag('LeapingBunny-Logo.png', :class => '', :height => '100',
+                                                      alt: 'Leaping Bunny Seal'), 'https://www.neueve.com/blog/cruelty-free-certified/' %>
+                            </div>
+                            <div class="col-6 text-center">
+                                <%= image_tag("OnePercentFTP.png", :class => '', :height => '100',
+                                              alt: '1% for the Planet Seal') %>
+                            </div>
                         </div>
                     </div>
-
-                    <h3>
-                        Questions?
-                    </h3>
-                    <p>
-                        See our <%= link_to 'frequently asked questions and answers here.', faq_path %>
-                    </p>
-                    <h4>Email:</h4>
-                    <p>
-                        Customer Service: <%= mail_to "help@neueve.com" %>
-                    </p>
-                    <p>
-                        Medical Questions: <%= mail_to "medicalhelp@neueve.com" %>
-                    </p>
-                    <p>
-                        Press Inquiries: <%= mail_to "press@neueve.com" %>
-                    </p>
-                    <p>
-                        Partnerships (Wholesale Opportunities and Strategic Partnerships): <%= mail_to "partners@neueve.com" %>
-                    </p>
-                    <h4>Address:</h4>
-                    <p>
-                        965 W Chicago Ave, Chicago, IL 60642
-                    </p>
-                    <h4>Phone Number (we do NOT accept orders over the phone):</h4>
-                    <p>
-                        224-578-2854 - This is Kevin's personal cell phone, please only call during normal business hours for urgent
-                        matters! Thanks! Texting is preferred!
-                    </p>
-                    <h4>Business hours (Central Standard Time):</h4>
-                    <ul>
-                        <li>Monday: 11am - 5pm</li>
-                        <li>Tuesday: 10am - 5pm</li>
-                        <li>Wednesday: 10am - 5pm</li>
-                        <li>Thursday: 10am - 5pm</li>
-                        <li>Friday: 10am - 5pm</li>
-                    </ul>
-                    <h4>Unsubscribe from Monthly Shipments:</h4>
-                    <%= link_to 'Click here to unsubscribe', "https://www.paypal.com/cgi-bin/webscr?cmd=_subscr-find&alias=TERMWE8J86S96" %>
-                    from automatic monthly shipments
-
-                    <div align="center">
-                        <%= link_to image_tag('amazon-5-stars.jpg', :size => "95x42"), 'http://amzn.to/2g6tUUf', target: '_blank' %>
-                        <br>
-                        <%= link_to 'Lavax, Inc. has 94% positive ratings on Amazon', 'http://amzn.to/2g6tUUf', target: '_blank' %>
-                    </div>
-
-                    <h3>Our Company</h3>
-                    <p>
-                        <%= link_to 'Lavax, Inc.', 'http://amzn.to/2g6tUUf' %> is an Illinois-based research, development, manufacturer and
-                        distributor of all-natural,
-                        environmentally-friendly personal health care products. We are a small, family-owned company, established nearly 14
-                        years ago in Palatine, IL. Our goal is to utilize cutting edge science and technology to develop innovative health
-                        care products to improve human lives. To date, our research projects have won three grants from National Institutes
-                        of
-                        Health and two Grand Challenge Exploration Awards from Bill & Melinda Gates Foundation.
-                    <p>
-                        All of our all-natural products have been developed by our team of scientists. We test our products on ourselves; we
-                        wouldn't be selling them to the market if we weren't extremely satisfied with the results. All the formulas have
-                        been
-                        thoroughly tested and found to deliver immediate and powerful results, time after time.
-                    <p>
-
-                    <h3>Our Founder <br></h3>
-
-                    <h4>Renjie Chang, M.D., M.S., Founder & President</h4>
-                    <p>
-                        Dr. Chang started the company in 1999, determined to apply the knowledge and skills she had learned from a long
-                        career
-                        in the field of Obstetrics and Gynecology and in the pharmaceutical industry. In the past three decades, she worked
-                        as
-                        an OB-GYN in the Peking Union Hospital in China, a faculty member of OB-GYN at University of Oklahoma Health
-                        Sciences
-                        Center, and a drug developer at the Abbott Laboratories in Chicago. She established Lavax, Inc. to develop an
-                        innovative vaginal microbicide for preventing sexually transmitted disease with grants from NIH and Gates
-                        Foundation.
-                        While developing the sophisticated drug, she invented the all-natural NeuEve suppository as a spin-off. This
-                        innovative technology has made conceptual breakthrough in women’s personal care: reversing vaginal atrophy without
-                        using hormone. A patent has filed to protect its composition of natural ingredients. Because this product is a
-                        cosmetic for personal care, not a drug, it can be marketed to benefit consumers much sooner.
-                    <p>
-                        Two Gates Foundation Grants won by Dr. Renjie Chang:
-                    </p>
-                    <ol>
-                        <li>
-                            <%= link_to 'Novel Method Protecting Infants from HIV in Breast Milk', 'https://gcgh.grandchallenges.org/grant/novel-method-protecting-infants-hiv-breast-milk' %>
-
-                        </li>
-                        <li>
-                            <%= link_to 'A Novel Female-Controlled Antiviral Contraceptive', 'https://gcgh.grandchallenges.org/grant/novel-female-controlled-antiviral-contraceptive' %>
-
-                        </li>
-                    </ol>
-
-                    <p>
-                        <br>
-                        <%= image_tag 'chang-lab-photo.jpg', alt: 'Dr. Renjie Chang working hard to innovate and help women.' %>
-                        <br>
-
-                    <h3>Our Team<br></h3>
-
-                    <h4>Kevin Tao, Chief Digital Officer</h4>
-                    <p>
-                        Kevin Tao worked as a software developer for 6 years at Cancer IQ, Groupon and IMC Financial Markets. He graduated
-                        from Duke University with a Bachelor's Degree in Biomedical Engineering. Kevin originally created this site while
-                        teaching himself Ruby on Rails. His duties include marketing, answering customer support messages, helping write
-                        content for this site and blog, and business development and outreach to influencers. He is passionate about making
-                        a difference in people's lives and doing right by the customer.
-                    </p>
-                    <p>
-                        <br>
-                        <%= image_tag 'Kevin_Tao_NeuEve.jpg', size: "600x400", alt: 'Kevin Tao, Chief Digital Officer of NeuEve' %>
-                        <br>
-                    </p>
-                    <p>
-                        <%= link_to "More on Kevin Tao", kevin_tao_path %>
-                    </p>
-
-                    <h3>NeuEve on Social Media</h3>
-                    <h4>Pelvic Health Allies</h4>
-                    <p>Join <%= link_to "Pelvic Health Allies", "https://www.facebook.com/groups/PelvicHealthAllies", target: '_blank' %>, a
-                        private support group we created on Facebook to discuss pelvic health issues!</p>
-
-                    <li><%= link_to 'YouTube', 'https://www.youtube.com/user/neueve' %></li>
-                    <li><%= link_to 'Facebook', 'https://www.facebook.com/neuevesuppositories' %></li>
-                    <li><%= link_to 'LinkedIn', 'https://www.linkedin.com/company/neueve' %></li>
-                    <li><%= link_to 'Pinterest', 'https://www.pinterest.com/neuevehealth/' %></li>
-
-
                 </div>
             </div>
         </div>

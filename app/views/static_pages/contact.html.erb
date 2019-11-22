@@ -1,0 +1,75 @@
+<% provide(:title, 'Contact') %>
+<% provide(:description, 'We are available via live chat, text message, email, and phone! We are excited to help answer your questions!') %>
+<% provide(:last_modified, 'November 22, 2019') %>
+
+
+<section class="hero">
+    <div class="container">
+        <!-- Breadcrumbs -->
+        <ol class="breadcrumb justify-content-center">
+            <li class="breadcrumb-item">
+                <%= link_to 'Home', root_path %>
+            </li>
+            <li class="breadcrumb-item active">Contact</li>
+        </ol>
+        <!-- Hero Content-->
+        <div class="hero-content pb-5 text-center">
+            <h1 class="hero-heading">Contact</h1>
+            <p class="lead text-muted">
+                We are available through live chat, text message, email, and even phone!
+            </p>
+            <p class="lead text-muted">
+                We are real people living in Chicago, so please only live chat / text / call during normal hours.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section style="background: #fafafa;" class="py-6">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 text-center text-sm-left">
+                <svg class="svg-icon svg-icon-light text-primary w-3rem h-3rem mb-3">
+                    <use xlink:href="#navigation-map-1"> </use>
+                </svg>
+                <h4 class="ff-base">Address</h4>
+                <p class="text-muted">965 W Chicago Ave<br>Chicago, IL 60642<br>United States<br>
+                    <%= image_tag("made-in-usa-logo-vector-400x400.png", :class => "", :height => "100px",
+                                  alt: 'Made in USA Seal') %>
+                </p>
+            </div>
+
+            <div class="col-sm-6 text-center text-sm-left">
+                <svg class="svg-icon svg-icon-light text-primary w-3rem h-3rem mb-3">
+                    <use xlink:href="#mail-1"> </use>
+                </svg>
+                <h4 class="ff-base">Email</h4>
+                <ul class="list-unstyled text-muted">
+                    <li>Customer Service: <%= mail_to "help@neueve.com" %></li>
+                    <li>Medical Questions: <%= mail_to "medicalhelp@neueve.com" %></li>
+                    <li>Press Inquiries: <%= mail_to "press@neueve.com" %></li>
+                    <li>Partnerships (Wholesale Opps and Strategic): <%= mail_to "partners@neueve.com" %></li>
+                </ul>
+            </div>
+            <div class="col-sm-6 text-center text-sm-left">
+                <svg class="svg-icon svg-icon-light text-primary w-3rem h-3rem mb-3">
+                    <use xlink:href="#audio-call-1"> </use>
+                </svg>
+                <h4 class="ff-base">Text / Call</h4>
+
+                <p class="text-muted"><strong><a href="tel:1-224-578-2854">1-224-578-2854</a></strong></p>
+                <p class="text-muted">Texting is extremely preferred.</p>
+                <p class="text-muted">This is <%= link_to "Kevin", kevin_tao_path %>'s personal cell phone, please only call during normal (Central time) business hours.
+                    Please only call for urgent matters, as it will likely interrupt his work.</p>
+                <p class="text-muted">We do NOT accept orders over the phone.</p>
+            </div>
+            <div class="col-sm-6 text-center text-sm-left">
+                <i class="fab fa-facebook svg-icon svg-icon-light text-primary w-3rem h-3rem mb-3"></i>
+                <h4 class="ff-base">Support Group</h4>
+                <p class="text-muted">You're not alone!</p>
+                <p class="text-muted">Share stories, give and get advice and support from women going through the exact same things you are.</p>
+                <p class="text-muted">Apply to join <%= link_to "Pelvic Health Allies", "https://www.facebook.com/groups/PelvicHealthAllies", target: '_blank' %>.</p>
+            </div>
+        </div>
+    </div>
+</section>
