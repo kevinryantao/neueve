@@ -8,7 +8,7 @@ Lavax::Application.routes.draw do
   match '/vaginal_odor_cause_treatment' => 'static_pages#vaginal_odor_cause_treatment', :via => :get
   match '/bacterial_vaginosis_vaginal_odor' => 'static_pages#bacterial_vaginosis', :via => :get
   match '/bv' => redirect('/bacterial_vaginosis_vaginal_odor'), :via => :get
-  match '/contact' => 'static_pages#about', :via => :get
+  match '/contact' => 'static_pages#contact', :via => :get
   match '/comparison' => 'static_pages#comparison', :via => :get
   match '/disclaimer' => 'static_pages#disclaimer', :via => :get
   match '/faq' => 'static_pages#faq', :via => :get

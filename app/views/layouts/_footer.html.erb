@@ -13,20 +13,25 @@
                     </div>
                 </div>
                 <div class="col-lg-4 service-column">
-                    <i class="far fa-smile-beam svg-icon service-icon"></i>
+                    <%= link_to(satisfaction_path, class: 'text-gray-700') do %>
+                        <i class="far fa-smile-beam svg-icon service-icon"></i>
+                    <% end %>
                     <div class="service-text">
-                        <h6 class="text-uppercase"><%= link_to 'Satisfaction Guarantee', satisfaction_path %></h6>
+                        <h6 class="text-uppercase"><%= link_to 'Satisfaction Guaranteed', satisfaction_path, class: 'text-gray-900' %></h6>
                         <p class="text-muted font-weight-light text-sm mb-0">Full Refund If No Progress After 30
                             Days</p>
                         <p class="text-muted font-weight-light text-sm mb-0">For Health Reasons, No Returns Accepted</p>
+                        <p class="text-muted font-weight-light text-sm mb-0"><%= link_to 'Full details', satisfaction_path %></p>
                     </div>
                 </div>
                 <div class="col-lg-4 service-column">
-                    <svg class="svg-icon service-icon">
-                        <use xlink:href="#customer-support-1"></use>
-                    </svg>
+                    <%= link_to(contact_path, class: 'text-gray-700') do %>
+                        <svg class="svg-icon service-icon">
+                            <use xlink:href="#customer-support-1"></use>
+                        </svg>
+                    <% end %>
                     <div class="service-text">
-                        <h6 class="text-uppercase">We're Here For You</h6>
+                        <h6 class="text-uppercase"><%= link_to "We're Here For You", contact_path, class: 'text-gray-900' %></h6>
                         <p class="text-muted font-weight-light text-sm mb-0">We're available M-F, 10-5, CST</p>
                         <p class="text-muted font-weight-light text-sm mb-0">Text:
                             <a href="tel:1-224-578-2854">1-224-578-2854</a>
@@ -46,7 +51,7 @@
             <div class="row">
                 <div class="col-lg-4 col-6 mb-5 mb-lg-0">
                     <div class="font-weight-bold text-lg text-dark mb-3">NeuEve<span class="text-primary"></span></div>
-                    <p>Love is Natural.</p>
+                    <p>We want to live in a world where kindness, love and helping others can make a big impact.</p>
                     <p>NeuEve LLC<br>
                     965 W. Chicago Ave.<br>
                     Chicago, IL 60642</p>
@@ -103,6 +108,9 @@
                 <div class="col-lg-2 col-6 mb-5 mb-lg-0">
                     <h6 class="text-uppercase text-dark mb-3">Company</h6>
                     <ul class="list-unstyled">
+                        <li>
+                            <%= link_to 'Contact', contact_path, class: 'text-muted' %>
+                        </li>
                         <li>
                             <%= link_to 'Reviews', reviews_path, class: 'text-muted' %>
                         </li>
@@ -201,7 +209,7 @@
                 </div>
                 <div class="col-md-3 text-center text-md-right">
                     <p class="mb-md-0">
-                        <%= link_to 'Disclaimer and Privacy Policy.', disclaimer_path %>
+                        <%= link_to 'Disclaimer and Privacy Policy.', disclaimer_path, class: 'text-gray-300' %>
                     </p>
                 </div>
             </div>
