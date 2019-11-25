@@ -22,6 +22,7 @@ Lavax::Application.routes.draw do
   match '/applicator' => 'static_pages#applicator', :via => :get
   match '/libido' => 'static_pages#libido', :via => :get
   match '/kevin_tao' => 'static_pages#kevin_tao', :via => :get
+  match '/dr_renjie_chang' => 'static_pages#dr_renjie_chang', :via => :get
   match '/bacterial_vaginosis_testimonials' => 'static_pages#bv_testimonials', :via => :get
   get '/blog' => redirect('/blog/')
   match '/dilators' => 'static_pages#dilators', :via => :get

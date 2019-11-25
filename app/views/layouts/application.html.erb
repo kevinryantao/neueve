@@ -38,7 +38,10 @@
           !yield(:title).include?('Vaginal Odor') &&
           !yield(:title).include?('BV') &&
           !yield(:title).include?('Contact') &&
-          !yield(:title).include?('About')) %>
+          !yield(:title).include?('About') &&
+          !yield(:title).include?('Renjie Chang') &&
+          !yield(:title).include?('Kevin Tao')
+  ) %>
 
     <p class="text-center">
         Last modified: <%= yield(:last_modified) %>
