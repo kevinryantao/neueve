@@ -49,6 +49,8 @@ Lavax::Application.routes.draw do
   match '/monalisa-touch-alternative' => 'alternatives#monalisa_touch', :via => :get
   match '/thermiva-alternative' => 'alternatives#thermiva', :via => :get
   match '/femilift-alternative' => 'alternatives#femilift', :via => :get
+  match '/viveve-alternative' => 'alternatives#viveve', :via => :get
+  match '/votiva-alternative' => 'alternatives#votiva', :via => :get
 
   # Douche Alternative Paths
   match '/summers-eve-alternative' => 'alternatives#summers_eve', :via => :get

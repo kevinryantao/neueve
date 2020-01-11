@@ -67,6 +67,8 @@ SitemapGenerator::Sitemap.create do
   add monalisa_touch_alternative_path, priority: 1
   add thermiva_alternative_path, priority: 1
   add femilift_alternative_path, priority: 1
+  add viveve_alternative_path, priority: 1
+  add votiva_alternative_path, priority: 1
 
   # Douches
   add summers_eve_alternative_path, priority: 1
