@@ -9,7 +9,7 @@ Lavax::Application.routes.draw do
   match '/bacterial_vaginosis_vaginal_odor' => 'static_pages#bacterial_vaginosis', :via => :get
   match '/bv' => redirect('/bacterial_vaginosis_vaginal_odor'), :via => :get
   match '/contact' => 'static_pages#contact', :via => :get
-  match '/comparison' => 'static_pages#comparison', :via => :get
+  # match '/comparison' => 'static_pages#comparison', :via => :get
   match '/disclaimer' => 'static_pages#disclaimer', :via => :get
   match '/faq' => 'static_pages#faq', :via => :get
   match '/product' => 'static_pages#product', :via => :get
@@ -31,6 +31,10 @@ Lavax::Application.routes.draw do
   match '/satisfaction' => 'static_pages#satisfaction', :via => :get
 
   match '/search' => 'static_pages#search', :via => :get
+
+  # NeuEve Alternatives Path
+  match '/neueve-alternatives' => 'alternatives#neueve', :via => :get
+  match '/comparison' => redirect('/neueve-alternatives'), via: :get
 
   # Estrogen Alternative Paths
   match '/premarin-cream-alternative' => 'alternatives#premarin_cream', :via => :get
