@@ -1,0 +1,561 @@
+<% provide(:title, 'See how NeuEve compares to the competition') %>
+<% provide(:description, "We want you to choose the best product for you, even if it's not us. Here's how we compare to competitors.") %>
+<% provide(:last_modified, 'Jan 11, 2020') %>
+
+
+<section class="hero">
+    <div class="container">
+        <!-- Breadcrumbs -->
+        <ol class="breadcrumb justify-content-center">
+            <li class="breadcrumb-item">
+                <%= link_to 'Home', root_path %>
+            </li>
+            <li class="breadcrumb-item active">
+                Comparison
+            </li>
+        </ol>
+        <!-- Hero Content-->
+        <div class="hero-content pb-5 text-center">
+            <h1 class="hero-heading">How does NeuEve compare with the competition?
+            </h1>
+            <div class="row">
+                <div class="col-xl-8 offset-xl-2">
+                    <p class="lead mb-0">
+                        We want you to choose the best product for you, even if it’s not us.
+                </p></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="pb-5">
+    <div class="container">
+        <h2>
+            NeuEve vs Vaginal Rejuvenation Lasers
+        </h2>
+        <table class='table table-bordered table-striped table-hover table-condensed table-sm'>
+            <thead>
+            <tr>
+                <th></th>
+                <th>NeuEve</th>
+                <th>
+                    <%= link_to "MonaLisa Touch", monalisa_touch_alternative_path %>
+                </th>
+                <th>
+                    <%= link_to "ThermiVa", thermiva_alternative_path %>
+
+                </th>
+                <th>
+                    <%= link_to "FemiLift", femilift_alternative_path %>
+
+                </th>
+                <th>
+                    <%= link_to "Viveve", viveve_alternative_path %>
+
+                </th>
+                <th>
+                    <%= link_to "Votiva", votiva_alternative_path %>
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th>Cost for 1 year</th>
+                <td>$600</td>
+                <td>$2000</td>
+                <td>$2650</td>
+                <td>$2600</td>
+                <td>$2775</td>
+                <td>$2325</td>
+            </tr>
+            <tr>
+                <th>Covered by Insurance</th>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+            </tr>
+            <tr>
+                <th>No Risk of Laser Burns or Scarring</th>
+                <td><i class='fas fa-check'></i></td>
+                <td><i class='fas fa-times'></i>
+                    <%= link_to '1', 'https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfMAUDE/detail.cfm?mdrfoi__id=5658696&pc=GEX', target: '_blank' %>,
+                    <%= link_to '2', 'https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfMAUDE/detail.cfm?mdrfoi__id=7772703&pc=GEX', target: '_blank' %>,
+                    <%= link_to '3', 'https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfMAUDE/detail.cfm?mdrfoi__id=7797154&pc=GEX', target: '_blank' %>
+                </td>
+                <td><i class='fas fa-times'></i>
+                    <%= link_to '1', 'https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfMAUDE/detail.cfm?mdrfoi__id=7818945&pc=GEI', target: '_blank' %>,
+                    <%= link_to '2', 'https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfMAUDE/detail.cfm?mdrfoi__id=7805369&pc=GEI', target: '_blank' %>,
+                    <%= link_to '3', 'https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfMAUDE/detail.cfm?mdrfoi__id=7784378&pc=GEI', target: '_blank' %>
+                </td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i>
+                    <%= link_to '1', 'https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfMAUDE/detail.cfm?mdrfoi__id=7199857&pc=GEI', target: '_blank' %>,
+                    <%= link_to '2', 'https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfMAUDE/detail.cfm?mdrfoi__id=7769568&pc=GEI', target: '_blank' %>,
+                    <%= link_to '3', 'https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfMAUDE/detail.cfm?mdrfoi__id=7742801&pc=GEI', target: '_blank' %>
+                </td>
+                <td><i class='fas fa-times'></i></td>
+            </tr>
+
+            <tr>
+                <th>100% Plant-Based
+                    </th>
+                <td><i class='fas fa-check'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+            </tr>
+
+            <tr>
+                <th>Cruelty-Free 🐇</th>
+                <td><i class='fas fa-check'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-question text-primary'></i></td>
+                <td><i class='fas fa-question text-primary'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+            </tr>
+
+            <tr>
+                <th>Manufactured in USA 🇺🇸</th>
+                <td><i class='fas fa-check'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-check'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-check'></i></td>
+                <td><i class='fas fa-check'></i></td>
+            </tr>
+
+            <tr>
+                <th>Satisfaction Guarantee</th>
+                <td><i class='fas fa-check'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+            </tr>
+
+            <tr>
+                <th>Email Support</th>
+                <td><i class='fas fa-check'></i></td>
+                <td><i class='fas fa-check'></i></td>
+                <td><i class='fas fa-check'></i></td>
+                <td><i class='fas fa-check'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-check'></i></td>
+            </tr>
+
+            <tr>
+                <th>Phone Support</th>
+                <td><i class='fas fa-check'></i></td>
+                <td><i class='fas fa-check'></i></td>
+                <td><i class='fas fa-check'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-check'></i></td>
+                <td><i class='fas fa-check'></i></td>
+            </tr>
+
+            <tr>
+                <th>Text Support</th>
+                <td><i class='fas fa-check'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+            </tr>
+
+            <tr>
+                <th>Live Chat Support</th>
+                <td><i class='fas fa-check'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+            </tr>
+
+            <tr>
+                <th>Private Facebook Support Group</th>
+                <td><i class='fas fa-check'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+            </tr>
+
+            <tr>
+                <th>Free Shipping & Delivered to your Doorstep
+                    </th>
+                <td><i class='fas fa-check'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+            </tr>
+            </tbody>
+        </table>
+
+    </div>
+</section>
+
+
+<section class="pb-5">
+    <div class="container">
+        <h2>
+            NeuEve vs Estrogens and Hormones
+        </h2>
+        <div class="table-responsive">
+            <table class='table table-bordered table-striped table-hover table-condensed table-sm '>
+            <thead>
+            <tr>
+                <th></th>
+                <th>NeuEve</th>
+
+                <th>
+                    <%= link_to "Premarin Cream", premarin_cream_alternative_path %>
+                </th>
+                <th>
+                    <%= link_to "Prempro", prempro_alternative_path %>
+                </th>
+                <th>
+                    <%= link_to "Estrace Cream", estrace_cream_alternative_path %>
+                </th>
+                <th>
+                    <%= link_to "Vagifem", vagifem_alternative_path %>
+                </th>
+                <!-- Osphena goes here -->
+                <th>
+                    <%= link_to "Intrarosa", intrarosa_alternative_path %>
+                </th>
+                <th>
+                    <%= link_to "Yuvafem", yuvafem_alternative_path %>
+                </th>
+                <th>
+                    <%= link_to "Estring", estring_alternative_path %>
+                </th>
+                <th>
+                    <%= link_to "Estrogel", estrogel_alternative_path %>
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th>Cost for 1 mo (w/o insurance)</th>
+                <td>$49</td>
+                <td>$398</td>
+                <td>$210</td>
+                <td>$368</td>
+                <td>$408</td>
+                <td>$219</td>
+                <td>$175</td>
+                <td>$160</td>
+                <td>$135</td>
+            </tr>
+            <tr>
+                <th>Covered by Medicare</th>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-check'></i></td>
+                <td><i class='fas fa-question text-primary'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-question text-primary'></i></td>
+                <td><i class='fas fa-times'></i></td>
+            </tr>
+            <tr>
+                <th>Contains No Hormones</th>
+                <td><i class='fas fa-check'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+            </tr>
+            <tr>
+                <th>Contains No Estrogen</th>
+                <td><i class='fas fa-check'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+            </tr>
+
+            <tr>
+                <th>100% Plant-Based Natural Ingredients
+                </th>
+                <td><i class='fas fa-check'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+            </tr>
+
+            <tr>
+                <th>
+                    <%= link_to "Safe for Male Sexual Partner", "https://www.ncbi.nlm.nih.gov/pubmed/18251358", target: '_blank' %>
+                </th>
+                <td><i class='fas fa-check'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-check'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-question text-primary'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+            </tr>
+
+            <tr>
+                <th>
+                    Safe for Breastfeeding
+                </th>
+                <td><i class='fas fa-check'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+            </tr>
+
+
+            <tr>
+                <th>Cruelty-Free 🐇</th>
+                <td><i class='fas fa-check'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+            </tr>
+
+            <tr>
+                <th>Satisfaction Guarantee</th>
+                <td><i class='fas fa-check'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+            </tr>
+
+            <tr>
+                <th>Email Support</th>
+                <td><i class='fas fa-check'></i></td>
+                <td><i class='fas fa-check'></i></td>
+                <td><i class='fas fa-check'></i></td>
+                <td><i class='fas fa-check'></i></td>
+                <td><i class='fas fa-check'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-check'></i></td>
+                <td><i class='fas fa-check'></i></td>
+                <td><i class='fas fa-check'></i></td>
+            </tr>
+
+            <tr>
+                <th>Phone Support</th>
+                <td><i class='fas fa-check'></i></td>
+                <td><i class='fas fa-check'></i></td>
+                <td><i class='fas fa-check'></i></td>
+                <td><i class='fas fa-check'></i></td>
+                <td><i class='fas fa-check'></i></td>
+                <td><i class='fas fa-check'></i></td>
+                <td><i class='fas fa-check'></i></td>
+                <td><i class='fas fa-check'></i></td>
+                <td><i class='fas fa-check'></i></td>
+            </tr>
+
+            <tr>
+                <th>Text Support</th>
+                <td><i class='fas fa-check'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+            </tr>
+
+            <tr>
+                <th>Live Chat Support</th>
+                <td><i class='fas fa-check'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+            </tr>
+
+            <tr>
+                <th>Private Facebook Support Group</th>
+                <td><i class='fas fa-check'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+            </tr>
+
+            <tr>
+                <th>Order Online w/o Prescription & Free Shipping
+                </th>
+                <td><i class='fas fa-check'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+                <td><i class='fas fa-times'></i></td>
+            </tr>
+            </tbody>
+        </table>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="pb-5">
+    <div class="container">
+        <h2>
+            NeuEve vs Vaginal Odor Remedies
+        </h2>
+        <table class='table table-bordered table-striped table-hover'>
+            <thead>
+            <tr>
+                <th></th>
+                <th>NeuEve</th>
+                <th>
+                    <%= link_to "Summer's Eve", summers_eve_alternative_path %>
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th>Cost</th>
+                <td>$38</td>
+                <td>$5</td>
+            </tr>
+            <tr>
+                <th>Supports Healthy Vaginal Bacteria</th>
+                <td><i class='fas fa-check'></i></td>
+                <td><i class='fas fa-times'></i></td>
+            </tr>
+            <tr>
+                <th>Ends Recurrent Vaginal Odor</th>
+                <td><i class='fas fa-check'></i></td>
+                <td><i class='fas fa-times'></i></td>
+            </tr>
+
+            <tr>
+                <th>100% Plant-Based
+                </th>
+                <td><i class='fas fa-check'></i></td>
+                <td><i class='fas fa-times'></i></td>
+            </tr>
+
+            <tr>
+                <th>Cruelty-Free 🐇</th>
+                <td><i class='fas fa-check'></i></td>
+                <td><i class='fas fa-check'></i></td>
+            </tr>
+
+
+            <tr>
+                <th>Giving Back</th>
+                <td><i class='fas fa-check'></i></td>
+                <td><i class='fas fa-times'></i></td>
+            </tr>
+
+
+            <tr>
+                <th>Manufactured in USA 🇺🇸</th>
+                <td><i class='fas fa-check'></i></td>
+                <td><i class='fas fa-check'></i></td>
+            </tr>
+
+            <tr>
+                <th>Satisfaction Guarantee</th>
+                <td><i class='fas fa-check'></i></td>
+                <td><i class='fas fa-times'></i></td>
+            </tr>
+
+            <tr>
+                <th>Email Support</th>
+                <td><i class='fas fa-check'></i></td>
+                <td><i class='fas fa-check'></i></td>
+            </tr>
+
+            <tr>
+                <th>Phone Support</th>
+                <td><i class='fas fa-check'></i></td>
+                <td><i class='fas fa-check'></i></td>
+            </tr>
+
+            <tr>
+                <th>Text Support</th>
+                <td><i class='fas fa-check'></i></td>
+                <td><i class='fas fa-times'></i></td>
+            </tr>
+
+            <tr>
+                <th>Live Chat Support</th>
+                <td><i class='fas fa-check'></i></td>
+                <td><i class='fas fa-times'></i></td>
+            </tr>
+
+            <tr>
+                <th>Private Facebook Support Group</th>
+                <td><i class='fas fa-check'></i></td>
+                <td><i class='fas fa-times'></i></td>
+            </tr>
+
+            <tr>
+                <th>Free Shipping & Delivered to your Doorstep
+                </th>
+                <td><i class='fas fa-check'></i></td>
+                <td><i class='fas fa-times'></i></td>
+            </tr>
+            </tbody>
+        </table>
+
+    </div>
+</section>
