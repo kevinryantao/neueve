@@ -46,6 +46,9 @@ SitemapGenerator::Sitemap.create do
   add silk_path, priority: 1
   add applicator_path, priority: 1
   add kevin_tao_path, priority: 1
+  add dr_renjie_chang_path, priority: 1
+  add contact_path, priority: 1
+
   add reviews_path, priority: 1
   add dmannose_path, priority: 1
   add dilators_path, priority: 1
@@ -59,7 +62,7 @@ SitemapGenerator::Sitemap.create do
   add estring_alternative_path, priority: 1
   add estrogel_alternative_path, priority: 1
 
-  add neueve_alternative_path, priority: 1
+  add neueve_alternatives_path, priority: 1
 
   # DHEA
   add intrarosa_alternative_path, priority: 1
