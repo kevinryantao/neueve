@@ -45,6 +45,8 @@ Lavax::Application.routes.draw do
   match '/estring-alternative' => 'alternatives#estring', :via => :get
   match '/estrogel-alternative' => 'alternatives#estrogel', :via => :get
 
+  # Pharma Alternative Paths
+  match '/addyi-alternative' => 'alternatives#addyi', :via => :get
 
   # DHEA Alternative Paths
   match '/intrarosa-alternative' => 'alternatives#intrarosa', :via => :get

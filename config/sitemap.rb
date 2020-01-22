@@ -62,6 +62,10 @@ SitemapGenerator::Sitemap.create do
   add estring_alternative_path, priority: 1
   add estrogel_alternative_path, priority: 1
 
+  # Pharma alternatives Paths
+  add addyi_alternative_path, priority: 1
+
+  # All comparisons path
   add neueve_alternatives_path, priority: 1
 
   # DHEA
