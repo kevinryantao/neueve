@@ -1,0 +1,847 @@
+<% provide(:title, 'Which Formula is Right for Me?') %>
+<% provide(:description, "NeuEve suppositories are personalized for you. Use this chart with your menopausal status (pre/peri/post), your age, how painful is sex on a scale from 1-10.") %>
+<% provide(:last_modified, 'March 11, 2020') %>
+
+
+<section class="hero">
+    <div class="container">
+        <!-- Breadcrumbs -->
+        <ol class="breadcrumb justify-content-center">
+            <li class="breadcrumb-item">
+                <%= link_to 'Home', root_path %>
+            </li>
+            <li class="breadcrumb-item">
+                <%= link_to 'FAQ', faq_path %>
+            </li>
+            <li class="breadcrumb-item active">
+                Which Formula is Right for Me?
+            </li>
+        </ol>
+        <!-- Hero Content-->
+        <div class="hero-content pb-5 text-center">
+            <h1 class="hero-heading">Which Formula is Right for Me?
+            </h1>
+            <div class="row">
+                <div class="col-xl-8 offset-xl-2">
+                    <p class="lead mb-0">
+                        A helpful analogy: think of NeuEve like training for a marathon. Use our chart to look up the formula that is personalized for you.
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="pb-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-8 col-lg-10 mx-auto">
+                <p>
+                    <%= image_tag("lifestyle/woman_jogging_neueve-unsplash.jpg", class: 'img-fluid') %>
+                </p>
+                <p class="lead mb-5">
+                    NeuEve works by challenging the vaginal wall skin tissues with slightly more vitamins, nutrients and
+                    essential oils than it can handle. The result is that the vaginal wall responds by getting "in shape",
+                    i.e. thicker and more surface area to better absorb all of the nutrients.
+                </p>
+
+                <h4>Our 3 Formulas for Dryness</h4>
+
+                <table class='table table-bordered table-striped table-condensed'>
+
+                    <tr align="center">
+                        <td style="background-color: #ffffff" colspan="1">
+                            <div align="center">
+                                <%= link_to image_tag('product/silk/NeuEve_Silk_White.jpg',
+                                                      :class => 'img_pair img-fluid',
+                                                      alt: 'NeuEve Silk is a natural vaginal moisturizer that helps with vaginal dryness'),
+                                            silk_path %>
+                                Silk
+                            </div>
+                            <div>
+                                Like jogging a mile
+                            </div>
+                        </td>
+                        <td style="background-color: #ffffff" colspan="1">
+                            <div align="center">
+                                <%= link_to image_tag('product/silver/NeuEve_Silver_White.jpg',
+                                                      :class => 'img_pair img-fluid',
+                                                      alt: 'NeuEve Silver is a natural vaginal moisturizer that helps with vaginal dryness'),
+                                            silver_path %>
+                                Silver
+                            </div>
+                            <div>
+                                Like running a 5k
+                            </div>
+                        </td>
+                        <td style="background-color: #ffffff" colspan="1">
+                            <div align="center">
+                                <%= link_to image_tag('product/gold/NeuEve_Gold_White.jpg',
+                                                      :class => 'img_pair img-fluid',
+                                                      alt: 'NeuEve Gold is a natural vaginal moisturizer that helps with painful sex'),
+                                            gold_path %>
+                                Gold
+                            </div>
+                            <div>
+                                Like a half-marathon
+                            </div>
+                        </td>
+                    </tr>
+
+                </table>
+
+                <table class='table table-bordered table-striped table-condensed'>
+
+                    <tr>
+                        <th></th>
+                        <th>Silk</th>
+                        <th>Silver</th>
+                        <th>Gold</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Concentration</strong></td>
+                        <td>1x</td>
+                        <td>3x</td>
+                        <td>9x</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Intensity</strong></td>
+                        <td>Mild</td>
+                        <td>Moderate</td>
+                        <td>Strong</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Use Every</strong></td>
+                        <td>3-4 days</td>
+                        <td>5 days</td>
+                        <td>7 days</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Quantity per Month (28-days)</strong></td>
+                        <td>8</td>
+                        <td>6</td>
+                        <td>4</td>
+                    </tr>
+                </table>
+
+
+                <div class="text-content text-lg">
+                    <h4>Instructions</h4>
+                    <ol>
+                        Look up the right formula using:
+                        <li>Menopausal status (<%= link_to "pre", which_formula_path(:anchor => "pre") %>/<%= link_to "peri", which_formula_path(:anchor => "peri") %>/<%= link_to "post", which_formula_path(:anchor => "post") %>)</li>
+                        <li>Age</li>
+                        <li>How painful is sex? (0-10)
+                            <%= image_tag("faq/faces-pain-scale.jpg", class: 'img-fluid') %>
+                        </li>
+                    </ol>
+                    <p>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<%= link_to '', {}, name: "pre" %>
+<section class="pb-5">
+    <div class="container">
+        <h3>
+            Premenopausal:
+        </h3>
+        <table class='table table-bordered table-hover table-striped table-condensed table-sm text-sm'>
+            <thead>
+            <tr>
+                <th colspan="12" class="text-center text-lg">Pain (Scale 0-10)</th>
+            </tr>
+            <tr>
+                <th class="text-lg">Age</th>
+                <th>0</th>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+                <th>4</th>
+                <th>5</th>
+                <th>6</th>
+                <th>7</th>
+                <th>8</th>
+                <th>9</th>
+                <th>10</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th>< 34</th>
+                <td class="table-warning">Gold</td>
+                <td class="table-warning">Gold</td>
+                <td class="table-warning">Gold</td>
+                <td class="table-warning">Gold</td>
+                <td class="table-warning">Gold</td>
+                <td class="table-warning">Gold</td>
+                <td class="table-warning">Gold</td>
+                <td class="table-danger text-center" colspan="4">Please See A Doctor</td>
+            </tr>
+
+            <tr>
+                <th>35</th>
+                <td class="table-warning">Gold</td>
+                <td class="table-warning">Gold</td>
+                <td class="table-warning">Gold</td>
+                <td class="table-warning">Gold</td>
+                <td class="table-warning">Gold</td>
+                <td class="table-warning">Gold</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+            </tr>
+            <tr>
+                <th>36</th>
+                <td class="table-warning">Gold</td>
+                <td class="table-warning">Gold</td>
+                <td class="table-warning">Gold</td>
+                <td class="table-warning">Gold</td>
+                <td class="table-warning">Gold</td>
+                <td class="table-warning">Gold</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+            </tr>
+            <tr>
+                <th>37</th>
+                <td class="table-warning">Gold</td>
+                <td class="table-warning">Gold</td>
+                <td class="table-warning">Gold</td>
+                <td class="table-warning">Gold</td>
+                <td class="table-warning">Gold</td>
+                <td class="table-warning">Gold</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+            </tr>
+            <tr>
+                <th>38</th>
+                <td class="table-warning">Gold</td>
+                <td class="table-warning">Gold</td>
+                <td class="table-warning">Gold</td>
+                <td class="table-warning">Gold</td>
+                <td class="table-warning">Gold</td>
+                <td class="table-warning">Gold</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+            </tr>
+            <tr>
+                <th>39</th>
+                <td class="table-warning">Gold</td>
+                <td class="table-warning">Gold</td>
+                <td class="table-warning">Gold</td>
+                <td class="table-warning">Gold</td>
+                <td class="table-warning">Gold</td>
+                <td class="table-warning">Gold</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+            </tr>
+            <tr>
+                <th>40</th>
+                <td class="table-warning">Gold</td>
+                <td class="table-warning">Gold</td>
+                <td class="table-warning">Gold</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+            </tr>
+            <tr>
+                <th>41</th>
+                <td class="table-warning">Gold</td>
+                <td class="table-warning">Gold</td>
+                <td class="table-warning">Gold</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+            </tr>
+            <tr>
+                <th>42</th>
+                <td class="table-warning">Gold</td>
+                <td class="table-warning">Gold</td>
+                <td class="table-warning">Gold</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+            </tr>
+            <tr>
+                <th>43</th>
+                <td class="table-warning">Gold</td>
+                <td class="table-warning">Gold</td>
+                <td class="table-warning">Gold</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+            </tr>
+            <tr>
+                <th>44</th>
+                <td class="table-warning">Gold</td>
+                <td class="table-warning">Gold</td>
+                <td class="table-warning">Gold</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+            </tr>
+            <tr>
+                <th>45</th>
+                <td class="table-warning">Gold</td>
+                <td class="table-warning">Gold</td>
+                <td class="table-warning">Gold</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+            </tr>
+            <tr>
+                <th>46</th>
+                <td class="table-warning">Gold</td>
+                <td class="table-warning">Gold</td>
+                <td class="table-warning">Gold</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+            </tr>
+            <tr>
+                <th>47</th>
+                <td class="table-warning">Gold</td>
+                <td class="table-warning">Gold</td>
+                <td class="table-warning">Gold</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+            </tr>
+            <tr>
+                <th>48</th>
+                <td class="table-warning">Gold</td>
+                <td class="table-warning">Gold</td>
+                <td class="table-warning">Gold</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+            </tr>
+            <tr>
+                <th>49</th>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+            </tr>
+            <tr>
+                <th>50</th>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+
+<%= link_to '', {}, name: "peri" %>
+<section class="pb-5">
+    <div class="container">
+        <h3>
+            Perimenopausal:
+        </h3>
+        <table class='table table-bordered table-hover table-striped table-condensed table-sm text-sm'>
+            <thead>
+            <tr>
+                <th colspan="12" class="text-center text-lg">Pain (Scale 0-10)</th>
+            </tr>
+            <tr>
+                <th class="text-lg">Age</th>
+                <th>0</th>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+                <th>4</th>
+                <th>5</th>
+                <th>6</th>
+                <th>7</th>
+                <th>8</th>
+                <th>9</th>
+                <th>10</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th>< 45</th>
+                <td class="table-warning">Gold</td>
+                <td class="table-warning">Gold</td>
+                <td class="table-warning">Gold</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+            </tr>
+            <tr>
+                <th>46</th>
+                <td class="table-warning">Gold</td>
+                <td class="table-warning">Gold</td>
+                <td class="table-warning">Gold</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+            </tr>
+            <tr>
+                <th>47</th>
+                <td class="table-warning">Gold</td>
+                <td class="table-warning">Gold</td>
+                <td class="table-warning">Gold</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+            </tr>
+            <tr>
+                <th>48</th>
+                <td class="table-warning">Gold</td>
+                <td class="table-warning">Gold</td>
+                <td class="table-warning">Gold</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+            </tr>
+            <tr>
+                <th>49</th>
+                <td class="table-warning">Gold</td>
+                <td class="table-warning">Gold</td>
+                <td class="table-warning">Gold</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+            </tr>
+            <tr>
+                <th>50</th>
+                <td class="table-warning">Gold</td>
+                <td class="table-warning">Gold</td>
+                <td class="table-warning">Gold</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+            </tr>
+            <tr>
+                <th>51</th>
+                <td class="table-warning">Gold</td>
+                <td class="table-warning">Gold</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+            </tr>
+            <tr>
+                <th>52</th>
+                <td class="table-warning">Gold</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+            </tr>
+            <tr>
+                <th>53</th>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+            </tr>
+            <tr>
+                <th>54</th>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+            </tr>
+            <tr>
+                <th>55+</th>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+
+<%= link_to '', {}, name: "post" %>
+<section class="pb-5">
+    <div class="container">
+        <h3>
+            Postmenopausal:
+        </h3>
+        <table class='table table-bordered table-hover table-striped table-condensed table-sm text-sm'>
+            <thead>
+            <tr>
+                <th colspan="12" class="text-center text-lg">Pain (Scale 0-10)</th>
+            </tr>
+            <tr>
+                <th class="text-lg">Age</th>
+                <th>0</th>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+                <th>4</th>
+                <th>5</th>
+                <th>6</th>
+                <th>7</th>
+                <th>8</th>
+                <th>9</th>
+                <th>10</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th>< 40</th>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+            </tr>
+            <tr>
+                <th>41</th>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+            </tr>
+            <tr>
+                <th>42</th>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+            </tr>
+            <tr>
+                <th>43</th>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+            </tr>
+            <tr>
+                <th>44</th>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+            </tr>
+            <tr>
+                <th>45-51</th>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+            </tr>
+            <tr>
+                <th>52</th>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+            </tr>
+            <tr>
+                <th>53</th>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+            </tr>
+            <tr>
+                <th>54</th>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+            </tr>
+            <tr>
+                <th>55</th>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+            </tr>
+            <tr>
+                <th>56</th>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+            </tr>
+            <tr>
+                <th>57</th>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-secondary">Silver</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+            </tr>
+            <tr>
+                <th>58</th>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+            </tr>
+
+            <tr>
+                <th>59</th>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+            </tr>
+
+            <tr>
+                <th>60+</th>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+                <td class="table-primary">Silk</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
