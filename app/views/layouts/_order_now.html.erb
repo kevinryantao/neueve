@@ -2,110 +2,117 @@
     <div class="container">
         <div class="row">
             <div class="mx-auto">
-                <div class="text-content text-lg text-center">
+                <div class="text-content text-lg">
                     <h3>
                         Which formula is right for me?
                     </h3>
                     <p>
-                        <%= link_to 'The right formula depends on age.', faq_path(:anchor => 'right_formula_atrophy') %>
+                        A helpful analogy: think of NeuEve like training for a marathon.
                     </p>
                     <p>
-                        NeuEve Silk is milder than NeuEve Silver, and is
-                        designed for women with severe dryness and atrophy.
+                        <%= link_to "Use our charts", which_formula_path %> to look up the formula that is personalized for you.
                     </p>
                     <p>
-                        Tip: For women with advanced vaginal dryness, using Cream daily plus the Silk formula twice/week
-                        works well.
+                        The right formula depends on:
                     </p>
-                    <p>
-                        <%= image_tag('flowchart-tiny.png',
-                                      size: '600x400',
-                                      alt: 'If intercourse is very painful or not possible or atrophy is severe, start with
-                                  Silk formula. If intercourse is painful, or you have BV, start with the Silver formula.',
-                                      class: 'img-fluid') %>
-                    </p>
-                    <p>
-                        <%= link_to 'Frequently Asked Questions: How do I select the right NeuEve suppository formula?',
-                                    faq_path(:anchor => 'selectingFormula') %>
-                    </p>
+                    <ol>
+                        <li>
+                            Menopausal status (<%= link_to "pre", which_formula_path(:anchor => "pre") %>/<%= link_to "peri", which_formula_path(:anchor => "peri") %>/<%= link_to "post", which_formula_path(:anchor => "post") %>)
+                        </li>
+                        <li>
+                            Age
+                        </li>
+                        <li>
+                            How Painful is Sex? (0-10)
+                        </li>
+                    </ol>
+
                 </div>
             </div>
         </div>
     </div>
 </section>
 
+
+
 <section class="pb-5">
     <div class="container">
         <div class="row">
-            <div class="mx-auto">
-                <h3>
-                    Try it for yourself, order NeuEve today!
-                </h3>
-
+            <div class="mx-auto text-content col-xl-8 col-lg-10 mx-auto">
                 <table class='table table-bordered table-striped table-condensed'>
 
                     <tr align="center">
-                        <td style="background-color: #fafaf6" colspan="2">
+                        <td style="background-color: #ffffff" colspan="1">
                             <div align="center">
-                                <%= image_tag('triple-neueve-white.jpg',
-                                              :class => 'img_pair img-fluid',
-                                              alt: 'NeuEve Vaginal Suppositories help alleviate symptoms of vaginal dryness, atrophy, and BV') %>
-                            </div>
-                        </td>
-                        <td style="background-color: #fdfdfa" colspan="2">
-                            <div align="center">
-                                <%= link_to image_tag('cream-red-flower-med.jpg',
+                                <%= link_to image_tag('product/silk/NeuEve_Silk_White.jpg',
                                                       :class => 'img_pair img-fluid',
-                                                      alt: 'NeuEve Cream is a natural vaginal moisturizer that helps with vaginal itching'),
-                                            cream_path %>
+                                                      alt: 'NeuEve Silk is a natural vaginal moisturizer that helps with vaginal dryness'),
+                                            silk_path %>
+                                Silk
+                            </div>
+                            <div>
+                                Like jogging a mile
+                            </div>
+                        </td>
+                        <td style="background-color: #ffffff" colspan="1">
+                            <div align="center">
+                                <%= link_to image_tag('product/silver/NeuEve_Silver_White.jpg',
+                                                      :class => 'img_pair img-fluid',
+                                                      alt: 'NeuEve Silver is a natural vaginal moisturizer that helps with vaginal dryness'),
+                                            silver_path %>
+                                Silver
+                            </div>
+                            <div>
+                                Like running a 5k
+                            </div>
+                        </td>
+                        <td style="background-color: #ffffff" colspan="1">
+                            <div align="center">
+                                <%= link_to image_tag('product/gold/NeuEve_Gold_White.jpg',
+                                                      :class => 'img_pair img-fluid',
+                                                      alt: 'NeuEve Gold is a natural vaginal moisturizer that helps with painful sex'),
+                                            gold_path %>
+                                Gold
+                            </div>
+                            <div>
+                                Like a half-marathon
                             </div>
                         </td>
                     </tr>
-                    <tr>
-                        <th colspan="4" rowspan="1" class="title">Difference between Silk, Silver, and Gold Formulas
-                        </th>
-                    </tr>
+
+                </table>
+
+                <table class='table table-bordered table-striped table-condensed'>
+
                     <tr>
                         <th></th>
-                        <th>Silk (Mild)</th>
-                        <th>Silver (Advanced)</th>
-                        <th>Gold (Expert)</th>
+                        <th>Silk</th>
+                        <th>Silver</th>
+                        <th>Gold</th>
                     </tr>
                     <tr>
-                        <td><strong>Effect</strong></td>
+                        <td><strong>Concentration</strong></td>
+                        <td>1x</td>
+                        <td>3x</td>
+                        <td>9x</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Intensity</strong></td>
                         <td>Mild</td>
                         <td>Moderate</td>
                         <td>Strong</td>
                     </tr>
                     <tr>
-                        <td><strong>Suitable for</strong></td>
-                        <td>Recovery</td>
-                        <td>Recovery & Maintenance</td>
-                        <td>Maintenance</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Each lasts</strong></td>
+                        <td><strong>Use Every</strong></td>
                         <td>3-4 days</td>
-                        <td>5-6 days</td>
-                        <td>7-8 days</td>
+                        <td>5 days</td>
+                        <td>7 days</td>
                     </tr>
                     <tr>
-                        <td><strong>Supplies per Month</strong></td>
+                        <td><strong>Quantity per Month (28-days)</strong></td>
                         <td>8</td>
                         <td>6</td>
                         <td>4</td>
-                    </tr>
-                    <tr>
-                        <td colspan="2">
-                            <div align="center">
-                                <%= link_to 'More details on Silk vs. Silver vs. Gold', faq_path(:anchor => 'silkSilverGoldDifferences') %>
-                            </div>
-                        </td>
-                        <td colspan="2">
-                            <div align="center">
-                                <%= link_to 'More details on Cream', cream_path %>
-                            </div>
-                        </td>
                     </tr>
                 </table>
 

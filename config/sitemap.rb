@@ -48,6 +48,8 @@ SitemapGenerator::Sitemap.create do
   add kevin_tao_path, priority: 1
   add dr_renjie_chang_path, priority: 1
   add contact_path, priority: 1
+  add which_formula_path, priority: 1
+  add satisfaction_path, priority: 1
 
   add reviews_path, priority: 1
   add dmannose_path, priority: 1
