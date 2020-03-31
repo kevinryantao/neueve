@@ -43,10 +43,3 @@ $('a.amazon-review').on('click', function () {
 $('a.below-your-belt').on('click', function () {
   ga('send', 'event', 'below-your-belt', 'click', "Clicked on Below Your Belt");
 });
-
-setTimeout("ga('send', 'event', 'adjusted bounce rate', 'page visit seconds', 15)", 15000);
-setTimeout("ga('send', 'event', 'adjusted bounce rate', 'page visit seconds', 30)", 30000);
-setTimeout("ga('send', 'event', 'adjusted bounce rate', 'page visit seconds', 60)", 60000);
-setTimeout("ga('send', 'event', 'adjusted bounce rate', 'page visit seconds', 120)", 120000);
-setTimeout("ga('send', 'event', 'adjusted bounce rate', 'page visit seconds', 240)", 240000);
-setTimeout("ga('send', 'event', 'adjusted bounce rate', 'page visit seconds', 480)", 480000);
