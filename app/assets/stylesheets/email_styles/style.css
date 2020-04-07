@@ -1,6 +1,7 @@
 /* -------------------------------------
     GLOBAL
     A very basic CSS reset
+    From https://github.com/mailgun/transactional-email-templates
 ------------------------------------- */
 * {
     margin: 0;
