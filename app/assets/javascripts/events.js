@@ -43,3 +43,5 @@ $('a.amazon-review').on('click', function () {
 $('a.below-your-belt').on('click', function () {
   ga('send', 'event', 'below-your-belt', 'click', "Clicked on Below Your Belt");
 });
+
+setTimeout("ga('send', 'event', 'adjusted bounce rate', 'page visit seconds', 15)", 15000);
