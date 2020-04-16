@@ -7,7 +7,8 @@
                         Which formula is right for me?
                     </h3>
                     <p>
-                        A helpful analogy: think of NeuEve like training for a marathon.
+                        A helpful analogy: think of using NeuEve like training for a marathon. Vaginal wall thickness is like
+                        your conditioning level.
                     </p>
                     <p>
                         <%= link_to "Use our charts", which_formula_path %> to look up the formula that is personalized for you.
@@ -26,6 +27,11 @@
                             How Painful is Sex? (0-10)
                         </li>
                     </ol>
+
+                    <%= link_to which_formula_path, :class => 'formbutton btn btn-large btn-info add-to-cart', :target => '_blank' do %>
+                        View Formula Charts
+                    <% end %>
+
 
                 </div>
             </div>
@@ -89,6 +95,12 @@
                         <th>Silk</th>
                         <th>Silver</th>
                         <th>Gold</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Vaginal Wall Thickness</strong></td>
+                        <td>Thin</td>
+                        <td>Moderate</td>
+                        <td>Thick</td>
                     </tr>
                     <tr>
                         <td><strong>Concentration</strong></td>
