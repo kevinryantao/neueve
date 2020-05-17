@@ -1,6 +1,6 @@
 <% provide(:title, 'NeuEve Satisfaction Guarantee and Return Policy') %>
 <% provide(:description, 'For health reasons, we do not accept returns. If unsatisfied, we are happy to refund up to one month supply of product!') %>
-<% provide(:last_modified, 'November 22, 2019') %>
+<% provide(:last_modified, 'May 16, 2020') %>
 
 
 <section class="hero">
@@ -31,8 +31,9 @@
                 </h2>
 
                 <p>
-                    For health reasons of our employees and our customers, NeuEve vaginal products are not able to be restocked. We
-                    <strong>cannot</strong>
+                    For health reasons of our employees and our customers, <strong>especially due to the COVID-19 pandemic</strong>,
+                    NeuEve products are not able to be restocked.
+                    We <strong>cannot</strong>
                     accept returns for NeuEve vaginal suppositories, NeuEve vaginal cream, or NeuEve vaginal
                     applicators.
                 </p>
@@ -56,7 +57,8 @@
                     jam-packed with vitamins
                     and nutrients. We are <em> so confident</em> you will be satisfied with NeuEve that we will give
                     you your money back if you
-                    are unsatisfied. * Limited to one box per customer for life, to prevent abuse.
+                    are unsatisfied.
+                    <br> * Limited to one box (excluding $10 for shipping and handling) per customer for life, to prevent abuse.
                 </p>
 
                 <h3>Your Satisfaction is Our Priority</h3>
@@ -69,23 +71,16 @@
 
                 <p class="lead">Are you using the right formula?</p>
                 <p>
-                    Starting off, if your age is:
+                    If you are using a formula that is too strong for you, you may experience strong stimulation or
+                    a burning feeling. Please use the formula charts to determine the formula for you:
+
+
+                    <%= link_to which_formula_path, :class => 'formbutton btn btn-large btn-info', :target => '_blank' do %>
+                        View Formula Charts
+                    <% end %>
+
                 </p>
-                <ul>
-                    <li>
-                        60+, then you should start with <%= link_to 'Silk', silk_path %>
-                        + <%= link_to 'Cream', cream_path %>
-                    </li>
-                    <li>
-                        50-60, then you should start with <%= link_to 'Silk', silk_path %>
-                    </li>
-                    <li>
-                        40-50, then you should start with <%= link_to 'Silver', silver_path %>
-                    </li>
-                    <li>
-                        -40, then you should start with <%= link_to 'Gold', gold_path %>
-                    </li>
-                </ul>
+
 
                 <p class="lead">
                     Do you have BV?
@@ -110,7 +105,8 @@
                 <p><strong>
                     If you have used our product for 30 days, and have seen no progress, please email us
                     at <%= mail_to "satisfaction@neueve.com" %>. We will fully refund you for up to one month’s
-                    supply of our product. This offer is limited to once per customer, for life.
+                    supply of our product, minus $10 for shipping and handling. This offer is limited to once per customer, for life.
+                    This offer is good for up to 90 days from the date of purchase.
                 </strong></p>
 
                 <h4>For BV Clear</h4>
@@ -119,8 +115,8 @@
                     If you are 100% sure that you have BV and you have finished using the entire box of BV Clear
                     without progress, please email
                     us at <%= mail_to "satisfaction@neueve.com" %>. We will fully refund you for the entire box of
-                    BV Clear. This offer is limited to
-                    once per customer, for life.</strong>
+                    BV Clear, minus $10 for shipping and handling. This offer is limited to
+                    once per customer, for life. This offer is good for up to 90 days from the date of purchase.</strong>
                 </p>
             </div>
         </div>
