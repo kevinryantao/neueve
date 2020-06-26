@@ -61,6 +61,7 @@ Lavax::Application.routes.draw do
 
   # Douche Alternative Paths
   match '/summers-eve-alternative' => 'alternatives#summers_eve', :via => :get
+  match '/boric-acid-alternative' => 'alternatives#boric_acid', :via => :get
 
 
 
@@ -146,6 +147,8 @@ Lavax::Application.routes.draw do
   match '/content/6/s2/s6' => 'immunome_research#6_S2_S6', :via => :get
   match '/content/6/s2/s7' => 'immunome_research#6_S2_S7', :via => :get
 
+
+  # For previewing emails, comment this out and go to localhost:3003/rails/mailers
   match '*path' => redirect('/'), via: :all
 
   # The priority is based upon order of creation:
