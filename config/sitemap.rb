@@ -72,6 +72,7 @@ SitemapGenerator::Sitemap.create do
 
   # DHEA
   add intrarosa_alternative_path, priority: 1
+  add dhea_alternative_path, priority: 1
 
   # Lasers
   add monalisa_touch_alternative_path, priority: 1

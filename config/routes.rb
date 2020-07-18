@@ -51,6 +51,7 @@ Lavax::Application.routes.draw do
 
   # DHEA Alternative Paths
   match '/intrarosa-alternative' => 'alternatives#intrarosa', :via => :get
+  match '/dhea-alternative' => 'alternatives#dhea', :via => :get
 
   # Laser Alternative Paths
   match '/monalisa-touch-alternative' => 'alternatives#monalisa_touch', :via => :get
