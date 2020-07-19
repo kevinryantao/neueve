@@ -24,6 +24,7 @@ module MailwizzApiHelper
     mailwizz_data['FNAME']=pdt_data['first_name']
     mailwizz_data['LNAME']=pdt_data['last_name']
     mailwizz_data['LAST_TXN_ID']=pdt_data['txn_id']
+    mailwizz_data['PHONE']=pdt_data['contact_phone']
 
 
     mailwizz_data['LAST_PURCHASE_DATE']=Date.today.to_s
