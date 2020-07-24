@@ -90,13 +90,10 @@
                         0.7 oz<br>
                         <div class="row pt-2">
                             <div class="col-12 pb-2">
-                                <p>
                                 <span itemprop="offers" itemscope itemtype="http://schema.org/Offer">
                                   <span itemprop="price">$42.95</span>
                                   <meta itemprop="priceCurrency" content="USD"/>
                                 </span>
-                                </p>
-                                <br>
 
                                 <div class="formbutton">
                                     <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
@@ -111,9 +108,10 @@
                                         <% end %>
                                     </form>
                                 </div>
-
                             </div>
-                            <div class="col-12">
+
+                            <br>
+                            <div class="col-12 pt-4 mt-3">
                                 $42.50 / Every 2 Months
                                 <p>Recurring Delivery</p>
                                 <div class="formbutton">
@@ -193,6 +191,23 @@
         <div class="row">
             <div class="col-xl-8 col-lg-10 mx-auto">
                 <div class="text-content text-lg">
+                    <h3>
+                        Ingredients:
+                    </h3>
+                    <p>
+                        <%= link_to 'Organic palm oil*', faq_path(:anchor => 'tropicalTraditions') %>, organic coconut oil, organic beeswax,
+                        evening primrose oil, organic sea buckthorn fruit oil, organic lavender
+                        essential oil, organic orange oil, organic vitamin E (d-α
+                        tocopherol), <%= link_to 'and a proprietary blend of nutrients', faq_path(:anchor => 'proprietaryBlend') %>
+                        .
+                        All ingredients are natural, organic, green, gluten-free,
+                        food-grade and of plant source.
+                        <br>
+                        NeuEve Cream <strong>does NOT contain</strong> any synthetic chemicals,
+                        hormones, drugs, herbs (such as black cohosh and wild yam), yeasts, bacteria, animal
+                        byproducts, petroleum products, artificial color, artificial fragrance, and preservatives
+                        such as parabens.
+                    </p>
 
 
                     <p>
@@ -251,23 +266,6 @@
         <div class="row">
             <div class="col-xl-8 col-lg-10 mx-auto">
                 <div class="text-content text-lg">
-                    <h3>
-                        Ingredients:
-                    </h3>
-                    <p>
-                        <%= link_to 'Organic palm oil*', faq_path(:anchor => 'tropicalTraditions') %>, organic coconut oil, organic beeswax,
-                        evening primrose oil, organic sea buckthorn fruit oil, organic lavender
-                        essential oil, organic orange oil, organic vitamin E (d-α
-                        tocopherol), <%= link_to 'and a proprietary blend of nutrients', faq_path(:anchor => 'proprietaryBlend') %>
-                        .
-                        All ingredients are natural, organic, green, gluten-free,
-                        food-grade and of plant source.
-                        <br>
-                        NeuEve Cream <strong>does NOT contain</strong> any synthetic chemicals,
-                        hormones, drugs, herbs (such as black cohosh and wild yam), yeasts, bacteria, animal
-                        byproducts, petroleum products, artificial color, artificial fragrance, and preservatives
-                        such as parabens.
-                    </p>
 
                     <h3>
                         Note:
