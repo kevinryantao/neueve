@@ -1,0 +1,333 @@
+<% provide(:title, "A Better Metronidazole Gel Alternative") %>
+<% provide(:description, "NeuEve is a natural remedy for bacterial vaginosis that's better for you and better for the planet. See why women are switching from Metrogel (Flagyl) to NeuEve.") %>
+<% provide(:last_modified, 'June 26, 2020') %>
+
+
+<section class="hero">
+    <div class="container">
+        <!-- Breadcrumbs -->
+        <ol class="breadcrumb justify-content-center">
+            <li class="breadcrumb-item">
+                <%= link_to 'Home', root_path %>
+            </li>
+            <li class="breadcrumb-item">
+                <%= link_to 'Comparison', neueve_alternatives_path %>
+            </li>
+            <li class="breadcrumb-item active">Metronidazole vs NeuEve for Bacterial Vaginosis</li>
+        </ol>
+        <!-- Hero Content-->
+        <div class="hero-content pb-5 text-center">
+            <h1 class="hero-heading">A Metrogel(Flagyl) Alternative that Breaks the Cycle of Bacterial Vaginosis</h1>
+        </div>
+    </div>
+</section>
+
+<section class="pb-5">
+    <div class="container">
+        <hr>
+        <div class="h3">
+            Warning:
+        </div>
+        <div class="h5">
+            If you or a loved one accidentally ingested Metronidazole Gel, seek emergency medical attention or call the Poison Help line at 1-800-222-1222.
+        </div>
+        <hr>
+    </div>
+</section>
+
+<section class="pb-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 about-text-column">
+                <div class="about-text">
+                    <h2 class="mb-4 hero-heading">Could your search for a natural Metronidazole Gel alternative finally be over?</h2>
+                    <p class="text-lg text-muted">No kidding.</p>
+                    <h5>Introducing NeuEve.</h5>
+                    <p class="text-lg text-muted">NeuEve is a natural remedy for vaginal odor, invented by a gynecologist. NeuEve has no synthetic chemicals and
+                        is 100% plant-based. And most importantly, it's completely safe to drink alcohol while using NeuEve!</p>
+                    <p class="text-lg text-muted">NeuEve uses vitamins and essential oils to naturally rebalance vaginal pH and break the cycle of bad vaginal odor.</p>
+                    <p class="text-lg text-muted">Read on for a NeuEve vs Metrogel comparison.</p>
+                    <div class="text-center">
+                        <%= link_to bacterial_vaginosis_vaginal_odor_path, class:'btn btn-large btn-warning add-to-cart rounded' do %>
+                            <svg class="svg-icon"><use xlink:href="#label-tag-1"></use></svg>
+                            Shop
+                        <% end %>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-lg-6 p-lg-0 about-image-column">
+                <%= image_tag 'Dr-Renjie-Chang-Founder-NeuEve.jpg', class: 'bg-image' %>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 about-text-column order-lg-2">
+                <div class="about-text">
+                    <h2 class="mb-4 hero-heading">The All-Natural Option</h2>
+
+                    <p class="text-lg text-muted">Put down that antibiotic, and pick up a glass of wine!</p>
+                    <p class="text-lg text-muted">Instead try our luxuriously natural vaginal creams and suppositories OB/GYN-formulated
+                    with all-natural ingredients you can actually pronounce.</p>
+                    <p class="text-lg text-muted">The hardest to pronounce is “sea buckthorn”, seriously! It’s actually quite a tongue-twister.</p>
+
+                </div>
+            </div>
+            <div class="col-lg-6 p-lg-0 about-image-column order-lg-1">
+                <%= image_tag 'product/bv_clear/NeuEve_BV_Clear_Bush.jpg', class: 'bg-image' %>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="pb-5">
+    <div class="container">
+        <div class="alternative-row ">
+            <div class="alternative-product offset-md-4 ">
+                NeuEve
+            </div>
+            <div class="alternative-product  ">
+                Metrogel
+            </div>
+        </div>
+        <div class="alternative-row ">
+            <div class="alternative-category ">
+                Cost
+            </div>
+            <div class="alternative-cell  ">
+                <p>$43</p>
+                <p>$38/mo if you Subscribe</p>
+            </div>
+            <div class="alternative-cell  ">
+                <p><%= link_to '$43', 'https://www.goodrx.com/metrogel?dosage=60g-of-1%25&form=tube-of-gel&label_override=metronidazole&quantity=1', target: '_blank', rel: 'nofollow' %> (generic metronidazole)</p>
+                <p><%= link_to '$403', 'https://www.drugs.com/price-guide/metrogel', target: '_blank', rel: 'nofollow' %> (brand name Metrogel)</p>
+            </div>
+        </div>
+        <div class="alternative-row ">
+            <div class="alternative-category ">
+                Supports Healthy Vaginal Bacteria
+            </div>
+            <div class="alternative-cell  ">
+                <i class='fas fa-check'></i>
+            </div>
+            <div class="alternative-cell  ">
+                <i class='fas fa-times'></i>
+                    Concentrations between 1000 and 4000 μg/ml partially inhibited growth of <em>Lactobacillus</em>, >5000 μg/ml completely suppressed the growth of <em>Lactobacillus</em>.
+                    <%= link_to "- Journal of Infectious Disease in Ob/Gyn",'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1784636/', target: '_blank'%>
+                </div>
+        </div>
+        <div class="alternative-row ">
+            <div class="alternative-category ">
+                Ends Recurrent Vaginal Odor for Good
+            </div>
+            <div class="alternative-cell  ">
+                <i class='fas fa-check'></i>
+                94% of NeuEve customers reported relief from fishy vaginal odors after completing 9 days.
+            </div>
+            <div class="alternative-cell  ">
+                <i class='fas fa-times'></i>
+                Recurrence rates of BV are high: 69–80% within 12 months
+                <%= link_to "- Journal of Infection and Drug Resistance",'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6661983/', target: '_blank'%>
+            </div>
+        </div>
+        <div class="alternative-row ">
+            <div class="alternative-category ">
+                Can Drink Alcohol
+            </div>
+            <div class="alternative-cell  ">
+                <i class='fas fa-check'></i>
+            </div>
+            <div class="alternative-cell  ">
+                <i class='fas fa-times'></i>
+                Drinking alcoholic beverages while using this medicine may cause stomach pain, nausea, vomiting,
+                headache, or flushing or redness of the face. The chance of these problems occurring may continue for at least a day
+                after you stop using metronidazole.
+                <%= link_to '- Mayo Clinic', 'https://www.mayoclinic.org/drugs-supplements/metronidazole-vaginal-route/precautions/drg-20064738', target: '_blank' %>
+            </div>
+        </div>
+        <div class="alternative-row">
+            <div class="alternative-category ">
+                100% Plant-Based 🌱, Natural Ingredients
+            </div>
+            <div class="alternative-cell  ">
+                <i class='fas fa-check'></i>
+                NeuEve BV Clear Ingredients:
+                <div class="text-sm">
+                    <%= link_to 'Organic palm oil*', faq_path(:anchor => 'tropicalTraditions') %> , organic coconut oil,
+                    organic beeswax, organic tapioca starch,
+                    organic potato starch, evening primrose oil, organic sea buckthorn fruit oil, organic lavender essential oil, organic orange
+                    oil, organic vitamin
+                    E (d-α tocopherol), <%= link_to 'and a proprietary blend of nutrients.',
+                                                    faq_path(:anchor => 'proprietaryBlend') %>
+                </div>
+            </div>
+            <div class="alternative-cell  ">
+                <i class='fas fa-times'></i>
+                <%= link_to 'Metrogel Ingredients:', 'https://www.rxlist.com/metrogel-vaginal-drug.htm#description', target: '_blank' %>
+                <div class="text-sm">
+                    <p>
+                        METROGEL-VAGINAL is a gelled, purified water solution, containing metronidazole at a
+                        concentration of 7.5 mg/g (0.75%). The gel is formulated at pH 4.0. The gel also contains
+                        <%= link_to 'carbomer 934P', 'https://en.wikipedia.org/wiki/Polyacrylic_acid', target: '_blank' %>
+                        , <%= link_to 'edetate disodium','https://en.wikipedia.org/wiki/Ethylenediaminetetraacetic_acid', target: '_blank'%>
+                        , methylparaben, propylparaben, propylene glycol, and sodium
+                        hydroxide.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="alternative-row ">
+            <div class="alternative-category ">
+                Safe for Sexual Partner 💕
+            </div>
+            <div class="alternative-cell  ">
+                <i class='fas fa-check'></i>
+            </div>
+            <div class="alternative-cell  ">
+                <p>
+                    <i class='fas fa-times'></i>
+                    Seek emergency medical attention or call the Poison Help line at 1-800-222-1222 if anyone has accidentally swallowed the medication
+                    <%= link_to "- Drugs.com", "https://www.drugs.com/mtm/metrogel-vaginal.html", target: '_blank' %>
+                </p>
+            </div>
+        </div>
+        <div class="alternative-row ">
+            <div class="alternative-category ">
+                Safe for Breastfeeding 🤱
+            </div>
+            <div class="alternative-cell  ">
+                <i class='fas fa-check'></i>
+            </div>
+            <div class="alternative-cell  ">
+                <i class='fas fa-times'></i>
+                Metronidazole can pass into breast milk and may harm a nursing baby. <strong>You should not breast-feed within 24 hours after using metronidazole.</strong> If you use a breast pump during this time, throw out any milk you collect. Do not feed it to your baby.
+                <%= link_to "- University of Michigan", "https://www.uofmhealth.org/health-library/d00108a1", target: '_blank' %>
+            </div>
+        </div>
+        <div class="alternative-row ">
+            <div class="alternative-category ">
+                Cruelty-Free 🐇
+            </div>
+            <div class="alternative-cell  ">
+                <i class='fas fa-check'></i>
+                <%= link_to 'Certified Cruelty Free', 'https://www.neueve.com/blog/cruelty-free-certified/', target: '_blank'%>
+            </div>
+            <div class="alternative-cell  ">
+                <i class='fas fa-times'></i>
+                In animal studies, metronidazole caused certain types of tumors, some of which were cancerous.
+                <%= link_to "- University of Michigan", "https://www.uofmhealth.org/health-library/d00108a1", target: '_blank' %>
+            </div>
+        </div>
+        <div class="alternative-row ">
+            <div class="alternative-category ">
+                Giving Back
+            </div>
+            <div class="alternative-cell  ">
+                <i class='fas fa-check'></i> NeuEve is a member of
+                <%= link_to "1% for the Planet.", 'http://www.onepercentfortheplanet.org/', target: '_blank'%>
+                We believe it's the right to do to protect our planet.
+                <div class="text-center" >
+                        <%= link_to image_tag('OnePercentFTP.png', :class => 'img-fluid seal',
+                                              alt: 'One Percent for the Planet', style:'max-height: 250px'), 'http://www.onepercentfortheplanet.org/', target: '_blank' %>
+                </div>
+            </div>
+            <div class="alternative-cell  ">
+                <i class='fas fa-check'></i>
+            </div>
+        </div>
+        <div class="alternative-row ">
+            <div class="alternative-category ">
+                Manufactured in USA 🇺🇸
+            </div>
+            <div class="alternative-cell  ">
+                <i class='fas fa-check'></i>
+            </div>
+            <div class="alternative-cell  ">
+                <p>
+                    <i class='fas fa-times'></i>
+                    Metrogel is made in
+                    <%= link_to "Canada 🇨🇦", "https://www.alibaba.com/showroom/vaginal-suppositories-boric-acid.html" %>
+                </p>
+            </div>
+        </div>
+        <div class="alternative-row ">
+            <div class="alternative-category ">
+                Satisfaction Guarantee
+            </div>
+            <div class="alternative-cell  ">
+                <i class='fas fa-check'></i>
+                <%= link_to 'Policy Details', :anchor => "satisfaction" %>
+            </div>
+            <div class="alternative-cell  ">
+                <i class='fas fa-times'></i>
+            </div>
+        </div>
+        <div class="alternative-row ">
+            <div class="alternative-category ">
+                Email Support 📧
+            </div>
+            <div class="alternative-cell  ">
+                <i class='fas fa-check'></i>
+            </div>
+            <div class="alternative-cell  ">
+                <i class='fas fa-times'></i>
+            </div>
+        </div>
+        <div class="alternative-row ">
+            <div class="alternative-category ">
+                Phone Support 📞
+            </div>
+            <div class="alternative-cell  ">
+                <i class='fas fa-check'></i>
+            </div>
+            <div class="alternative-cell  ">
+                <i class='fas fa-times'></i>
+            </div>
+        </div>
+        <div class="alternative-row ">
+            <div class="alternative-category ">
+                Text Support <i class="fas fa-sms"></i>
+            </div>
+            <div class="alternative-cell  ">
+                <i class='fas fa-check'></i>
+            </div>
+            <div class="alternative-cell  ">
+                <i class='fas fa-times'></i>
+            </div>
+        </div>
+        <div class="alternative-row ">
+            <div class="alternative-category ">
+                Live Chat Support 💬
+            </div>
+            <div class="alternative-cell  ">
+                <i class='fas fa-check'></i>
+            </div>
+            <div class="alternative-cell  ">
+                <i class='fas fa-times'></i>
+            </div>
+        </div>
+        <div class="alternative-row ">
+            <div class="alternative-category ">
+                Private Facebook Support Group <i class="fas fa-hand-holding-heart"></i>
+            </div>
+            <div class="alternative-cell  ">
+                <i class='fas fa-check'></i>
+            </div>
+            <div class="alternative-cell  ">
+                <i class='fas fa-times'></i>
+            </div>
+        </div>
+        <div class="alternative-row ">
+            <div class="alternative-category ">
+                Free Shipping & Delivered to your Doorstep 📦
+            </div>
+            <div class="alternative-cell  ">
+                <i class='fas fa-check'></i>
+            </div>
+            <div class="alternative-cell  ">
+                <i class='fas fa-times'></i>
+            </div>
+        </div>
+    </div>
+</section>
+
+<%= render 'layouts/order_now_bv' %>
