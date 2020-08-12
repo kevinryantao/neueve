@@ -84,6 +84,7 @@ SitemapGenerator::Sitemap.create do
   # Douches
   add summers_eve_alternative_path, priority: 1
   add boric_acid_alternative_path, priority: 1
+  add metrogel_alternative_path, priority: 1
 
 
   # Immunome Research Paths
