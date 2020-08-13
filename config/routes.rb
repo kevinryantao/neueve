@@ -64,6 +64,7 @@ Lavax::Application.routes.draw do
   match '/summers-eve-alternative' => 'alternatives#summers_eve', :via => :get
   match '/boric-acid-alternative' => 'alternatives#boric_acid', :via => :get
   match '/metrogel-alternative' => 'alternatives#metrogel', :via => :get
+  match '/rephresh-alternative' => 'alternatives#rephresh', :via => :get
 
 
 
