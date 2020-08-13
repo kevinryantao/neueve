@@ -85,7 +85,7 @@ SitemapGenerator::Sitemap.create do
   add summers_eve_alternative_path, priority: 1
   add boric_acid_alternative_path, priority: 1
   add metrogel_alternative_path, priority: 1
-
+  add rephresh_alternative_path, priority: 1
 
   # Immunome Research Paths
   add '/content/1/1/1', priority: 0.25
