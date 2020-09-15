@@ -63,14 +63,24 @@
         and we will update your subscription.
     </td>
 </tr>
-<tr>
-    <td class="content-block alignleft">
-        <strong>TIP:</strong>
-        Taking calcium, vitamin D, and omega-3 supplements daily will help NeuEve work better.
-        Learn more at:
-        <a href="https://www.neueve.com/faq?utm_medium=email&utm_source=internal&utm_campaign=order+confirmation#supplements">neueve.com/faq#supplements</a>
-    </td>
-</tr>
+<% if !@is_bv_user %>
+    <tr>
+        <td class="content-block alignleft">
+            <strong>TIP:</strong>
+            Taking calcium, vitamin D, and omega-3 supplements daily will help NeuEve work better.
+            Learn more at:
+            <a href="https://www.neueve.com/faq?utm_medium=email&utm_source=internal&utm_campaign=order+confirmation#supplements">neueve.com/faq#supplements</a>
+        </td>
+    </tr>
+<% else %>
+    <tr>
+        <td class="content-block alignleft">
+            <strong>TIP:</strong>
+            Detailed instructions on BV Clear:
+            <a href="https://drive.google.com/file/d/1xJsA_sqZKm116olTa2jn4P9nq1vMv_FX/view?usp=sharing">https://drive.google.com/file/d/1xJsA_sqZKm116olTa2jn4P9nq1vMv_FX/view?usp=sharing</a>
+        </td>
+    </tr>
+<% end %>
 
 <tr>
     <td class="content-block alignleft">
