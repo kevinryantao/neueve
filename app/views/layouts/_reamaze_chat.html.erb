@@ -1,0 +1,44 @@
+<script type="text/javascript" async src="https://cdn.reamaze.com/assets/reamaze.js"></script>
+<script type="text/javascript">
+    var _support = _support || { 'ui': {}, 'user': {} };
+    _support['account'] = 'neueve';
+    _support['ui']['contactMode'] = 'default';
+    _support['ui']['enableKb'] = 'true';
+    _support['ui']['styles'] = {
+        widgetColor: 'rgb(140, 34, 210)',
+        gradient: true,
+    };
+    _support['ui']['widget'] = {
+        icon: 'chat',
+        displayOn: 'all',
+        label: {
+            text: 'Let us know if you have any questions! &#128522;',
+            mode: "prompt-3",
+            delay: 3,
+            duration: 30,
+        },
+        position: 'bottom-right',
+        mobilePosition: 'bottom-right'
+    };
+    _support['custom_fields'] = {
+        'Age': {
+            pos: 1602826903879,
+            type: 'text',
+            value: '',
+            required: false,
+            placeholder: '',
+        },
+        'Menopausal Status': {
+            pos: 1602826903880,
+            type: 'dropdown',
+            value: ['Premenopausal','Perimenopausal','Postmenopausal'],
+            required: false,
+            placeholder: '',
+        }
+    };
+    _support['apps'] = {
+        faq: {"enabled":true},
+        recentConversations: {},
+        orders: {}
+    };
+</script>
