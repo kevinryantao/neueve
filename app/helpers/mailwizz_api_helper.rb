@@ -45,6 +45,10 @@ module MailwizzApiHelper
 
         if pdt_data["item_number#{i}"].include?('x 4')
           mailwizz_data['CART_ITEM_COUNT'] = mailwizz_data['CART_ITEM_COUNT'].to_i + 4 * quantity
+        elsif pdt_data["item_number#{i}"].include?('x 3')
+          mailwizz_data['CART_ITEM_COUNT'] = mailwizz_data['CART_ITEM_COUNT'].to_i + 3 * quantity
+        elsif pdt_data["item_number#{i}"].include?('x 2')
+          mailwizz_data['CART_ITEM_COUNT'] = mailwizz_data['CART_ITEM_COUNT'].to_i + 2 * quantity
         else
           mailwizz_data['CART_ITEM_COUNT'] = mailwizz_data['CART_ITEM_COUNT'].to_i + quantity
         end
@@ -70,6 +74,10 @@ module MailwizzApiHelper
             mailwizz_data['SILVER_COUNT'] = mailwizz_data['SILVER_COUNT'].to_i + 4 * quantity
           when 'gold x 4'
             mailwizz_data['GOLD_COUNT'] = mailwizz_data['GOLD_COUNT'].to_i + 4 * quantity
+          when 'bv-clearing-kit x 2'
+            mailwizz_data['BV_COUNT'] = mailwizz_data['BV_COUNT'].to_i + 2 * quantity
+          when 'bv-clearing-kit x 3'
+            mailwizz_data['BV_COUNT'] = mailwizz_data['BV_COUNT'].to_i + 3 * quantity
           when 'bv-clearing-kit x 4'
             mailwizz_data['BV_COUNT'] = mailwizz_data['BV_COUNT'].to_i + 4 * quantity
           when 'cream x 4'
