@@ -46,6 +46,7 @@ SitemapGenerator::Sitemap.create do
   add silver_path, priority: 1
   add silk_path, priority: 1
   add applicator_path, priority: 1
+  add sea_buckthorn_path, priority: 1
   add kevin_tao_path, priority: 1
   add dr_renjie_chang_path, priority: 1
   add contact_path, priority: 1
