@@ -1,0 +1,498 @@
+<% provide(:title, 'Sea Buckthorn Oil Supplements for Vaginal Dryness'.html_safe) %>
+<% provide(:description, 'Premium, Vegan Sea Buckthorn Softgels for $34.95. Omega-7 essential fatty acids help nourish hair, skin, and nails.') %>
+<% provide(:last_modified, 'Dec 10, 2020') %>
+
+
+<section class="product-details">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7 pt-4 order-1 order-lg-1">
+                <div class="row">
+                    <div class="col-md-2 col-sm-12 pr-0 order-2 order-md-1">
+                        <div class="owl-thumbs" data-slider-id="1">
+                            <button class="owl-thumb-item detail-thumb-item mb-3">
+                                <%= image_tag('product/sea_buckthorn/NeuEve_Sea_Buckthorn_Front.jpg', class: 'img-fluid') %>
+                            </button>
+                            <button class="owl-thumb-item detail-thumb-item mb-3">
+                                <%= image_tag("product/sea_buckthorn/NeuEve_Sea_Buckthorn_NutritionFacts.jpg", class: 'img-fluid') %>
+                            </button>
+                            <button class="owl-thumb-item detail-thumb-item mb-3">
+                                <%= image_tag("product/sea_buckthorn/NeuEve_Sea_Buckthorn_Side.jpg", class: 'img-fluid') %>
+                            </button>
+                            <button class="owl-thumb-item detail-thumb-item mb-3">
+                                <%= image_tag("product/sea_buckthorn/hand_photo_1024x1024.png", class: 'img-fluid') %>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-10 detail-carousel order-1 order-md-2 pb-2">
+                        <div class="ribbon ribbon-info">Free Shipping</div>
+                        <div class="ribbon ribbon-primary">Vegan 🌱</div>
+                        <div class="ribbon ribbon-dark">Premium Grade Purity</div>
+                        <div class="owl-carousel detail-slider" data-slider-id="1">
+                            <div class="item">
+                                <!-- todo write some footer captions that make sense -->
+                                <%= link_to(image_url('product/sea_buckthorn/NeuEve_Sea_Buckthorn_Front.jpg'),
+                                            'data-footer'=> "",
+                                            'data-toggle'=>"lightbox",
+                                            'data-gallery'=>'product-gallery') do %>
+                                    <%= image_tag("product/sea_buckthorn/NeuEve_Sea_Buckthorn_Front.jpg", class: 'img-fluid') %>
+                                <% end %>
+                            </div>
+                            <div class="item">
+                                <%= link_to(image_url('product/sea_buckthorn/NeuEve_Sea_Buckthorn_NutritionFacts.jpg'),
+                                            'data-footer'=> "",
+                                            'data-toggle'=>"lightbox",
+                                            'data-gallery'=>'product-gallery') do %>
+                                    <%= image_tag("product/sea_buckthorn/NeuEve_Sea_Buckthorn_NutritionFacts.jpg", class: 'img-fluid') %>
+                                <% end %>
+                            </div>
+                            <div class="item">
+                                <%= link_to(image_url('product/sea_buckthorn/NeuEve_Sea_Buckthorn_Side.jpg'),
+                                            'data-footer'=> "",
+                                            'data-toggle'=>"lightbox",
+                                            'data-gallery'=>'product-gallery') do %>
+                                    <%= image_tag("product/sea_buckthorn/NeuEve_Sea_Buckthorn_Side.jpg", class: 'img-fluid') %>
+                                <% end %>
+                            </div>
+                            <div class="item">
+                                <%= link_to(image_url('product/sea_buckthorn/hand_photo_1024x1024.png'),
+                                            'data-footer'=> "",
+                                            'data-toggle'=>"lightbox",
+                                            'data-gallery'=>'product-gallery') do %>
+                                    <%= image_tag("product/sea_buckthorn/hand_photo_1024x1024.png", class: 'img-fluid') %>
+                                <% end %>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5 pl-lg-4 order-2 order-lg-2">
+                <ul class="breadcrumb undefined">
+                    <li class="breadcrumb-item">
+                        <%= link_to 'Home', root_path %>
+                    </li>
+                    <li class="breadcrumb-item active">
+                        Sea Buckthorn Oil
+                    </li>
+                </ul>
+                <h1 class="mb-4">Sea Buckthorn Oil</h1>
+                <div class="d-flex flex-column flex-sm-row align-items-sm-center justify-content-sm-between mb-4">
+                    <ul class="list-inline mb-2 mb-sm-0">
+                        <li class="list-inline-item h4 font-weight-light mb-0">$34.95</li>
+                        <li class="list-inline-item text-muted font-weight-light">
+                            <del></del>
+                        </li>
+                    </ul>
+                    <div class="d-flex align-items-center">
+                        <span class="stamped-product-reviews-badge stamped-main-badge text-muted text-uppercase text-sm" data-id="7000"></span>
+                    </div>
+                </div>
+                <p class="mb-4 text-muted">
+                    This special oil from the berries of a cold weather shrub contains high amounts of Omega-7.
+
+                </p>
+                <p class="mb-4 text-muted">
+                    Omega-7 is an essential fatty-acid that is a key building block of skin, hair and nails. The human body is incapable of making Omega-7, therefore it must be supplemented by diet.
+                </p>
+                <p class="mb-4 text-muted">
+                    It is very helpful at improving lubrication throughout the body – including tears, saliva, and vagina.
+
+                </p>
+
+                <p class="mb-4 text-muted">
+                    <%= link_to 'Read a scientific study', 'http://dx.doi.org/10.1016/j.maturitas.2014.07.010' %> of the effects of sea buckthorn oil on vaginal dryness for 116 menopausal women.
+                </p>
+
+                <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                    <div class="row">
+                        <input type="hidden" name="cmd" value="_s-xclick">
+                        <input type="hidden" name="hosted_button_id" value="DPV3UZQGB6W7E">
+                        <input type="hidden" name="on0" value="Quantity">
+                        <div class="col-sm-6 col-lg-12 detail-option mb-3">
+                            <h6 class="detail-option-heading">
+                                Quantity <span>(required)</span>
+                            </h6>
+                            <div>
+                                <label class="btn btn-sm btn-outline-secondary detail-option-btn-label" for="size_0">
+                                    1 Bottle
+                                    <input class="input-invisible" type="radio" name="os0" value="1 Bottle" id="size_0" required="">
+                                </label>
+                                - $34.95
+                            </div>
+                            <div>
+                                <label class="btn btn-sm btn-outline-secondary detail-option-btn-label" for="size_1">
+                                    2 Bottles
+                                    <input class="input-invisible" type="radio" name="os0" value="2 Bottles" id="size_1" required="">
+                                </label>
+                                - $67 <del>$70</del>
+                            </div>
+                            <div>
+                                <label class="btn btn-sm btn-outline-secondary detail-option-btn-label" for="size_2">
+                                    3 Bottles
+                                    <input class="input-invisible" type="radio" name="os0" value="3 Bottles" id="size_2" required="">
+                                </label>
+                                - $96 <del>$105</del>
+                            </div>
+                            <div>
+
+                                <label class="btn btn-sm btn-outline-secondary detail-option-btn-label" for="size_3">
+                                    4 Bottles
+                                    <input class="input-invisible" type="radio" name="os0" value="4 Bottles" id="size_3" required="">
+                                </label>
+                                - $125 <del>$140</del>
+                            </div>
+                        </div>
+                    </div>
+                    <input type="hidden" name="currency_code" value="USD">
+                    <ul class="list-inline">
+                        <li class="list-inline-item">
+
+                            <%= button_tag(type: 'submit',
+                                           class: 'btn btn-warning add-to-cart mb-1',
+                                           id: 'sea_buckthorn_60',
+                                           name: 'submit') do %>
+                                <svg class="svg-icon"><use xlink:href="#add-to-cart-1"></use></svg>
+                                Add to Cart
+                            <% end %>
+                        </li>
+                    </ul>
+
+                </form>
+
+
+                <div class="row pt-4">
+                    <h6 class="col-12 detail-option-heading">
+                        Subscribe and Save
+                    </h6>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        $31.95/mo
+                        <div class="formbutton">
+                            <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                                <input type="hidden" name="cmd" value="_s-xclick">
+                                <input type="hidden" name="hosted_button_id" value="J4FKSYF4NKUXN">
+                                <%= button_tag(type: 'submit',
+                                               class: 'btn btn-warning subscribe',
+                                               id: 'sea_buckthorn_60-sub',
+                                               name: 'submit') do %>
+                                    <i class="fas fa-sync-alt svg-icon"></i>
+                                    Subscribe
+                                <% end %>
+                            </form>
+                        </div>
+                        <div class="text-sm">(Min. 3 Months)</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="mt-5">
+    <div class="container">
+        <ul role="tablist" class="nav nav-tabs flex-column flex-sm-row">
+            <!--
+            <li class="nav-item"><a data-toggle="tab" href="#what" role="tab" class="nav-link detail-nav-link active">What is Sea Buckthorn Oil?</a></li>
+            <li class="nav-item"><a data-toggle="tab" href="#difference" role="tab" class="nav-link detail-nav-link">How are we different from other supplements?</a></li>
+            -->
+            <li class="nav-item"><a data-toggle="tab" href="#ingredients" role="tab" class="nav-link detail-nav-link">Ingredients</a></li>
+            <li class="nav-item"><a data-toggle="tab" href="#instructions" role="tab" class="nav-link detail-nav-link">Instructions</a></li>
+        </ul>
+        <div class="tab-content py-4">
+            <div id="what" role="tabpanel" class="tab-pane  px-3">
+                <p class="text-muted">
+                BV Clear is an effective and natural way to get you feeling - and smelling - back to normal. Invented by a gynecologist, it clears persistent and one-off episodes of bacterial vaginosis (BV) faster than you can say “healthy vagina”.
+                </p>
+                <p class="text-muted">
+                Our 100% natural and easy to insert vaginal suppositories quickly target the imbalance of bacteria in the vagina that causes BV, relieving you of those hideous symptoms of itching, odor, and discharge for good. Yippee!
+                </p>
+                <p class="text-muted">
+                Surveys of our customers have shown 62% of women found relief from the symptoms of BV within just 24 hours, while 91% reported relief from BV after just one pack of BV Clear*.
+                </p>
+                <p class="text-muted">
+                If you are post-menopausal, use our <%= link_to "Silk", silk_path %> range.
+                </p>
+                <p class="text-muted text-sm font-italic">
+                *From a survey of 98 customers of whom 25 had new BV and 73 had recurrent BV.
+                </p>
+
+            </div>
+            <div id="difference" role="tabpanel" class="tab-pane px-3">
+                <p class="text-muted">
+                    We don’t want to blow our own trumpet too much, but BV Clear is the only product on the market that
+                    can stop BV in its tracks.
+                </p>
+                <p class="text-muted">
+                    It’s all down to the way BV Clear deals with friendly bacteria. Antibiotic treatments such as
+                    metronidazole eliminate all naturally-occurring bacteria in the vagina. You might think this sounds
+                    like a good thing, but these treatments wipe out everything, including the friendly lactobacilli
+                    that keep you clean and healthy down below. So, when you stop using antibiotics, BV may well come
+                    back, or side-effects such as yeast infections may appear.
+                </p>
+                <p class="text-muted">
+                    BV Clear works instead to foster a healthy balance of bacteria in your vagina. It restores friendly
+                    <em>lactobacilli</em> to routine levels and your body to its natural state of equilibrium. You’ll stay BV
+                    free for the long-haul.
+                </p>
+                <p class="text-muted">
+                    Want to celebrate the defeat of BV? You’re in luck: unlike antibiotic treatments, BV Clear has no
+                    harmful side-effects when combined with alcohol. It’s also 100% natural and made from food-grade
+                    ingredients, which means it’s safe even if you’re breastfeeding, and for your sexual partner.
+                </p>
+            </div>
+            <div id="ingredients" role="tabpanel" class="active tab-pane px-3">
+
+                <p class="text-muted">
+                    Organic Sea Buckthorn Fruit Oil (80%), Organic Sea Buckthorn Seed Oil (20%)
+                </p>
+                <p class="text-muted">
+                    Vegan Softgel Shell Ingredients: Purified Water, Carageenan, Non-GMO Corn Starch, Vegetable Glycerine, Sorbitol
+                </p>
+                <p class="text-muted">
+                    NeuEve has <%= link_to "never been tested on animals", "https://www.neueve.com/blog/cruelty-free-certified/" %> and does not contain any animal products.
+                </p>
+            </div>
+            <div id="instructions" role="tabpanel" class="tab-pane px-3">
+                <p class="text-muted">
+                    Each bottle includes 60 vegan softgels.
+                </p>
+                <h4 class="pt-3">
+                    How to Take Sea Buckthorn Oil
+                </h4>
+                <p class="text-muted">
+                    Take 2 softgels daily (1,000 mg) with a meal.
+                </p>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!--
+
+<section class="mt-5">
+    <div class="container">
+        <h2>What causes BV and how does BV Clear work?</h2>
+        <div class="row">
+            <div class="col-lg-4 pt-4">
+                <h3>The healthy vagina
+                </h3>
+                <%= image_tag 'illustration/NeuEve_Healthy_Vagina_Illus.jpg', class:'img-fluid' %>
+                <p>
+                    A healthy vagina is home to a delicate balance of bacteria, including friendly lactobacilli, and exists in a natural state of equilibrium.
+
+                </p>
+            </div>
+            <div class="col-lg-4 pt-4">
+                <h3>What causes BV?
+                </h3>
+                <%= image_tag 'illustration/NeuEve_What_Causes_BV_Illus.jpg', class:'img-fluid' %>
+                <p>
+                    There are plenty of things to blame for BV. Your period, antibiotics, over-washing, and even semen; all can disrupt your vagina’s natural balance. Lactobacilli are replaced by unfriendly bacteria, causing itching, a strong, fishy odor, and grey, watery discharge.
+
+                </p>
+            </div>
+            <div class="col-lg-4 pt-4">
+                <h3>What does BV Clear do?
+                </h3>
+                <%= image_tag 'illustration/NeuEve_BV_Clear_Illus.jpg', class:'img-fluid' %>
+                <p>
+                    BV Clear beats BV by restoring balance to your vagina. Carefully selected nutrients support the re-growth of lactobacilli and - as if by magic - the symptoms of BV disappear. Goodbye discomfort, hello healthy, happy vagina!
+
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="mt-5">
+    <div class="container">
+        <h2>How many packs of BV Clear do I need?</h2>
+        <div class="row">
+            <div class="col-lg-4 pt-4">
+                <%= image_tag 'product/bv_clear/BV_Clear_1_Box.jpg', class:'img-fluid' %>
+            </div>
+            <div class="col-lg-4 pt-4">
+                <p>
+                    Mild BV: You’ve never had BV before and haven’t tried any other treatments.
+                </p>
+            </div>
+            <div class="col-lg-4 pt-4">
+                <p>
+                    = BV-free by day nine
+                </p>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-lg-4 pt-4">
+                <%= image_tag 'product/bv_clear/BV_Clear_2_Box.jpg', class:'img-fluid' %>
+            </div>
+            <div class="col-lg-4 pt-4">
+                <p>
+                    Moderate BV: Your BV is recurrent and you’ve tried one other treatment, such as boric acid, tea tree oils, acid gels, or probiotic suppositories.                 </p>
+            </div>
+            <div class="col-lg-4 pt-4">
+                <p>
+                    = BV-free by day 12
+                </p>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-lg-4 pt-4">
+                <%= image_tag 'product/bv_clear/BV_Clear_3_Box.jpg', class:'img-fluid' %>
+            </div>
+            <div class="col-lg-4 pt-4">
+                <p>
+                    Severe BV: Your BV is recurrent and you’ve tried multiple treatments - including antibiotics, douching, and/or those mentioned above
+                </p>
+            </div>
+            <div class="col-lg-4 pt-4">
+                <p>
+                    = BV-free by day 12
+                </p>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-lg-4 pt-4">
+                <%= image_tag 'illustration/NeuEve_BV_maintenance.jpg', class:'img-fluid' %>
+            </div>
+            <div class="col-lg-4 pt-4">
+                <p>
+                    Once you’ve beaten BV, we recommend a suppository each week - excluding the week of your period - for a further three months.
+                </p>
+            </div>
+            <div class="col-lg-4 pt-4">
+                <p>
+                    This’ll keep your vagina in tip-top condition and can help prevent further episodes of BV.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+-->
+
+<!--
+<section class="mt-4">
+    <div class="bg-gray-100 text-dark-700 py-6">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 service-column">
+                    <svg class="svg-icon service-icon">
+                        <use xlink:href="#delivery-time-1"></use>
+                    </svg>
+                    <div class="service-text">
+                        <h6 class="text-uppercase">Free Shipping</h6>
+                        <p class="text-muted font-weight-light text-sm mb-0">Fulfilled Every Morning at 9am (except Sundays) via USPS from Chicago, IL</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 service-column">
+                    <%= link_to(satisfaction_path, class: 'text-gray-700') do %>
+                        <i class="far fa-smile-beam svg-icon service-icon"></i>
+                    <% end %>
+                    <div class="service-text">
+                        <h6 class="text-uppercase"><%= link_to 'Satisfaction Guaranteed', satisfaction_path, class: 'text-gray-900' %></h6>
+                        <p class="text-muted font-weight-light text-sm mb-0">Full Refund (except S&H) If No Progress After 30
+                            Days</p>
+                        <p class="text-muted font-weight-light text-sm mb-0">For Health Reasons, No Returns Accepted</p>
+                        <p class="text-muted font-weight-light text-sm mb-0"><%= link_to 'Full details', satisfaction_path %></p>
+                    </div>
+                </div>
+                <div class="col-lg-4 service-column">
+                    <%= link_to(contact_path, class: 'text-gray-700') do %>
+                        <svg class="svg-icon service-icon">
+                            <use xlink:href="#customer-support-1"></use>
+                        </svg>
+                    <% end %>
+                    <div class="service-text">
+                        <h6 class="text-uppercase"><%= link_to "We're Here For You", contact_path, class: 'text-gray-900' %></h6>
+                        <p class="text-muted font-weight-light text-sm mb-0">We're available M-F, 10-5, CST</p>
+                        <p class="text-muted font-weight-light text-sm mb-0">Text:
+                            <a href="tel:1-224-578-2854">1-224-578-2854</a>
+                        </p>
+                        <p class="text-muted font-weight-light text-sm mb-0">Email:
+                            <a href="mailto:help@neueve.com">help@neueve.com</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+-->
+
+<!--
+
+<section class="mt-4">
+    <div class="container">
+        <h2>Video Testimonials</h2>
+        <div class="row">
+            <div class="col-lg-4 pt-4">
+                <div class="embed-responsive embed-responsive-4by3">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/7wriYw1Z6ro?modestbranding=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <p class="p-3">
+                    "My symptoms were gone in less than 24 hours"
+                </p>
+            </div>
+            <div class="col-lg-4 pt-4">
+                <div class="embed-responsive embed-responsive-4by3">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/4pMzwcFCreY?modestbranding=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <p class="p-3">
+                    "After I used this I had no more fishy odor left. It was very effective. I didn't have to not drink alcohol. It doesn't taste gross like flagyl does."
+                </p>
+            </div>
+            <div class="col-lg-4 pt-4">
+                <div class="embed-responsive embed-responsive-4by3">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/eQ3Y3WH3bcQ?modestbranding=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <p class="p-3">
+                    "After I used the third one, my odor and discharge cleared up"
+                </p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+-->
+
+<section class="pb-5">
+    <div class="container">
+        <h2>Reviews</h2>
+        <div class="py-4">
+            <div class="text-content text-lg">
+                <%= link_to '', {}, name: 'reviews' %>
+                <div id="stamped-main-widget"
+                     data-product-id="7000"
+                     data-name="Sea Buckthorn Oil"
+                     data-url="https://www.neueve.com/sea_buckthorn"
+                     data-image-url="https://d3ilh7i74k3q3i.cloudfront.net/assets/product/sea_buckthorn/NeuEve_Sea_Buckthorn_Front-41f44e4a83913c0c3a1837d71476ecc280dd076198733e8bf00f6e09f51a06cb.jpg"
+                     data-description="Sea buckthorn softgels. Full of Omega-7 fatty acids. Vegan and organic."
+                     data-product-sku="sea-buckthorn">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--
+
+<%= render 'layouts/satisfaction_snippet' %>
+
+-->
+
+<%= render 'layouts/disclaimer' %>
