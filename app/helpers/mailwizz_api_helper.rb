@@ -16,6 +16,7 @@ module MailwizzApiHelper
     mailwizz_data['CREAM_COUNT'] = 0
     mailwizz_data['APPLICATOR_COUNT'] = 0
     mailwizz_data['ASSORTED_COUNT'] = 0
+    mailwizz_data['SEA_BUCKTHORN_60_COUNT'] = 0
     mailwizz_data
   end
 
@@ -68,6 +69,14 @@ module MailwizzApiHelper
             mailwizz_data['APPLICATOR_COUNT'] = mailwizz_data['APPLICATOR_COUNT'].to_i + quantity
           when 'assorted'
             mailwizz_data['ASSORTED_COUNT'] = mailwizz_data['ASSORTED_COUNT'].to_i + quantity
+          when 'sea_buckthorn_60'
+            mailwizz_data['SEA_BUCKTHORN_60_COUNT'] = mailwizz_data['SEA_BUCKTHORN_60_COUNT'].to_i + quantity
+          when 'sea_buckthorn_60 x 2'
+            mailwizz_data['SEA_BUCKTHORN_60_COUNT'] = mailwizz_data['SEA_BUCKTHORN_60_COUNT'].to_i + 2 * quantity
+          when 'sea_buckthorn_60 x 3'
+            mailwizz_data['SEA_BUCKTHORN_60_COUNT'] = mailwizz_data['SEA_BUCKTHORN_60_COUNT'].to_i + 3 * quantity
+          when 'sea_buckthorn_60 x 4'
+            mailwizz_data['SEA_BUCKTHORN_60_COUNT'] = mailwizz_data['SEA_BUCKTHORN_60_COUNT'].to_i + 4 * quantity
           when 'silk x 4'
             mailwizz_data['SILK_COUNT'] = mailwizz_data['SILK_COUNT'].to_i + 4 * quantity
           when 'silver x 4'
@@ -99,6 +108,8 @@ module MailwizzApiHelper
           mailwizz_data['BV_COUNT'] = mailwizz_data['BV_COUNT'].to_i + 1
         when 'cream'
           mailwizz_data['CREAM_COUNT'] = mailwizz_data['CREAM_COUNT'].to_i + 1
+        when 'sea_buckthorn_60'
+          mailwizz_data['SEA_BUCKTHORN_60_COUNT'] = mailwizz_data['SEA_BUCKTHORN_60_COUNT'].to_i + 1
         else
       end
       mailwizz_data['CART_ITEM_COUNT'] = mailwizz_data['CART_ITEM_COUNT'].to_i + 1

@@ -31,6 +31,7 @@ Lavax::Application.routes.draw do
   get '/blog' => redirect('/blog/')
   match '/dilators' => 'static_pages#dilators', :via => :get
   match '/dmannose' => 'static_pages#dmannose', :via => :get
+  match '/sea_buckthorn' => 'static_pages#sea_buckthorn', :via => :get
   match '/reviews' => 'static_pages#reviews', :via => :get
   match '/satisfaction' => 'static_pages#satisfaction', :via => :get
   match '/which_formula' => 'static_pages#which_formula', :via => :get
