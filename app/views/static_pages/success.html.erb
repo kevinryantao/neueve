@@ -306,6 +306,14 @@
 
 </script>
 
+<!-- BING CONVERSION TRACKING -->
+<script>
+    window.uetq = window.uetq || [];
+    <% if @pdt_data.present? && @pdt_data.size > 0 %>
+        window.uetq.push('event', '', {'revenue_value': '<%= @pdt_data['payment_gross'] %>', 'currency': 'USD'});
+    <% end %>
+</script>
+
 <!-- REFERSION TRACKING: BEGIN -->
 <script src="//neueve.refersion.com/tracker/v3/pub_e995ed19861f51e2eb90.js"></script>
 <script>
