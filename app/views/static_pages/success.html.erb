@@ -260,7 +260,7 @@
     <% end %>
     <% else %>
     ga('ec:addProduct', {
-        'id': '<%= @pdt_data["option_selection1"] %>',
+        'id': '<%= @pdt_data["item_number"] %>',
         'name': '<%= @pdt_data["item_name"] %>',
         'brand': 'NeuEve',
         'category': 'subscription',
@@ -341,7 +341,7 @@
         <% end %>
         <% else %>
         _rfsn._addItem({
-            'sku': '<%= @pdt_data["option_selection1"] %>',
+            'sku': '<%= @pdt_data["item_number"] %>',
             'quantity': '1',
             'price': '<%= @pdt_data["mc_gross"] %>'
         });
