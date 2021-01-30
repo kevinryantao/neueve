@@ -359,6 +359,19 @@
 </script>
 <!-- REFERSION TRACKING: END -->
 
+<!-- Pinterest Tracking -->
+<script>
+    <% if @pdt_data.present? && @pdt_data.size > 0 %>
+        pintrk('track', 'checkout', {
+            value: '<%= @pdt_data['payment_gross'] %>',
+            currency: 'USD',
+            order_id: '<%= @pdt_data['txn_id'] %>'
+        });
+    <% end %>
+</script>
+
+<!-- Pinterest Tracking END -->
+
 <!-- BEGIN GCR Opt-in Module Code -->
 <!--
 <script src="https://apis.google.com/js/platform.js?onload=renderOptIn" async defer></script>
