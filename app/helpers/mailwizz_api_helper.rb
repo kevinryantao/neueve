@@ -180,7 +180,7 @@ module MailwizzApiHelper
         return response.response_body
       else
         error_response = response.body
-        Rails.logger.error("Mailwizz Add Subscriber Failed with Error: #{error_response}, payload: #{data.to_query}")
+        Rails.logger.error("Mailwizz Update Subscriber Failed with Error: #{error_response}, payload: #{data.to_query}")
         return nil
       end
     end
@@ -244,7 +244,7 @@ module MailwizzApiHelper
         return nil
       else
         error_response = response.body
-        Rails.logger.error("Mailwizz Add Subscriber Failed with Error: #{error_response}, subscriber_uid: #{subscriber_uid}")
+        Rails.logger.error("Mailwizz Get Subscriber Failed with Error: #{error_response}, subscriber_uid: #{subscriber_uid}")
         return nil
       end
     end
@@ -292,7 +292,7 @@ module MailwizzApiHelper
         return nil
       else
         error_response = response.body
-        Rails.logger.error("Mailwizz Add Subscriber Failed with Error: #{error_response}, payload: #{payload}")
+        Rails.logger.error("Mailwizz Get UUID Failed with Error: #{error_response}, payload: #{payload}")
         return nil
       end
     end
