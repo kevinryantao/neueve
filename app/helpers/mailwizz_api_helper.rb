@@ -133,7 +133,7 @@ module MailwizzApiHelper
     list = 'dv927wz51ca58' # All Customers
 
     request = Typhoeus::Request.new(
-        "http://ec2-34-203-205-175.compute-1.amazonaws.com/api/lists/#{list}/subscribers/",
+        "http://mailserver.neueve.com/api/lists/#{list}/subscribers/",
         method: :post,
         body: data.to_query,
         headers: { 'Content-Type' => 'application/x-www-form-urlencoded',
@@ -162,7 +162,7 @@ module MailwizzApiHelper
   def ajax_mailwizz_update_subscriber(subscriber_uid, data, list = 'dv927wz51ca58')
 
     request = Typhoeus::Request.new(
-        "http://ec2-34-203-205-175.compute-1.amazonaws.com/api/lists/#{list}/subscribers/#{subscriber_uid}",
+        "http://mailserver.neueve.com/api/lists/#{list}/subscribers/#{subscriber_uid}",
         method: :put,
         body: data.to_query,
         headers: { 'Content-Type' => 'application/x-www-form-urlencoded',
@@ -220,7 +220,7 @@ module MailwizzApiHelper
   #
   def ajax_mailwizz_get_subscriber(subscriber_uid, list = 'dv927wz51ca58')
     request = Typhoeus::Request.new(
-        "http://ec2-34-203-205-175.compute-1.amazonaws.com/api/lists/#{list}/subscribers/#{subscriber_uid}",
+        "http://mailserver.neueve.com/api/lists/#{list}/subscribers/#{subscriber_uid}",
         method: :get,
         body: nil,
         headers: { 'Content-Type' => 'application/json',
@@ -268,7 +268,7 @@ module MailwizzApiHelper
     list = 'dv927wz51ca58' # all subscribers
     payload = "EMAIL=#{email}"
     request = Typhoeus::Request.new(
-        "http://ec2-34-203-205-175.compute-1.amazonaws.com/api/lists/#{list}/subscribers/search-by-email?#{payload}",
+        "http://mailserver.neueve.com/api/lists/#{list}/subscribers/search-by-email?#{payload}",
         method: :get,
         body: nil,
         headers: { 'Content-Type' => 'application/x-www-form-urlencoded',
