@@ -372,30 +372,3 @@
 
 <!-- Pinterest Tracking END -->
 
-<!-- BEGIN GCR Opt-in Module Code -->
-<!--
-<script src="https://apis.google.com/js/platform.js?onload=renderOptIn" async defer></script>
-<script>
-    window.renderOptIn = function() {
-        window.gapi.load('surveyoptin', function() {
-            window.gapi.surveyoptin.render(
-                    {
-                        "merchant_id": 16657021,
-                        "order_id": "<%= @pdt_data['txn_id'] %>",
-                        "email": "<%= @pdt_data['payer_email'] %>",
-                        "delivery_country": "<%= @pdt_data['address_country_code'] %>",
-                        "estimated_delivery_date": "<%= @estimated_delivery_date %>"
-                    });
-        });
-    }
-</script>
--->
-<!-- END GCR Opt-in Module Code -->
-
-<!-- BEGIN GCR Language Code -->
-<script>
-    window.___gcfg = {
-        lang: 'en_US'
-    };
-</script>
-<!-- END GCR Language Code -->
