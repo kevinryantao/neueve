@@ -11,6 +11,8 @@ Lavax::Application.routes.draw do
   match '/bv' => redirect('/bv_clear'), :via => :get
 
   match '/bv_clear' => 'static_pages#bv_clear', :via => :get
+  match '/finisher' => 'static_pages#bv_clear_finisher', :via => :get
+
 
   match '/contact' => 'static_pages#contact', :via => :get
   # match '/comparison' => 'static_pages#comparison', :via => :get

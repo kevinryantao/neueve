@@ -17,6 +17,7 @@ module MailwizzApiHelper
     mailwizz_data['APPLICATOR_COUNT'] = 0
     mailwizz_data['ASSORTED_COUNT'] = 0
     mailwizz_data['SEA_BUCKTHORN_60_COUNT'] = 0
+    mailwizz_data['FINISHER_COUNT'] = 0
     mailwizz_data
   end
 
@@ -89,6 +90,14 @@ module MailwizzApiHelper
             mailwizz_data['BV_COUNT'] = mailwizz_data['BV_COUNT'].to_i + 3 * quantity
           when 'bv-clearing-kit x 4'
             mailwizz_data['BV_COUNT'] = mailwizz_data['BV_COUNT'].to_i + 4 * quantity
+          when 'finisher'
+            mailwizz_data['FINISHER_COUNT'] = mailwizz_data['FINISHER_COUNT'].to_i + quantity
+          when 'finisher x 2'
+            mailwizz_data['FINISHER_COUNT'] = mailwizz_data['FINISHER_COUNT'].to_i + 2 * quantity
+          when 'finisher x 3'
+            mailwizz_data['FINISHER_COUNT'] = mailwizz_data['FINISHER_COUNT'].to_i + 3 * quantity
+          when 'finisher x 4'
+            mailwizz_data['FINISHER_COUNT'] = mailwizz_data['FINISHER_COUNT'].to_i + 4 * quantity
           when 'cream x 4'
             mailwizz_data['CREAM_COUNT'] = mailwizz_data['CREAM_COUNT'].to_i + 4 * quantity
           else
@@ -110,6 +119,8 @@ module MailwizzApiHelper
           mailwizz_data['CREAM_COUNT'] = mailwizz_data['CREAM_COUNT'].to_i + 1
         when 'sea_buckthorn_60'
           mailwizz_data['SEA_BUCKTHORN_60_COUNT'] = mailwizz_data['SEA_BUCKTHORN_60_COUNT'].to_i + 1
+        when 'finisher'
+          mailwizz_data['FINISHER_COUNT'] = mailwizz_data['FINISHER_COUNT'].to_i + quantity
         else
       end
       mailwizz_data['CART_ITEM_COUNT'] = mailwizz_data['CART_ITEM_COUNT'].to_i + 1
