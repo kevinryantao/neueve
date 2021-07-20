@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.6.6'
+ruby '2.6.8'
 
 gem 'rails', '~> 4.2'
 gem 'mini_racer'

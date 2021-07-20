@@ -13,7 +13,7 @@ class TransactionalMailer < ApplicationMailer
 
   def is_bv_user(pdt_hash)
     (1..(pdt_hash["num_cart_items"].to_i)).each do |i|
-      if pdt_hash["item_name#{i}"].include? "BV"
+      if (pdt_hash["item_name#{i}"].include? "BV") || (pdt_hash["item_name#{i}"].include? "Finisher")
         return true
       end
     end

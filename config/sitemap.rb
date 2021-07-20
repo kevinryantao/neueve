@@ -33,6 +33,7 @@ SitemapGenerator::Sitemap.create do
   add vaginal_dryness_atrophy_cause_treatment_path, priority: 1
   add vaginal_odor_cause_treatment_path, priority: 1
   add bv_clear_path, priority: 1
+  add finisher_path, priority: 1
   add bacterial_vaginosis_vaginal_odor_path, priority: 1
   add comparison_path, priority: 1
   add disclaimer_path, priority: 1
