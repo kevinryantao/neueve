@@ -289,7 +289,16 @@
         'send_to': 'AW-1039056375/-bxQCMDw24QBEPf7uu8D',
         'value': <%= @pdt_data['payment_gross'] %>,
         'currency': 'USD',
-        'transaction_id': '<%= @pdt_data['txn_id'] %>'
+        'transaction_id': '<%= @pdt_data['txn_id'] %>',
+        'email': '<%= @pdt_data['payer_email'] %>',
+        'phone_number': '<%= @pdt_data['contact_phone'] %>',
+        'first_name': '<%= @pdt_data['first_name'] %>',
+        'last_name': '<%= @pdt_data['last_name'] %>',
+        'home_address.street': '<%= @pdt_data['address_street'] %>',
+        'home_address.city': '<%= @pdt_data['address_city'] %>',
+        'home_address.region': '<%= @pdt_data['address_state'] %>',
+        'home_address.postal_code': '<%= @pdt_data['address_zip'] %>',
+        'home_address.country': '<%= @pdt_data['address_country'] %>'
     });
     <% end %>
 
