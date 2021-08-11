@@ -410,3 +410,157 @@ Using at bedtime is desirable. Do not use during menses.
         </div>
     </div>
 </section>
+
+
+<!-- NeuEve Silver Structured Data -->
+<script>
+
+    function addEventListenerStamped(el, eventName, handler) {
+
+        if (el.addEventListener) { el.addEventListener(eventName, handler); }
+        else { el.attachEvent('on' + eventName, function () { handler.call(el); }); }
+
+    }
+
+    addEventListenerStamped(document, 'stamped:reviews:loaded', function(e) {
+        var ratingCount = jQueryStamped('meta[itemprop="reviewCount"]').attr('content');
+        var ratingValue = jQueryStamped('meta[itemprop="ratingValue"]').attr('content');
+
+        var richSnippet = {
+            "@context": "https://schema.org/",
+            "@type": "Product",
+            "sku": "silver",
+            "mpn": "silver",
+            "gtin": "091131112717",
+            "image": [
+                "https://www.neueve.com/assets/product/silver/NeuEve_Silver_White-4e3442ca97e3450cb7d4f58d83e51d20b287ef2973e1e1214ccdc471a425af24.jpg",
+                "https://d3ilh7i74k3q3i.cloudfront.net/assets/product/silver/NeuEve_Silver_Lavender-1c0a8c814fb0771da50eef2e1b55fd4f406b90c060d9c86fe5ca418b36fc7c4e.jpg",
+                "https://d3ilh7i74k3q3i.cloudfront.net/assets/product/silver/NeuEve_Silver_Orange-deeb7ecd37b1a6ee50ec51395f3e22679e2040c99df94f65853c38e73526ec7d.jpg"
+            ],
+            "name": "NeuEve Silver Vaginal Suppositories",
+            "description": "Our vitamins and essential oils help thicken, tighten and lubricate the vaginal wall and " +
+                           "rebalance pH. NeuEve is made with all natural, plant-based, edible ingredients without any " +
+                           "chemicals or hormones. NeuEve helps alleviate vaginal dryness, atrophy, and BV. NeuEve's " +
+                           "formulas are personalized for you. NeuEve Silver is our medium formula, perfect for " +
+                           "perimenopausal women. One month supply contains 6 suppositories. " +
+                           "Ingredients : Organic palm oil, organic coconut oil, organic beeswax, organic tapioca " +
+                           "starch, organic potato starch, evening primrose oil, organic sea buckthorn fruit oil, " +
+                           "organic lavender essential oil, organic orange oil, organic vitamin E (d-α tocopherol), and a " +
+                           "proprietary blend of nutrients.",
+            "brand": {
+                "@type": "Brand",
+                "name": "NeuEve"
+            },
+            "offers": {
+                "@type": "Offer",
+                "url": "https://www.neueve.com/silver",
+                "itemCondition": "https://schema.org/NewCondition",
+                "availability": "https://schema.org/InStock",
+                "price": "59.95",
+                "priceCurrency": "USD",
+                "priceValidUntil": "<%= (Date.today + 1.year).iso8601 %>",
+                "shippingDetails": {
+                    "@type": "OfferShippingDetails",
+                    "shippingRate": {
+                        "@type": "MonetaryAmount",
+                        "value": "0.0",
+                        "currency": "USD"
+                    },
+                    "shippingDestination": {
+                        "@type": "DefinedRegion",
+                        "addressCountry": "US"
+                    },
+                    "deliveryTime": {
+                        "@type": "ShippingDeliveryTime",
+                        "handlingTime": {
+                            "@type": "QuantitativeValue",
+                            "minValue": "0",
+                            "maxValue": "1"
+                        },
+                        "transitTime": {
+                            "@type": "QuantitativeValue",
+                            "minValue": "1",
+                            "maxValue": "5"
+                        },
+                        "cutOffTime": "23:59-05:00",
+                        "businessDays": {
+                            "@type": "OpeningHoursSpecification",
+                            "dayOfWeek": ["https://schema.org/Monday", "https://schema.org/Tuesday",
+                                "https://schema.org/Wednesday", "https://schema.org/Thursday",
+                                "https://schema.org/Friday"]
+                        }
+                    },
+                    "shippingSettingsLink": "https://www.neueve.com/satisfaction"
+                }
+            },
+            "review": [{
+                "@type": "Review",
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5",
+                    "bestRating": "5"
+                },
+                "author": {
+                    "@type": "Person",
+                    "name": "Carol M."
+                },
+                "name": "Thank you",
+                "reviewBody" : "I had a hysterectomy at age 31. Things where still ok in the sexual experience until I hit my 45th birthday. I started experiencing vaginal dryness, and painful sex with my husband. It got so bad sex was impossible even with lubricants. I started to have symptoms of UTI's as well. I found Neueve on the internet and thought I'll give it a try. I'm so thankful I did. I feel like a woman In my 20's again. Thank you Neueve for your product. Thank you for thinking of a woman's needs.",
+                "datePublished" : "2019-08-18"
+            },{
+                "@type": "Review",
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5",
+                    "bestRating": "5"
+                },
+                "author": {
+                    "@type": "Person",
+                    "name": "Angelique S."
+                },
+                "name": "Excellent Results With Excellent Product",
+                "reviewBody" : "In 2010 I a hysterectomy due to the ravages of endometriosis. Because of the scarring caused by years of endometriosis, my surgeon had to leave my cervix as it had adhesed to my bowel in such a way removal was impossible without putting me in a colostomy bag for the rest of my life. As a result, I still have to have pelvic exams and pap smears. I also have not been sexually active for over 9 years." +
+                               "\n" +
+                               "During my last pelvic exam and pap smear, I was unpleasantly surprised to discover it was very painful during the procedure and afterwards I bled for 3 days and was in pain for a week." +
+                               "\n" +
+                               " Where before I'd never had any pain during an examination or during sex. While my doctor suggested dilators, he didn't give me any other information or suggest any other options." +
+                               "\n" +
+                               "I also had been having increased occurrences of UTIs and vulva itching. I didn't want hormones as I'd taken natural hormones specifically made for my body's chemistry after the hysterectomy and I'd stopped. I'd been warned by my gynecologist that if I resumed hormone replacement after having taken them previously and stopping taking them that I'd increase my chances of developing cancer." +
+                               "\n" +
+                               "I discovered NeuEve while doing exploring my options on the internet. I am definitely not ready to forget about having sex ever again and so, I decided to start using NeuEve and the vulva cream. My UTIs disappeared, and my vulva itching ceased." +
+                               "\n" +
+                               "I've gotten the magnetic dilators suggested on their website and between them and NeuEve, I no longer have pain when using them or a vibrator being inserted in my vagina. I am now at the dilator size that of a normal sized penis and I am confident that should I have sex again, it will not be painful and that my vaginal health has improved to the point my next exam won't be painful." +
+                               "\n" +
+                               "I highly recommend this product. Customer service is exemplary and I any concerns I have had have been addressed promptly and to my satisfaction. I am very grateful for the peace of mind using NeuEve has helped me to have." +
+                               "",
+                "datePublished" : "2019-05-02"
+            },{
+                "@type": "Review",
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5",
+                    "bestRating": "5"
+                },
+                "author": {
+                    "@type": "Person",
+                    "name": "Potpourripattie"
+                },
+                "name": " Happily married again!",
+                "reviewBody": "I had vaginal atrophy so bad that my last pap smear was almost impossible to do. By the end of the examine I was in tears. My doctor was so upset for me. I was not able to take prescription meds as I had suffered 2 massive heart attacks in 2008. I watched the commercials on TV and was going to try to find a doctor that I could convince to let me try them but to no avail. Then the Heavens opened and I found Neueve! I have gone without sex for years, much to my husband of 35 years dismay. I followed the directions and after several weeks of using this awesome product we tried. Slow at first but now it is so awesome to make love to my husband. We cannot believe the turnaround in our love life. I tell my friends that it is like we are on our honeymoon. Even our daughter has noticed the closeness in us again when she came to visit! There are no words in the dictionary to describe how grateful we are. Another marriage saved by Neueve!",
+                "datePublished": "2018-12-09"
+            }]
+        };
+
+        if (parseInt(ratingValue) > 0){
+            richSnippet.aggregateRating = {
+                "@type": "AggregateRating",
+                "ratingValue": ratingValue,
+                "reviewCount": ratingCount
+            }
+        }
+        var script = document.createElement('script');
+        script.type = 'application/ld+json';
+        script.innerHTML = JSON.stringify(richSnippet);
+        document.getElementsByTagName('head')[0].appendChild(script);
+    });
+</script>

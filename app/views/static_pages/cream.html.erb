@@ -316,3 +316,143 @@
     </div>
 </section>
 <%= render 'layouts/testimonial_disclaimer' %>
+
+
+<!-- NeuEve Cream Structured Data -->
+<script>
+
+    function addEventListenerStamped(el, eventName, handler) {
+
+        if (el.addEventListener) { el.addEventListener(eventName, handler); }
+        else { el.attachEvent('on' + eventName, function () { handler.call(el); }); }
+
+    }
+
+    addEventListenerStamped(document, 'stamped:reviews:loaded', function(e) {
+        var ratingCount = jQueryStamped('meta[itemprop="reviewCount"]').attr('content');
+        var ratingValue = jQueryStamped('meta[itemprop="ratingValue"]').attr('content');
+
+        var richSnippet = {
+            "@context": "https://schema.org/",
+            "@type": "Product",
+            "sku": "cream",
+            "mpn": "cream",
+            "gtin": "804551330605",
+            "image": [
+                "https://d3ilh7i74k3q3i.cloudfront.net/assets/product/cream/NeuEve_Cream_White-7c66b56067c9f6b6659aee0851cdbb85c3bc2f49f85d6784e4c252f7a3018c5a.jpg",
+                "https://d3ilh7i74k3q3i.cloudfront.net/assets/product/cream/NeuEve_Cream_Lavender-1a320fcd6ad5bb9dba22c56f04589e682714977a641e929479a6d83d0ae010fc.jpg",
+                "https://d3ilh7i74k3q3i.cloudfront.net/assets/product/cream/NeuEve_Cream_BlueField-15fbe29fd50afd501216c60cbe9a63abd823c7d401da75373712c3ed8f31035e.jpg",
+                    "https://d3ilh7i74k3q3i.cloudfront.net/assets/product/cream/NeuEve_Cream_Orange-2a48a152a33f9ac9affc5ce23e105b472412ade67d02f61d5279dce82ed4b5b2.jpg"
+            ],
+            "name": "NeuEve Vaginal Cream",
+            "description": "NeuEve Vaginal Cream helps relieve vaginal dryness & itching. NeuEve Cream is made from " +
+                           "all-natural, plant-based ingredients that are safe to ingest. NeuEve Cream helps alleviate " +
+                           "vulvar itching, burning, dryness, atrophy, painful intercourse (dyspareunia) and vaginal " +
+                           "muscle spasm (vaginismus). One jar of NeuEve Cream will last about 2-3 months. Ingredients : " +
+                           "Organic palm oil, organic beeswax, evening primrose oil, organic flaxseed oil, organic sea buckthorn oil, " +
+                           "organic orange oil, organic lavender essential oil, vitamins and a proprietary blend. All ingredients are " +
+                           "natural, organic, green, vegan, gluten-free, food-grade and of plant source.",
+            "brand": {
+                "@type": "Brand",
+                "name": "NeuEve"
+            },
+            "offers": {
+                "@type": "Offer",
+                "url": "https://www.neueve.com/cream",
+                "itemCondition": "https://schema.org/NewCondition",
+                "availability": "https://schema.org/InStock",
+                "price": "59.95",
+                "priceCurrency": "USD",
+                "priceValidUntil": "<%= (Date.today + 1.year).iso8601 %>",
+                "shippingDetails": {
+                    "@type": "OfferShippingDetails",
+                    "shippingRate": {
+                        "@type": "MonetaryAmount",
+                        "value": "0.0",
+                        "currency": "USD"
+                    },
+                    "shippingDestination": {
+                        "@type": "DefinedRegion",
+                        "addressCountry": "US"
+                    },
+                    "deliveryTime": {
+                        "@type": "ShippingDeliveryTime",
+                        "handlingTime": {
+                            "@type": "QuantitativeValue",
+                            "minValue": "0",
+                            "maxValue": "1"
+                        },
+                        "transitTime": {
+                            "@type": "QuantitativeValue",
+                            "minValue": "1",
+                            "maxValue": "5"
+                        },
+                        "cutOffTime": "23:59-05:00",
+                        "businessDays": {
+                            "@type": "OpeningHoursSpecification",
+                            "dayOfWeek": ["https://schema.org/Monday", "https://schema.org/Tuesday",
+                                "https://schema.org/Wednesday", "https://schema.org/Thursday",
+                                "https://schema.org/Friday"]
+                        }
+                    },
+                    "shippingSettingsLink": "https://www.neueve.com/satisfaction"
+                }
+            },
+            "review": [{
+                "@type": "Review",
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5",
+                    "bestRating": "5"
+                },
+                "author": {
+                    "@type": "Person",
+                    "name": "Erin"
+                },
+                "name": "Excellent products!",
+                "reviewBody" : "I have had a very positive experience with NeuEve products. The Silk suppositories and NeuEve Cream have been life-changing! I am 59 years old and experienced several years of significant vaginal dryness and pain during sex. My doctor recommended hormone replacement, but I wanted a more natural solution. I started using the Silk suppositories and Cream a couple of months ago and the results have been amazing! No more vaginal dryness or painful sex! It takes time, so be patient. But it is definitely worth it. These products are wonderful.",
+                "datePublished" : "2019-08-08"
+            },{
+                "@type": "Review",
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5",
+                    "bestRating": "5"
+                },
+                "author": {
+                    "@type": "Person",
+                    "name": "dbusic"
+                },
+                "name": "Excellent results so far!",
+                "reviewBody" : "I am actually amazed at the vast improvement of my once extremely thin vaginal tissue. At 70 years old I was convinced that sex with my husband was never going to possible again due to tearing & pain. After using the cream for only one month I feel certain that will not be the case! It really is amazing. It really does put vitality & comfort back into the vaginal area. No thin tissue at all. Now I’m so looking forward to trying the suppositories even though I read they can be messy. It will be worth it If it brings intimacy back into our very happy marriage of 38 years. So incredibly grateful to have found these products after years of unsuccessful suggestions from my female gyn.",
+                "datePublished" : "2020-07-31"
+            },{
+                "@type": "Review",
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5",
+                    "bestRating": "5"
+                },
+                "author": {
+                    "@type": "Person",
+                    "name": "Meg Z."
+                },
+                "name": "This cream works really well with the suppositories.",
+                "reviewBody": "This product is a real game-changer! I have sensitive skin, and I started with the Silk Formula (I'll likely copy this review and post it there, too, as well as with the cream). I saw a bit of improvement right away, but it *did* take time for it to work fully, so be patient. (I was skeptical about it at first, too. After all, 'being patient' could just be a way to get people to buy more of a product that doesn't work). I used the product for about 4 months total before I was completely comfortable during sex again, and I'm now using the Gold formula. It's awkward to post about such a sensitive topic, until you think about all the other topics that were once thought unmentionable and now we talk about those at least relatively freely. Why should a matter that's so important to a woman (and a couple) be any different? The cream and the suppositories have different roles/purposes, and I would recommend using both (and use the cream everyday), and starting slowly with the silk until your body adjusts. (Basically, follow the instructions and be patient). Even if you don't have sensitive skin, if you have extreme dryness, a stronger version of the product might not stay in your body long enough to work. Also, it's worth noting that my gynecologist recommended an estrogen cream about a year or so before I tried NeuEve....I had such a terrible allergic reaction that I was *really* afraid to try anything else....but I did...and I am so grateful and happy I did!",
+                "datePublished": "2018-11-26"
+            }]
+        };
+
+        if (parseInt(ratingValue) > 0){
+            richSnippet.aggregateRating = {
+                "@type": "AggregateRating",
+                "ratingValue": ratingValue,
+                "reviewCount": ratingCount
+            }
+        }
+        var script = document.createElement('script');
+        script.type = 'application/ld+json';
+        script.innerHTML = JSON.stringify(richSnippet);
+        document.getElementsByTagName('head')[0].appendChild(script);
+    });
+</script>
