@@ -655,3 +655,154 @@
 
 
 <%= render 'layouts/disclaimer' %>
+
+
+<!-- NeuEve BV Clear Finisher Structured Data -->
+<script>
+
+    function addEventListenerStamped(el, eventName, handler) {
+
+        if (el.addEventListener) { el.addEventListener(eventName, handler); }
+        else { el.attachEvent('on' + eventName, function () { handler.call(el); }); }
+
+    }
+
+    addEventListenerStamped(document, 'stamped:reviews:loaded', function(e) {
+        var ratingCount = jQueryStamped('meta[itemprop="reviewCount"]').attr('content');
+        var ratingValue = jQueryStamped('meta[itemprop="ratingValue"]').attr('content');
+
+        var richSnippet = {
+            "@context": "https://schema.org/",
+            "@type": "Product",
+            "sku": "finisher",
+            "mpn": "finisher",
+            "gtin": "091131112700",
+            "image": [
+                "https://m.media-amazon.com/images/I/61xhGusHzsL._SL1115_.jpg",
+                "https://d3ilh7i74k3q3i.cloudfront.net/assets/product/finisher/BV_Clear_Finisher_main-ec8ce05755e78d07cc4c1cecbcda2f96e34a544115012b60fc90d760a988864b.jpg",
+                "https://d3ilh7i74k3q3i.cloudfront.net/assets/product/finisher/BV_Clear_Finisher_main2-f5604eadddd6268dc3187fb7571bbeec5c6ae51563aab80dc9aed605466d9139.jpg",
+                    "https://d3ilh7i74k3q3i.cloudfront.net/assets/product/general/NeuEve_3_Suppositories_Lavender-600c42b2fc219b5c7c3b47070734fd9c8d9f1f7f8c84e2885d2acdb753596d0e.jpg"
+            ],
+            "name": "BV Clear Finisher",
+            "description": "A fast, OB/GYN-approved and all-natural method of beating severe bacterial vaginosis - for good." +
+                           "\n" +
+                           "Clears recurrent and chronic bacterial vaginosis, leaving you feeling comfortable, confident, and ready to rule the world" +
+                           "\n" +
+                           "Ends vaginal itching, odor and discharge without any pesky side-effects" +
+                           "\n" +
+                           "pH balancing to promote friendly bacteria and foster a healthy, happy vagina" +
+                           "\n" +
+                           "No antibiotics or boric acid. Uses all-natural, food grade ingredients - if you wouldn’t put it in your mouth, why use it down below?" +
+                           "\n" +
+                           "Each pack contains three suppositories" +
+                           "",
+            "brand": {
+                "@type": "Brand",
+                "name": "NeuEve"
+            },
+            "offers": {
+                "@type": "Offer",
+                "url": "https://www.neueve.com/silk",
+                "itemCondition": "https://schema.org/NewCondition",
+                "availability": "https://schema.org/InStock",
+                "price": "52.95",
+                "priceCurrency": "USD",
+                "priceValidUntil": "<%= (Date.today + 1.year).iso8601 %>",
+                "shippingDetails": {
+                    "@type": "OfferShippingDetails",
+                    "shippingRate": {
+                        "@type": "MonetaryAmount",
+                        "value": "0.0",
+                        "currency": "USD"
+                    },
+                    "shippingDestination": {
+                        "@type": "DefinedRegion",
+                        "addressCountry": "US"
+                    },
+                    "deliveryTime": {
+                        "@type": "ShippingDeliveryTime",
+                        "handlingTime": {
+                            "@type": "QuantitativeValue",
+                            "minValue": "0",
+                            "maxValue": "1"
+                        },
+                        "transitTime": {
+                            "@type": "QuantitativeValue",
+                            "minValue": "1",
+                            "maxValue": "5"
+                        },
+                        "cutOffTime": "23:59-05:00",
+                        "businessDays": {
+                            "@type": "OpeningHoursSpecification",
+                            "dayOfWeek": ["https://schema.org/Monday", "https://schema.org/Tuesday",
+                                "https://schema.org/Wednesday", "https://schema.org/Thursday",
+                                "https://schema.org/Friday"]
+                        }
+                    },
+                    "shippingSettingsLink": "https://www.neueve.com/satisfaction"
+                }
+            },
+            "review": [{
+                "@type": "Review",
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "4",
+                    "bestRating": "5"
+                },
+                "author": {
+                    "@type": "Person",
+                    "name": "Brandy"
+                },
+                "name": "Best B.V. Cure",
+                "reviewBody" : "I'm 44 yrs. old. I have recurrent B.V. about 3yrs. now. I think that this product is wonderful. It really has helped me out in my stubborn B.V. days. I would deff. recommended this product." +
+                               "\n" +
+                               "I have however used other creams that are proscribed by the obgyn & regular family dr., but my B.V. kept coming back. I've used Chlamydia cream that I used vaginally, Monistat 3 supp. that I used for 3 days, Clindamycin cream once a day cream, Metrogel cream for 5 nights. None of these products kept the B.V. away. The only one that became the champion at keeping my B.V. at Bay is the NEUEVE suppository." +
+                               "\n" +
+                               "Anyway, I hope this review helps w/ all those women out there struggling w/ B.V. recurrences." +
+                               "" +
+                               "",
+                "datePublished" : "2021-08-09"
+            },{
+                "@type": "Review",
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5",
+                    "bestRating": "5"
+                },
+                "author": {
+                    "@type": "Person",
+                    "name": "Kylie"
+                },
+                "name": "AMAZING",
+                "reviewBody" : "LOVE THIS PRODUCT. The only thing that has relieved me. Thank you!!!",
+                "datePublished" : "2021-08-09"
+            },{
+                "@type": "Review",
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5",
+                    "bestRating": "5"
+                },
+                "author": {
+                    "@type": "Person",
+                    "name": "Megan"
+                },
+                "name": "Relief",
+                "reviewBody": "I have had severe symptoms from BV for month and finally got relief with NeuEve Finisher. I feel like I’ve finally found something that will keep the symptoms controlled.. Had to do internet research to find out what that may be about: Found many women experiencing it, called symptom of Menopause! I've been using 3 different external feminine salves (which I love them all) for about out a year but was looking for natural and safe INTERNAL product. Found that in NueEve. I was scared to use at first and have only used Silk two weeks now and using the NeuEve balm at night, too. SIGNIFICANTLY NOTICEABLE difference. I have to say, Sea Buckthorn oral supplement (recommended by NueEve for help with vaginal dryness), which I got at my natural grocer's after more internet research, seems to be a SIGNIFICANT FACTOR in helping. At least I noticed dry eyes (which is what it was largely touted for in store/on bottle) and dry mouth subsiding in literally a matter of a few days after one per day. (Fiance even takes this and significantly noticeable for him, as well, with the dry eye/mouth relief--we live at altitude, as well.) Not sure what is working best or most, but, at this point, I DON'T CARE: I am sold on the Silk, NeuEve Balm (which is so creamy and I love the smell) and Sea Buckthorn combo (as well as my three other external natural balm products which I alternate and love) for now. I will update this review after I finish my eight weeks of Silk. I will say, as TMI does not apply here, after two weeks, we did NOT have to use the usual lubricant during IC (which he described as a 'liquid condom' and did not care for its use but it was the only way we could make IC even remotely happen before). Feeling like a better version of my younger self, with noticeable increased sex drive and now better climax (as both were before painful IC). Best wishes for all older women wanting to still enjoy life. New Motto: 60 is the new 40! At least for me, with NeuEve.",
+                "datePublished": "2021-08-09"
+            }]
+        };
+
+        if (parseInt(ratingValue) > 0){
+            richSnippet.aggregateRating = {
+                "@type": "AggregateRating",
+                "ratingValue": ratingValue,
+                "reviewCount": ratingCount
+            }
+        }
+        var script = document.createElement('script');
+        script.type = 'application/ld+json';
+        script.innerHTML = JSON.stringify(richSnippet);
+        document.getElementsByTagName('head')[0].appendChild(script);
+    });
+</script>

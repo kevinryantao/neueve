@@ -428,3 +428,156 @@ Using at bedtime is desirable. Do not use during menses.
         </div>
     </div>
 </section>
+
+
+<!-- NeuEve Gold Structured Data -->
+<script>
+
+    function addEventListenerStamped(el, eventName, handler) {
+
+        if (el.addEventListener) { el.addEventListener(eventName, handler); }
+        else { el.attachEvent('on' + eventName, function () { handler.call(el); }); }
+
+    }
+
+    addEventListenerStamped(document, 'stamped:reviews:loaded', function(e) {
+        var ratingCount = jQueryStamped('meta[itemprop="reviewCount"]').attr('content');
+        var ratingValue = jQueryStamped('meta[itemprop="ratingValue"]').attr('content');
+
+        var richSnippet = {
+            "@context": "https://schema.org/",
+            "@type": "Product",
+            "sku": "gold",
+            "mpn": "gold",
+            "gtin": "091131112694",
+            "image": [
+                "https://www.neueve.com/assets/product/gold/NeuEve_Gold_White-bdef4207a71a76f9b3320d7046714b13d89db522976c40bb08829319fda281af.jpg",
+                "https://d3ilh7i74k3q3i.cloudfront.net/assets/product/gold/NeuEve_Gold_Lavender-169132cb8e70ff8a424458b4b49bb2a1e38b23a5008f682371c517af4a176869.jpg",
+                "https://d3ilh7i74k3q3i.cloudfront.net/assets/product/gold/NeuEve_Gold_Orange-41ed8c09d86a3228d5667dcaf1aa243f3aea4c9300950f3acd9ba5017b577cbf.jpg",
+                "https://d3ilh7i74k3q3i.cloudfront.net/assets/product/gold/NeuEve_Gold_Violet-1bd2c617ecce5f8488010ce8919a131c061213dc9f3d714d8158efccac76c24e.jpg"
+            ],
+            "name": "NeuEve Gold Vaginal Suppositories",
+            "description": "Our vitamins and essential oils help thicken, tighten and lubricate the vaginal wall and " +
+                           "rebalance pH. NeuEve is made with all natural, plant-based, edible ingredients without any " +
+                           "chemicals or hormones. NeuEve helps alleviate vaginal dryness, atrophy, and BV. NeuEve's " +
+                           "formulas are personalized for you. NeuEve Gold is our most concentrated formula, perfect for" +
+                           " premenopausal women. One month supply contains 4 suppositories. " +
+                           "Ingredients : Organic palm oil, organic coconut oil, organic beeswax, organic tapioca " +
+                           "starch, organic potato starch, evening primrose oil, organic sea buckthorn fruit oil, " +
+                           "organic lavender essential oil, organic orange oil, organic vitamin E (d-α tocopherol), and a " +
+                           "proprietary blend of nutrients.",
+            "brand": {
+                "@type": "Brand",
+                "name": "NeuEve"
+            },
+            "offers": {
+                "@type": "Offer",
+                "url": "https://www.neueve.com/gold",
+                "itemCondition": "https://schema.org/NewCondition",
+                "availability": "https://schema.org/InStock",
+                "price": "59.95",
+                "priceCurrency": "USD",
+                "priceValidUntil": "<%= (Date.today + 1.year).iso8601 %>",
+                "shippingDetails": {
+                    "@type": "OfferShippingDetails",
+                    "shippingRate": {
+                        "@type": "MonetaryAmount",
+                        "value": "0.0",
+                        "currency": "USD"
+                    },
+                    "shippingDestination": {
+                        "@type": "DefinedRegion",
+                        "addressCountry": "US"
+                    },
+                    "deliveryTime": {
+                        "@type": "ShippingDeliveryTime",
+                        "handlingTime": {
+                            "@type": "QuantitativeValue",
+                            "minValue": "0",
+                            "maxValue": "1"
+                        },
+                        "transitTime": {
+                            "@type": "QuantitativeValue",
+                            "minValue": "1",
+                            "maxValue": "5"
+                        },
+                        "cutOffTime": "23:59-05:00",
+                        "businessDays": {
+                            "@type": "OpeningHoursSpecification",
+                            "dayOfWeek": ["https://schema.org/Monday", "https://schema.org/Tuesday",
+                                "https://schema.org/Wednesday", "https://schema.org/Thursday",
+                                "https://schema.org/Friday"]
+                        }
+                    },
+                    "shippingSettingsLink": "https://www.neueve.com/satisfaction"
+                }
+            },
+            "review": [{
+                "@type": "Review",
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5",
+                    "bestRating": "5"
+                },
+                "author": {
+                    "@type": "Person",
+                    "name": "Mia"
+                },
+                "name": "I thought my life was over before NeuEve",
+                "reviewBody" : "I am 59, I had a hysterectomy in which my uterus was removed some years ago. There were side effects of the operation, my orgasms were less intense among one of them, but for the most part all was ok." +
+                               "\n" +
+                               "Flash forward to two years ago. After normal sex with him for 8 years, I broke-up with my boyfriend and did not have sex for about 6 months---he then temporarily came back into my life and the first time we had intercourse it was like someone was sticking a knife into my vagina." +
+                               "\n" +
+                               "I tried lotions and creams and talked to my doctor who really had nothing useful to advise ['looks good down there']." +
+                               "\n" +
+                               "It was awful, I felt like my life was over, like I would never be able to enjoy sex again. I was really depressed." +
+                               "\n" +
+                               "Then I tried a suppository called NeuEve [for the record, I have no connection of any kind to the company and have not received any compensation ever]. The first few times sex was better [I use the 'gold' for painful sex], although bearable unlike before. Now a year and a half later I feel completely normal [I use it every 5 or so days with my new and wonderful boyfriend." +
+                               "\n" +
+                               "The only thing that is not great is that it contains palm oil [although they say it is ethically sourced]. But it has been a miracle for me." +
+                               "",
+                "datePublished" : "2020-02-12"
+            },{
+                "@type": "Review",
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5",
+                    "bestRating": "5"
+                },
+                "author": {
+                    "@type": "Person",
+                    "name": "Fran"
+                },
+                "name": "I’m the husband!",
+                "reviewBody" : "My wife is 9 years older than me. After many years of marriage our sex became painful for her. I was understanding but my sex drive was off the charts. Not having regular intercourse was driving me insane! Her doctor prescribed hormones which I rejected. After much research I discovered NeuEve on the internet. She was willing to give it a try and here we are 2 years later having sex like we’re 30! She’s now 63! Thanks to the folks at NeuEve for giving our life back!",
+                "datePublished" : "2019-04-28"
+            },{
+                "@type": "Review",
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5",
+                    "bestRating": "5"
+                },
+                "author": {
+                    "@type": "Person",
+                    "name": "Becca"
+                },
+                "name": "Must have if you have experienced sexual discomfort/pain",
+                "reviewBody": "I had recurrent BV/yeast infections for a year and my vagina needed major recovery after I finished over a month of antibiotic suppository treatment with my gynecologist. My gynecologist recommended trying coconut oil suppositories to help nourish the vaginal tissue and keep things lubricated (I was experiencing sexual pain/discomfort from anxiety about sex/physical discomfort from recovery) and the gold suppositories have helped immensely!!!! I could not recommend these suppositories enough - I have tried almost everything under the sun and these actually work. After going through any intensive vaginal treatment, it's a great way to keep things lubricated and comfortable for sex and for daily comfort. They are worth the price and the customer service is very helpful - I would definitely recommend trying it! I am in my mid-20s and this suppository was the best fit for me right now.",
+                "datePublished": "2019-10-24"
+            }]
+        };
+
+        if (parseInt(ratingValue) > 0){
+            richSnippet.aggregateRating = {
+                "@type": "AggregateRating",
+                "ratingValue": ratingValue,
+                "reviewCount": ratingCount
+            }
+        }
+        var script = document.createElement('script');
+        script.type = 'application/ld+json';
+        script.innerHTML = JSON.stringify(richSnippet);
+        document.getElementsByTagName('head')[0].appendChild(script);
+    });
+</script>

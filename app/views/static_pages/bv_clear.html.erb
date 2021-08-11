@@ -626,3 +626,155 @@
 
 
 <%= render 'layouts/disclaimer' %>
+
+
+<!-- NeuEve BV Clear Structured Data -->
+<script>
+
+    function addEventListenerStamped(el, eventName, handler) {
+
+        if (el.addEventListener) { el.addEventListener(eventName, handler); }
+        else { el.attachEvent('on' + eventName, function () { handler.call(el); }); }
+
+    }
+
+    addEventListenerStamped(document, 'stamped:reviews:loaded', function(e) {
+        var ratingCount = jQueryStamped('meta[itemprop="reviewCount"]').attr('content');
+        var ratingValue = jQueryStamped('meta[itemprop="ratingValue"]').attr('content');
+
+        var richSnippet = {
+            "@context": "https://schema.org/",
+            "@type": "Product",
+            "sku": "bv-clearing-kit",
+            "mpn": "bv-clearing-kit",
+            "gtin": "091131112755",
+            "image": [
+                "https://www.neueve.com/assets/product/bv_clear/NeuEve_BV_Clear_White-019809926c0658d6739460b6f224bb92c11bd63b3a958ef972f4cf6d8a122806.jpg",
+                "https://d3ilh7i74k3q3i.cloudfront.net/assets/product/bv_clear/NeuEve_BV_Clear_Field-e21e9cb14a6e9027dba98a399f4e7f6cd500f803d4dcaa69afb00cf965f48f3a.jpg",
+                "https://d3ilh7i74k3q3i.cloudfront.net/assets/product/bv_clear/NeuEve_BV_Clear_Orange-38fe7ade533adce776d4e40c80c2b23bdd9e7a6c6259bf7c46cf311441596f11.jpg",
+                    "https://d3ilh7i74k3q3i.cloudfront.net/assets/product/general/NeuEve_3_Suppositories_Lavender-600c42b2fc219b5c7c3b47070734fd9c8d9f1f7f8c84e2885d2acdb753596d0e.jpg"
+            ],
+            "name": "NeuEve BV Clear",
+            "description": "A fast, OB/GYN-approved and all-natural method of beating bacterial vaginosis - for good." +
+                           "\n"+
+                           "Clears recurrent and chronic bacterial vaginosis, leaving you feeling comfortable, confident, and ready to rule the world" +
+                           "\n" +
+                           "Ends vaginal itching, odor and discharge without any pesky side-effects" +
+                           "\n" +
+                           "pH balancing to promote friendly bacteria and foster a healthy, happy vagina" +
+                           "\n" +
+                           "No antibiotics and uses all-natural, food grade ingredients - if you wouldn’t put it in your mouth, why use it down below?" +
+                           "\n" +
+                           "Each pack contains three suppositories",
+            "brand": {
+                "@type": "Brand",
+                "name": "NeuEve"
+            },
+            "offers": {
+                "@type": "Offer",
+                "url": "https://www.neueve.com/bv_clear",
+                "itemCondition": "https://schema.org/NewCondition",
+                "availability": "https://schema.org/InStock",
+                "price": "42.95",
+                "priceCurrency": "USD",
+                "priceValidUntil": "<%= (Date.today + 1.year).iso8601 %>",
+                "shippingDetails": {
+                    "@type": "OfferShippingDetails",
+                    "shippingRate": {
+                        "@type": "MonetaryAmount",
+                        "value": "0.0",
+                        "currency": "USD"
+                    },
+                    "shippingDestination": {
+                        "@type": "DefinedRegion",
+                        "addressCountry": "US"
+                    },
+                    "deliveryTime": {
+                        "@type": "ShippingDeliveryTime",
+                        "handlingTime": {
+                            "@type": "QuantitativeValue",
+                            "minValue": "0",
+                            "maxValue": "1"
+                        },
+                        "transitTime": {
+                            "@type": "QuantitativeValue",
+                            "minValue": "1",
+                            "maxValue": "5"
+                        },
+                        "cutOffTime": "23:59-05:00",
+                        "businessDays": {
+                            "@type": "OpeningHoursSpecification",
+                            "dayOfWeek": ["https://schema.org/Monday", "https://schema.org/Tuesday",
+                                "https://schema.org/Wednesday", "https://schema.org/Thursday",
+                                "https://schema.org/Friday"]
+                        }
+                    },
+                    "shippingSettingsLink": "https://www.neueve.com/satisfaction"
+                }
+            },
+            "review": [{
+                "@type": "Review",
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "4",
+                    "bestRating": "5"
+                },
+                "author": {
+                    "@type": "Person",
+                    "name": "Kate"
+                },
+                "name": "Great product but is it a lifelong necessity?",
+                "reviewBody" : "Let me start off by saying this, I was super tired of taking antibiotics only to find out as soon as I finished them, the BV was back. This is a new issue for me, only happening in the last year. I do love this product but it’s got me thinking a few things: how costly this journey has become and will I need to use this product forever? If you’re like me, we’ve all researched and there’s not really a “cure” for this. I also take vaginal health probiotics and use condoms with my partner, so to say it’s only NeuEve that is fixing my issue, would be misleading. Will I have to use condoms forever? I don’t really want to, but having BV is far worse than using them. All in all, I am a satisfied customer, but I wish there was a permanent fix, that didn’t require weekly suppositories.",
+                "datePublished" : "2020-07-30"
+            },{
+                "@type": "Review",
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5",
+                    "bestRating": "5"
+                },
+                "author": {
+                    "@type": "Person",
+                    "name": "Kimmie"
+                },
+                "name": "MUST TRY!! Its amazing!",
+                "reviewBody" : "Oh my gosh this is awesome! I was diagnosed with BV for the first time and didn't want to take antibiotics because it can cause yeast infections. So I started popping 90 billion cultures of womens probiotics for a couple weeks then ordered this and after 1 use, GONE! :) I had thick white discharge with a not so great smell and the smell was gone immediately. I will say as the suppositories melt there is some leakage but nothing crazy. Also what comes out will be oily, obviously but get up in there after a day or 2 and scoop out any excess. I promise it will not smell bad at all! Then put some coconut oil inside you, the lactic acid keeps the environment favorable for good bacteria. It's been 4 days and still no smell or discharge. I really only needed 1 but I used another after sex because semen changes your ph. Please do not douche! I was trapped in a cycle of douching and after being diagnosed 2 weeks ago I've stopped, tried these, take probiotics daily and use coconut oil and it's amazing in there now. I actually let my husbands fingers back up there for the first time last night. So get this now!!",
+                "datePublished" : "2018-11-26"
+            },{
+                "@type": "Review",
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5",
+                    "bestRating": "5"
+                },
+                "author": {
+                    "@type": "Person",
+                    "name": "N."
+                },
+                "name": "The final solution 🤗",
+                "reviewBody": "I had a reoccurring bv issue for about 8 months. Tried antibiotics and pretty much every natural cure out there..vitamin C, borax, apple cider vinegar but it returned." +
+                              "\n" +
+                              "I first tried the silver they weren't strong enough it returned....then the gold I used two boxes... one tab every week then one every two weeks. It's been gone for a few months and I am so very happy and thankful. It's a rough ride and such an unbalancing upsetting feeling when you can't heal yourself." +
+                              "\n" +
+                              "I have to say although it says not to use with antibiotics...because it is more of a ph issue. For me on the gold try...I used just a few days of antibiotic and then the tab ..because I found the antibiotic could set me back to basic acidity in 3 days and the Nueve right after established the balance I needed. Everyone is different so what works for you might also be different. Just stick to it and know in your heart you will beat it and you will...two thumbs up NuEve🤗" +
+                              "\n" +
+                              "A sided benefit noticeably more moist vagina fir sex, lasts about a month or so after the tab 😍 I am 43yrs old." +
+                              "\n" +
+                              "Love to everyone N.",
+                "datePublished": "2019-04-30"
+            }]
+        };
+
+        if (parseInt(ratingValue) > 0){
+            richSnippet.aggregateRating = {
+                "@type": "AggregateRating",
+                "ratingValue": ratingValue,
+                "reviewCount": ratingCount
+            }
+        }
+        var script = document.createElement('script');
+        script.type = 'application/ld+json';
+        script.innerHTML = JSON.stringify(richSnippet);
+        document.getElementsByTagName('head')[0].appendChild(script);
+    });
+</script>

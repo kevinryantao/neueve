@@ -208,3 +208,141 @@
         </div>
     </div>
 </section>
+
+
+
+<!-- NeuEve Applicator Structured Data -->
+<script>
+
+    function addEventListenerStamped(el, eventName, handler) {
+
+        if (el.addEventListener) { el.addEventListener(eventName, handler); }
+        else { el.attachEvent('on' + eventName, function () { handler.call(el); }); }
+
+    }
+
+    addEventListenerStamped(document, 'stamped:reviews:loaded', function(e) {
+        var ratingCount = jQueryStamped('meta[itemprop="reviewCount"]').attr('content');
+        var ratingValue = jQueryStamped('meta[itemprop="ratingValue"]').attr('content');
+
+        var richSnippet = {
+            "@context": "https://schema.org/",
+            "@type": "Product",
+            "sku": "applicator",
+            "mpn": "applicator",
+            "gtin": "091131112748",
+            "image": [
+                "https://m.media-amazon.com/images/I/81b7oYbugEL._SL1500_.jpg",
+                "https://d3ilh7i74k3q3i.cloudfront.net/assets/product/applicator/NeuEve_Applicator_w_Box-02bfb968946430b4da89326c18a0982e8809f8e6324114008098ff5d6bb20f10.jpg",
+                "https://d3ilh7i74k3q3i.cloudfront.net/assets/product/applicator/NeuEve_Applicator_Orange_sm-11a56f787b3b668ed8a0630f8c3426641f70ec11435b637d8bd539dfb838695b.jpg"
+            ],
+            "name": "Applicator for Vaginal Suppositories",
+            "description": "Using an applicator can help deliver the suppository deeper and avoid the suppository melt in the hand. Many customers use an applicator to help inserting suppositories. \n" +
+                           "It is designed specially for delivering the NeuEve brand vaginal suppositories. It is not guaranteed to work for other brand of suppository unless the size matches. \n" +
+                           "The internal diameter is 11mm or 3.5/8 inches. \n" +
+                           "Washable and reusable. \n" +
+                           "Made of plastic",
+            "brand": {
+                "@type": "Brand",
+                "name": "NeuEve"
+            },
+            "offers": {
+                "@type": "Offer",
+                "url": "https://www.neueve.com/applicator",
+                "itemCondition": "https://schema.org/NewCondition",
+                "availability": "https://schema.org/InStock",
+                "price": "5.95",
+                "priceCurrency": "USD",
+                "priceValidUntil": "<%= (Date.today + 1.year).iso8601 %>",
+                "shippingDetails": {
+                    "@type": "OfferShippingDetails",
+                    "shippingRate": {
+                        "@type": "MonetaryAmount",
+                        "value": "0.0",
+                        "currency": "USD"
+                    },
+                    "shippingDestination": {
+                        "@type": "DefinedRegion",
+                        "addressCountry": "US"
+                    },
+                    "deliveryTime": {
+                        "@type": "ShippingDeliveryTime",
+                        "handlingTime": {
+                            "@type": "QuantitativeValue",
+                            "minValue": "0",
+                            "maxValue": "1"
+                        },
+                        "transitTime": {
+                            "@type": "QuantitativeValue",
+                            "minValue": "1",
+                            "maxValue": "5"
+                        },
+                        "cutOffTime": "23:59-05:00",
+                        "businessDays": {
+                            "@type": "OpeningHoursSpecification",
+                            "dayOfWeek": ["https://schema.org/Monday", "https://schema.org/Tuesday",
+                                "https://schema.org/Wednesday", "https://schema.org/Thursday",
+                                "https://schema.org/Friday"]
+                        }
+                    },
+                    "shippingSettingsLink": "https://www.neueve.com/satisfaction"
+                }
+            },
+            "review": [{
+                "@type": "Review",
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5",
+                    "bestRating": "5"
+                },
+                "author": {
+                    "@type": "Person",
+                    "name": "Leia K."
+                },
+                "name": "Works!",
+                "reviewBody" : "It does what it needs to do. I took the bottom half out. I put my pill in and push it down the applicator using the bottom applicator part. Then I connect the applicator back together, insert and push. It works!",
+                "datePublished" : "2018-12-11"
+            },{
+                "@type": "Review",
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5",
+                    "bestRating": "5"
+                },
+                "author": {
+                    "@type": "Person",
+                    "name": "Wendy B."
+                },
+                "name": "Satisfied customer",
+                "reviewBody" : "This product does the job. No scratching or irritation. I used it for a regular sized capsule and had no issues.",
+                "datePublished" : "2018-12-09"
+            },{
+                "@type": "Review",
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "4",
+                    "bestRating": "5"
+                },
+                "author": {
+                    "@type": "Person",
+                    "name": "Molly M."
+                },
+                "name": "Good applicator",
+                "reviewBody": "This works well with the vitamin E suppositories that I use for dryness. My only complaint is that it can be difficult to insert. I wish it had a more tapered top.",
+                "datePublished": "2018-11-30"
+            }]
+        };
+
+        if (parseInt(ratingValue) > 0){
+            richSnippet.aggregateRating = {
+                "@type": "AggregateRating",
+                "ratingValue": ratingValue,
+                "reviewCount": ratingCount
+            }
+        }
+        var script = document.createElement('script');
+        script.type = 'application/ld+json';
+        script.innerHTML = JSON.stringify(richSnippet);
+        document.getElementsByTagName('head')[0].appendChild(script);
+    });
+</script>
