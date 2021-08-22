@@ -300,6 +300,45 @@
         'home_address.postal_code': '<%= @pdt_data['address_zip'] %>',
         'home_address.country': '<%= @pdt_data['address_country'] %>'
     });
+
+    <!-- GA4 Event for Purchase -->
+    <!-- developers.google.com/analytics/devguides/collection/ga4/ecommerce#purchase -->
+    gtag("event", "purchase", {
+        currency: "USD",
+        transaction_id: '<%= @pdt_data['txn_id'] %>',
+        value: <%= @pdt_data['payment_gross'] %>,
+        affiliation: 'NeuEve Store - Online',
+        shipping: <%= @pdt_data['mc_shipping'] %>,
+        tax: <%= @pdt_data['tax'] %>,
+        items: [
+            <% if @pdt_data.present? && @pdt_data.size > 0 %>
+                <% if @pdt_data['num_cart_items'].to_i > 0 %>
+                    <% for i in 1..@pdt_data['num_cart_items'].to_i %>
+                        {
+                            item_id: '<%= @pdt_data["item_number#{i}"] %>',
+                            item_name: '<%= @pdt_data["item_name#{i}"] %>',
+                            affiliation: 'NeuEve Store - Online',
+                            currency: "USD",
+                            item_brand: "NeuEve",
+                            price: '<%= @pdt_data["mc_gross_#{i}"] %>',
+                            quantity: '<%= @pdt_data["quantity#{i}"] %>'
+                        },
+                    <% end %>
+                <% else %>
+                {
+                    item_id: '<%= @pdt_data["item_number"] %>',
+                    item_name: '<%= @pdt_data["item_name"] %>',
+                    affiliation: 'NeuEve Store - Online',
+                    currency: "USD",
+                    item_brand: "NeuEve",
+                    price: '<%= @pdt_data["mc_gross"] %>',
+                    quantity: 1
+                }
+                <% end %>
+            <% end %>
+        ],
+    });
+
     <% end %>
 
     var urlParams;
