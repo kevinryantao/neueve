@@ -16,13 +16,6 @@
 
 <tr>
     <td class="content-block alignleft">
-        Help other customers by sharing your opinion and experiences:
-        <a href="https://www.neueve.com/reviews?utm_medium=email&utm_source=internal&utm_campaign=order+confirmation">neueve.com/reviews</a>
-    </td>
-</tr>
-
-<tr>
-    <td class="content-block alignleft">
         Once your package is shipped, you will receive an email with your USPS tracking number. Add <a href="mailto:marketing@shipbob.com">marketing@shipbob.com</a> to your address book to prevent it from going to your spam filter.
     </td>
 </tr>
@@ -30,7 +23,7 @@
     <tr>
         <td class="content-block alignleft">
             <strong>TIP:</strong>
-            Taking calcium, vitamin D, vitamin K2 (100 µg/day), omega-3, and <a href="https://www.neueve.com/sea_buckthorn">sea buckthorn</a> supplements daily will help NeuEve work better.
+            Taking calcium, vitamin D, vitamin K2 (100 µg/day), omega-3, and <a href="https://www.neueve.com/sea_buckthorn?utm_medium=email&utm_source=internal&utm_campaign=order+confirmation">sea buckthorn</a> supplements daily will help NeuEve work better.
             Learn more at:
             <a href="https://help.neueve.com/kb/starting-to-use-neueve/what-supplements-do-you-recommend?utm_medium=email&utm_source=internal&utm_campaign=order+confirmation">https://help.neueve.com/kb/starting-to-use-neueve/what-supplements-do-you-recommend</a>
         </td>
@@ -44,17 +37,28 @@
         </td>
     </tr>
 <% end %>
+
+<% if !@is_applicator_user %>
 <tr>
     <td class="content-block alignleft">
         <strong>TIP:</strong>
-        Taking <a href="https://infl.tv/dY6y">d-mannose supplements</a> daily will help prevent UTIs.
+        Using an <a href="https://www.neueve.com/applicator?utm_medium=email&utm_source=internal&utm_campaign=order+confirmation">applicator</a>
+        can help insert the suppository deeper. This helps the nutrients get more fully absorbed.
+    </td>
+</tr>
+<% end %>
+
+<tr>
+    <td class="content-block alignleft">
+        <strong>TIP:</strong>
+        Taking <a href="https://www.neueve.com/dmannose?utm_medium=email&utm_source=internal&utm_campaign=order+confirmation">d-mannose supplements</a> daily will help prevent UTIs.
     </td>
 </tr>
 
 <tr>
     <td class="content-block alignleft">
         <strong>TIP:</strong>
-        If you are experiencing pelvic pain, using <a href="https://www.vuvatech.com/collections/frontpage/products/full-set-of-vuva-magnetic-dilators?utm_source=neueve&utm_medium=email&utm_campaign=neueve-postpurchase&rfsn=1742452.8d0e50">magnetic vaginal dilators</a> can help.
+        If you are experiencing pelvic pain, using <a href="https://www.neueve.com/dilators?utm_source=neueve&utm_medium=email&utm_campaign=neueve-postpurchase&rfsn=1742452.8d0e50">magnetic vaginal dilators</a> can help.
     </td>
 </tr>
 
@@ -139,3 +143,10 @@
     </td>
 </tr>
 
+
+<tr>
+    <td class="content-block alignleft">
+        If you love us, please tell your doctor! And help other customers by sharing your opinion and experiences:
+        <a href="https://www.neueve.com/reviews?utm_medium=email&utm_source=internal&utm_campaign=order+confirmation">neueve.com/reviews</a>
+    </td>
+</tr>
