@@ -1,4 +1,4 @@
-class Message
+class Message < ApplicationRecord
 
   include ActiveModel::Validations
   include ActiveModel::Conversion

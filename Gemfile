@@ -1,11 +1,10 @@
 source 'https://rubygems.org'
 ruby '2.6.8'
 
-gem 'rails', '~> 4.2'
+gem 'rails', '~> 5.2.6'
 gem 'mini_racer'
 gem 'better_errors'
 gem 'simple_form'
-gem 'protected_attributes'
 gem 'rails-observers'
 gem 'actionpack-page_caching'
 gem 'actionpack-action_caching'
@@ -46,15 +45,17 @@ end
 
 # Gems used only for assets and not required
 # in production environments by default.
-gem 'coffee-rails', '~> 4.1.0'
+gem 'coffee-rails', '~> 5.0.0'
 
 # Premailer
 gem 'premailer-rails'
+
+
 gem 'nokogiri'
-gem 'sass-rails', '~> 5.0.4'
+gem 'sass-rails', '~> 6.0.0'
 
 # Canonical Rails
-gem 'canonical-rails', '~> 0.2.5'
+gem 'canonical-rails', '~> 0.2.12'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', :platforms => :ruby
