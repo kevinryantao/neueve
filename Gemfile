@@ -1,11 +1,10 @@
 source 'https://rubygems.org'
 ruby '2.6.8'
 
-gem 'rails', '~> 4.2'
+gem 'rails', '~> 5.2.6'
 gem 'mini_racer'
 gem 'better_errors'
 gem 'simple_form'
-gem 'protected_attributes'
 gem 'rails-observers'
 gem 'actionpack-page_caching'
 gem 'actionpack-action_caching'
@@ -33,6 +32,8 @@ group :development do
   gem 'sqlite3', "~> 1.3.13"
   gem 'rb-readline'
 
+  gem 'listen'
+
 # To use debugger
   gem 'debase'
   gem 'ruby-debug-ide'
@@ -46,15 +47,17 @@ end
 
 # Gems used only for assets and not required
 # in production environments by default.
-gem 'coffee-rails', '~> 4.1.0'
+gem 'coffee-rails', '~> 5.0.0'
 
 # Premailer
 gem 'premailer-rails'
+
+
 gem 'nokogiri'
-gem 'sass-rails', '~> 5.0.4'
+gem 'sass-rails', '~> 6.0.0'
 
 # Canonical Rails
-gem 'canonical-rails', '~> 0.2.5'
+gem 'canonical-rails', '~> 0.2.12'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', :platforms => :ruby
@@ -65,6 +68,8 @@ gem 'jquery-rails'
 
 #Reverse Proxy to bring in blog.neueve.com under neueve.com/blog
 gem 'rack-reverse-proxy', :require => 'rack/reverse_proxy', :git => 'git://github.com/waterlink/rack-reverse-proxy.git'
+
+gem 'bootsnap'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

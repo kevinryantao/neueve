@@ -1,10 +1,11 @@
 // Custom bootstrap variables must be set or imported *before* bootstrap.
-// @import "user/custom";
 
 @import "owl.carousel/owl.carousel.min";
 @import "owl.carousel/owl.theme.default.min";
 @import "ekko-lightbox/ekko-lightbox";
 @import "style.default";
+
+@import "font-awesome";
 
 //
 ///*
@@ -17,8 +18,4 @@
 // * You're free to add application-wide styles to this file and they'll appear at the top of the
 // * compiled file, but it's generally better to create a new file per style scope.
 // *
-// *= require font-awesome
-// *= require bootstrap
-// *= require_directory .
-// *= require_self
 // */
