@@ -421,6 +421,7 @@
                 lineItem.product_id = '<%= @pdt_data["item_number#{i}"] %>';
                 lineItem.product_quantity = '<%= @pdt_data["quantity#{i}"] %>';
                 lineItem.product_price = '<%= (@pdt_data["mc_gross_#{i}"].to_f)/(@pdt_data["quantity#{i}"].to_i) %>';
+                lineItems.push(lineItem);
             <% end %>
             pintrk('track', 'checkout', {
                 value: '<%= @pdt_data['payment_gross'] %>',
