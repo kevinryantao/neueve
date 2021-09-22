@@ -324,7 +324,7 @@
                             affiliation: 'NeuEve Store - Online',
                             currency: "USD",
                             item_brand: "NeuEve",
-                            price: '<%= @pdt_data["mc_gross_#{i}"] %>',
+                            price: '<%= (@pdt_data["mc_gross_#{i}"].to_f)/(@pdt_data["quantity#{i}"].to_i) %>',
                             quantity: '<%= @pdt_data["quantity#{i}"] %>'
                         },
                     <% end %>
@@ -414,11 +414,30 @@
 <!-- Pinterest Tracking -->
 <script>
     <% if @pdt_data.present? && @pdt_data.size > 0 %>
-        pintrk('track', 'checkout', {
-            value: '<%= @pdt_data['payment_gross'] %>',
-            currency: 'USD',
-            order_id: '<%= @pdt_data['txn_id'] %>'
-        });
+        <% if @pdt_data['num_cart_items'].to_i > 0 %>
+            var lineItems = [];
+            <% for i in 1..@pdt_data['num_cart_items'].to_i %>
+                var lineItem = {};
+                lineItem.product_id = '<%= @pdt_data["item_number#{i}"] %>';
+                lineItem.product_quantity = '<%= @pdt_data["quantity#{i}"] %>';
+                lineItem.product_price = '<%= (@pdt_data["mc_gross_#{i}"].to_f)/(@pdt_data["quantity#{i}"].to_i) %>';
+            <% end %>
+            pintrk('track', 'checkout', {
+                value: '<%= @pdt_data['payment_gross'] %>',
+                currency: 'USD',
+                line_items: lineItems,
+                order_id: '<%= @pdt_data['txn_id'] %>'
+            });
+
+        <% else %>
+            pintrk('track', 'checkout', {
+                value: '<%= @pdt_data['payment_gross'] %>',
+                currency: 'USD',
+                order_quantity: '1',
+                product_id: '<%= @pdt_data["item_number"] %>',
+                order_id: '<%= @pdt_data['txn_id'] %>'
+            });
+        <% end %>
     <% end %>
 </script>
 
