@@ -10,11 +10,11 @@
                                 <svg class="svg-icon">
                                     <use xlink:href="#shipping-box-1"></use>
                                 </svg>
-                                Free Shipping
+                                <%= link_to('Free Shipping', shipping_path)  %>
                             </li>
                             <li class="list-inline-item px-3 border-left d-none d-md-inline-block">
                                 <i class="far fa-smile-beam svg-icon"></i>
-                                <%= link_to('Satisfaction Guaranteed', satisfaction_path, :class => 'text-gray-700')  %>
+                                <%= link_to('Satisfaction Guaranteed', satisfaction_path, :class => 'text-blue')  %>
                             </li>
                         </ul>
                     </div>

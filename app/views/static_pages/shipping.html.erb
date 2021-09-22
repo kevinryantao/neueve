@@ -1,0 +1,119 @@
+<% provide(:title, 'Shipping Policy') %>
+<% provide(:description, 'Free Shipping to the United States in 3-5 days. International Shipping costs $12.') %>
+<% provide(:last_modified, 'Sept 22, 2021') %>
+
+<section class="hero">
+    <div class="container">
+        <!-- Breadcrumbs -->
+        <ol class="breadcrumb justify-content-center">
+            <li class="breadcrumb-item">
+                <%= link_to 'Home', root_path %>
+            </li>
+            <li class="breadcrumb-item active">Shipping Policies</li>
+        </ol>
+        <!-- Hero Content-->
+        <div class="hero-content pb-5 text-center">
+            <h1 class="hero-heading">NeuEve Shipping Policies</h1>
+        </div>
+
+    </div>
+</section>
+
+<!-- Shipping Policies -->
+<section class="pb-5">
+    <div class="container">
+        <div class="py-4">
+            <h2 class="mb-5 text-muted">Domestic Shipping Policy</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Shipment processing time</h5>
+                    <p class="text-muted mb-4">All orders are processed and shipped out the next business day via USPS,
+                        in discreet packaging. The cut-off time is midnight, central time. To cancel or modify an order,
+                        you must notify us before midnight.</p>
+                    <h5>Shipping rates and delivery estimates</h5>
+                    <p class="text-muted mb-4"><strong>All US orders are free shipping</strong>, including Hawaii, Alaska, and APO/FPO
+                        addresses. We ship from Chicago and Los Angeles.
+                    </p>
+                    <p class="text-muted mb-4">
+                        It takes an average of 2 days to get to CA, IL,
+                        AZ, IN, WI, MI. It takes an average of 4 days to get to RI, NH, MA, MS, DE, VT, LA, AK, CT, ND.
+                        Everywhere else in the continental US takes about 3 days.
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <h5>Shipment confirmation and order tracking</h5>
+                    <p class="text-muted mb-4">After your package ships, you will receive an email from ShipBob with your tracking information. Please add <%= mail_to "marketing@shipbob.com" %>  to your address book so it doesn't go to your spam folder.</p>
+                    <p class="text-muted mb-4">Because we ship with USPS, sometimes USPS is very slow with scanning and package tracking.</p>
+
+                    <h5>Damages / Summertime Heat</h5>
+                    <p class="text-muted mb-4">NeuEve is formulated to melt at body temperature, and it's manufactured
+                        at 180 degrees F, so heat won't damage it. In the summertime, please place NeuEve in the
+                        refrigerator for 6 hours when you receive your package, to resolidify it.</p>
+                    <p class="text-muted mb-4">If your package is missing or damaged, please
+                        <a href="#" data-reamaze-lightbox="contact" data-reamaze-lightbox-anchored="true">live chat with us</a>
+                        and we will do our best to make things right.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <hr class="bg-gray-500">
+        <div class="py-4">
+            <h2 class="mb-5 text-muted">International Shipping Policy</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Shipping Rates</h5>
+                    <p class="text-muted mb-4">Shipping Internationally costs $12. We ship via USPS or DHL.</p>
+                    <h5>Customs, duties, and taxes</h5>
+                    <p class="text-muted mb-4">NeuEve is not responsible for any customs and taxes applied to your
+                        order. All fees imposed during or after shipping are the responsibility of the customer
+                        (tariffs, taxes, etc.).
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <h5>Countries We Ship To</h5>
+                    <p class="text-muted mb-4">We ship to all countries.</p>
+                </div>
+            </div>
+        </div>
+        <hr class="bg-gray-500">
+        <div class="py-4">
+            <h2 class="mb-5 text-muted">Return and Satisfaction Policy</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Return Policy</h5>
+                    <p class="text-muted mb-4">For health reasons of our employees and our customers, <strong>especially due to
+                        the COVID-19 pandemic,</strong> NeuEve products are not able to be restocked. We cannot accept returns
+                        for NeuEve vaginal suppositories, NeuEve vaginal cream, or NeuEve vaginal applicators.</p>
+                </div>
+                <div class="col-md-6">
+                    <h5>100% Satisfaction Guarantee Policy</h5>
+                    <p class="text-muted mb-4">Our organic ingredients are the best quality. Our suppositories and
+                        creams are completely jam-packed with vitamins and nutrients. We are so confident you will be
+                        satisfied with NeuEve that we will give you your money back if you are unsatisfied.
+                    </p>
+                    <p class="text-muted mb-4">
+                        Please email <%= mail_to "satisfaction@neueve.com" %>.
+                    </p>
+                    <ul class="text-muted mb-4">
+                        <li>
+                            Only if you have fully finished using our product for 30 days and have seen no progress.
+                        </li>
+                        <li>
+                            Limited to one box (excluding $10 for shipping and handling) per customer for life, to prevent abuse.
+                        </li>
+                        <li>
+                            Limited to full-priced purchase only. Special discount deals, including subscription and bulk discount purchase, are not refundable.
+                        </li>
+                        <li>
+                            This offer is good for 90 days from the date of purchase.
+                        </li>
+                    </ul>
+                    <h5>Satisfaction Policy Terms and Conditions</h5>
+                    <p class="text-muted mb-4">
+                        <%=link_to 'Full Terms of Policy', satisfaction_path %>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
