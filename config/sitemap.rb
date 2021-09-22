@@ -53,6 +53,7 @@ SitemapGenerator::Sitemap.create do
   add contact_path, priority: 1
   add which_formula_path, priority: 1
   add satisfaction_path, priority: 1
+  add shipping_path, priority: 1
 
   add reviews_path, priority: 1
   add dmannose_path, priority: 1

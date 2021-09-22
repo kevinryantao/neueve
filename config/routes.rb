@@ -37,6 +37,7 @@ Lavax::Application.routes.draw do
   match '/reviews' => 'static_pages#reviews', :via => :get
   match '/satisfaction' => 'static_pages#satisfaction', :via => :get
   match '/which_formula' => 'static_pages#which_formula', :via => :get
+  match '/shipping' => 'static_pages#shipping', :via => :get
 
   match '/search' => 'static_pages#search', :via => :get
 
