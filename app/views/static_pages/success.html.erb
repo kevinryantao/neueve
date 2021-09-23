@@ -346,7 +346,7 @@
     <% end %>
 </script>
 
-<!-- Facebook Conversion Tracking -->
+<!-- Facebook Conversion Tracking https://developers.facebook.com/docs/facebook-pixel/reference#standard-events -->
 <script>
 
     var contents = [];
@@ -391,11 +391,44 @@
     <% end %>
 </script>
 
-<!-- BING CONVERSION TRACKING -->
+<!-- BING CONVERSION TRACKING https://help.ads.microsoft.com/#apex/ads/en/60118/-1 -->
 <script>
     window.uetq = window.uetq || [];
     <% if @pdt_data.present? && @pdt_data.size > 0 %>
-        window.uetq.push('event', '', {'revenue_value': '<%= @pdt_data['payment_gross'] %>', 'currency': 'USD'});
+        var items = [];
+        var ecomm_prod_ids = [];
+        <% if @pdt_data['num_cart_items'].to_i > 0 %>
+            <% for i in 1..@pdt_data['num_cart_items'].to_i %>
+                ecomm_prod_ids.push('<%= @pdt_data["item_number#{i}"] %>');
+                items.push(
+                        {
+                            'id': '<%= @pdt_data["item_number#{i}"] %>',
+                            'quantity': '<%= @pdt_data["quantity#{i}"] %>',
+                            'price': <%= (@pdt_data["mc_gross_#{i}"].to_f)/(@pdt_data["quantity#{i}"].to_i) %>
+                        }
+                );
+            <% end %>
+
+        <% else %>
+            ecomm_prod_ids.push('<%= @pdt_data["item_number"] %>');
+            items.push(
+                    {
+                        'id': '<%= @pdt_data["item_number"] %>',
+                        'quantity': '1',
+                        'price': '<%= @pdt_data["mc_gross"] %>'
+                    }
+            );
+        <% end %>
+
+        window.uetq.push('event', 'purchase', {
+            'transaction_id': '<%= @pdt_data['txn_id'] %>',
+            'ecomm_prodid': ecomm_prod_ids,
+            'ecomm_pagetype': 'purchase',
+            'ecomm_totalvalue': '<%= @pdt_data['payment_gross'] %>',
+            'items': items,
+            'revenue_value': '<%= @pdt_data['payment_gross'] %>',
+            'currency': 'USD'
+        });
     <% end %>
 </script>
 
