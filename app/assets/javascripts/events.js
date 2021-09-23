@@ -32,8 +32,7 @@ $('.subscribe-button').on('click', function () {
   ga('send', 'event', 'button', 'click', 'Subscribe');
   var uetq = uetq || [];
   uetq.push({'ec': 'button', 'ea': 'click', 'el': 'Subscribe', 'ev': 52});
-  // Send to Facebook Pixel
-  fbq('track', 'Purchase', {value: 52, currency: 'USD'});
+  fbq('track', 'AddToCart');
 });
 
 $('a.amazon-review').on('click', function () {

@@ -6,7 +6,21 @@
     t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
       document,'script','https://connect.facebook.net/en_US/fbevents.js');
 
-  fbq('init', '1742685622682471');
+  <% if @pdt_data.present? && @pdt_data.size > 0 %>
+      fbq('init', '1742685622682471', {
+          em: '<%= @pdt_data['payer_email'] %>'.toLowerCase(),
+          fn: '<%= @pdt_data['first_name'] %>'.toLowerCase(),
+          ln: '<%= @pdt_data['last_name'] %>'.toLowerCase(),
+          ph: '<%= @pdt_data['contact_phone'] %>',
+          ct: '<%= @pdt_data['address_city'] %>'.toLowerCase().replace(/\s/g, ''),
+          st: '<%= @pdt_data['address_state'] %>'.toLowerCase(),
+          zp: '<%= @pdt_data['address_zip'] %>',
+          country: '<%= @pdt_data['address_country'] %>'.toLowerCase()
+      });
+  <% else %>
+      fbq('init', '1742685622682471');
+  <% end %>
+
   fbq('track', "PageView");
 </script>
 <noscript><img height="1" width="1" style="display:none"

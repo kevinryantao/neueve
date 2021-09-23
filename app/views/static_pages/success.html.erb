@@ -258,27 +258,27 @@
 <script type="text/javascript">
     <% if @pdt_data.present? && @pdt_data.size > 0 %>
 
-    <% if @pdt_data['num_cart_items'].to_i > 0 %>
-    <% for i in 1..@pdt_data['num_cart_items'].to_i %>
-    ga('ec:addProduct', {
-        'id': '<%= @pdt_data["item_number#{i}"] %>',
-        'name': '<%= @pdt_data["item_name#{i}"] %>',
-        'brand': 'NeuEve',
-        'category': 'ala-carte',
-        'price': '<%= @pdt_data["mc_gross_#{i}"] %>',
-        'quantity': '<%= @pdt_data["quantity#{i}"] %>'
-    });
-    <% end %>
-    <% else %>
-    ga('ec:addProduct', {
-        'id': '<%= @pdt_data["item_number"] %>',
-        'name': '<%= @pdt_data["item_name"] %>',
-        'brand': 'NeuEve',
-        'category': 'subscription',
-        'price': '<%= @pdt_data["mc_gross"] %>',
-        'quantity': '1'
-    });
-    <% end %>
+        <% if @pdt_data['num_cart_items'].to_i > 0 %>
+            <% for i in 1..@pdt_data['num_cart_items'].to_i %>
+                ga('ec:addProduct', {
+                    'id': '<%= @pdt_data["item_number#{i}"] %>',
+                    'name': '<%= @pdt_data["item_name#{i}"] %>',
+                    'brand': 'NeuEve',
+                    'category': 'ala-carte',
+                    'price': '<%= (@pdt_data["mc_gross_#{i}"].to_f)/(@pdt_data["quantity#{i}"].to_i) %>',
+                    'quantity': '<%= @pdt_data["quantity#{i}"] %>'
+                });
+            <% end %>
+        <% else %>
+            ga('ec:addProduct', {
+                'id': '<%= @pdt_data["item_number"] %>',
+                'name': '<%= @pdt_data["item_name"] %>',
+                'brand': 'NeuEve',
+                'category': 'subscription',
+                'price': '<%= @pdt_data["mc_gross"] %>',
+                'quantity': '1'
+            });
+        <% end %>
 
     ga('ec:setAction', 'purchase', {                              // Transaction details are provided in an actionFieldObject.
         'id': '<%= @pdt_data['txn_id'] %>',                         // (Required) Transaction id (string).
@@ -344,25 +344,51 @@
     });
 
     <% end %>
+</script>
 
-    var urlParams;
-    (window.onpopstate = function () {
-        var match,
-            pl     = /\+/g,  // Regex for replacing addition symbol with a space
-            search = /([^&=]+)=?([^&]*)/g,
-            decode = function (s) {
-                return decodeURIComponent(s.replace(pl, " "));
-            },
-            query  = window.location.search.substring(1);
+<!-- Facebook Conversion Tracking -->
+<script>
 
-        urlParams = {};
-        while (match = search.exec(query)) {
-            urlParams[decode(match[1])] = decode(match[2]);
-        }
-        // Send to Facebook Pixel
-        fbq('track', 'Purchase', {value: urlParams['amt'], currency: 'USD'});
-    })();
+    var contents = [];
+    var content_ids = [];
 
+    <% if @pdt_data.present? && @pdt_data.size > 0 %>
+        <% if @pdt_data['num_cart_items'].to_i > 0 %>
+            <% for i in 1..@pdt_data['num_cart_items'].to_i %>
+                content_ids.push('<%= @pdt_data["item_number#{i}"] %>');
+                contents.push(
+                        {
+                            'id': '<%= @pdt_data["item_number#{i}"] %>',
+                            'quantity': '<%= @pdt_data["quantity#{i}"] %>'
+                        }
+                );
+            <% end %>
+
+            // Send to Facebook Pixel
+            fbq('track', 'Purchase', {
+                content_type: 'product',
+                contents: contents,
+                content_ids: content_ids,
+                value: '<%= @pdt_data['payment_gross'] %>',
+                currency: 'USD'});
+        <% else %>
+            content_ids.push('<%= @pdt_data["item_number"] %>');
+            contents.push(
+                    {
+                        'id': '<%= @pdt_data["item_number"] %>',
+                        'quantity': '1'
+                    }
+            );
+            // Send to Facebook Pixel
+            fbq('track', 'Subscribe',
+                {
+                    content_type: 'product',
+                    contents: contents,
+                    content_ids: content_ids,
+                    value: '<%= @pdt_data['payment_gross'] %>',
+                    currency: 'USD'});
+        <% end %>
+    <% end %>
 </script>
 
 <!-- BING CONVERSION TRACKING -->
