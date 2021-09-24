@@ -1,6 +1,23 @@
 <!-- Global site tag (gtag.js) - Google AdWords: 1039056375 -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-1039056375"></script>
 <script>
+    <!-- https://support.google.com/google-ads/answer/9888145 -->
+    <% if @pdt_data.present? && @pdt_data.size > 0 %>
+    var enhanced_conversion_data = {
+        email: '<%= @pdt_data['payer_email'] %>',
+        phone_number: '<%= @pdt_data['contact_phone'] %>',
+        first_name: '<%= @pdt_data['first_name'] %>',
+        last_name: '<%= @pdt_data['last_name'] %>',
+        home_address: {
+            street: '<%= @pdt_data['address_street'] %>',
+            city: '<%= @pdt_data['address_city'] %>',
+            region: '<%= @pdt_data['address_state'] %>',
+            postal_code: '<%= @pdt_data['address_zip'] %>',
+            country: '<%= @pdt_data['address_country'] %>'
+        }
+    };
+    <% end %>
+
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
