@@ -256,54 +256,101 @@
 
 
 <script type="text/javascript">
+
+    var adwordsItems = [];
+
     <% if @pdt_data.present? && @pdt_data.size > 0 %>
 
         <% if @pdt_data['num_cart_items'].to_i > 0 %>
             <% for i in 1..@pdt_data['num_cart_items'].to_i %>
                 ga('ec:addProduct', {
-                    'id': '<%= @pdt_data["item_number#{i}"] %>',
-                    'name': '<%= @pdt_data["item_name#{i}"] %>',
-                    'brand': 'NeuEve',
-                    'category': 'ala-carte',
-                    'price': '<%= (@pdt_data["mc_gross_#{i}"].to_f)/(@pdt_data["quantity#{i}"].to_i) %>',
-                    'quantity': '<%= @pdt_data["quantity#{i}"] %>'
+                    id: '<%= @pdt_data["item_number#{i}"] %>',
+                    name: '<%= @pdt_data["item_name#{i}"] %>',
+                    brand: 'NeuEve',
+                    category: 'ala-carte',
+                    price: '<%= (@pdt_data["mc_gross_#{i}"].to_f)/(@pdt_data["quantity#{i}"].to_i) %>',
+                    quantity: '<%= @pdt_data["quantity#{i}"] %>'
+                });
+                adwordsItems.push({
+                    id: '<%= @pdt_data["item_number#{i}"] %>',
+                    price: '<%= (@pdt_data["mc_gross_#{i}"].to_f)/(@pdt_data["quantity#{i}"].to_i) %>',
+                    quantity: '<%= @pdt_data["quantity#{i}"] %>'
                 });
             <% end %>
         <% else %>
             ga('ec:addProduct', {
-                'id': '<%= @pdt_data["item_number"] %>',
-                'name': '<%= @pdt_data["item_name"] %>',
-                'brand': 'NeuEve',
-                'category': 'subscription',
-                'price': '<%= @pdt_data["mc_gross"] %>',
-                'quantity': '1'
+                id: '<%= @pdt_data["item_number"] %>',
+                name: '<%= @pdt_data["item_name"] %>',
+                brand: 'NeuEve',
+                category: 'subscription',
+                price: '<%= @pdt_data["mc_gross"] %>',
+                quantity: '1'
+            });
+            adwordsItems.push({
+                id: '<%= @pdt_data["item_number"] %>',
+                price: '<%= @pdt_data["mc_gross"] %>',
+                quantity: '1'
             });
         <% end %>
 
     ga('ec:setAction', 'purchase', {                              // Transaction details are provided in an actionFieldObject.
-        'id': '<%= @pdt_data['txn_id'] %>',                         // (Required) Transaction id (string).
-        'affiliation': 'NeuEve Store - Online',                   // Affiliation (string).
-        'revenue': '<%= @pdt_data['payment_gross'] %>',             // Revenue (currency).
-        'tax': '<%= @pdt_data['tax'] %>',                           // Tax (currency).
-        'shipping': '<%= @pdt_data['mc_shipping'] %>'               // Shipping (currency).
+        id: '<%= @pdt_data['txn_id'] %>',                         // (Required) Transaction id (string).
+        affiliation: 'NeuEve Store - Online',                   // Affiliation (string).
+        revenue: '<%= @pdt_data['payment_gross'] %>',             // Revenue (currency).
+        tax: '<%= @pdt_data['tax'] %>',                           // Tax (currency).
+        shipping: '<%= @pdt_data['mc_shipping'] %>'               // Shipping (currency).
     });
+
 
     <!-- Event snippet for NeuEve Purchase conversion page -->
     gtag('event', 'conversion', {
-        'send_to': 'AW-1039056375/-bxQCMDw24QBEPf7uu8D',
-        'value': <%= @pdt_data['payment_gross'] %>,
-        'currency': 'USD',
-        'transaction_id': '<%= @pdt_data['txn_id'] %>',
-        'email': '<%= @pdt_data['payer_email'] %>',
-        'phone_number': '<%= @pdt_data['contact_phone'] %>',
-        'first_name': '<%= @pdt_data['first_name'] %>',
-        'last_name': '<%= @pdt_data['last_name'] %>',
-        'home_address.street': '<%= @pdt_data['address_street'] %>',
-        'home_address.city': '<%= @pdt_data['address_city'] %>',
-        'home_address.region': '<%= @pdt_data['address_state'] %>',
-        'home_address.postal_code': '<%= @pdt_data['address_zip'] %>',
-        'home_address.country': '<%= @pdt_data['address_country'] %>'
+        send_to: 'AW-1039056375/-bxQCMDw24QBEPf7uu8D',
+        value: <%= @pdt_data['payment_gross'] %>,
+        currency: 'USD',
+        transaction_id: '<%= @pdt_data['txn_id'] %>',
+        email: '<%= @pdt_data['payer_email'] %>',
+        phone_number: '<%= @pdt_data['contact_phone'] %>',
+        first_name: '<%= @pdt_data['first_name'] %>',
+        last_name: '<%= @pdt_data['last_name'] %>',
+        home_address: {
+            street: '<%= @pdt_data['address_street'] %>',
+            city: '<%= @pdt_data['address_city'] %>',
+            region: '<%= @pdt_data['address_state'] %>',
+            postal_code: '<%= @pdt_data['address_zip'] %>',
+            country: '<%= @pdt_data['address_country'] %>'
+        },
+        items: adwordsItems,
+        aw_merchant_id: 16657021,
+        aw_feed_country: 'US',
+        aw_feed_language: 'EN'
     });
+
+    var items = [];
+    <% if @pdt_data.present? && @pdt_data.size > 0 %>
+        <% if @pdt_data['num_cart_items'].to_i > 0 %>
+            <% for i in 1..@pdt_data['num_cart_items'].to_i %>
+                items.push({
+                        item_id: '<%= @pdt_data["item_number#{i}"] %>',
+                        item_name: '<%= @pdt_data["item_name#{i}"] %>',
+                        affiliation: 'NeuEve Store - Online',
+                        currency: "USD",
+                        item_brand: "NeuEve",
+                        price: '<%= (@pdt_data["mc_gross_#{i}"].to_f)/(@pdt_data["quantity#{i}"].to_i) %>',
+                        quantity: '<%= @pdt_data["quantity#{i}"] %>'
+                });
+            <% end %>
+        <% else %>
+            items.push({
+                    item_id: '<%= @pdt_data["item_number"] %>',
+                    item_name: '<%= @pdt_data["item_name"] %>',
+                    affiliation: 'NeuEve Store - Online',
+                    currency: "USD",
+                    item_brand: "NeuEve",
+                    price: '<%= @pdt_data["mc_gross"] %>',
+                    quantity: 1
+            });
+        <% end %>
+    <% end %>
 
     <!-- GA4 Event for Purchase -->
     <!-- developers.google.com/analytics/devguides/collection/ga4/ecommerce#purchase -->
@@ -314,33 +361,7 @@
         affiliation: 'NeuEve Store - Online',
         shipping: <%= @pdt_data['mc_shipping'] %>,
         tax: <%= @pdt_data['tax'] %>,
-        items: [
-            <% if @pdt_data.present? && @pdt_data.size > 0 %>
-                <% if @pdt_data['num_cart_items'].to_i > 0 %>
-                    <% for i in 1..@pdt_data['num_cart_items'].to_i %>
-                        {
-                            item_id: '<%= @pdt_data["item_number#{i}"] %>',
-                            item_name: '<%= @pdt_data["item_name#{i}"] %>',
-                            affiliation: 'NeuEve Store - Online',
-                            currency: "USD",
-                            item_brand: "NeuEve",
-                            price: '<%= (@pdt_data["mc_gross_#{i}"].to_f)/(@pdt_data["quantity#{i}"].to_i) %>',
-                            quantity: '<%= @pdt_data["quantity#{i}"] %>'
-                        },
-                    <% end %>
-                <% else %>
-                {
-                    item_id: '<%= @pdt_data["item_number"] %>',
-                    item_name: '<%= @pdt_data["item_name"] %>',
-                    affiliation: 'NeuEve Store - Online',
-                    currency: "USD",
-                    item_brand: "NeuEve",
-                    price: '<%= @pdt_data["mc_gross"] %>',
-                    quantity: 1
-                }
-                <% end %>
-            <% end %>
-        ],
+        items: items
     });
 
     <% end %>
