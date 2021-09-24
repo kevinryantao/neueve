@@ -277,7 +277,32 @@
                     quantity: '<%= @pdt_data["quantity#{i}"] %>'
                 });
             <% end %>
-        <% else %>
+
+            <!-- Event snippet for NeuEve Purchase conversion page -->
+            gtag('event', 'conversion', {
+                send_to: 'AW-1039056375/-bxQCMDw24QBEPf7uu8D',
+                value: <%= @pdt_data['payment_gross'] %>,
+                currency: 'USD',
+                transaction_id: '<%= @pdt_data['txn_id'] %>',
+                email: '<%= @pdt_data['payer_email'] %>',
+                phone_number: '<%= @pdt_data['contact_phone'] %>',
+                first_name: '<%= @pdt_data['first_name'] %>',
+                last_name: '<%= @pdt_data['last_name'] %>',
+                home_address: {
+                    street: '<%= @pdt_data['address_street'] %>',
+                    city: '<%= @pdt_data['address_city'] %>',
+                    region: '<%= @pdt_data['address_state'] %>',
+                    postal_code: '<%= @pdt_data['address_zip'] %>',
+                    country: '<%= @pdt_data['address_country'] %>'
+                },
+                items: adwordsItems,
+                aw_merchant_id: 16657021,
+                aw_feed_country: 'US',
+                aw_feed_language: 'EN'
+            });
+
+
+    <% else %>
             ga('ec:addProduct', {
                 id: '<%= @pdt_data["item_number"] %>',
                 name: '<%= @pdt_data["item_name"] %>',
@@ -291,7 +316,31 @@
                 price: '<%= @pdt_data["mc_gross"] %>',
                 quantity: '1'
             });
-        <% end %>
+
+            <!-- Event snippet for NeuEve Subscribe conversion page -->
+            gtag('event', 'conversion', {
+                send_to: 'AW-1039056375/-1APOCIaQjeABEPf7uu8D',
+                value: <%= @pdt_data['payment_gross'] %>,
+                currency: 'USD',
+                transaction_id: '<%= @pdt_data['txn_id'] %>',
+                email: '<%= @pdt_data['payer_email'] %>',
+                phone_number: '<%= @pdt_data['contact_phone'] %>',
+                first_name: '<%= @pdt_data['first_name'] %>',
+                last_name: '<%= @pdt_data['last_name'] %>',
+                home_address: {
+                    street: '<%= @pdt_data['address_street'] %>',
+                    city: '<%= @pdt_data['address_city'] %>',
+                    region: '<%= @pdt_data['address_state'] %>',
+                    postal_code: '<%= @pdt_data['address_zip'] %>',
+                    country: '<%= @pdt_data['address_country'] %>'
+                },
+                items: adwordsItems,
+                aw_merchant_id: 16657021,
+                aw_feed_country: 'US',
+                aw_feed_language: 'EN'
+            });
+
+    <% end %>
 
     ga('ec:setAction', 'purchase', {                              // Transaction details are provided in an actionFieldObject.
         id: '<%= @pdt_data['txn_id'] %>',                         // (Required) Transaction id (string).
@@ -299,30 +348,6 @@
         revenue: '<%= @pdt_data['payment_gross'] %>',             // Revenue (currency).
         tax: '<%= @pdt_data['tax'] %>',                           // Tax (currency).
         shipping: '<%= @pdt_data['mc_shipping'] %>'               // Shipping (currency).
-    });
-
-
-    <!-- Event snippet for NeuEve Purchase conversion page -->
-    gtag('event', 'conversion', {
-        send_to: 'AW-1039056375/-bxQCMDw24QBEPf7uu8D',
-        value: <%= @pdt_data['payment_gross'] %>,
-        currency: 'USD',
-        transaction_id: '<%= @pdt_data['txn_id'] %>',
-        email: '<%= @pdt_data['payer_email'] %>',
-        phone_number: '<%= @pdt_data['contact_phone'] %>',
-        first_name: '<%= @pdt_data['first_name'] %>',
-        last_name: '<%= @pdt_data['last_name'] %>',
-        home_address: {
-            street: '<%= @pdt_data['address_street'] %>',
-            city: '<%= @pdt_data['address_city'] %>',
-            region: '<%= @pdt_data['address_state'] %>',
-            postal_code: '<%= @pdt_data['address_zip'] %>',
-            country: '<%= @pdt_data['address_country'] %>'
-        },
-        items: adwordsItems,
-        aw_merchant_id: 16657021,
-        aw_feed_country: 'US',
-        aw_feed_language: 'EN'
     });
 
     var items = [];
