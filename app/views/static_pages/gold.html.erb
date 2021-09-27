@@ -599,4 +599,31 @@ Using at bedtime is desirable. Do not use during menses.
     pintrk('track', 'pagevisit', {
         product_id: "gold"
     });
+
+
+    <!-- Bing View Item -->
+    window.uetq = window.uetq || [];
+    window.uetq.push('event', '', {
+                'ecomm_prodid': ["gold"],
+                'ecomm_pagetype': 'product'
+            }
+    );
+
+    <!-- Facebook View Item -->
+    fbq('track', 'ViewContent', {
+        content_type: 'product',
+        content_ids: ['gold'],
+        value: 0.50,
+        currency: 'USD'});
+
+    <!-- Google Adwords View Item support.google.com/google-ads/answer/7305793 -->
+    gtag('event', 'page_view', {
+        'send_to': 'AW-1039056375',
+        'items': [{
+            'id': 'gold',
+            'google_business_vertical': 'retail'
+        }],
+        'ecomm_pagetype': 'product',
+        'ecomm_prodid': 'gold'
+    });
 </script>
