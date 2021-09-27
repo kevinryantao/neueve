@@ -563,4 +563,30 @@ Using at bedtime is desirable. Do not use during menses.
     pintrk('track', 'pagevisit', {
         product_id: "silk"
     });
+
+    <!-- Bing View Item -->
+    window.uetq = window.uetq || [];
+    window.uetq.push('event', '', {
+                'ecomm_prodid': ["silk"],
+                'ecomm_pagetype': 'product'
+            }
+    );
+
+    <!-- Facebook View Item -->
+    fbq('track', 'ViewContent', {
+        content_type: 'product',
+        content_ids: ['silk'],
+        value: 0.50,
+        currency: 'USD'});
+
+    <!-- Google Adwords View Item support.google.com/google-ads/answer/7305793 -->
+    gtag('event', 'page_view', {
+        'send_to': 'AW-1039056375',
+        'items': [{
+            'id': 'silk',
+            'google_business_vertical': 'retail'
+        }],
+        'ecomm_pagetype': 'product',
+        'ecomm_prodid': 'silk'
+    });
 </script>
