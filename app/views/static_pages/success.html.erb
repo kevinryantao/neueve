@@ -258,6 +258,7 @@
 <script type="text/javascript">
 
     var adwordsItems = [];
+    var ecomm_prod_ids = [];
 
     <% if @pdt_data.present? && @pdt_data.size > 0 %>
 
@@ -276,6 +277,7 @@
                     price: '<%= (@pdt_data["mc_gross_#{i}"].to_f)/(@pdt_data["quantity#{i}"].to_i) %>',
                     quantity: '<%= @pdt_data["quantity#{i}"] %>'
                 });
+                ecomm_prod_ids.push('<%= @pdt_data["item_number#{i}"] %>');
             <% end %>
 
             <!-- Event snippet for NeuEve Purchase conversion page -->
@@ -298,7 +300,9 @@
                 items: adwordsItems,
                 aw_merchant_id: 16657021,
                 aw_feed_country: 'US',
-                aw_feed_language: 'EN'
+                aw_feed_language: 'EN',
+                ecomm_pagetype: 'purchase',
+                ecomm_prodids: ecomm_prod_ids
             });
 
 
@@ -316,6 +320,7 @@
                 price: '<%= @pdt_data["mc_gross"] %>',
                 quantity: '1'
             });
+            ecomm_prod_ids.push('<%= @pdt_data["item_number"] %>');
 
             <!-- Event snippet for NeuEve Subscribe conversion page -->
             gtag('event', 'conversion', {
@@ -337,7 +342,9 @@
                 items: adwordsItems,
                 aw_merchant_id: 16657021,
                 aw_feed_country: 'US',
-                aw_feed_language: 'EN'
+                aw_feed_language: 'EN',
+                ecomm_pagetype: 'purchase',
+                ecomm_prodids: ecomm_prod_ids
             });
 
     <% end %>
