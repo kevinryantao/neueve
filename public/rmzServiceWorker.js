@@ -1,0 +1,1 @@
+importScripts('https://push.reamaze.com/sdks/rmzServiceWorker.js');

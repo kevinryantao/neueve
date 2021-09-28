@@ -42,3 +42,21 @@
         orders: {}
     };
 </script>
+<script type="text/javascript">
+    <% if @pdt_data.present? && @pdt_data.size > 0 %>
+        _support['user'] = {
+            email: '<%= @pdt_data['payer_email'] %>',
+            name: '<%= @pdt_data['first_name'] %> <%= @pdt_data['last_name'] %>',
+            phone: '<%= @pdt_data['contact_phone'] %>'
+        };
+
+        _support['user']['data'] = {
+            phone: '<%= @pdt_data['contact_phone'] %>',
+            street: '<%= @pdt_data['address_street'] %>',
+            city: '<%= @pdt_data['address_city'] %>',
+            region: '<%= @pdt_data['address_state'] %>',
+            postal_code: '<%= @pdt_data['address_zip'] %>',
+            country: '<%= @pdt_data['address_country'] %>'
+        };
+    <% end %>
+</script>
