@@ -255,8 +255,7 @@
 </section>
 
 
-<script type="text/javascript">
-
+<script>
     var adwordsItems = [];
     var ecomm_prod_ids = [];
 
@@ -280,7 +279,7 @@
                 ecomm_prod_ids.push('<%= @pdt_data["item_number#{i}"] %>');
             <% end %>
 
-            <!-- Event snippet for NeuEve Purchase conversion page -->
+            // Event snippet for NeuEve Purchase conversion page
             gtag('event', 'conversion', {
                 send_to: 'AW-1039056375/-bxQCMDw24QBEPf7uu8D',
                 value: <%= @pdt_data['payment_gross'] %>,
@@ -322,7 +321,7 @@
             });
             ecomm_prod_ids.push('<%= @pdt_data["item_number"] %>');
 
-            <!-- Event snippet for NeuEve Subscribe conversion page -->
+            // Event snippet for NeuEve Subscribe conversion page
             gtag('event', 'conversion', {
                 send_to: 'AW-1039056375/1APOCIaQjeABEPf7uu8D',
                 value: <%= @pdt_data['payment_gross'] %>,
@@ -351,10 +350,10 @@
 
     ga('ec:setAction', 'purchase', {                              // Transaction details are provided in an actionFieldObject.
         id: '<%= @pdt_data['txn_id'] %>',                         // (Required) Transaction id (string).
-        affiliation: 'NeuEve Store - Online',                   // Affiliation (string).
+        affiliation: 'NeuEve Store - Online',                     // Affiliation (string).
         revenue: '<%= @pdt_data['payment_gross'] %>',             // Revenue (currency).
-        tax: '<%= @pdt_data['tax'] %>',                           // Tax (currency).
-        shipping: '<%= @pdt_data['mc_shipping'] %>'               // Shipping (currency).
+        tax: '<%= @pdt_data['tax'].to_f %>',                           // Tax (currency).
+        shipping: '<%= @pdt_data['mc_shipping'].to_f %>'               // Shipping (currency).
     });
 
     var items = [];
@@ -384,15 +383,15 @@
         <% end %>
     <% end %>
 
-    <!-- GA4 Event for Purchase -->
-    <!-- developers.google.com/analytics/devguides/collection/ga4/ecommerce#purchase -->
+    // GA4 Event for Purchase
+    // developers.google.com/analytics/devguides/collection/ga4/ecommerce#purchase
     gtag("event", "purchase", {
         currency: "USD",
         transaction_id: '<%= @pdt_data['txn_id'] %>',
         value: <%= @pdt_data['payment_gross'] %>,
         affiliation: 'NeuEve Store - Online',
-        shipping: <%= @pdt_data['mc_shipping'] %>,
-        tax: <%= @pdt_data['tax'] %>,
+        shipping: <%= @pdt_data['mc_shipping'].to_f %>,
+        tax: <%= @pdt_data['tax'].to_f %>,
         items: items
     });
 
@@ -492,8 +491,8 @@
     _refersion(function () {
         _rfsn._addTrans({
             'order_id': '<%= @pdt_data['txn_id'] %>',
-            'shipping': '<%= @pdt_data['mc_shipping'] %>',
-            'tax': '<%= @pdt_data['tax'] %>',
+            'shipping': '<%= @pdt_data['mc_shipping'].to_f %>',
+            'tax': '<%= @pdt_data['tax'].to_f %>',
             'currency_code': 'USD'
         });
         _rfsn._addCustomer({
