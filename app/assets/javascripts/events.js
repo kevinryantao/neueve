@@ -111,6 +111,7 @@ $('.subscribe-button').on('click', function () {
   window.uetq = window.uetq || [];
   window.uetq.push('event', 'add_to_cart', {
       'ecomm_prodid': [$(this).data('sku')],
+      'ecomm_pagetype': 'cart',
       'currency': 'USD',
       'items': [
         {
