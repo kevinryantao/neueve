@@ -37,21 +37,22 @@ $('.add-to-cart').on('click', function () {
   gtag('event', 'add_to_cart', {
     'send_to': 'AW-1039056375',
     'items': [{
-      'id': this.data('sku'),
+      'id': $(this).data('sku'),
       'google_business_vertical': 'retail'
     }],
-    'ecomm_prodid': this.data('sku')
+    'ecomm_prodid': $(this).data('sku')
   });
 
   
   // BING CONVERSION TRACKING https://help.ads.microsoft.com/#apex/ads/en/60118/-1
   window.uetq = window.uetq || [];
   window.uetq.push('event', 'add_to_cart', {
-      'ecomm_prodid': [this.data('sku')],
+      'ecomm_prodid': [$(this).data('sku')],
+      'ecomm_pagetype': 'cart',
       'currency': 'USD',
       'items': [
         {
-          'id': this.data('sku'),
+          'id': $(this).data('sku'),
           'quantity': 1
         }
       ]
@@ -61,13 +62,13 @@ $('.add-to-cart').on('click', function () {
   // Facebook Add to Cart
   fbq('track', 'AddToCart', {
     content_type: 'product',
-    content_ids: [this.data('sku')],
+    content_ids: [$(this).data('sku')],
     value: 0.50,
     currency: 'USD'});
 
   // https://help.pinterest.com/en/business/article/add-event-codes
   pintrk('track', 'addtocart', {
-    product_id: this.data('sku'),
+    product_id: $(this).data('sku'),
     order_quantity: 1,
     currency: 'USD'
   });
@@ -77,7 +78,7 @@ $('.add-to-cart').on('click', function () {
     currency: "USD",
     items: [
       {
-        item_id: this.data('sku'),
+        item_id: $(this).data('sku'),
         quantity: 1
       }
     ]
@@ -85,7 +86,7 @@ $('.add-to-cart').on('click', function () {
 
   // Google Analytics UA analytics.js https://developers.google.com/analytics/devguides/collection/analyticsjs/enhanced-ecommerce#add-remove-cart
   ga('ec:addProduct', {
-    'id': this.data('sku'),
+    'id': $(this).data('sku'),
     'quantity': 1
   });
   ga('ec:setAction', 'add');
@@ -99,21 +100,21 @@ $('.subscribe-button').on('click', function () {
   gtag('event', 'add_to_cart', {
     'send_to': 'AW-1039056375',
     'items': [{
-      'id': this.data('sku'),
+      'id': $(this).data('sku'),
       'google_business_vertical': 'retail'
     }],
-    'ecomm_prodid': this.data('sku')
+    'ecomm_prodid': $(this).data('sku')
   });
 
 
   // BING CONVERSION TRACKING https://help.ads.microsoft.com/#apex/ads/en/60118/-1
   window.uetq = window.uetq || [];
   window.uetq.push('event', 'add_to_cart', {
-      'ecomm_prodid': [this.data('sku')],
+      'ecomm_prodid': [$(this).data('sku')],
       'currency': 'USD',
       'items': [
         {
-          'id': this.data('sku'),
+          'id': $(this).data('sku'),
           'quantity': 1
         }
       ]
@@ -123,13 +124,13 @@ $('.subscribe-button').on('click', function () {
   // Facebook Add to Cart
   fbq('track', 'AddToCart', {
     content_type: 'product',
-    content_ids: [this.data('sku')],
+    content_ids: [$(this).data('sku')],
     value: 0.50,
     currency: 'USD'});
 
   // https://help.pinterest.com/en/business/article/add-event-codes
   pintrk('track', 'addtocart', {
-    product_id: this.data('sku'),
+    product_id: $(this).data('sku'),
     order_quantity: 1,
     currency: 'USD'
   });
@@ -139,7 +140,7 @@ $('.subscribe-button').on('click', function () {
     currency: "USD",
     items: [
       {
-        item_id: this.data('sku'),
+        item_id: $(this).data('sku'),
         quantity: 1
       }
     ]
@@ -147,7 +148,7 @@ $('.subscribe-button').on('click', function () {
 
   // Google Analytics UA analytics.js https://developers.google.com/analytics/devguides/collection/analyticsjs/enhanced-ecommerce#add-remove-cart
   ga('ec:addProduct', {
-    'id': this.data('sku'),
+    'id': $(this).data('sku'),
     'quantity': 1
   });
   ga('ec:setAction', 'add');
