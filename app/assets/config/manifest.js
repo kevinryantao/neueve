@@ -7,7 +7,6 @@
 //
 //= link jquery.js
 //= link email_styles/style.css
-//= link fontawesome-all.js
 //= link pwa_manifest.json
 //= link owl.carousel/owl.video.play.png
 //= link owl.carousel/ajax-loader.gif
