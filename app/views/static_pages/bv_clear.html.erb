@@ -154,6 +154,7 @@
                             <%= button_tag(type: 'submit',
                                            class: 'btn btn-warning add-to-cart mb-1',
                                            id: 'bv-clearing-kit',
+                                           data: {sku: 'bv-clearing-kit'},
                                            name: 'submit') do %>
                                 <svg class="svg-icon"><use xlink:href="#add-to-cart-1"></use></svg>
                                 Add to Cart
@@ -180,6 +181,7 @@
                                 <%= button_tag(type: 'submit',
                                                class: 'btn btn-warning subscribe',
                                                id: 'bv-clearing-kit-sub',
+                                               data: {sku: 'bv-clearing-kit'},
                                                name: 'submit') do %>
                                     <i class="fas fa-sync-alt svg-icon"></i>
                                     Subscribe

@@ -169,7 +169,7 @@
 
                                     <%= button_tag(type: 'submit',
                                                    class: 'btn btn-large btn-warning add-to-cart',
-                                                   id: 'silk-formula',
+                                                   data: {sku: 'silk'},
                                                    name: 'submit') do %>
                                         <svg class="svg-icon"><use xlink:href="#add-to-cart-1"></use></svg>
                                         Add to Cart
@@ -203,7 +203,7 @@
                                     <input type="hidden" name="hosted_button_id" value="NU5SQ9KGHKCLG">
                                     <%= button_tag(type: 'submit',
                                                    class: 'btn btn-large btn-warning add-to-cart',
-                                                   id: 'assorted-formulas',
+                                                   data: {sku: 'assorted'},
                                                    name: 'submit') do %>
                                         <svg class="svg-icon"><use xlink:href="#add-to-cart-1"></use></svg>
                                         Add to Cart
@@ -238,7 +238,7 @@
                                     <input type="hidden" name="hosted_button_id" value="YBLLFZFMYNVT8">
                                     <%= button_tag(type: 'submit',
                                                    class: 'btn btn-large btn-warning add-to-cart',
-                                                   id: 'silver-formula',
+                                                   data: {sku: 'silver'},
                                                    name: 'submit') do %>
                                         <svg class="svg-icon"><use xlink:href="#add-to-cart-1"></use></svg>
                                         Add to Cart
@@ -274,7 +274,7 @@
                                     <input type="hidden" name="hosted_button_id" value="MGMFZHE4QB2LW">
                                     <%= button_tag(type: 'submit',
                                                    class: 'btn btn-large btn-warning add-to-cart',
-                                                   id: 'neueve-cream',
+                                                   data: {sku: 'cream'},
                                                    name: 'submit') do %>
                                         <svg class="svg-icon"><use xlink:href="#add-to-cart-1"></use></svg>
                                         Add to Cart
@@ -311,7 +311,7 @@
                                     <input type="hidden" name="hosted_button_id" value="BW3C5YD36UAS8">
                                     <%= button_tag(type: 'submit',
                                                    class: 'btn btn-large btn-warning add-to-cart',
-                                                   id: 'gold-formula',
+                                                   data: {sku: 'gold'},
                                                    name: 'submit') do %>
                                         <svg class="svg-icon"><use xlink:href="#add-to-cart-1"></use></svg>
                                         Add to Cart
@@ -346,7 +346,7 @@
                                     <input type="hidden" name="hosted_button_id" value="2R7PRXENKU33G">
                                     <%= button_tag(type: 'submit',
                                                    class: 'btn btn-large btn-warning add-to-cart',
-                                                   id: 'suppository-applicator',
+                                                   data: {sku: 'applicator'},
                                                    name: 'submit') do %>
                                         <svg class="svg-icon"><use xlink:href="#add-to-cart-1"></use></svg>
                                         Add to Cart
@@ -411,7 +411,7 @@
                                             <input type="hidden" name="hosted_button_id" value="P6SSR5KBG2HTA">
                                             <%= button_tag(type: 'submit',
                                                            class: 'btn btn-large btn-warning subscribe',
-                                                           id: 'silk-formula',
+                                                           data: {sku: 'silk'},
                                                            name: 'submit') do %>
                                                 <i class="fas fa-sync-alt svg-icon"></i>
                                                 Subscribe
@@ -435,7 +435,7 @@
                                     <input type="hidden" name="hosted_button_id" value="N7WDAKA7N9ZQJ">
                                     <%= button_tag(type: 'submit',
                                                    class: 'btn btn-large btn-warning subscribe',
-                                                   id: 'silver-formula',
+                                                   data: {sku: 'silver'},
                                                    name: 'submit') do %>
                                         <i class="fas fa-sync-alt svg-icon"></i>
                                         Subscribe
@@ -457,7 +457,7 @@
                                     <input type="hidden" name="hosted_button_id" value="BTXQMQ7X3MHQW">
                                     <%= button_tag(type: 'submit',
                                                    class: 'btn btn-large btn-warning subscribe',
-                                                   id: 'gold-formula',
+                                                   data: {sku: 'gold'},
                                                    name: 'submit') do %>
                                         <i class="fas fa-sync-alt svg-icon"></i>
                                         Subscribe
@@ -500,7 +500,7 @@
                                 <br>
                             </label>
                             <div align="center">
-                                <%= submit_tag 'Subscribe (CAN/MEX)', :class => 'btn btn-large btn-warning subscribe-button', :name => 'submit' %>
+                                <%= submit_tag 'Subscribe (CAN/MEX)', :class => 'btn btn-large btn-warning subscribe-button', data: {sku: 'silk'}, :name => 'submit' %>
                                 <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
                             </div>
                             </form>
