@@ -390,8 +390,8 @@
         transaction_id: '<%= @pdt_data['txn_id'] %>',
         value: <%= @pdt_data['payment_gross'] %>,
         affiliation: 'NeuEve Store - Online',
-        shipping: <%= @pdt_data['mc_shipping'].to_f %>,
-        tax: <%= @pdt_data['tax'].to_f %>,
+        shipping: '<%= @pdt_data['mc_shipping'].to_f %>',
+        tax: '<%= @pdt_data['tax'].to_f %>',
         items: items
     });
 
