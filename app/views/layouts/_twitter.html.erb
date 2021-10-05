@@ -6,5 +6,12 @@
     // Insert Twitter Pixel ID and Standard Event data below
     twq('init','o6trs');
     twq('track','PageView');
+    <% if @pdt_data.present? && @pdt_data.size > 0 %>
+    twq('track','Purchase', {
+        value: '<%= @pdt_data['payment_gross'] %>',
+        currency: 'USD',
+        num_items: '<%= max(@pdt_data['num_cart_items'].to_i, 1) %>'
+    });
+    <% end %>
 </script>
 <!-- End Twitter universal website tag code -->
