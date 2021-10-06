@@ -10,7 +10,7 @@
     twq('track','Purchase', {
         value: '<%= @pdt_data['payment_gross'] %>',
         currency: 'USD',
-        num_items: '<%= max(@pdt_data['num_cart_items'].to_i, 1) %>'
+        num_items: '<%= [@pdt_data['num_cart_items'].to_i, 1].max %>'
     });
     <% end %>
 </script>
